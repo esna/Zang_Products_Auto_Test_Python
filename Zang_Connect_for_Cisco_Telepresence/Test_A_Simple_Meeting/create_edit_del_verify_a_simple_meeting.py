@@ -449,7 +449,7 @@ class GmailAccountVerifyPy(unittest.TestCase):
             
             
         login_to_gmail_account()
-#         create_simple_meeting()
+        create_simple_meeting()
 #         verify_created_meeting_details()
 #         edit_the_simple_meeting()
 #         verify_edited_meeting_details()
