@@ -17,9 +17,7 @@ import ConfigParser, getopt, os, subprocess, sys
 
 
 Config = ConfigParser.ConfigParser()
-#Config.read("D:\escloud\escloud\QC_Auto_Test_Python\OnEsna_Testing\onesna_testing.ini")
 Config.read("../configuration.ini")
-
 def ConfigSectionMap(section):
     dict1 = {}
     options = Config.options(section)
@@ -161,6 +159,9 @@ class GmailAccountVerifyPy(unittest.TestCase):
                     room_filter.clear()
                     select_room = 'TMSUCREID - %s' % meeting_room
                     room_filter.send_keys(select_room)
+                    time.sleep(1)
+                    driver.find_element_by_xpath("//span[contains(.,'%s')]"% select_room).click()
+                    time.sleep(1)
                     return select_room
                     time.sleep(2)
                     print "Meeting room is selected"
@@ -448,9 +449,9 @@ class GmailAccountVerifyPy(unittest.TestCase):
             verify_meeting_deleted()
             
             
-        login_to_gmail_account()
-        create_simple_meeting()
-#         verify_created_meeting_details()
+#         login_to_gmail_account()
+#         create_simple_meeting()
+        verify_created_meeting_details()
 #         edit_the_simple_meeting()
 #         verify_edited_meeting_details()
 #         delete_created_meeting()
