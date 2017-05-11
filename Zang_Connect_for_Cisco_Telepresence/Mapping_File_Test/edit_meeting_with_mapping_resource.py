@@ -27,7 +27,7 @@ for row in reader:
     v = row[2]
     google_res_dict[k] = v
 for v in google_res_dict:
-    google_res_room = google_res_dict[v]
+    google_res_room2 = google_res_dict[v]
     if v == gid:
         break
     else:
@@ -45,7 +45,7 @@ driver = Login_Gmail_Get_Calendar.driver
 def change_meeting_title():
     """Get the created meeting"""
     try:
-        xpath = "//span[contains(., 'Create a meeting with mapped resources')]"
+        xpath = "//span[contains(., '%s')]" % title
         driver.find_element_by_xpath(xpath)
         crt_meeting = driver.find_element_by_xpath(xpath)
         crt_meeting.click()
@@ -55,7 +55,7 @@ def change_meeting_title():
         print 'The created meeting is not found'
         driver.close()
         driver.service.process.send_signal(signal.SIGTERM)
-        
+         
     """Change meeting title"""
     xpath = "//input[@title='Event title']"
     meeting_title = driver.find_element_by_xpath(xpath)
@@ -63,8 +63,13 @@ def change_meeting_title():
     meeting_title.send_keys(new_title)
     print "Meeting title is changed to a new one"
     
-def select_meeting_room():
-    print "Select meeting room to be added"
+def change_meeting_room():
+    xpath = "(//span[@class='ep-gc-icon ep-gc-icon-response'][@title='Yes'])[2]"
+    remove_symbol = driver.find_element_by_xpath(xpath)
+    remove_symbol.click()
+    print "Old meeting room is removed"
+    
+    print "Select meeting room to be changed"
     xpath = "//span[@id='ui-ltsr-tab-1']"
     room_menu = driver.find_element_by_xpath(xpath)
     room_menu.click()
@@ -74,16 +79,16 @@ def select_meeting_room():
     room_filter.click()
     room_filter.clear()
 #     select_room = 'TMSUCREID - %s' % google_name
-    room_filter.send_keys(google_res_room)
+    room_filter.send_keys(google_res_room2)
     time.sleep(1)
     try:
-        driver.find_element_by_xpath("//span[contains(.,'%s')]"% google_res_room).click()
+        driver.find_element_by_xpath("//span[contains(.,'%s')]"% google_res_room2).click()
         time.sleep(2)
-        print "%s is added" % google_res_room
+        print "%s is added" % google_res_room2
     except:
         "The meeting room is not available, meeting is not created."
         driver.close()
-        driver.service.process.send_signal(signal.SIGTERM)
+        driver.quit
         
 def save_created_meeting():
     print "Save the created meeting"
@@ -102,7 +107,7 @@ if __name__ == '__main__':
     Login_Gmail_Get_Calendar.login_gmail_account()
     Login_Gmail_Get_Calendar.go_to_google_calendar()
     change_meeting_title()
-    select_room = select_meeting_room()
+    select_room = change_meeting_room()
     save_created_meeting()
-    
-    driver.service.process.send_signal(signal.SIGTERM)
+    driver.quit()
+

@@ -10,7 +10,7 @@ import edit_meeting_with_mapping_resource
 
 driver = Login_Gmail_Get_Calendar.driver
 new_title = edit_meeting_with_mapping_resource.new_title
-google_res_room = edit_meeting_with_mapping_resource.google_res_room
+google_res_room = edit_meeting_with_mapping_resource.google_res_room2
 
 def locate_edited_meeting():
     try:

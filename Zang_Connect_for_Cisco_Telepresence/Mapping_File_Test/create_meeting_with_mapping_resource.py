@@ -14,12 +14,14 @@ from read_csv_files import tms_res_dict, google_res_dict
 map_file = "C:/TMS_Resources/resources_map_google.csv"
 tms_res = "C:/TMS_Resources/resources_tms.csv"
 google_res = "C:/TMS_Resources/resources_google.csv"
+
 """read first line from mapping file, get google id"""
 with open (map_file, 'r') as f:
     lines = f.readlines()
     line = lines[0]
     gid = line.split(",")[1]
     tid = line.split(",")[0]
+    
 """get google resource name from csv file"""
 reader = csv.reader(open(google_res, 'r'))
 for row in reader:
@@ -116,4 +118,4 @@ if __name__ == '__main__':
     select_room = select_meeting_room()
     save_created_meeting()
     
-    driver.service.process.send_signal(signal.SIGTERM)
+    driver.quit()

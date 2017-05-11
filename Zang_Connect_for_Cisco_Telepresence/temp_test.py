@@ -27,9 +27,31 @@ Created on May 2, 2017
 # assert "No results found." not in driver.page_source
 # driver.service.process.send_signal(signal.SIGTERM)
 
-map_file = "C:/TMS_Resources/resources_map_google.csv"
+# map_file = "C:/TMS_Resources/resources_map_google.csv"
+# with open (map_file, 'r') as f:
+#     firstline = f.readline()
+#     tid = firstline.split(",")[0]
+#     gid = firstline.split(",")[1]
 
-with open (map_file, 'r') as f:
-    firstline = f.readline()
-    tid = firstline.split(",")[0]
-    gid = firstline.split(",")[1]
+
+a = 2
+b = 3
+c = 2
+
+assert a == c
+assert a == b
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
