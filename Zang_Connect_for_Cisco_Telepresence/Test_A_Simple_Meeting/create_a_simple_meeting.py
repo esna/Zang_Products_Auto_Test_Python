@@ -1,40 +1,13 @@
 '''
-Created on May 9, 2017
+Created on May 11, 2017
 
 @author: qcadmin
 '''
-import datetime
-import time
-import csv
 import Login_Gmail_Get_Calendar
-import read_csv_files
-import signal
-from read_csv_files import tms_res_dict, google_res_dict
+import time
+import datetime
 
-map_file = "C:/TMS_Resources/resources_map_google.csv"
-tms_res = "C:/TMS_Resources/resources_tms.csv"
-google_res = "C:/TMS_Resources/resources_google.csv"
 
-"""read first line from mapping file, get google id"""
-with open (map_file, 'r') as f:
-    lines = f.readlines()
-    line = lines[0]
-    gid = line.split(",")[1]
-    tid = line.split(",")[0]
-    
-"""get google resource name from csv file"""
-reader = csv.reader(open(google_res, 'r'))
-for row in reader:
-    k = row[0]
-    v = row[1]
-    google_res_dict[k] = v
-for v in google_res_dict:
-    google_res_room = google_res_dict[v]
-    if v == gid:
-        break
-    else:
-        continue
-    
 tmr = datetime.date.today() + datetime.timedelta(days=1)
 tmr_plus_one = datetime.date.today() + datetime.timedelta(days=2)
 d1 = datetime.datetime.strptime("%s" % tmr, '%Y-%m-%d')
@@ -43,11 +16,13 @@ tomorrow = datetime.date.strftime(d1, 'X%m/X%d/X%Y').replace('X0', 'X').replace(
 tom_plus_one = datetime.date.strftime(d2, 'X%m/X%d/X%Y').replace('X0', 'X').replace('X', '')
 fromtime = "12:00 PM"
 untiltime = "1:00 PM"
-title = 'Create a meeting with mapped resources'
+title = 'Default meeting with single meeting room'
+new_title = 'Default meeting is changed to WebEx CMR meeting'
+meeting_room = 'test1'
+new_mt_room = 'WebEx CMR meeting'
 userid = Login_Gmail_Get_Calendar.ConfigSectionMap("Account")['essultn_id_2']
 passwd = Login_Gmail_Get_Calendar.ConfigSectionMap("Account")['essultn_pwd']
-guest1 = 'reidz@esna.com'
-guest2 = 'esnaqc.testing@gmail.com'
+
 driver = Login_Gmail_Get_Calendar.driver
 
 def input_meeting_title():
@@ -86,17 +61,21 @@ def select_meeting_room():
     room_filter = driver.find_element_by_xpath(xpath)
     room_filter.click()
     room_filter.clear()
-#     select_room = 'TMSUCREID - %s' % google_name
-    room_filter.send_keys(google_res_room)
-    print "Meeting room is selected"
+    select_room = 'TMSUCREID - %s' % meeting_room
+    room_filter.send_keys(select_room)
     time.sleep(1)
+    driver.find_element_by_xpath("//span[contains(.,'%s')]"% select_room).click()
+    time.sleep(1)
+    return select_room
+    time.sleep(2)
+    print "Meeting room is selected"
     try:
-        driver.find_element_by_xpath("//span[contains(.,'%s')]"% google_res_room).click()
+        driver.find_element_by_xpath("//span[contains(.,'%s')]"% select_room).click()
         time.sleep(2)
         print "Selected meeting room is added"
     except:
         print "Selected meeting room is not available, meeting cannot be created"
-        driver.service.process.send_signal(signal.SIGTERM)
+        driver.quit()
         
 def save_created_meeting():
     print "Save the created meeting"
@@ -106,8 +85,8 @@ def save_created_meeting():
     time.sleep(5)
     print "Created meeting is saved"
     print ''
-    
-    
+
+        
         
 if __name__ == '__main__':
     
@@ -117,4 +96,5 @@ if __name__ == '__main__':
     set_meeting_schedule()
     select_room = select_meeting_room()
     save_created_meeting()
+    driver.quit()
     

@@ -1,40 +1,12 @@
 '''
-Created on May 9, 2017
+Created on May 11, 2017
 
 @author: qcadmin
 '''
-import datetime
-import time
-import csv
 import Login_Gmail_Get_Calendar
-import read_csv_files
-import signal
-from read_csv_files import tms_res_dict, google_res_dict
+import time
+import datetime
 
-map_file = "C:/TMS_Resources/resources_map_google.csv"
-tms_res = "C:/TMS_Resources/resources_tms.csv"
-google_res = "C:/TMS_Resources/resources_google.csv"
-
-"""read first line from mapping file, get google id"""
-with open (map_file, 'r') as f:
-    lines = f.readlines()
-    line = lines[0]
-    gid = line.split(",")[1]
-    tid = line.split(",")[0]
-    
-"""get google resource name from csv file"""
-reader = csv.reader(open(google_res, 'r'))
-for row in reader:
-    k = row[0]
-    v = row[1]
-    google_res_dict[k] = v
-for v in google_res_dict:
-    google_res_room = google_res_dict[v]
-    if v == gid:
-        break
-    else:
-        continue
-    
 tmr = datetime.date.today() + datetime.timedelta(days=1)
 tmr_plus_one = datetime.date.today() + datetime.timedelta(days=2)
 d1 = datetime.datetime.strptime("%s" % tmr, '%Y-%m-%d')
@@ -43,22 +15,25 @@ tomorrow = datetime.date.strftime(d1, 'X%m/X%d/X%Y').replace('X0', 'X').replace(
 tom_plus_one = datetime.date.strftime(d2, 'X%m/X%d/X%Y').replace('X0', 'X').replace('X', '')
 fromtime = "12:00 PM"
 untiltime = "1:00 PM"
-title = 'Create a meeting with mapped resources'
+ori_title = 'Repeat meeting, two meeting rooms, repeat daily for 5 times'
+new_title = "Repeat meeting edited, three meeting rooms, start time 1:00pm"
+meeting_room_1 = 'New Room A'
+meeting_room_2 = 'No Name (192.168.0.138)'
+room_list_1 = (meeting_room_1, meeting_room_2)
 userid = Login_Gmail_Get_Calendar.ConfigSectionMap("Account")['essultn_id_2']
 passwd = Login_Gmail_Get_Calendar.ConfigSectionMap("Account")['essultn_pwd']
-guest1 = 'reidz@esna.com'
-guest2 = 'esnaqc.testing@gmail.com'
+
 driver = Login_Gmail_Get_Calendar.driver
+
 
 def input_meeting_title():
     xpath = "//div[@id='createEventButtonContainer']//div[@class='goog-imageless-button-content']"
     create_btn = driver.find_element_by_xpath(xpath)
     create_btn.click()
-    print "Input meeting title"
     xpath = "//input[@title='Event title']"
     meeting_title = driver.find_element_by_xpath(xpath)
     meeting_title.clear()
-    meeting_title.send_keys(title)
+    meeting_title.send_keys(ori_title)
     print "Meeting title is input"
 
 def set_meeting_schedule():
@@ -75,46 +50,59 @@ def set_meeting_schedule():
     until_time.clear()
     until_time.send_keys(untiltime)
     print "Meeting schedule is set"
-    
-def select_meeting_room():
-    print "Select meeting room"
-    xpath = "//span[@id='ui-ltsr-tab-1']"
-    room_menu = driver.find_element_by_xpath(xpath)
-    room_menu.click()
+
+def set_repeating_cycle():
+    repeat_check = driver.find_element_by_id(":20.repeatcheckbox")
+    repeat_check.click()
     time.sleep(2)
-    xpath = "//input[@title='Search rooms']"
-    room_filter = driver.find_element_by_xpath(xpath)
-    room_filter.click()
-    room_filter.clear()
-#     select_room = 'TMSUCREID - %s' % google_name
-    room_filter.send_keys(google_res_room)
-    print "Meeting room is selected"
-    time.sleep(1)
-    try:
-        driver.find_element_by_xpath("//span[contains(.,'%s')]"% google_res_room).click()
+    driver.switch_to_active_element()
+    xpath = "//table[@class='ep-rec']/tbody/tr/td/select/option[@value='0']"
+    driver.find_element_by_xpath(xpath).click()
+    xpath = "//input[@aria-label='Ends after a number of occurrences']"
+    option_after = driver.find_element_by_xpath(xpath)
+    option_after.click()
+    xpath = "//td[@class='ep-rec-buttons-padding']/div/div"
+    time.sleep(2)
+    done_btn = driver.find_element_by_xpath(xpath)
+    done_btn.click()
+    print "Repeating cycle is set"
+
+def select_meeting_rooms():
+    for select_room in room_list_1:
+        xpath = "//span[@id='ui-ltsr-tab-1']"
+        room_menu = driver.find_element_by_xpath(xpath)
+        room_menu.click()
         time.sleep(2)
-        print "Selected meeting room is added"
-    except:
-        print "Selected meeting room is not available, meeting cannot be created"
-        driver.service.process.send_signal(signal.SIGTERM)
+        xpath = "//input[@title='Search rooms']"
+        room_filter = driver.find_element_by_xpath(xpath)
+        room_filter.click()
+        select_room = 'TMSUCREID - %s' % select_room
+        room_filter.clear()
+        room_filter.send_keys(select_room)
+        time.sleep(2)
+        try:
+            xpath = "//span[contains(., '%s')]" % select_room
+            driver.find_element_by_xpath(xpath).click()
+            print "%s is selected" % select_room
+            time.sleep(2)
+        except:
+            print "The meeting room is not available."
+    print "Meeting rooms are selected"
+    time.sleep(5)
         
 def save_created_meeting():
-    print "Save the created meeting"
     xpath = "//div[@class='goog-imageless-button-content'][contains(., 'Save')]"
     save_btn = driver.find_element_by_xpath(xpath)
     save_btn.click()
-    time.sleep(5)
-    print "Created meeting is saved"
-    print ''
-    
-    
-        
+    print "Scheduled repeat meeting is saved"
+
+
 if __name__ == '__main__':
     
     Login_Gmail_Get_Calendar.login_gmail_account()
     Login_Gmail_Get_Calendar.go_to_google_calendar()
     input_meeting_title()
     set_meeting_schedule()
-    select_room = select_meeting_room()
+    set_repeating_cycle()
+    select_meeting_rooms()
     save_created_meeting()
-    

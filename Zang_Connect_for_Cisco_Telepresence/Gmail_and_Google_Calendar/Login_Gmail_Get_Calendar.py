@@ -68,7 +68,6 @@ def login_gmail_account():
     
 def go_to_google_calendar():
     print "Go to google calendar"
-    driver.find_element_by_tag_name('body').send_keys(Keys.COMMAND + 't') 
     driver.get("https://calendar.google.com/calendar/render?tab=mc#main_7")
     time.sleep(5)
 

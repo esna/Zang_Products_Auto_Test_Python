@@ -4,17 +4,16 @@ Created on May 9, 2017
 @author: qcadmin
 '''
 import Login_Gmail_Get_Calendar
+import login_tms_server
 import create_meeting_with_mapping_resource
 import edit_meeting_with_mapping_resource
 import csv
 import time
-import signal
 
 map_file = "C:/TMS_Resources/resources_map_google.csv"
 tms_res = "C:/TMS_Resources/resources_tms.csv"
 tms_res_dict = {}
 driver = Login_Gmail_Get_Calendar.driver
-url = '192.168.1.164/tms/default.aspx?pageId=77'
 title = create_meeting_with_mapping_resource.title
 new_title = edit_meeting_with_mapping_resource.new_title
 tomorrow = create_meeting_with_mapping_resource.tomorrow
@@ -45,11 +44,6 @@ for v in tms_res_dict:
     else:
         continue
 
-def login_tms_server():
-    driver.get('http://reidz@esna.main:Esnareid7@%s'% url)
-    print "Login tms server and display the conference lsit"
-    time.sleep(2)
-
 def verify_created_meeting_details():
     def get_meeting_title():
         values_list = []
@@ -69,7 +63,7 @@ def verify_created_meeting_details():
         except:
             print "Created meeting is not found"
             driver.quit()
-            driver.service.process.send_signal(signal.SIGTERM)
+            driver.quit()
 
     title_content = get_meeting_title()
     
@@ -134,7 +128,7 @@ def verify_edited_meeting_details():
         except:
             print "Edited meeting is not found"
             driver.quit()
-            driver.service.process.send_signal(signal.SIGTERM)
+            driver.quit()
 
     title_content = get_meeting_title()
     
@@ -154,11 +148,33 @@ def verify_edited_meeting_details():
     print "The meeting details are exactly same with those in created meeting"
     print ''
         
+def verify_deleted_meeting():
+    try:
+        xpath = "//td[contains(., 'No results found. Try widening your search by using fewer criteria.')]"
+        no_result = driver.find_element_by_xpath(xpath)
+        if no_result.is_displayed():
+            print "No meeting list is diaplyed, the edited meeting is deleted"
+        else:
+            print "A meeting list is displayed"
+    except:
+        try:
+            xpath = "//a[contains(., '%s')]" % new_title
+            meeting_title = driver.find_element_by_xpath(xpath)
+            xpath = "//span[@id='ctl00_uxContent_ctl01_conferenceGrid_ctl02_StartDate']"
+            start_date = driver.find_element_by_xpath(xpath)
+            st_date = start_date.text
+            if meeting_title.is_displayed() and tomorrow == st_date:
+                print "The meeting is still there, not deleted"
+            else:
+                print "Edited repeat meeting is not found in meeting list, it was deleted"
+        except:
+            print "Edited repeat meeting is not found, it is deleted"
         
         
 if __name__ == '__main__':
     
-    login_tms_server()
+    login_tms_server.login_tms_server()
 #     verify_created_meeting_details()
-    verify_edited_meeting_details()
+#     verify_edited_meeting_details()
+    verify_deleted_meeting()
     driver.quit()
