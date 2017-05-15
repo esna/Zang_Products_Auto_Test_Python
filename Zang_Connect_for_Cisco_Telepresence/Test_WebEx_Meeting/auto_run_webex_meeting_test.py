@@ -3,12 +3,6 @@ Created on May 11, 2017
 
 @author: qcadmin
 '''
-from Test_WebEx_Meeting.verify_webex_meeting_details import verify_created_webex_meeting
-'''
-Created on May 11, 2017
-
-@author: qcadmin
-'''
 import Login_Gmail_Get_Calendar
 import login_tms_server
 import create_webex_meeting

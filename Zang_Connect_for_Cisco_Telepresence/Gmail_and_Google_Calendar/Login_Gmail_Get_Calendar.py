@@ -7,7 +7,6 @@ from selenium import webdriver
 # import unittest
 import time
 import ConfigParser
-from selenium.webdriver.common.keys import Keys
 
 Config = ConfigParser.ConfigParser()
 Config.read("../configuration.ini")

@@ -30,7 +30,7 @@ def create_mapFile_dict():
     
     for tms_id in map_dict:
         google_id = map_dict[tms_id]
-#         print tms_id + ' => ' + google_id
+        print tms_id + ' => ' + google_id
 #     print ''
 
 def create_tms_dict():
@@ -42,7 +42,7 @@ def create_tms_dict():
         
     for tms_id in tms_res_dict:
         tms_name = tms_res_dict[tms_id]
-#         print tms_id + ' => ' + tms_name
+        print tms_id + ' => ' + tms_name
 #     print ''
     
 def create_google_dict():
@@ -54,7 +54,7 @@ def create_google_dict():
         
     for google_id in google_res_dict:
         google_name = google_res_dict[google_id]
-#         print google_id + ' => ' + google_name
+        print google_id + ' => ' + google_name
 
 
 

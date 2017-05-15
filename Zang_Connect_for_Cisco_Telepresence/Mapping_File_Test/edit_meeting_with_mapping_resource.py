@@ -3,13 +3,12 @@ Created on May 9, 2017
 
 @author: qcadmin
 '''
-import datetime
 import time
 import csv
 import Login_Gmail_Get_Calendar
 import create_meeting_with_mapping_resource
 import signal
-from read_csv_files import tms_res_dict, google_res_dict
+from read_csv_files import google_res_dict
 
 map_file = "C:/TMS_Resources/resources_map_google.csv"
 tms_res = "C:/TMS_Resources/resources_tms.csv"

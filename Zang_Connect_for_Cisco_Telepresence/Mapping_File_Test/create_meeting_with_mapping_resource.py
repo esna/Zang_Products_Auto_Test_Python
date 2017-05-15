@@ -7,9 +7,7 @@ import datetime
 import time
 import csv
 import Login_Gmail_Get_Calendar
-import read_csv_files
-import signal
-from read_csv_files import tms_res_dict, google_res_dict
+from read_csv_files import google_res_dict
 
 map_file = "C:/TMS_Resources/resources_map_google.csv"
 tms_res = "C:/TMS_Resources/resources_tms.csv"
@@ -96,7 +94,7 @@ def select_meeting_room():
         print "Selected meeting room is added"
     except:
         print "Selected meeting room is not available, meeting cannot be created"
-        driver.service.process.send_signal(signal.SIGTERM)
+        driver.quit()
         
 def save_created_meeting():
     print "Save the created meeting"
