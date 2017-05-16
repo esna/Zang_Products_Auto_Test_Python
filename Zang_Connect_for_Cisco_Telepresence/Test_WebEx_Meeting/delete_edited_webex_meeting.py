@@ -37,9 +37,9 @@ def delete_edited_webex_meeting():
     try:
         confirm_btn = driver.find_element_by_name("no")
         confirm_btn.click()
-        print "The simple meeting is deleted from google calendar"
+        print "The webex meeting is deleted from google calendar"
     except:
-        print "The simple meeting is deleted from google calendar"
+        print "The webex meeting is deleted from google calendar"
         
     
 

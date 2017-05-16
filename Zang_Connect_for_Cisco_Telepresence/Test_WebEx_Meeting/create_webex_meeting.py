@@ -78,6 +78,7 @@ def save_created_meeting():
     save_btn = driver.find_element_by_xpath(xpath)
     save_btn.click()
     print "Created WebEx meeting is saved"
+    print ''
 
 
 if __name__ == '__main__':

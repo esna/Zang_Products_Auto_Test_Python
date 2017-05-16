@@ -32,9 +32,11 @@ def delete_edited_meeting():
     del_btn = driver.find_element_by_xpath(xpath)
     del_btn.click()
     driver.switch_to_active_element()
-#     confirm_btn = driver.find_element_by_name("no")
-#     confirm_btn.click()
-    print "The simple meeting is deleted from google calendar"
+#     try:
+#         confirm_btn = driver.find_element_by_name("no")
+#         confirm_btn.click()
+        
+    print "The meeting with map file is deleted from google calendar"
 
         
     

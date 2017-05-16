@@ -8,6 +8,7 @@ import Login_Gmail_Get_Calendar
 import login_tms_server
 import edit_created_webex_meeting
 import time
+from create_a_simple_meeting import tomorrow
 
 driver = Login_Gmail_Get_Calendar.driver
 ori_title = create_webex_meeting.ori_title
@@ -60,8 +61,8 @@ def verify_created_webex_meeting():
         end_time = driver.find_element_by_xpath(xpath)
         ed_time = end_time.get_attribute('value')
         print "Got meeting schedule date time"
-        assert tom_plus_one == st_date
-        assert tom_plus_one == ed_date
+        assert tomorrow == st_date
+        assert tomorrow == ed_date
         assert fromtime == st_time
         assert untiltime == ed_time
         print "Meeting date, start and end time are verified"
@@ -116,6 +117,7 @@ def verify_edited_webex_meeting():
                     print "%s is verified in participant list" % particpts
             except:
                 print "%s is not in the participant list for unknown reason (check CZ log)" % particpts
+        print ''
     verify_mtrooms_new_guests()
     
     
@@ -142,7 +144,7 @@ def verify_deleted_webex_meeting():
 if __name__ == '__main__':
     
     login_tms_server.login_tms_server()
-#     verify_created_webex_meeting()
+    verify_created_webex_meeting()
 #     verify_edited_webex_meeting()
-    verify_deleted_webex_meeting()
-    driver.quit()
+#     verify_deleted_webex_meeting()
+#     driver.quit()
