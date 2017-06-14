@@ -29,6 +29,8 @@ for new_res_names in name_list:
     except:
         time.sleep(1)
         print "Resource %s is not found"
+
+
         
     
 
