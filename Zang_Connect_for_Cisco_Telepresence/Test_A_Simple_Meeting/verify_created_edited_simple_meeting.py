@@ -140,10 +140,10 @@ def verify_deleted_meeting():
         except:
             print "Edited simple meeting is not found, it is deleted"
 
-if __name__ == '__main__':
-    
-    login_tms_server.login_tms_server()
+# if __name__ == '__main__':
+#     
+#     login_tms_server.login_tms_server()
 #     verify_created_simple_meeting()
 #     verify_edited_simple_meeting()
-    verify_deleted_meeting()
-    driver.quit()
+#     verify_deleted_meeting()
+#     driver.quit()

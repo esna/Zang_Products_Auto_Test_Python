@@ -141,10 +141,10 @@ def verify_deleted_webex_meeting():
         except:
             print "Edited webex meeting is not found, it is deleted"
 
-if __name__ == '__main__':
-    
-    login_tms_server.login_tms_server()
-    verify_created_webex_meeting()
+# if __name__ == '__main__':
+#     
+#     login_tms_server.login_tms_server()
+#     verify_created_webex_meeting()
 #     verify_edited_webex_meeting()
 #     verify_deleted_webex_meeting()
 #     driver.quit()

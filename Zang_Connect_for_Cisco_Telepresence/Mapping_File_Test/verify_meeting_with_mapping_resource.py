@@ -171,10 +171,10 @@ def verify_deleted_meeting():
             print "Edited repeat meeting is not found, it is deleted"
         
         
-if __name__ == '__main__':
-    
-    login_tms_server.login_tms_server()
+# if __name__ == '__main__':
+#     
+#     login_tms_server.login_tms_server()
 #     verify_created_meeting_details()
 #     verify_edited_meeting_details()
-    verify_deleted_meeting()
-    driver.quit()
+#     verify_deleted_meeting()
+#     driver.quit()

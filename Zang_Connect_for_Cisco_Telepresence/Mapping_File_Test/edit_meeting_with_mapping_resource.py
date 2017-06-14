@@ -101,13 +101,13 @@ def save_created_meeting():
     
     
         
-if __name__ == '__main__':
-    
-    Login_Gmail_Get_Calendar.login_gmail_account()
-    Login_Gmail_Get_Calendar.go_to_google_calendar()
-    change_meeting_title()
-    select_room = change_meeting_room()
-    save_created_meeting()
-    driver.quit()
+# if __name__ == '__main__':
+#     
+#     Login_Gmail_Get_Calendar.login_gmail_account()
+#     Login_Gmail_Get_Calendar.go_to_google_calendar()
+#     change_meeting_title()
+#     select_room = change_meeting_room()
+#     save_created_meeting()
+#     driver.quit()
     
 

@@ -98,12 +98,12 @@ def save_created_meeting():
     print ''
 
 
-if __name__ == '__main__':
-    
-    Login_Gmail_Get_Calendar.login_gmail_account()
-    Login_Gmail_Get_Calendar.go_to_google_calendar()
-    input_meeting_title()
-    set_meeting_schedule()
-    set_repeating_cycle()
-    select_meeting_rooms()
-    save_created_meeting()
+# if __name__ == '__main__':
+#     
+#     Login_Gmail_Get_Calendar.login_gmail_account()
+#     Login_Gmail_Get_Calendar.go_to_google_calendar()
+#     input_meeting_title()
+#     set_meeting_schedule()
+#     set_repeating_cycle()
+#     select_meeting_rooms()
+#     save_created_meeting()

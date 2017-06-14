@@ -93,12 +93,12 @@ def save_edited_meeting():
     
     
     
-if __name__ == '__main__':
+# if __name__ == '__main__':
     
-    Login_Gmail_Get_Calendar.login_gmail_account()
-    Login_Gmail_Get_Calendar.go_to_google_calendar()
-    change_meeting_title()
-    select_room = change_meeting_room()
-    add_guests()
-    save_edited_meeting()
-    driver.quit()
+#     Login_Gmail_Get_Calendar.login_gmail_account()
+#     Login_Gmail_Get_Calendar.go_to_google_calendar()
+#     change_meeting_title()
+#     select_room = change_meeting_room()
+#     add_guests()
+#     save_edited_meeting()
+#     driver.quit()

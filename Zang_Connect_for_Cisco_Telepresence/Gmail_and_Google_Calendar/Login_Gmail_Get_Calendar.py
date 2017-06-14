@@ -72,6 +72,6 @@ def go_to_google_calendar():
 
 
 
-if __name__ == '__main__':
-    login_gmail_account()
-    go_to_google_calendar()
+# if __name__ == '__main__':
+#     login_gmail_account()
+#     go_to_google_calendar()

@@ -43,10 +43,10 @@ def delete_edited_webex_meeting():
         
     
 
-if __name__ == '__main__':
-    
-    Login_Gmail_Get_Calendar.login_gmail_account()
-    Login_Gmail_Get_Calendar.go_to_google_calendar()
-    locate_edited_webex_meeting()
-    delete_edited_webex_meeting()
-    driver.quit()
+# if __name__ == '__main__':
+#     
+#     Login_Gmail_Get_Calendar.login_gmail_account()
+#     Login_Gmail_Get_Calendar.go_to_google_calendar()
+#     locate_edited_webex_meeting()
+#     delete_edited_webex_meeting()
+#     driver.quit()
