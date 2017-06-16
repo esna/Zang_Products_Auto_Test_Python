@@ -7,8 +7,5 @@
 <path>/${PROJECT_DIR_NAME}/iLink_for_Webex_Testing</path>
 <path>/${PROJECT_DIR_NAME}/iLink_for_Webex_Testing/Google_Service</path>
 </pydev_pathproperty>
-<pydev_pathproperty name="org.python.pydev.PROJECT_EXTERNAL_SOURCE_PATH">
-<path>D:\Zang_Products_Auto_Test_Python\Zang_Connect_for_Cisco_Telepresence</path>
-<path>D:\Chrome_Extension_Tests\iLink_for_Webex_Testing</path>
-</pydev_pathproperty>
+
 </pydev_project>
