@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?eclipse-pydev version="1.0"?><pydev_project>
+<pydev_property name="org.python.pydev.PYTHON_PROJECT_INTERPRETER">Default</pydev_property>
+<pydev_property name="org.python.pydev.PYTHON_PROJECT_VERSION">python 2.7</pydev_property>
+<pydev_pathproperty name="org.python.pydev.PROJECT_SOURCE_PATH">
+<path>/${PROJECT_DIR_NAME}</path>
+<path>/${PROJECT_DIR_NAME}/iLink_for_Webex_Testing</path>
+<path>/${PROJECT_DIR_NAME}/iLink_for_Webex_Testing/Google_Service</path>
+</pydev_pathproperty>
+<pydev_pathproperty name="org.python.pydev.PROJECT_EXTERNAL_SOURCE_PATH">
+<path>D:\Zang_Products_Auto_Test_Python\Zang_Connect_for_Cisco_Telepresence</path>
+<path>D:\Chrome_Extension_Tests\iLink_for_Webex_Testing</path>
+</pydev_pathproperty>
+</pydev_project>
