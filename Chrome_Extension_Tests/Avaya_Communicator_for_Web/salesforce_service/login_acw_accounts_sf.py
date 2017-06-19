@@ -6,7 +6,6 @@ import time
 
 username_1 = 'Reidz@esna.com'
 username_2 = 'Percyt@esna.com'
-acw_file = add_acw_extension.acw_file
 
 
 def login_acw_account_1():
