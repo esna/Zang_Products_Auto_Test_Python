@@ -12,12 +12,16 @@ o365_pwd = '!esnatech1234$'
 sf_id = 'arnoe@esna.com'
 sf_pwd = 'EsnaAvaya03'
 
-def login_ext_with_google(driver):
-    driver.switch_to_window(driver.window_handles[0])
-    driver.find_element_by_xpath("//a[@class='social google']/div").click()
+import add_acw_extension
+driver = add_acw_extension.add_chrome_extension()
+time.sleep(3)
+
+def login_ext_with_google():
+    xpath = "//a[@href='ws://'][@class='social google']/div"
+    driver.find_element_by_xpath(xpath).click()
     time.sleep(1)
-    driver.switch_to_window(driver.window_handles[1])
-    driver.close()
+#     driver.switch_to_window(driver.window_handles[1])
+#     driver.close()
     driver.switch_to_window(driver.window_handles[-1])
     time.sleep(1)
     print "Go to gmail login interface"
@@ -44,10 +48,9 @@ def login_ext_with_google(driver):
     xpath = "//span[contains(.,'ALLOW')]"
     driver.find_element_by_xpath(xpath).click()
     time.sleep(2)
+    return driver
     
-def login_ext_with_office365(driver):
-    driver.switch_to_window(driver.window_handles[0])
-    time.sleep(6)
+def login_ext_with_office365():
     driver.find_element_by_xpath("//a[@class='social office365']/div").click()
     time.sleep(1)
 #     driver.switch_to_window(driver.window_handles[1])
@@ -69,12 +72,11 @@ def login_ext_with_office365(driver):
     print "Office 365 account is logged in"
     driver.switch_to_window(driver.window_handles[0])
     time.sleep(10)
+    return driver
     
-def login_ext_with_Salesforce(driver):
-    driver.switch_to_window(driver.window_handles[0])
-    time.sleep(6)
+def login_ext_with_Salesforce():
     driver.find_element_by_xpath("//a[@class='social salesforce']/div").click()
-    time.sleep(2)
+    time.sleep(3)
 #     driver.switch_to_window(driver.window_handles[1])
 #     driver.close()
     driver.switch_to_window(driver.window_handles[-1])
@@ -94,3 +96,6 @@ def login_ext_with_Salesforce(driver):
     time.sleep(3)
     driver.switch_to_window(driver.window_handles[0])
     time.sleep(8)
+    return driver
+    
+# login_ext_with_google()

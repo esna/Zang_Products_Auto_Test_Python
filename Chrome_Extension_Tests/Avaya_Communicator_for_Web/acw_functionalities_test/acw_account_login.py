@@ -5,12 +5,28 @@ Created on Jun 19, 2017
 '''
 import time
 from selenium.webdriver.support.ui import Select
+from Avaya_Communicator_for_Web import sso_login
 
 pre_server = 'esnaipo.esna.com'
 med_server = 'esnaipo.esna.com'
 password = '3snat3ch'
 
-def ipoffice_login(driver, user_name):
+username_1 = 'Reidz@esna.com'
+username_2 = 'Percyt@esna.com'
+ser_name_1 = 'google'
+ser_name_2 = 'o365'
+ser_name_3 = 'salesforce'
+
+def select_sso_service(ser_name, user_name):
+    if ser_name == 'google':
+        driver = sso_login.login_ext_with_google()
+    elif ser_name == 'o365':
+        driver = sso_login.login_ext_with_office365()
+    elif ser_name == 'salesforce':
+        driver = sso_login.login_ext_with_Salesforce()
+    else:
+        print "SSO service name is wrong"
+
     def select_login_server():
         print "Begin to login acw account"
         driver.switch_to_window(driver.window_handles[0])
@@ -49,7 +65,6 @@ def ipoffice_login(driver, user_name):
             print "Account logged in, skipped tutorial"
         except:
             print "Account logged in, tutorial is not popped up"
-            
     try:
         select_login_server()
         print "Site is selected."
@@ -61,6 +76,51 @@ def ipoffice_login(driver, user_name):
         print "Server domain is input"
     except:
         print "No need to input server domain"
-        
     input_user_credential()
     login_to_ipoffice()
+    return driver
+
+
+def login_account_1_google():
+    driver = select_sso_service(ser_name_1, username_1)
+    print "Account 1 is logged in"
+    time.sleep(2)
+    return driver
+    
+def login_account_2_google():
+    driver = select_sso_service(ser_name_1, username_2)
+    print "Account 2 is logged in"
+    time.sleep(2)
+    return driver
+
+def login_account_1_o365():
+    driver = select_sso_service(ser_name_2, username_1)
+    print "Account 1 is logged in"
+    time.sleep(2)
+    return driver
+    
+def login_account_2_o365():
+    driver = select_sso_service(ser_name_2, username_2)
+    print "Account 2 is logged in"
+    time.sleep(2)
+    return driver
+
+def login_account_1_salesforce():
+    driver = select_sso_service(ser_name_3, username_1)
+    print "Account 1 is logged in"
+    time.sleep(2)
+    return driver
+    
+def login_account_2_salesforce():
+    driver = select_sso_service(ser_name_3, username_2)
+    print "Account 2 is logged in"
+    time.sleep(2)
+    return driver
+
+
+login_account_1_google()
+# login_account_2_google()
+# login_account_1_o365()
+# login_account_2_o365()
+# login_account_1_salesforce()
+# login_account_2_salesforce()
