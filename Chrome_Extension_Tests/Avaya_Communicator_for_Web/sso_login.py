@@ -14,9 +14,11 @@ sf_pwd = 'EsnaAvaya03'
 
 import add_acw_extension
 driver = add_acw_extension.add_chrome_extension()
-time.sleep(3)
+time.sleep(2)
 
 def login_ext_with_google():
+    driver.switch_to_window(driver.window_handles[0])
+    time.sleep(1)
     xpath = "//a[@href='ws://'][@class='social google']/div"
     driver.find_element_by_xpath(xpath).click()
     time.sleep(1)

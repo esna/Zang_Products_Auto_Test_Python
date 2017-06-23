@@ -4,15 +4,15 @@ Created on Jun 20, 2017
 @author: qcadmin
 '''
 import time
-import acw_account_login
+from Avaya_Communicator_for_Web.acw_functionalities import acw_account_login
 from selenium.webdriver.common.keys import Keys
 
 new_label = "New Presence Label"
 softphone = "Ready : Softphone [Reidz]"
-driver = acw_account_login.login_account_1_google()
+# driver = acw_account_login.login_account_1_google()
 time.sleep(2)
 
-def presence_test():
+def presence_test(driver):
     aval_xpath = "//div[@class='imp']"
     aval = driver.find_element_by_xpath(aval_xpath)
     aval.click()
@@ -50,15 +50,15 @@ def presence_test():
     time.sleep(2)
     input_label.send_keys(Keys.RETURN)
     print "A presence label is input"
-    time.sleep(2)
+    time.sleep(3)
     aval_xpath = "//div[@class='imp']"
     aval = driver.find_element_by_xpath(aval_xpath)
-    if aval_label == aval.text:
+    if aval.text == new_label:
         print "The %s is displayed on the main panel" % new_label
     else:
         print "The new label is not displayed on main panel"
-    
-    xpath = "//a[@href='ws://']/div[contains(.,'Available')]"
+    time.sleep(2)
+    xpath = "//li[@jsc_id='ActOnline']/a[@href='ws://']/div[contains(.,'Available')]"
     avail = driver.find_element_by_xpath(xpath)
     avail.click()
     print "Click Available"
@@ -81,14 +81,4 @@ def presence_test():
     else:
         print"Softphone has problem"
 
-def group_add_edit_delete():
-    print "Click People icon"
-    driver.find_element_by_xpath("//a[@title='People']").click()
-    print "Click Group button"
-    driver.find_element_by_xpath("//a[@jsc_id='ActGroups']").click
-    xpath = "//a[@href='ws://']/div[contains(.,'Add group')]"
-    add_gp = driver.find_element_by_xpath(xpath)
-    add_gp.click()
-    
-    
-presence_test()
+# presence_test()
