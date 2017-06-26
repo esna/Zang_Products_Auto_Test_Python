@@ -18,10 +18,10 @@ time.sleep(2)
 
 def login_ext_with_google():
     driver.switch_to_window(driver.window_handles[0])
-    time.sleep(1)
+    time.sleep(2)
     xpath = "//a[@href='ws://'][@class='social google']/div"
     driver.find_element_by_xpath(xpath).click()
-    time.sleep(1)
+    time.sleep(2)
 #     driver.switch_to_window(driver.window_handles[1])
 #     driver.close()
     driver.switch_to_window(driver.window_handles[-1])

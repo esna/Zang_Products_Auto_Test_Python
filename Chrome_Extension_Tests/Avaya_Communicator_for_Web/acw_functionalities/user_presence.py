@@ -68,17 +68,17 @@ def presence_test(driver):
     assert aval_label == aval.text
     print "%s is displayed on the main panel" % aval_label
     
-    xpath = "//a[@href='ws://']/div[contains(.,'Softphone')]"
-    s_phone = driver.find_element_by_xpath(xpath)
-    s_phone.click()
-    print "Select Softphone"
-    time.sleep(10)
-    """Need to manually click the 'Allow' button on WebRTC page"""
-    xpath = "//div[@class='phone'][contains(.,'Ready')]"
-    phone_type = driver.find_element_by_xpath(xpath)
-    if phone_type.text == softphone:
-        print "Phone type is switched to softphone"
-    else:
-        print"Softphone has problem"
+#     xpath = "//a[@href='ws://']/div[contains(.,'Softphone')]"
+#     s_phone = driver.find_element_by_xpath(xpath)
+#     s_phone.click()
+#     print "Select Softphone"
+#     time.sleep(10)
+#     """Need to manually click the 'Allow' button on WebRTC page"""
+#     xpath = "//div[@class='phone'][contains(.,'Ready')]"
+#     phone_type = driver.find_element_by_xpath(xpath)
+#     if phone_type.text == softphone:
+#         print "Phone type is switched to softphone"
+#     else:
+#         print"Softphone has problem"
 
 # presence_test()
