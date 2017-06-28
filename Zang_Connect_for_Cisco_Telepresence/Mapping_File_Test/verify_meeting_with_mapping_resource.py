@@ -19,6 +19,8 @@ new_title = edit_meeting_with_mapping_resource.new_title
 tomorrow = create_meeting_with_mapping_resource.tomorrow
 fromtime = create_meeting_with_mapping_resource.fromtime
 untiltime = create_meeting_with_mapping_resource.untiltime
+tms_res_room1 = ''
+tms_res_room2 = ''
 
 """read first line from mapping file, get google id"""
 with open (map_file, 'r') as f:
@@ -38,7 +40,12 @@ for row in reader:
 for v in tms_res_dict:
     if v == tid1:
         tms_res_room1 = tms_res_dict[v]
-    elif v == tid2:
+        break
+    else:
+        continue
+    
+for v in tms_res_dict:
+    if v == tid2:
         tms_res_room2 = tms_res_dict[v]
         break
     else:
@@ -143,6 +150,8 @@ def verify_edited_meeting_details():
     """Verify meeting details"""
     assert new_title == title_content
     print "Meeting title is verified"
+    print tms_res_room2
+    print mt_room
     assert tms_res_room2 == mt_room
     print "Meeting room is verified"
     print "The meeting details are exactly same with those in created meeting"

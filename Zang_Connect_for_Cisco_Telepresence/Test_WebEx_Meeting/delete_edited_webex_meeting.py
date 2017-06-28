@@ -16,7 +16,7 @@ meeting_room_1 = create_webex_meeting.meeting_room_1
 
 def locate_edited_webex_meeting():
     try:
-        xpath = "//div[@class='cpchip']/span[contains(., '%s')]" % meeting_room_1
+        xpath = "//div[@class='cpchip']/div/span[contains(., '%s')]" % meeting_room_1
         driver.find_element_by_xpath(xpath)
         edt_meeting = driver.find_element_by_xpath(xpath)
         print "Found the edited meeting"
@@ -29,8 +29,8 @@ def locate_edited_webex_meeting():
         driver.service.process.send_signal(signal.SIGTERM)
     
 def delete_edited_webex_meeting():
-    driver.switch_to_active_element()
-    xpath = "//div[@class='neb-footer']/span[2]/div[1]"
+#     driver.switch_to_active_element()
+    xpath = "//div[@class='goog-imageless-button-content'][contains(.,'Delete')]"
     del_btn = driver.find_element_by_xpath(xpath)
     del_btn.click()
     driver.switch_to_active_element()
