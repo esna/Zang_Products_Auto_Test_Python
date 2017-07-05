@@ -1,4 +1,5 @@
 from iLink_for_Webex_Testing import add_login_webex_extension
+from selenium.webdriver.support.ui import Select
 import datetime, time
 
 tmr = datetime.date.today() + datetime.timedelta(days=1)
@@ -7,13 +8,19 @@ d1 = datetime.datetime.strptime("%s" % tmr, '%Y-%m-%d')
 d2 = datetime.datetime.strptime("%s" % tmr_plus_one, '%Y-%m-%d')
 tomorrow = datetime.date.strftime(d1, 'X%m/X%d/X%Y').replace('X0', 'X').replace('X', '')
 tom_plus_one = datetime.date.strftime(d2, 'X%m/X%d/X%Y').replace('X0', 'X').replace('X', '')
-fromtime = "2:00 PM"
-untiltime = "3:00 PM"
-title = "Repeat meeting from google calendar - daily repeat for 5 times"
+fromtime = "1:00 PM"
+untiltime = "2:00 PM"
+title = "Repeat meeting from google calendar - daily repeat for 3 times"
+rept_fq = 3
+reid_tem = 'reid test template'
+tel_num = '905-707-9700'
+
+add_login_webex_extension.login_ext_with_google()
+time.sleep(10)
+add_login_webex_extension.input_esna_webex_password()
 
 driver = add_login_webex_extension.driver
-add_login_webex_extension.login_ext_with_google()
-add_login_webex_extension.input_esna_webex_password()
+
 
 def go_to_google_mail_calendar():
     print "Go to gmail account"
@@ -47,9 +54,9 @@ def set_meeting_schedule():
     from_time = driver.find_element_by_xpath("//input[@title = 'From time']")
     until_time = driver.find_element_by_xpath("//input[@title = 'Until time']")
     from_date.clear()
-    from_date.send_keys(tom_plus_one)
+    from_date.send_keys(tomorrow)
     until_date.clear()
-    until_date.send_keys(tom_plus_one)
+    until_date.send_keys(tomorrow)
     from_time.clear()
     from_time.send_keys(fromtime)
     until_time.clear()
@@ -66,17 +73,31 @@ def set_repeating_cycle():
     xpath = "//input[@aria-label='Ends after a number of occurrences']"
     option_after = driver.find_element_by_xpath(xpath)
     option_after.click()
+    xpath = "//input[contains(@id,'endson_count_input')]"
+    occu_fre = driver.find_element_by_xpath(xpath)
+    occu_fre.clear()
+    occu_fre.send_keys(rept_fq)
     xpath = "//td[@class='ep-rec-buttons-padding']/div/div"
     time.sleep(2)
     done_btn = driver.find_element_by_xpath(xpath)
     done_btn.click()
-    print "Repeating cycle is set"
+    print "Repeating cycle is set to daily for 3 times"
     
 def save_meeting():
     driver.find_element_by_id('webex0addtext').click()
     print "Click webex meeting icon"
     time.sleep(2)
     driver.switch_to_frame('frameCreateWebex')
+    templt = Select(driver.find_element_by_id('comboTemplates'))
+    templt.select_by_visible_text(reid_tem)
+    print "Select %s" % reid_tem
+    aud_tp = Select(driver.find_element_by_id('id_wexAudio'))
+    aud_tp.select_by_value('OTHER')
+    print "Select audio type as Other"
+    phone_num = driver.find_element_by_id('id_wexOtherTeleconfOptions')
+    phone_num.clear()
+    phone_num.send_keys(tel_num)
+    print "Input phone number %s" % tel_num
     driver.find_element_by_id('createWebexSpan').click()
     print "Create meeting button is clicked"
     time.sleep(1)
@@ -88,9 +109,7 @@ def save_meeting():
     print "Click Save button on calendar"
     print "Scheduled meeting is saved"
     time.sleep(5)
-    
-    
-    
+
 # go_to_google_mail_calendar()
 # create_repeat_meeging()
 # input_meeting_title()
@@ -98,5 +117,7 @@ def save_meeting():
 # set_repeating_cycle()
 # save_meeting()
 
-    
+
+
+
     

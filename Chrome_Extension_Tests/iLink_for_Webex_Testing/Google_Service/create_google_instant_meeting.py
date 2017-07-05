@@ -26,6 +26,7 @@ toll_number = '1-650-479-3207 Call-in toll number (US/Canada)'
 
 driver = add_login_webex_extension.driver
 add_login_webex_extension.login_ext_with_google()
+time.sleep(30)
 add_login_webex_extension.input_esna_webex_password()
 time.sleep(5)
 
@@ -62,8 +63,18 @@ def create_inst_meeting():
         print "Select Audio tyep"
         audio_type = Select(driver.find_element_by_id('id_wexAudio'))
         audio_type.select_by_visible_text(audio)
-        driver.find_element_by_id('id_wexTollFree').click()
-        driver.find_element_by_id('id_wexCallIn').click()
+        toll_free = driver.find_element_by_id('id_wexTollFree')
+        if toll_free.get_attribute('checked'):
+            print "toll free box is checked"
+        else:
+            toll_free.click()
+            print "toll free box is not checked, check it"
+        call_in = driver.find_element_by_id('id_wexCallIn')
+        if call_in.get_attribute('checked'):
+            print "Call_in box is checked"
+        else:
+            toll_free.click()
+            print "Call_in box is not checked, check it"
         pwd = driver.find_element_by_id('id_txtPin')
         pwd.clear()
         pwd.send_keys(passwd)
@@ -188,3 +199,4 @@ get_inst_meeting_window()
 create_inst_meeting()
 verify_created_google_inst_meeting()
 delete_created_instant_meeting()
+print 'test ends'

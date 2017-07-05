@@ -30,10 +30,22 @@ def locate_edited_webex_meeting():
     
 def delete_edited_webex_meeting():
 #     driver.switch_to_active_element()
-    xpath = "//div[@class='goog-imageless-button-content'][contains(.,'Delete')]"
-    del_btn = driver.find_element_by_xpath(xpath)
-    del_btn.click()
-    driver.switch_to_active_element()
+    try:
+        xpath = "//div[@class='goog-imageless-button-content'][contains(.,'Delete')]"
+        xpath = "//div[@class='goog-imageless-button-content'][contains(.,'Delete')]"
+        del_btn = driver.find_element_by_xpath(xpath)
+        del_btn.click()
+        driver.switch_to_active_element()
+    except:
+        xpath = "//div[@title='Next period']"
+        nav_next = driver.find_element_by_xpath(xpath)
+        print "Click the navigation Next button"
+        nav_next.click()
+        time.sleep(2)
+        xpath = "//div[@class='goog-imageless-button-content'][contains(.,'Delete')]"
+        del_btn = driver.find_element_by_xpath(xpath)
+        del_btn.click()
+        driver.switch_to_active_element()
     try:
         confirm_btn = driver.find_element_by_name("no")
         confirm_btn.click()
@@ -41,8 +53,6 @@ def delete_edited_webex_meeting():
     except:
         print "The webex meeting is deleted from google calendar"
         
-    
-
 # if __name__ == '__main__':
 #     
 #     Login_Gmail_Get_Calendar.login_gmail_account()

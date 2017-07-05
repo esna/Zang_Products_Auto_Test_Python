@@ -14,6 +14,7 @@ def test_save_delete_template_with_0ffice365_service():
     print "Test save and delete template with office365 service"
     def sso_with_o365_credential():
         add_login_webex_extension.login_ext_with_office365()
+        time.sleep(20)
         add_login_webex_extension.input_esna_webex_password()
         time.sleep(5)
     
@@ -45,8 +46,15 @@ def test_save_delete_template_with_0ffice365_service():
         time.sleep(2)
         
     def delete_created_template():
+        try:
+            driver.find_element_by_id('tabHeaderTemplates').click()
+            print "Click Templates tab"
+            time.sleep(2)
+            driver.switch_to_frame('tpl_iframe')
+        except:
+            print "Template tab is focused already"
         delete = Select(driver.find_element_by_xpath("//select[@id='comboTemplates']"))
-        delete.select_by_visible_text('Webex New Template Testing')
+        delete.select_by_visible_text(new_templt)
         print "Created template is selected"
         time.sleep(2)
         del_btn = driver.find_element_by_id('buttonWexTemplateDel')
@@ -69,4 +77,5 @@ def test_save_delete_template_with_0ffice365_service():
     delete_created_template()
     
 test_save_delete_template_with_0ffice365_service()
+print "Tests ends"
 driver.quit()

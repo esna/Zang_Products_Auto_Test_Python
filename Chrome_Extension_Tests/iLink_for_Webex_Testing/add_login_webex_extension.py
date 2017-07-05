@@ -18,7 +18,7 @@ webex_pwd = 'Zang123!'
     #     print os.getcwd()
 dir_path = os.path.dirname(os.path.realpath(__file__))
 # print dir_path
-webex_file = dir_path + '\wcl9.1.17.1516.crx'
+webex_file = dir_path + '\wcl_9.1.17.1626.crx'
 
 def add_chrome_extension():
     chop = webdriver.ChromeOptions()
@@ -28,9 +28,9 @@ def add_chrome_extension():
     time.sleep(5)
     driver.switch_to_window(driver.window_handles[-2])
     driver.close()
-    time.sleep(2)
+    time.sleep(3)
     driver.switch_to_window(driver.window_handles[0])
-    time.sleep(2)
+    time.sleep(3)
     return driver
 driver = add_chrome_extension()
 
@@ -115,6 +115,8 @@ def input_esna_webex_password():
     pwd.send_keys(webex_pwd)
     print "Input webex passowrd"
     time.sleep(2)
+    driver.find_element_by_id('chkSec').click()
+    print "Check Save Password option"
     driver.find_element_by_xpath("//button[@id='buttonApply']").click()
     print "Click Save button"
     time.sleep(5)

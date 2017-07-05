@@ -14,20 +14,24 @@ url_o365 = "https://login.microsoftonline.com/"
 
 driver = add_login_webex_extension.driver
 add_login_webex_extension.login_ext_with_office365()
+time.sleep(20)
 add_login_webex_extension.input_esna_webex_password()
 
 def go_to_O365_calendar():
-    print "Go to O365 account"
-    driver.get(url_o365)
-    time.sleep(3)
-    driver.find_element_by_id('O365_MainLink_NavMenu').click()
-    print "Click menu"
-    time.sleep(8)
-    print "Click calendar icon"
-    xpath = "//a[@title='Calendar']"
-#     xpath = "//span[@class='o365cs-nav-appTileIcon owaimg ms-Icon-- ms-icon-font-size-22 ms-Icon--calendar ms-fcl-w']"
-    driver.find_element_by_xpath(xpath).click()
-    time.sleep(15)
+#     print "Go to O365 account"
+#     driver.get(url_o365)
+#     time.sleep(3)
+#     driver.find_element_by_id('O365_MainLink_NavMenu').click()
+#     print "Click menu"
+#     time.sleep(3)
+#     print "Click calendar icon"
+#     xpath = "//a[@id='O365_AppTile_Calendar']/div/span"
+#     driver.find_element_by_xpath(xpath).click()
+#     time.sleep(20)
+    cal_url = 'https://outlook.office365.com/owa/?realm=esnatech.onmicrosoft.com&exsvurl=1&ll-cc=1033&modurl=1&path=/calendar'
+    print "Go to o365 calendar"
+    driver.get(cal_url)
+    time.sleep(20)
 
 def input_meeging_data_from_calendar():
     print "input meeting data begin"
@@ -129,8 +133,8 @@ def save_meeting_on_o365_calendar():
     time.sleep(5)
     
     
-# go_to_O365_calendar()
-# input_meeging_data_from_calendar()
-# create_meeting_from_webex_icon()
-# save_meeting_on_o365_calendar()
+go_to_O365_calendar()
+input_meeging_data_from_calendar()
+create_meeting_from_webex_icon()
+save_meeting_on_o365_calendar()
     

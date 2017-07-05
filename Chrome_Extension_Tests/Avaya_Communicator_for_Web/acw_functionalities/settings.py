@@ -24,13 +24,15 @@ def settings_test():
     print "Select Softphone"
     time.sleep(10)
     """Need to manually click the 'Allow' button on WebRTC page"""
-    xpath = "//div[@class='phone'][contains(.,'Ready')]"
-    phone_type = driver.find_element_by_xpath(xpath)
-    if phone_type.text == softphone:
-        print "Phone type is switched to softphone"
-    else:
-        print"Softphone has problem"
-    
+    try:
+        xpath = "//div[@class='phone'][contains(.,'Ready')]"
+        phone_type = driver.find_element_by_xpath(xpath)
+        if phone_type.text == softphone:
+            print "Phone type is switched to softphone"
+        else:
+            print"Softphone has problem"
+    except:
+        print "WebRTC request is not response, soft phone is not connected."
     xpath = "//div[@class='icons left']/a[@title='Menu']"
     menu = driver.find_element_by_xpath(xpath)
     menu.click()
@@ -239,7 +241,7 @@ def settings_test():
         embd_2.click()
         tuto_2 = driver.find_element_by_xpath(tuto_xpath_2)
         tuto_2.click()
-        
+        print "All the options are unchecked"
         
         
         

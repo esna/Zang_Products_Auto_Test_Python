@@ -25,6 +25,7 @@ url_calendar = 'https://calendar.google.com/calendar/render?tab=mc#main_7'
 
 driver = add_login_webex_extension.driver
 add_login_webex_extension.login_ext_with_google()
+time.sleep(20)
 add_login_webex_extension.input_esna_webex_password()
 
 def go_to_google_mail_calendar():
@@ -168,7 +169,7 @@ def verify_created_google_inst_meeting():
         def verify_meeting_time():
             xpath = "//td[contains(.,'%s')]" % fromtime.lower()
             mt_st_time = driver.find_element_by_xpath(xpath)
-            input_time = tmr.strftime("%B %d, %Y ") + fromtime.lower()
+            input_time = tmr.strftime("%b %d, %Y ") + fromtime.lower()
             get_mt_time = mt_st_time.text
             assert input_time == get_mt_time
             print "Meeting start time is verified correct"
@@ -282,6 +283,7 @@ save_meeting()
 verify_created_google_inst_meeting()
 delete_created_schdeuled_meeting()
 delete_meeting_on_calendar()
+print "test ends"
 driver.quit()
 
 

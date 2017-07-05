@@ -19,6 +19,7 @@ new_title = 'edited repeat meetings - change date, time and audio'
 audio_type = 'None'
 en_ex_tone = 'Announce name'
 passwd = '2222b'
+rept_fq = 5
 
 driver = add_login_webex_extension.driver
 
@@ -57,6 +58,28 @@ def change_meeting_date_time():
     print "Meeting schedule is changed"
     print ''
     
+def set_repeating_cycle():
+    xpath = "//a[contains(@id,'.editlink')]"
+    repeat_check = driver.find_element_by_xpath(xpath)
+    repeat_check.click()
+    time.sleep(2)
+    driver.switch_to_active_element()
+#     xpath = "//table[@class='ep-rec']/tbody/tr/td/select/option[@value='0']"
+#     driver.find_element_by_xpath(xpath).click()
+    xpath = "//input[@aria-label='Ends after a number of occurrences']"
+    option_after = driver.find_element_by_xpath(xpath)
+    option_after.click()
+    xpath = "//input[contains(@id,'endson_count_input')]"
+    occu_fre = driver.find_element_by_xpath(xpath)
+    occu_fre.clear()
+    occu_fre.send_keys(rept_fq)
+    xpath = "//td[@class='ep-rec-buttons-padding']/div/div"
+    time.sleep(2)
+    done_btn = driver.find_element_by_xpath(xpath)
+    done_btn.click()
+    print "Repeating cycle is set to daily for 5 times"
+    print ''
+    
 def change_meeting_type_audio_with_webex_icon():
     driver.find_element_by_id('webex0edit').click()
     time.sleep(3)
@@ -78,14 +101,21 @@ def save_edited_repeat_meetings():
     xpath = "//div[@class='goog-imageless-button-content'][contains(., 'Save')]"
     save_btn = driver.find_element_by_xpath(xpath)
     save_btn.click()
+    time.sleep(2)
     driver.switch_to_active_element()
-    driver.find_element_by_xpath("(//td[@class='ep-es-button-cell']/div)[3]").click()
-    print "Edited meeting is saved"
+    try:
+        driver.find_element_by_xpath("(//td[@class='ep-es-button-cell']/div)[3]").click()
+        print "Edited meeting is saved"
+    except:
+        xpath = "//div[@class='goog-imageless-button-content'][contains(.,'Following events')]"
+        driver.find_element_by_xpath(xpath).click()
+        print "Edited meeting is saved"
     print ''
     
 # go_to_goolge_calendar()
 # change_meeting_title()
 # change_meeting_date_time()
+# set_repeating_cycle()
 # change_meeting_type_audio_with_webex_icon()
 # save_edited_repeat_meetings()
 

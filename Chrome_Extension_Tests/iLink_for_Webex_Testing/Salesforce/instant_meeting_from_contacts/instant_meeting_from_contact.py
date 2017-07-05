@@ -198,11 +198,10 @@ def delete_created_instant_meeting():
     delete_selected_meeting()
 
 
-# sso_with_google_service()
-# get_specified_email()
-# create_meeting_with_webex_icon()
-# verify_created_meeting()
-# delete_created_instant_meeting()
-# driver.quit()
+sso_with_salesforce_service()
+create_meeting_with_webex_icon()
+verify_created_meeting()
+delete_created_instant_meeting()
+driver.quit()
     
     

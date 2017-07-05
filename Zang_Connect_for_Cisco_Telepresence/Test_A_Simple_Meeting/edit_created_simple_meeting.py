@@ -18,6 +18,7 @@ userid = Login_Gmail_Get_Calendar.ConfigSectionMap("Account")['essultn_id_2']
 passwd = Login_Gmail_Get_Calendar.ConfigSectionMap("Account")['essultn_pwd']
 guest1 = 'esnaqc.test.01@gmail.com'
 guest2 = 'esnaqc.testing@gmail.com'
+mt_descp = "Your meeting has been scheduled"
 
 def change_meeting_title():
     try:
@@ -31,9 +32,15 @@ def change_meeting_title():
         print 'The created meeting is not found'
         driver.close()
         driver.quit()
+    xpath = "//textarea[contains(.,'%s')]" % mt_descp
+    text_area = driver.find_element_by_xpath(xpath)
+    if text_area.is_displayed():
+        print "Meeting description is displayed"
+        
     xpath = "//input[@title='Event title']"
     meeting_title = driver.find_element_by_xpath(xpath)
     meeting_title.clear()
+    
     meeting_title.send_keys(new_title)
     print "Meeting title is changed to a new one"
     

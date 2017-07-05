@@ -13,6 +13,8 @@ from read_csv_files import google_res_dict
 map_file = "C:/TMS_Resources/resources_map_google.csv"
 tms_res = "C:/TMS_Resources/resources_tms.csv"
 google_res = "C:/TMS_Resources/resources_google.csv"
+mt_descp = "Your meeting has been scheduled"
+
 """read first line from mapping file, get google id"""
 with open (map_file, 'r') as f:
     lines = f.readlines()
@@ -61,6 +63,11 @@ def change_meeting_title():
     meeting_title.clear()
     meeting_title.send_keys(new_title)
     print "Meeting title is changed to a new one"
+    
+    xpath = "//textarea[contains(.,'%s')]" % mt_descp
+    text_area = driver.find_element_by_xpath(xpath)
+    if text_area.is_displayed():
+        print "Meeting description is displayed"
     
 def change_meeting_room():
     xpath = "(//span[@class='ep-gc-icon ep-gc-icon-response'][@title='Yes'])[2]"

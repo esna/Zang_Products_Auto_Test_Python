@@ -22,6 +22,8 @@ meeting_room_2 = create_repeat_meetings.meeting_room_2
 new_mt_room_1 = 'test1'
 new_mt_room_2 = 'No Name (192.168.1.38)'
 room_list_2 = (new_mt_room_1, new_mt_room_2)
+mt_descp = "Your meeting has been scheduled"
+
 
 def change_meeting_title():
     try:
@@ -32,12 +34,19 @@ def change_meeting_title():
     except:
         print 'The created meeting is not found'
     time.sleep(1)
+        
     """Get created meeting and edit"""
     driver.switch_to_active_element()
     xpath = "//div[@class='neb-footer']/span[2]/div[2]"
     edit_btn = driver.find_element_by_xpath(xpath)
     edit_btn.click()
     time.sleep(2)
+    
+    xpath = "//textarea[contains(.,'%s')]" % mt_descp
+    text_area = driver.find_element_by_xpath(xpath)
+    if text_area.is_displayed():
+        print "Meeting description is displayed"
+    
     xpath = "//input[@title='Event title']"
     mt_title = driver.find_element_by_xpath(xpath)
     mt_title.clear()
