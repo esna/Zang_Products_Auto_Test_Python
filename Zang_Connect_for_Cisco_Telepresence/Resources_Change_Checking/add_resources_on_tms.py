@@ -47,6 +47,6 @@ for new_res_names in name_list:
         next_btn.click()
         time.sleep(2)
         print "New resource %s is added into tms resources" % new_res_names
-        
-driver.quit()
+print "Test ends"
+# driver.quit()
 
