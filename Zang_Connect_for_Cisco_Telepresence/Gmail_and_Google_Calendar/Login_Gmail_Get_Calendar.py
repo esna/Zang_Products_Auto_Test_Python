@@ -4,12 +4,15 @@ Created on May 9, 2017
 @author: qcadmin
 '''
 from selenium import webdriver
-# import unittest
-import time
+import os, time
 import ConfigParser
-
+from distutils.sysconfig import project_base
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = os.path.dirname(PROJECT_ROOT)
+# print BASE_DIR
+config_file = BASE_DIR + "\configuration.ini"
 Config = ConfigParser.ConfigParser()
-Config.read("../configuration.ini")
+Config.read(config_file)
 
 def ConfigSectionMap(section):
     dict1 = {}
