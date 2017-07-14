@@ -5,8 +5,9 @@ Created on Jul 7, 2017
 '''
 import os, csv, sys
 
-dir_name = "C:\TMS_Resources"
-os.chdir(dir_name)
+dir_resource = "C:\TMS_Resources"
+dir_uctms = "C:\UC\UCTMS"
+os.chdir(dir_resource)
 
 tms_webmt = "WebEx meeting"
 tms_wcmr = "WebEx CMR meeting"
@@ -65,10 +66,10 @@ lst = [tid_roomA, gid_confA, notes_match1, \
        tid_webmt, gid_test1, notes_webmt, \
        tid_wcmr, gid_0_138, notes_wcmr]
 #Write to list with 3 elements per line
-os.chdir("C:\UC\UCTMS")
+os.chdir(dir_uctms)
 map_file = 'resources_map_google.csv'
 if os.path.isfile(map_file):
-    print "Map file has been created in folder %s" % dir_name
+    print "Map file has been created in folder %s" % dir_uctms
     sys.exit()
 with open(map_file, 'w') as f:
     n = m = 0
@@ -77,7 +78,7 @@ with open(map_file, 'w') as f:
         f.write(",".join(lst[n:m]))
         f.write("\n")
         n = m
-print "write google map file to folder %s" % dir_name
+print "write google map file to folder %s" % dir_uctms
 
             
         

@@ -28,8 +28,7 @@ def ConfigSectionMap(section):
             print("exception on %s!" % option)
             dict1[option] = None
     return dict1
-
-userid = ConfigSectionMap("Account")['essultn_id_2']
+userid = ConfigSectionMap("Account")['essultn_id_1']
 passwd = ConfigSectionMap("Account")['essultn_pwd']
 
 def setUp():
@@ -48,16 +47,19 @@ def login_gmail_account():
     driver.get('https://mail.google.com')
     time.sleep(5)
     print "Go to gmail login interface"
-    email = driver.find_element_by_id("identifierId")
-    email.clear()
-    email.send_keys(userid)
-    print "User id is input"
-    time.sleep(1)
-    xpath = "//div[@id='identifierNext']/content/span"
-    next_btn = driver.find_element_by_xpath(xpath)
-    next_btn.click()
-    print "Click next"
-    time.sleep(3)
+    try:
+        email = driver.find_element_by_id("identifierId")
+        email.clear()
+        email.send_keys(userid)
+        print "User id is input"
+        time.sleep(1)
+        xpath = "//div[@id='identifierNext']/content/span"
+        next_btn = driver.find_element_by_xpath(xpath)
+        next_btn.click()
+        print "Click next"
+        time.sleep(3)
+    except:
+        print "Input password directly"
     Passwd = driver.find_element_by_name("password")
     Passwd.clear()
     Passwd.send_keys(passwd)
@@ -70,7 +72,7 @@ def login_gmail_account():
     
 def go_to_google_calendar():
     print "Go to google calendar"
-    driver.get("https://calendar.google.com/calendar/render?tab=mc#main_7")
+    driver.get("https://calendar.google.com/calendar/b/2/render?tab=mc#eventpage_6")
     time.sleep(5)
 
 

@@ -16,9 +16,12 @@ meeting_room = 'test1'
 new_mt_room = 'WebEx CMR meeting'
 userid = Login_Gmail_Get_Calendar.ConfigSectionMap("Account")['essultn_id_2']
 passwd = Login_Gmail_Get_Calendar.ConfigSectionMap("Account")['essultn_pwd']
-guest1 = 'esnaqc.test.01@gmail.com'
-guest2 = 'esnaqc.testing@gmail.com'
-mt_descp = "Your meeting has been scheduled"
+guest_1 = create_a_simple_meeting.guest_1
+guest_2 = create_a_simple_meeting.guest_2
+guest_3 = 'esnaqc.test.01@gmail.com'
+guest_4 = 'esnaqc.test.02@gmail.com'
+guestlist_2 = (guest_3, guest_4)
+mt_descp = "https://192.168.1.164/tms"
 
 def change_meeting_title():
     try:
@@ -71,17 +74,25 @@ def change_meeting_room():
     except:
         print "The meeting room is not available, meeting is not created."
         
-def add_guests():
+def change_guests():
     guests = driver.find_element_by_id("ui-ltsr-tab-0")
     guests.click()
     time.sleep(1)
+#     """Remove guest_1"""
+#     xpath = "//div[@title='%s']/preceding-sibling::span[@class='ep-gc-icon ep-gc-icon-response']" % guest_1
+#     print xpath
+#     rmv_check_box = driver.find_element_by_xpath(xpath)
+#     rmv_check_box.click()
+#     print "Guest %s is removed" % guest_1
+#     time.sleep(1)
+    """add guest3 and guest4"""
     add_box = driver.find_element_by_xpath("//input[@title='Add guests']")
-    for guests in (guest1, guest2):
+    for guests in (guestlist_2):
         add_box.clear()
         add_box.send_keys(guests)
         add_box.send_keys(Keys.RETURN)
         time.sleep(2)
-    print "Two new guests are added"
+        print "Invited guest %s is added" % guests
     
 def save_edited_meeting():
     xpath = "//div[@class='goog-imageless-button-content'][contains(., 'Save')]"
@@ -90,7 +101,7 @@ def save_edited_meeting():
     time.sleep(2)
     try:
         driver.switch_to_active_element()
-        send_btn = driver.find_element_by_name('no')
+        send_btn = driver.find_element_by_name('yes')
         send_btn.click()
         print "Edited meeting is saved"
         print ''
@@ -98,14 +109,12 @@ def save_edited_meeting():
         print "Edited meeting is saved"
         print ''
     
-    
-    
+
 # if __name__ == '__main__':
-    
 #     Login_Gmail_Get_Calendar.login_gmail_account()
 #     Login_Gmail_Get_Calendar.go_to_google_calendar()
 #     change_meeting_title()
 #     select_room = change_meeting_room()
-#     add_guests()
+#     change_guests()
 #     save_edited_meeting()
 #     driver.quit()

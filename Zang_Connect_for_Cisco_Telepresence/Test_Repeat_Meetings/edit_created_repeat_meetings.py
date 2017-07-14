@@ -19,8 +19,8 @@ new_from_time = "1:00 PM"
 new_untl_time = "2:00 PM"
 meeting_room_1 = create_repeat_meetings.meeting_room_1
 meeting_room_2 = create_repeat_meetings.meeting_room_2
-new_mt_room_1 = 'test1'
-new_mt_room_2 = 'No Name (192.168.1.38)'
+new_mt_room_1 = 'No Name (192.168.1.38)'
+new_mt_room_2 = 'test1'
 room_list_2 = (new_mt_room_1, new_mt_room_2)
 mt_descp = "Your meeting has been scheduled"
 
@@ -71,7 +71,7 @@ def change_meeting_room():
             remove_icon.click()
             print "%s is removed" % mt_room
         except:
-            print "%s is not in the participant list"
+            print "%s is not in the participant list" % mt_room
     
     for new_mt_room in room_list_2:
         xpath = "//span[@id='ui-ltsr-tab-1']"
