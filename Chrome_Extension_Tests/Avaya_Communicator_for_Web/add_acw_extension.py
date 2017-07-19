@@ -13,7 +13,7 @@ from selenium.webdriver.chrome.options import Options
     #     print os.getcwd()
 dir_path = os.path.dirname(os.path.realpath(__file__))
 # print dir_path
-acw_file = dir_path + '\/avaya_1.0.17.1612.crx'
+acw_file = dir_path + '\/avaya_1.0.17.1715.crx'
 def add_chrome_extension():
     chop = webdriver.ChromeOptions()
     chop.add_extension(acw_file)

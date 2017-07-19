@@ -3,6 +3,7 @@ Created on May 11, 2017
 
 @author: qcadmin
 '''
+from selenium.webdriver.common.keys import Keys
 import Login_Gmail_Get_Calendar
 import create_repeat_meetings
 import time
@@ -22,6 +23,9 @@ meeting_room_2 = create_repeat_meetings.meeting_room_2
 new_mt_room_1 = 'No Name (192.168.1.38)'
 new_mt_room_2 = 'test1'
 room_list_2 = (new_mt_room_1, new_mt_room_2)
+guest_1 = create_repeat_meetings.guest_1
+guest_2 = create_repeat_meetings.guest_2
+guestlist = create_repeat_meetings.guestlist_1
 mt_descp = "Your meeting has been scheduled"
 
 
@@ -93,6 +97,26 @@ def change_meeting_room():
             print "Meeting room is changed to %s" % select_room
         except:
             print "The meeting room is not available, meeting is not created."
+            
+def change_guests():
+    guests = driver.find_element_by_id("ui-ltsr-tab-0")
+    guests.click()
+    time.sleep(1)
+    """Remove guest_1"""
+    xpath = "//div[@title='%s']/preceding-sibling::span[@class='ep-gc-icon ep-gc-icon-response']" % guest_1
+    print xpath
+    rmv_check_box = driver.find_element_by_xpath(xpath)
+    rmv_check_box.click()
+    print "Guest %s is removed" % guest_1
+    time.sleep(1)
+    """add guest3 and guest4"""
+    add_box = driver.find_element_by_xpath("//input[@title='Add guests']")
+    for guests in (guestlist):
+        add_box.clear()
+        add_box.send_keys(guests)
+        add_box.send_keys(Keys.RETURN)
+        time.sleep(2)
+        print "Invited guest %s is added" % guests
     
 def save_edited_meeting():
     xpath = "//div[@class='goog-imageless-button-content'][contains(., 'Save')]"
@@ -100,7 +124,19 @@ def save_edited_meeting():
     save_btn.click()
     driver.switch_to_active_element()
     driver.find_element_by_xpath("(//td[@class='ep-es-button-cell']/div)[3]").click()
-    print "Edited meeting is saved"
+    print "Click Save button"
+    driver.switch_to_active_element()
+    time.sleep(2)
+    print "Click Send button for sending email"
+    try:
+        driver.switch_to_active_element()
+        send_btn = driver.find_element_by_name('yes')
+        send_btn.click()
+        print "Created meeting is saved"
+        print ''
+    except:
+        print "Created meeting is saved"
+        print ''
     print ''
     
     

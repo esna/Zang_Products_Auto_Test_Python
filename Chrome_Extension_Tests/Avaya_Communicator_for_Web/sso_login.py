@@ -10,18 +10,18 @@ google_pwd = 'Esnareid4'
 o365_id = 'bryand@esnatech.onmicrosoft.com'
 o365_pwd = '!esnatech1234$'
 sf_id = 'arnoe@esna.com'
-sf_pwd = 'EsnaAvaya03'
+sf_pwd = 'EsnaAvaya06'
 
 import add_acw_extension
 driver = add_acw_extension.add_chrome_extension()
-time.sleep(2)
+time.sleep(3)
 
 def login_ext_with_google():
     driver.switch_to_window(driver.window_handles[0])
-    time.sleep(2)
+    time.sleep(3)
     xpath = "//a[@href='ws://'][@class='social google']/div"
     driver.find_element_by_xpath(xpath).click()
-    time.sleep(2)
+    time.sleep(3)
 #     driver.switch_to_window(driver.window_handles[1])
 #     driver.close()
     driver.switch_to_window(driver.window_handles[-1])
@@ -84,12 +84,13 @@ def login_ext_with_Salesforce():
     driver.switch_to_window(driver.window_handles[-1])
     time.sleep(2)
     print "Go to Salesforce login interface"
-    sf_id = driver.find_element_by_id('username')
-    sf_id.clear()
-    sf_id.send_keys('arnoe@esna.com')
-    sf_pwd = driver.find_element_by_id('password')
-    sf_pwd.clear()
-    sf_pwd.send_keys('EsnaAvaya03')
+    sf_username = driver.find_element_by_id('username')
+    print 
+    sf_username.clear()
+    sf_username.send_keys(sf_id)
+    sf_password = driver.find_element_by_id('password')
+    sf_password.clear()
+    sf_password.send_keys(sf_pwd)
     login = driver.find_element_by_id('Login')
     login.click()
     time.sleep(3)

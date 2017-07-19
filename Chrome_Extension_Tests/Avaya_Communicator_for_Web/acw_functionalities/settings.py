@@ -8,10 +8,10 @@ from Avaya_Communicator_for_Web.acw_functionalities import acw_account_login
 from selenium.webdriver.common.keys import Keys
 
 softphone = "Ready : Softphone [Reidz]"
-driver = acw_account_login.login_account_1_google()
+# driver = acw_account_login.login_account_1_google()
 time.sleep(2)
 
-def settings_test():
+def settings_test(driver):
     aval_xpath = "//div[@class='imp']"
     aval = driver.find_element_by_xpath(aval_xpath)
     aval.click()
@@ -30,7 +30,7 @@ def settings_test():
         if phone_type.text == softphone:
             print "Phone type is switched to softphone"
         else:
-            print"Softphone has problem"
+            print"Softphone connection failed"
     except:
         print "WebRTC request is not response, soft phone is not connected."
     xpath = "//div[@class='icons left']/a[@title='Menu']"
@@ -56,75 +56,72 @@ def settings_test():
         device = driver.find_element_by_xpath(xpath)
         device.click()
         print "Click Devices tab"
-        time.sleep(1)
+        time.sleep(2)
         
         """Playback devices"""
         xpath = "//li[@_id='Playback_communications']/a/div"
         comm = driver.find_element_by_xpath(xpath)
         comm.click()
         print "Click Communications button"
-        time.sleep(1)
+        time.sleep(2)
         xpath = "//a[@href='ws://']/div[contains(.,'HD Audio')]"
         hd_audio = driver.find_element_by_xpath(xpath)
         hd_audio.click()
-        time.sleep(1)
+        time.sleep(2)
         print "Click the HD Audio button"
         xpath = "//a[@href='ws://']/div[contains(.,'Speakers')]"
         speakers = driver.find_element_by_xpath(xpath)
         speakers.click()
-        time.sleep(1)
+        time.sleep(2)
         print "Click the Speakers button"
         xpath = "//a[@href='ws://']/div[contains(.,'Default')]"
         default = driver.find_element_by_xpath(xpath)
 #         driver.execute_script("arguments[0].scrollIntoView(true);", default)
         default.click()
-        time.sleep(1)
+        time.sleep(2)
         print "Click Default button"
         
         """recording devices"""
         xpath = "//li[@jsc_id='Recording_communications']/a/div"
         rec_comm = driver.find_element_by_xpath(xpath)
-        driver.execute_script("arguments[0].scrollIntoView(true);", default)
+#         driver.execute_script("arguments[0].scrollIntoView(true);", default)
         rec_comm.click()
         print "Click recording communications button"
-        time.sleep(1)
+        time.sleep(2)
         xpath = "//a[@href='ws://']/div[contains(.,'Microphone')]"
         mic = driver.find_element_by_xpath(xpath)
         mic.click()
         print "Click Microphone icon"
-        time.sleep(1)
+        time.sleep(2)
         xpath = "//li[@class='Recording']/a/div[contains(.,'Stereo')]"
         stereo_mix = driver.find_element_by_xpath(xpath)
         driver.execute_script("arguments[0].scrollIntoView(true);", stereo_mix)
         stereo_mix.click()
         print "Click Stereo Mix button"
-        time.sleep(1)
+        time.sleep(2)
         xpath = "//li[@jsc_id='Recording_default']/a/div"
-        rec_comm = driver.find_element_by_xpath(xpath)
         rec_def = driver.find_element_by_xpath(xpath)
         rec_def.click()
         print "Click Recording Default button"
-        time.sleep(1)
+        time.sleep(2)
         
         """Device control packages"""
         xpath = "//li[@jsc_id='Control_jabra']/a/div"
         jabra = driver.find_element_by_xpath(xpath)
         jabra.click()
         print "Click Jabra icon"
-        time.sleep(1) 
+        time.sleep(2) 
         xpath = "//li[@jsc_id='Control_plantronics']/a/div"
         plant = driver.find_element_by_xpath(xpath)
         plant.click()
         print "Click Plantronics icon"
-        time.sleep(1) 
+        time.sleep(2) 
         xpath = "//li[@jsc_id='Control_none']/a/div"
         none = driver.find_element_by_xpath(xpath)
         none.click()
         print "Click None icon"
         print ''
-        time.sleep(1) 
-        
-#     devices()
+        time.sleep(2) 
     
     def options():
         xpath = "//div[@class='tabs']/a[contains(.,'Options')]"
@@ -242,9 +239,115 @@ def settings_test():
         tuto_2 = driver.find_element_by_xpath(tuto_xpath_2)
         tuto_2.click()
         print "All the options are unchecked"
-        
-        
-        
-    options()
     
-settings_test()
+    def alerts():
+        xpath = "//div[@class='tabs']/a[contains(.,'Alerts')]"
+        alerts = driver.find_element_by_xpath(xpath)
+        alerts.click()
+        print "Click Alerts tab"
+        time.sleep(2)
+        """View all alerts, check all those unchecked"""
+        check = 'checked'
+        sound_xpath_1 = "//li[@class='icon iSndUse']/a/div"
+        sound_xpath_2 = "//li[@class='icon iSndUse %s']/a/div" % check
+        try:
+            use_sound_1 = driver.find_element_by_xpath(sound_xpath_1)
+            use_sound_1.click()
+            print "Checked the Autoanswer when available"
+        except:
+            use_sound_2 = driver.find_element_by_xpath(sound_xpath_2)
+            if use_sound_2.is_displayed():
+                print "Use Sound option is already checked"
+        status_xpath_1 = "//li[@jsc_id='ActNtf']/following-sibling::li[@class='icon iNtf']/a/div"
+        status_xpath_2 = "//li[@jsc_id='ActNtf']/following-sibling::li[@class='icon iNtf %s']/a/div" % check
+        try:
+            status_chg_1 = driver.find_element_by_xpath(status_xpath_1)
+            status_chg_1.click()
+            print "Check Online status change"
+        except:
+            status_chg_2 = driver.find_element_by_xpath(status_xpath_2)
+            if status_chg_2.is_displayed():
+                print "Online status change option is already checked"
+        chat_xpath_1 = "//li[@jsc_id='ActChat'][@class='icon iNtf']/a/div"
+        chat_xpath_2 = "//li[@jsc_id='ActChat'][@class='icon iNtf %s']/a/div" % check
+        try:
+            in_chat_1 = driver.find_element_by_xpath(chat_xpath_1)
+            in_chat_1.click()
+            print "Check Incoming chat"
+        except:
+            in_chat_2 = driver.find_element_by_xpath(chat_xpath_2)
+            if in_chat_2.is_displayed():
+                print "Incoming chat option is already checked"       
+        avalchg_xpath_1 = "//ul[@class='list icons check']/li[6][@class='icon iNtf']"
+        avalchg_xpath_2 = "//ul[@class='list icons check']/li[6][@class='icon iNtf %s']" % check
+        try:
+            aval_chg_1 = driver.find_element_by_xpath(avalchg_xpath_1)
+            aval_chg_1.click()
+            print "Check Available status change"
+        except:
+            aval_chg_2 = driver.find_element_by_xpath(avalchg_xpath_2)
+            if aval_chg_2.is_displayed():
+                print "Available status change option is already checked"
+        call_xpath_1 = "//li[@jsc_id='ActCall'][@class='icon iNtf']/a/div"
+        call_xpath_2 = "//li[@jsc_id='ActCall'][@class='icon iNtf %s']/a/div" % check
+        try:
+            act_call_1 = driver.find_element_by_xpath(call_xpath_1)
+            act_call_1.click()
+            print "Check Active call"
+        except:
+            act_call_2 = driver.find_element_by_xpath(call_xpath_2)
+            if act_call_2.is_displayed():
+                print "Active call option is already checked"
+        onlstachg_xpath_1 = "//li[@jsc_id='ActEvtOnl'][@class='icon iNtf']/a/div"
+        onlstachg_xpath_2 = "//li[@jsc_id='ActEvtOnl'][@class='icon iNtf %s']/a/div" % check
+        try:
+            online_stachg_1 = driver.find_element_by_xpath(onlstachg_xpath_1)
+            online_stachg_1.click()
+            print "Check Online status change"
+        except:
+            online_stachg_2 = driver.find_element_by_xpath(onlstachg_xpath_2)
+            if online_stachg_2.is_displayed():
+                print "Online status change option is already checked"
+                
+        prechg_xpath_1 = "//li[@jsc_id='ActEvtLoc'][@class='icon iNtf']/a/div"
+        prechg_xpath_2 = "//li[@jsc_id='ActEvtLoc'][@class='icon iNtf %s']/a/div" % check
+        try:
+            presc_chg_1 = driver.find_element_by_xpath(prechg_xpath_1)
+            presc_chg_1.click()
+            print "Check Presence change"
+        except:
+            presc_chg_2 = driver.find_element_by_xpath(prechg_xpath_2)
+            if presc_chg_2.is_displayed():
+                print "Presence change option is already checked"
+            
+        calls_xpath_1 = "//li[@jsc_id='ActMbxCll'][@class='icon iNtf']/a/div"
+        calls_xpath_2 = "//li[@jsc_id='ActMbxCll'][@class='icon iNtf %s']/a/div" % check
+        try:
+            timeln_calls_1 = driver.find_element_by_xpath(calls_xpath_1)
+            timeln_calls_1.click()
+            print "Check timeline Calls option"
+        except:
+            timeln_call_2 = driver.find_element_by_xpath(calls_xpath_2)
+            if timeln_call_2.is_displayed():
+                print "Timeline Calls option is already checked"
+        
+        """Uncheck all the Alerts options"""
+        print "Uncheck all the Alerts options"
+        driver.find_element_by_xpath(sound_xpath_2).click()
+        driver.find_element_by_xpath(status_xpath_2).click()
+        driver.find_element_by_xpath(avalchg_xpath_2)
+        driver.find_element_by_xpath(avalchg_xpath_2).click()
+        driver.find_element_by_xpath(chat_xpath_2).click()
+        driver.find_element_by_xpath(call_xpath_2).click()
+        driver.find_element_by_xpath(onlstachg_xpath_2).click()
+        driver.find_element_by_xpath(prechg_xpath_2).click()
+        driver.find_element_by_xpath(calls_xpath_2).click()
+        print "All the Alerts options are unchecked"
+        time.sleep(2)
+        return driver
+        
+    devices()
+    options()
+    alerts()
+    
+# settings_test()

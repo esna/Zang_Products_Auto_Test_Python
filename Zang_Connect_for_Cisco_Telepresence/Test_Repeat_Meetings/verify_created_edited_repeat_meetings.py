@@ -252,26 +252,30 @@ def verify_edited_repeat_meetings():
                 verify_declined_email_received(mt_room)
     verify_meeting_rooms()
     
-    
 def verify_deleted_meeting():
-    try:
-        xpath = "//td[contains(., 'No results found. Try widening your search by using fewer criteria.')]"
-        no_result = driver.find_element_by_xpath(xpath)
-        if no_result.is_displayed():
-            print "No meeting list is diaplyed, the edited repeat meeting is deleted"
-        else:
-            print "A meeting list is displayed"
-    except:
+    
+    def verify_guest_received_event_cancel_email():
+        pass
+    
+    def verify_meeting_deleted_in_tms_server():
         try:
-            xpath = "//a[contains(., '%s')]" % new_title
-            meeting_title = driver.find_element_by_xpath(xpath)
-            xpath = "//span[@id='ctl00_uxContent_ctl01_conferenceGrid_ctl02_StartDate']"
-            start_date = driver.find_element_by_xpath(xpath)
-            st_date = start_date.text
-            if meeting_title.is_displayed() and tomorrow == st_date:
-                print "The meeting is still there, not deleted"
+            xpath = "//td[contains(., 'No results found. Try widening your search by using fewer criteria.')]"
+            no_result = driver.find_element_by_xpath(xpath)
+            if no_result.is_displayed():
+                print "No meeting list is diaplyed, the edited repeat meeting is deleted"
+            else:
+                print "A meeting list is displayed"
         except:
-            print "Edited repeat meeting is not found, it is deleted"
+            try:
+                xpath = "//a[contains(., '%s')]" % new_title
+                meeting_title = driver.find_element_by_xpath(xpath)
+                xpath = "//span[@id='ctl00_uxContent_ctl01_conferenceGrid_ctl02_StartDate']"
+                start_date = driver.find_element_by_xpath(xpath)
+                st_date = start_date.text
+                if meeting_title.is_displayed() and tomorrow == st_date:
+                    print "The meeting is still there, not deleted"
+            except:
+                print "Edited repeat meeting is not found, it is deleted"
 
 # if __name__ == '__main__':
 #     

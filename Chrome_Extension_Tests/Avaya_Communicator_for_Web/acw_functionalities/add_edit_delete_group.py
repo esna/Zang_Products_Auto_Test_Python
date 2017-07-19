@@ -19,6 +19,7 @@ def group_test(driver):
     def add_group():
         print "Click People icon"
         driver.find_element_by_xpath("//a[@title='People']").click()
+        time.sleep(1)
         print "Click Group button"
         driver.find_element_by_xpath("//a[@jsc_id='ActGroups'][contains(.,'Groups')]").click()
         time.sleep(1)
@@ -144,7 +145,8 @@ def group_test(driver):
         print "Click People icon"
         driver.find_element_by_xpath("//a[@title='People']").click()
         time.sleep(2)
-        
+        return driver
+    
     add_group()
     add_group_member()
     remove_group_member()
