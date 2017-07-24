@@ -3,47 +3,25 @@ from iLink_for_Webex_Testing import add_login_webex_extension
 import datetime, time, re
 from selenium.webdriver.support.ui import Select
 
-tmr = datetime.date.today() + datetime.timedelta(days=1)
-tmr_plus_one = datetime.date.today() + datetime.timedelta(days=2)
-d1 = datetime.datetime.strptime("%s" % tmr, '%Y-%m-%d')
-d2 = datetime.datetime.strptime("%s" % tmr_plus_one, '%Y-%m-%d')
-tomorrow = datetime.date.strftime(d1, 'X%m/X%d/X%Y').replace('X0', 'X').replace('X', '')
-tom_plus_one = datetime.date.strftime(d2, 'X%m/X%d/X%Y').replace('X0', 'X').replace('X', '')
-fromtime = "12:00 PM"
-untiltime = "1:00 PM"
-time_taken = '1 hour'
-title = "Scheduled meeting from google calendar"
+prefix = 'chrome-extension://'
+testing_page = 'popup'
+subfix = '/%s.html' % testing_page
+unique_id = ''
 template = 'reid test template'
-al_host_email = 'reidz@esna.com'
-al_hostname = 'Reid Zhang'
-mt_type = 'Pro 1000'
-ph_num = '(905)707-9700'
-delegate_cl = 'Matheesan Manokaran'
+topic = 'Salesforce Instant Meeting with reid template'
+mt_type = 'Default'
+time_hrs = '1'
+time_mins = '15'
+audio = "WebEx Audio"
+passwd = '1111a'
 url_mywebex = 'https://esna.webex.com/mw3200/mywebex/default.do?siteurl=esna&service=10'
-url_gmail = 'https://mail.google.com'
-url_calendar = 'https://calendar.google.com/calendar/render?tab=mc#main_7'
+toll_free_num = '1-855-244-8681 Call-in toll-free number (US/Canada)'
+toll_number = '1-650-479-3207 Call-in toll number (US/Canada)'
 
 driver = add_login_webex_extension.driver
-add_login_webex_extension.login_ext_with_google()
+add_login_webex_extension.login_ext_with_Salesforce()
 add_login_webex_extension.input_esna_webex_password()
-
-def go_to_google_mail_calendar():
-    print "Go to gmail account"
-    driver.get(url_gmail)
-    time.sleep(5)
-    print "Go to google calendar"
-    driver.get(url_calendar)
-    time.sleep(5)
-
-def create_scheduled_meeging_with_delegate_calendar():
-    xpath = "//div[@id='createEventButtonContainer']//div[@class='goog-imageless-button-content']"
-    create_btn = driver.find_element_by_xpath(xpath)
-    create_btn.click()
-    print "Click create button"
-    time.sleep(3)
-    calendar = Select(driver.find_element_by_id(':1d.calendar'))
-    calendar.select_by_visible_text(delegate_cl)
-    print "Select %s's calendar as delegate calendar" % delegate_cl
+time.sleep(5)
     
 def input_meeting_title():
     xpath = "//div[@class='ui-sch ep-title']/input"
@@ -273,8 +251,7 @@ def delete_meeting_on_calendar():
     locate_edited_meeting()
     delete_edited_meeting()
     
-go_to_google_mail_calendar()
-create_scheduled_meeging_with_delegate_calendar()
+
 input_meeting_title()
 set_meeting_schedule()
 create_meeting_with_webex_icon()

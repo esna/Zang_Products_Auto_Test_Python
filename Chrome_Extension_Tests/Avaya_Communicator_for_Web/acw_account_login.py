@@ -17,15 +17,15 @@ ser_name_1 = 'google'
 ser_name_2 = 'o365'
 ser_name_3 = 'salesforce'
 
-def select_sso_service(ser_name, user_name):
-    if ser_name == 'google':
-        driver = sso_login.login_ext_with_google()
-    elif ser_name == 'o365':
-        driver = sso_login.login_ext_with_office365()
-    elif ser_name == 'salesforce':
-        driver = sso_login.login_ext_with_Salesforce()
-    else:
-        print "SSO service name is wrong"
+def select_sso_service(ser_name, user_name, driver):
+#     if ser_name == 'google':
+#         driver = sso_login.login_ext_with_google(driver)
+#     elif ser_name == 'o365':
+#         driver = sso_login.login_ext_with_office365()
+#     elif ser_name == 'salesforce':
+#         driver = sso_login.login_ext_with_Salesforce()
+#     else:
+#         print "SSO service name is wrong"
 
     def select_login_server():
         print "Begin to login acw account"
@@ -81,14 +81,14 @@ def select_sso_service(ser_name, user_name):
     return driver
 
 
-def login_account_1_google():
-    driver = select_sso_service(ser_name_1, username_1)
+def login_account_1_google(driver):
+    select_sso_service(ser_name_1, username_1, driver)
     print "Account 1 is logged in"
     time.sleep(2)
     return driver
     
-def login_account_2_google():
-    driver = select_sso_service(ser_name_1, username_2)
+def login_account_2_google(driver):
+    select_sso_service(ser_name_1, username_2, driver)
     print "Account 2 is logged in"
     time.sleep(2)
     return driver

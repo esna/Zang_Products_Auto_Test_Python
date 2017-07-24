@@ -95,7 +95,7 @@ def verify_meeting_data_from_webex_icon():
     print "Meeting password is verifid correct"
     
 
-webex_account_login()
-verify_meeting_title()
-verify_meeting_time()
-verify_meeting_data_from_webex_icon()
+# webex_account_login()
+# verify_meeting_title()
+# verify_meeting_time()
+# verify_meeting_data_from_webex_icon()

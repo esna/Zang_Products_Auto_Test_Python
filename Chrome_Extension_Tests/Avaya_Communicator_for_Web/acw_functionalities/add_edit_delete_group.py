@@ -5,7 +5,6 @@ Created on Jun 20, 2017
 @author: qcadmin
 '''
 import time
-from Avaya_Communicator_for_Web.acw_functionalities import acw_account_login
 
 new_label = "New Presence Label"
 new_group = 'Test1'

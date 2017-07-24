@@ -4,7 +4,7 @@ Created on Jun 20, 2017
 @author: qcadmin
 '''
 import time
-from Avaya_Communicator_for_Web.acw_functionalities import acw_account_login
+# from Avaya_Communicator_for_Web.acw_functionalities import acw_account_login
 from selenium.webdriver.common.keys import Keys
 
 new_label = "New Presence Label"

@@ -4,7 +4,7 @@ Created on Jun 23, 2017
 @author: qcadmin
 '''
 import time
-from Avaya_Communicator_for_Web.acw_functionalities import acw_account_login
+# from Avaya_Communicator_for_Web.acw_functionalities import acw_account_login
 from selenium.webdriver.common.keys import Keys
 
 softphone = "Ready : Softphone [Reidz]"

@@ -18,7 +18,7 @@ webex_pwd = 'Zang123!'
     #     print os.getcwd()
 dir_path = os.path.dirname(os.path.realpath(__file__))
 # print dir_path
-webex_file = dir_path + '\wcl_9.1.17.1626.crx'
+webex_file = dir_path + '\wcl_9.1.17.1724.crx'
 
 def add_chrome_extension():
     chop = webdriver.ChromeOptions()
@@ -100,7 +100,7 @@ def login_ext_with_Salesforce():
     sf_id.send_keys('arnoe@esna.com')
     sf_pwd = driver.find_element_by_id('password')
     sf_pwd.clear()
-    sf_pwd.send_keys('EsnaAvaya03')
+    sf_pwd.send_keys('EsnaAvaya06')
     login = driver.find_element_by_id('Login')
     login.click()
     time.sleep(3)

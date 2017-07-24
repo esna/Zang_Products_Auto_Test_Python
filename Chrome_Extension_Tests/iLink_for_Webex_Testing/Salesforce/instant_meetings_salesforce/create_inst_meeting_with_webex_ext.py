@@ -189,6 +189,7 @@ def delete_created_instant_meeting():
     delete_selected_meeting()
         
 get_inst_meeting_window()
-# create_inst_meeting()
+create_inst_meeting()
 verify_created_google_inst_meeting()
 delete_created_instant_meeting()
+print "Test ends"

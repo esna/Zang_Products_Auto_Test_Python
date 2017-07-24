@@ -12,11 +12,7 @@ o365_pwd = '!esnatech1234$'
 sf_id = 'arnoe@esna.com'
 sf_pwd = 'EsnaAvaya06'
 
-import add_acw_extension
-driver = add_acw_extension.add_chrome_extension()
-time.sleep(3)
-
-def login_ext_with_google():
+def login_ext_with_google(driver):
     driver.switch_to_window(driver.window_handles[0])
     time.sleep(3)
     xpath = "//a[@href='ws://'][@class='social google']/div"
@@ -52,7 +48,7 @@ def login_ext_with_google():
     time.sleep(2)
     return driver
     
-def login_ext_with_office365():
+def login_ext_with_office365(driver):
     driver.find_element_by_xpath("//a[@class='social office365']/div").click()
     time.sleep(1)
 #     driver.switch_to_window(driver.window_handles[1])
@@ -76,7 +72,7 @@ def login_ext_with_office365():
     time.sleep(10)
     return driver
     
-def login_ext_with_Salesforce():
+def login_ext_with_Salesforce(driver):
     driver.find_element_by_xpath("//a[@class='social salesforce']/div").click()
     time.sleep(3)
 #     driver.switch_to_window(driver.window_handles[1])
@@ -99,6 +95,6 @@ def login_ext_with_Salesforce():
     time.sleep(3)
     driver.switch_to_window(driver.window_handles[0])
     time.sleep(8)
-    return driver
+    
     
 # login_ext_with_google()

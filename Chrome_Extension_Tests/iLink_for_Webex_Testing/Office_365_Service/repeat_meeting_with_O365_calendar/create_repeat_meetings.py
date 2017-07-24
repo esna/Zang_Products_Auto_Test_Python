@@ -133,8 +133,8 @@ def save_meeting_on_o365_calendar():
     time.sleep(5)
     
     
-go_to_O365_calendar()
-input_meeging_data_from_calendar()
-create_meeting_from_webex_icon()
-save_meeting_on_o365_calendar()
+# go_to_O365_calendar()
+# input_meeging_data_from_calendar()
+# create_meeting_from_webex_icon()
+# save_meeting_on_o365_calendar()
     

@@ -28,7 +28,10 @@ def delete_edited_repeat_meetings_from_webex_server():
         driver.find_element_by_id('mwx-btn-logon').click()
         print "Webex account is logged in"
         time.sleep(2)
-    webex_account_login()
+    try:
+        webex_account_login()
+    except:
+        print "Webex account has login already"
     def go_to_meeting_list():
         driver.switch_to_default_content()
         driver.switch_to_frame('mainFrame')
@@ -129,5 +132,5 @@ def delete_repeat_meetings_from_o365_calendar():
     go_to_O365_calendar()
     delete_edited_meeting()
     
-delete_edited_repeat_meetings_from_webex_server()
+# delete_edited_repeat_meetings_from_webex_server()
 # delete_repeat_meetings_from_o365_calendar()
