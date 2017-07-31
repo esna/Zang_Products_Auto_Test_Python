@@ -16,7 +16,7 @@ def messages_call_actions(driver):
         driver.find_element_by_link_text('GROUPS').click()
         xpath = "//a[@class='header']//div[contains(.,'Favorites')]"
         driver.find_element_by_xpath(xpath).click()
-        time.sleep(1)
+        time.sleep(5)
         
         xpath = "//a[@title='percyt@esna.com']//div[contains(.,'Percy')]"
         conct = driver.find_element_by_xpath(xpath)
@@ -116,6 +116,6 @@ def messages_call_actions(driver):
      
     add_available_contact_to_favorite()
     get_the_available_contact()
-#     send_message_to_contact()
+    send_message_to_contact()
     contact_actions()
     

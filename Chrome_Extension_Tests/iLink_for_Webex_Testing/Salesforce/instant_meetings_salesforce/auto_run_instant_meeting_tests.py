@@ -1,0 +1,14 @@
+'''
+Created on Jul 25, 2017
+
+@author: qcadmin
+'''
+import create_inst_mt_from_webex_icon
+import verify_instant_meeting_data
+create_inst_mt_from_webex_icon.create_inst_meeting_from_webex_icon()
+
+import create_inst_mt_from_sf_contacts
+create_inst_mt_from_sf_contacts.create_inst_mt_from_contact_classic()
+create_inst_mt_from_sf_contacts.create_inst_mt_from_contact_lightning()
+verify_instant_meeting_data.webex_account_login()
+verify_instant_meeting_data.verify_meeting_data()

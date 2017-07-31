@@ -26,7 +26,7 @@ room_list_2 = (new_mt_room_1, new_mt_room_2)
 guest_1 = create_repeat_meetings.guest_1
 guest_2 = create_repeat_meetings.guest_2
 guestlist = create_repeat_meetings.guestlist_1
-mt_descp = "Your meeting has been scheduled"
+mt_descp = "TELEPRESENCE DETAILS"
 
 
 def change_meeting_title():

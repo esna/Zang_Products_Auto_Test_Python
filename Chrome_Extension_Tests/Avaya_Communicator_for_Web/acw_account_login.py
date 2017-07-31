@@ -13,11 +13,8 @@ password = '3snat3ch'
 
 username_1 = 'Reidz@esna.com'
 username_2 = 'Percyt@esna.com'
-ser_name_1 = 'google'
-ser_name_2 = 'o365'
-ser_name_3 = 'salesforce'
 
-def select_sso_service(ser_name, user_name, driver):
+def select_sso_service(user_name, driver):
 #     if ser_name == 'google':
 #         driver = sso_login.login_ext_with_google(driver)
 #     elif ser_name == 'o365':
@@ -81,41 +78,41 @@ def select_sso_service(ser_name, user_name, driver):
     return driver
 
 
-def login_account_1_google(driver):
-    select_sso_service(ser_name_1, username_1, driver)
+def login_account_1(driver):
+    select_sso_service(username_1, driver)
     print "Account 1 is logged in"
     time.sleep(2)
     return driver
     
-def login_account_2_google(driver):
-    select_sso_service(ser_name_1, username_2, driver)
+def login_account_2(driver):
+    select_sso_service(username_2, driver)
     print "Account 2 is logged in"
     time.sleep(2)
     return driver
 
-def login_account_1_o365():
-    driver = select_sso_service(ser_name_2, username_1)
-    print "Account 1 is logged in"
-    time.sleep(2)
-    return driver
-    
-def login_account_2_o365():
-    driver = select_sso_service(ser_name_2, username_2)
-    print "Account 2 is logged in"
-    time.sleep(2)
-    return driver
-
-def login_account_1_salesforce():
-    driver = select_sso_service(ser_name_3, username_1)
-    print "Account 1 is logged in"
-    time.sleep(2)
-    return driver
-    
-def login_account_2_salesforce():
-    driver = select_sso_service(ser_name_3, username_2)
-    print "Account 2 is logged in"
-    time.sleep(2)
-    return driver
+# def login_account_1_o365(driver):
+#     driver = select_sso_service(username_1, driver)
+#     print "Account 1 is logged in"
+#     time.sleep(2)
+#     return driver
+#     
+# def login_account_2_o365(driver):
+#     driver = select_sso_service(username_2, driver)
+#     print "Account 2 is logged in"
+#     time.sleep(2)
+#     return driver
+# 
+# def login_account_1_salesforce(driver):
+#     driver = select_sso_service(username_1, driver)
+#     print "Account 1 is logged in"
+#     time.sleep(2)
+#     return driver
+#     
+# def login_account_2_salesforce(driver):
+#     driver = select_sso_service(username_2, driver)
+#     print "Account 2 is logged in"
+#     time.sleep(2)
+#     return driver
 
 
 # login_account_1_google()

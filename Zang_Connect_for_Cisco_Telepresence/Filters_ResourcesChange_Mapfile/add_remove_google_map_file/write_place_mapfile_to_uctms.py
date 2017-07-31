@@ -69,7 +69,7 @@ lst = [tid_roomA, gid_confA, notes_match1, \
 os.chdir(dir_uctms)
 map_file = 'resources_map_google.csv'
 if os.path.isfile(map_file):
-    print "Map file has been created in folder %s" % dir_uctms
+    print "Map file has existed in folder already %s" % dir_uctms
     sys.exit()
 with open(map_file, 'w') as f:
     n = m = 0

@@ -46,7 +46,7 @@ def group_test(driver):
         search.click()
         search.clear()
         search.send_keys('Alec')
-        time.sleep(1)
+        time.sleep(2)
         mbr_xpath = "//a[@href='ws://']//div[contains(.,'%s')]" % member1
         new_mbr = driver.find_element_by_xpath(mbr_xpath)
         driver.execute_script("arguments[0].scrollIntoView(true);", new_mbr)
@@ -57,28 +57,22 @@ def group_test(driver):
             print "Company vs Contact notice is clicked"
         except:
             print "Company vs Contact notice is not displayed"
-        time.sleep(2)
         new_mbr.click()
-        print "Click member icon"
+        print "Click member icon"  
         driver.find_element_by_xpath("//a[@title='Add to group']").click()
+        print "Click add to group"
         time.sleep(1)
-        driver.find_element_by_xpath("//div[@class='icon iOK']/a[contains(.,'Close')]").click()
-        print "Click add to group symbol"
-        time.sleep(3)
-        print "First member is input"
-        edit_xpath = "//a[@title='Manage group members']"
-        edit_mbr = driver.find_element_by_xpath(edit_xpath)
-        edit_mbr.click()
-        time.sleep(1)
+        print "The first member is added to group"
         
         print "Inpunt second group member"
+        search.clear()
         search.send_keys('Percyt')
         time.sleep(1)
-        mbr_xpath = "//a[@href='ws://']//div[contains(.,'%s')]" % member2
-        new_mbr = driver.find_element_by_xpath(mbr_xpath)
-        driver.execute_script("arguments[0].scrollIntoView(true);", new_mbr)
-        time.sleep(1)
-        new_mbr.click()
+        mbr_xpath_2 = "//a[@href='ws://']//div[contains(.,'%s')]" % member2
+        new_mbr_2 = driver.find_element_by_xpath(mbr_xpath)
+        driver.execute_script("arguments[0].scrollIntoView(true);", new_mbr_2)
+        time.sleep(3)
+        new_mbr_2.click()
         print "Click member icon"  
         driver.find_element_by_xpath("//a[@title='Add to group']").click()
         print "Click add to group"

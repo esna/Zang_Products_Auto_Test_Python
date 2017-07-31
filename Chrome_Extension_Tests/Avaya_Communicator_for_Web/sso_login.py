@@ -13,15 +13,13 @@ sf_id = 'arnoe@esna.com'
 sf_pwd = 'EsnaAvaya06'
 
 def login_ext_with_google(driver):
-    driver.switch_to_window(driver.window_handles[0])
-    time.sleep(3)
     xpath = "//a[@href='ws://'][@class='social google']/div"
     driver.find_element_by_xpath(xpath).click()
-    time.sleep(3)
+    time.sleep(2)
 #     driver.switch_to_window(driver.window_handles[1])
 #     driver.close()
     driver.switch_to_window(driver.window_handles[-1])
-    time.sleep(1)
+    time.sleep(2)
     print "Go to gmail login interface"
     email = driver.find_element_by_id("identifierId")
     email.clear()
@@ -74,18 +72,19 @@ def login_ext_with_office365(driver):
     
 def login_ext_with_Salesforce(driver):
     driver.find_element_by_xpath("//a[@class='social salesforce']/div").click()
-    time.sleep(3)
+    time.sleep(1)
 #     driver.switch_to_window(driver.window_handles[1])
 #     driver.close()
     driver.switch_to_window(driver.window_handles[-1])
     time.sleep(2)
     print "Go to Salesforce login interface"
     sf_username = driver.find_element_by_id('username')
-    print 
     sf_username.clear()
+    print 'userid is input'
     sf_username.send_keys(sf_id)
     sf_password = driver.find_element_by_id('password')
     sf_password.clear()
+    print 'password is input'
     sf_password.send_keys(sf_pwd)
     login = driver.find_element_by_id('Login')
     login.click()
@@ -95,6 +94,7 @@ def login_ext_with_Salesforce(driver):
     time.sleep(3)
     driver.switch_to_window(driver.window_handles[0])
     time.sleep(8)
+    return driver
     
     
 # login_ext_with_google()

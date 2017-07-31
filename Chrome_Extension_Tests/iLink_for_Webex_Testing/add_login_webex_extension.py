@@ -95,11 +95,14 @@ def login_ext_with_Salesforce():
     sf.click()
     time.sleep(3)
     driver.switch_to_window(driver.window_handles[1])
+    print "Go to Salesforce login interface"
     sf_id = driver.find_element_by_id('username')
     sf_id.clear()
+    print "Input userid"
     sf_id.send_keys('arnoe@esna.com')
     sf_pwd = driver.find_element_by_id('password')
     sf_pwd.clear()
+    print "Input password"
     sf_pwd.send_keys('EsnaAvaya06')
     login = driver.find_element_by_id('Login')
     login.click()

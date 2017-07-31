@@ -19,7 +19,8 @@ guest2 = 'esnaqc.testing@gmail.com'
 tom_plus_one = create_webex_meeting.tom_plus_one
 new_fromtime = '11:00 AM'
 new_untltime = '12:00 PM'
-mt_descp = "Your meeting has been scheduled"
+mt_descp = "Reid Zhang invites you to this meeting."
+
 
 def change_meeting_title():
     try:
