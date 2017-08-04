@@ -165,13 +165,18 @@ def verify_created_google_inst_meeting():
             xpath = "//a[@title='%s']/i" % title
             mt_title = driver.find_element_by_xpath(xpath)
             print "Meeting title is verified correct"
-        verify_meeting_title()
+        
         def verify_meeting_time():
             xpath = "//td[contains(.,'%s')]" % fromtime.lower()
             mt_st_time = driver.find_element_by_xpath(xpath)
-            input_time = tmr.strftime("%b %d, %Y ") + fromtime.lower()
+            input_time = tmr.strftime("%b %d, %Y ").lstrip("0").replace(" 0", " ") + fromtime.lower()
             get_mt_time = mt_st_time.text
+            
+            print input_time
+            print get_mt_time
+            
             assert input_time == get_mt_time
+            
             print "Meeting start time is verified correct"
             xpath = "//a[@title='%s']/i" % title
             mt_title = driver.find_element_by_xpath(xpath)
@@ -181,7 +186,7 @@ def verify_created_google_inst_meeting():
             assert time_taken == get_time_period
             print "Meeting duration is verified correct"
             time.sleep(2)
-        verify_meeting_time()
+
         def verify_meeting_hosts_audio_connection():
             driver.find_element_by_id('mc-lnk-moreInfo').click()
             host = driver.find_element_by_id('mc-txt-hostname')
@@ -196,7 +201,11 @@ def verify_created_google_inst_meeting():
             audio = driver.find_element_by_xpath(xpath)
             assert  ph_num == audio.text
             print "Audio connection phone number is verified correct"
+            
+        verify_meeting_title()
+        verify_meeting_time()
         verify_meeting_hosts_audio_connection()
+        
     verify_meeting_data()
     print ''
     
@@ -284,7 +293,7 @@ verify_created_google_inst_meeting()
 delete_created_schdeuled_meeting()
 delete_meeting_on_calendar()
 print "test ends"
-# driver.quit()
+driver.quit()
 
 
     

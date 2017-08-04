@@ -107,9 +107,17 @@ def delete_repeat_meetings_from_o365_calendar():
         time.sleep(20)
         
     def delete_edited_meeting():
-        xpath = "//span[contains(., '%s')]" % new_title
-        edt_meeting = driver.find_element_by_xpath(xpath)
-        print "Found the edited meeting"
+        try:
+            xpath = "//span[contains(., '%s')]" % new_title
+            edt_meeting = driver.find_element_by_xpath(xpath)
+            print "Found the edited meeting"
+        except:
+            xpath = "//button[@aria-label='NextWeek go to ']/span"
+            driver.find_element_by_xpath(xpath).click()
+            time.sleep(2)
+            xpath = "//span[contains(., '%s')]" % new_title
+            edt_meeting = driver.find_element_by_xpath(xpath)
+            print "Found the edited meeting"
         edt_meeting.click()
         print "Click the meeting label"
         time.sleep(2)

@@ -121,5 +121,6 @@ def create_inst_mt_from_contact_lightning():
     set_password_create_meeting()
     driver.close
     
-
+create_inst_mt_from_contact_classic
+create_inst_mt_from_contact_lightning()
     

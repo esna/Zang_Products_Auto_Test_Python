@@ -78,20 +78,28 @@ def delete_repeat_meetings_from_google_calendar():
     def locate_edited_meeting():
         try:
             mt_xpath = "//div[@class='cpchip']/span[contains(., '%s')]" % new_title
+            edt_meeting = driver.find_element_by_xpath(mt_xpath)
+            if edt_meeting.is_displayed():
+                print "Found the edited meeting"
+            xpath = "//span[@class='chip-caption'][contains(.,'1p – 2p ')]"
+            driver.find_element_by_xpath(xpath).click()
+            print "Meeting link is clicked"
+            time.sleep(2)
         except:
             xpath = "//div[@title='Next period']"
             nav_next = driver.find_element_by_xpath(xpath)
             print "Click the navigation Next button"
             nav_next.click()
             time.sleep(2)
-        mt_xpath = "//div[@class='cpchip']/span[contains(., '%s')]" % new_title
-        edt_meeting = driver.find_element_by_xpath(mt_xpath)
-        if edt_meeting.is_displayed():
-            print "Found the edited meeting"
-        xpath = "//span[@class='chip-caption'][contains(.,'1p – 2p ')]"
-        driver.find_element_by_xpath(xpath).click()
-        print "Meeting link is clicked"
-        time.sleep(2)
+            
+            mt_xpath = "//div[@class='cpchip']/span[contains(., '%s')]" % new_title
+            edt_meeting = driver.find_element_by_xpath(mt_xpath)
+            if edt_meeting.is_displayed():
+                print "Found the edited meeting"
+            xpath = "//span[@class='chip-caption'][contains(.,'1p – 2p ')]"
+            driver.find_element_by_xpath(xpath).click()
+            print "Meeting link is clicked"
+            time.sleep(2)
             
     def delete_edited_meeting():
 
