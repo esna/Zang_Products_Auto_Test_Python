@@ -35,10 +35,12 @@ def change_meeting_title():
         print 'The created meeting is not found'
         driver.close()
         driver.quit()
-    xpath = "//textarea[contains(.,'%s')]" % mt_descp
-    text_area = driver.find_element_by_xpath(xpath)
-    if text_area.is_displayed():
-        print "Meeting description is displayed"
+        
+#     xpath = "//textarea[contains(.,'%s')]" % mt_descp
+#     xpath = "//textarea[contains(.,'invites you to this meeting')]"
+#     text_area = driver.find_element_by_xpath(xpath)
+#     if text_area.is_displayed():
+#         print "Meeting description is displayed"
         
     xpath = "//input[@title='Event title']"
     meeting_title = driver.find_element_by_xpath(xpath)

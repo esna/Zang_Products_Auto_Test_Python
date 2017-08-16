@@ -64,10 +64,10 @@ def change_meeting_title():
     meeting_title.send_keys(new_title)
     print "Meeting title is changed to a new one"
     
-    xpath = "//textarea[contains(.,'%s')]" % mt_descp
-    text_area = driver.find_element_by_xpath(xpath)
-    if text_area.is_displayed():
-        print "Meeting description is displayed"
+#     xpath = "//textarea[contains(.,'%s')]" % mt_descp
+#     text_area = driver.find_element_by_xpath(xpath)
+#     if text_area.is_displayed():
+#         print "Meeting description is displayed"
     
 def change_meeting_room():
     xpath = "(//span[@class='ep-gc-icon ep-gc-icon-response'][@title='Yes'])[2]"

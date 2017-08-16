@@ -18,7 +18,7 @@ webex_pwd = 'Zang123!'
     #     print os.getcwd()
 dir_path = os.path.dirname(os.path.realpath(__file__))
 # print dir_path
-webex_file = dir_path + '\wcl_9.1.17.1803.crx'
+webex_file = dir_path + '\wcl_9.1.17.1626.crx'
 
 def add_chrome_extension():
     chop = webdriver.ChromeOptions()

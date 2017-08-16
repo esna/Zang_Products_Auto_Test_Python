@@ -6,7 +6,8 @@ Created on Jul 24, 2017
 
 import create_inst_mt_from_webex_icon
 import create_inst_mt_from_sf_contacts
-import time
+import time, re
+from iLink_for_Webex_Testing.Salesforce import webex_account_login
 
 url_mywebex = 'https://esna.webex.com/mw3200/mywebex/default.do?siteurl=esna&service=10'
 toll_free_num = '1-855-244-8681 Call-in toll-free number (US/Canada)'
@@ -26,25 +27,18 @@ driver = create_inst_mt_from_sf_contacts.driver
 driver.get(url_mywebex)
 driver.switch_to_frame('mainFrame')
 
-def webex_account_login():
-    user_id = driver.find_element_by_id('mwx-ipt-username')
-    user_id.click()
-    user_id.send_keys('reidz')
-    print "Input user id"
-    passwd = driver.find_element_by_id('mwx-ipt-password')
-    passwd.click()
-    passwd.send_keys('Zang123!')
-    time.sleep(2)
-    print "Input password"
-    driver.find_element_by_id('mwx-btn-logon').click()
-    print "Webex account is logged in"
-    time.sleep(2)
-    
+webex_account_login.webex_account_login(driver)
+
 def verify_meeting_data():
     print "Verify the created meeting's details"
     def verify_instant_meeting_webex_icon():
         def verify_meeting_title():
-            driver.switch_to_frame('menu')
+            try:
+                driver.switch_to_frame('menu')
+            except:
+                driver.switch_to_default_content()
+                driver.switch_to_frame('mainFrame')
+                driver.switch_to_frame('menu')
             xpath = "//span[contains(.,'My Meetings')]"
             driver.find_element_by_xpath(xpath).click()
             driver.switch_to_default_content()
@@ -85,9 +79,7 @@ def verify_meeting_data():
             assert passwd_1 == pwd.text
             print "Meeting password is verified correct"
             print ''
-            time.sleep(2)
         verify_password()
-    verify_instant_meeting_webex_icon()
     
     def verify_inst_mt_sf_contact_classic():
         def verify_meeting_title():
@@ -127,7 +119,6 @@ def verify_meeting_data():
             print ''
             time.sleep(2)
         verify_password()
-    verify_inst_mt_sf_contact_classic()
         
     def verify_inst_mt_sf_contact_lightning():
         def verify_meeting_title():
@@ -167,8 +158,26 @@ def verify_meeting_data():
             print ''
             time.sleep(2)
         verify_password()
+        
+    def delete_meeting_from_webex():
+        def go_to_meeting_list():
+            driver.switch_to_default_content()
+            driver.switch_to_frame('mainFrame')
+            driver.switch_to_frame('menu')
+            xpath = "//span[contains(.,'My Meetings')]"
+            driver.find_element_by_xpath(xpath).click()
+            time.sleep(2)
+            print "My Meetings link is clicked"
+            driver.switch_to_default_content()
+            driver.switch_to_frame('mainFrame')
+#             driver.switch_to_frame('main')
+        go_to_meeting_list()
+        
+    verify_instant_meeting_webex_icon()
+    verify_inst_mt_sf_contact_classic()
     verify_inst_mt_sf_contact_lightning()   
+    return driver
+        
+# webex_account_login()
+# verify_meeting_data()
 
-
-webex_account_login()
-verify_meeting_data()

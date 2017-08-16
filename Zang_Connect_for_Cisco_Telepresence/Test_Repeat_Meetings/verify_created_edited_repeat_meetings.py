@@ -276,7 +276,7 @@ def verify_deleted_meeting():
                     print "The meeting is still there, not deleted"
             except:
                 print "Edited repeat meeting is not found, it is deleted"
-
+    verify_meeting_deleted_in_tms_server()
 # if __name__ == '__main__':
 #     
 #     login_tms_server.login_tms_server()

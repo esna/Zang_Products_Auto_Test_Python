@@ -46,10 +46,10 @@ def change_meeting_title():
     edit_btn.click()
     time.sleep(2)
     
-    xpath = "//textarea[contains(.,'%s')]" % mt_descp
-    text_area = driver.find_element_by_xpath(xpath)
-    if text_area.is_displayed():
-        print "Meeting description is displayed"
+#     xpath = "//textarea[contains(.,'%s')]" % mt_descp
+#     text_area = driver.find_element_by_xpath(xpath)
+#     if text_area.is_displayed():
+#         print "Meeting description is displayed"
     
     xpath = "//input[@title='Event title']"
     mt_title = driver.find_element_by_xpath(xpath)

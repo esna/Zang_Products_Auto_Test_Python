@@ -70,7 +70,6 @@ def verify_created_meeting_details():
         except:
             print "Created meeting is not found"
             driver.quit()
-            driver.quit()
 
     title_content = get_meeting_title()
     

@@ -34,7 +34,7 @@ def create_inst_meeting_from_webex_icon():
         
     def create_instant_meeting():
         def input_meeting_topic():
-            print "Select Apply tmeplate"
+            print "Select Applied tmeplate"
             templ = Select(driver.find_element_by_id('comboTemplates'))
             templ.select_by_visible_text(template_1)
             print "The template selected is %s" % template_1
@@ -83,6 +83,7 @@ def create_inst_meeting_from_webex_icon():
     driver.switch_to_window(driver.window_handles[0])
     return driver
 
+# create_inst_meeting_from_webex_icon()
 
 
 

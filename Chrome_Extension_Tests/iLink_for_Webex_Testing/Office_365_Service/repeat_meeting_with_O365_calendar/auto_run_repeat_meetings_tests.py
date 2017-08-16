@@ -17,12 +17,12 @@ create_repeat_meetings.input_meeging_data_from_calendar()
 create_repeat_meetings.create_meeting_from_webex_icon()
 create_repeat_meetings.save_meeting_on_o365_calendar()
 time.sleep(60)
- 
+   
 verify_created_meeting_data.webex_account_login()
 verify_created_meeting_data.verify_meeting_title()
 verify_created_meeting_data.verify_meeting_time()
 verify_created_meeting_data.verify_meeting_data_from_webex_icon()
-    
+      
 edit_repeat_meetings.go_to_O365_calendar()
 try:
     edit_repeat_meetings.locate_created_meeting()
@@ -37,7 +37,7 @@ edit_repeat_meetings.change_repeat_cycle()
 edit_repeat_meetings.edit_meeting_items_with_webex_icon()
 edit_repeat_meetings.save_meeting_on_o365_calendar()
 time.sleep(30)
- 
+  
 try:
     verify_created_meeting_data.webex_account_login()
 except:
