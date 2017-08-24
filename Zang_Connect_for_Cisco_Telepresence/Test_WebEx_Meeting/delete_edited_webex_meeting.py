@@ -24,9 +24,22 @@ def locate_edited_webex_meeting():
         print "Meeting link is clicked"
         time.sleep(2)
     except:
-        print 'The edited meeting is not found'
-        driver.close()
-        driver.service.process.send_signal(signal.SIGTERM)
+        print "Meeting is not found on current week."
+        try:
+            xpath = "//div[@class='navbutton navForward goog-inline-block']"
+            nav_btn = driver.find_element_by_xpath(xpath)
+            nav_btn.click()
+            time.sleep(1)
+            xpath = "//div[@class='cpchip']/div/span[contains(., '%s')]" % meeting_room_1
+            driver.find_element_by_xpath(xpath)
+            edt_meeting = driver.find_element_by_xpath(xpath)
+            print "Found the edited meeting"
+            edt_meeting.click()
+            print "Meeting link is clicked"
+            time.sleep(2)
+        except:
+            print 'The edited meeting is not found'
+            driver.close()
     
 def delete_edited_webex_meeting():
 #     driver.switch_to_active_element()

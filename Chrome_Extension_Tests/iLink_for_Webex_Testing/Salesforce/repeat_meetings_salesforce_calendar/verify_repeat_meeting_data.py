@@ -65,6 +65,7 @@ def verify_meeting_data():
             xpath = "//div[@id='mc-txt-teleconference']"
             audio = driver.find_element_by_xpath(xpath)
             assert  sele_autio == audio.text
+            
             print "Audio connection phone number is verified correct"
         verify_audio_connection()
         

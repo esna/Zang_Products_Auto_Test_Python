@@ -47,7 +47,7 @@ def group_test(driver):
         search.clear()
         search.send_keys('Alec')
         time.sleep(2)
-        mbr_xpath = "//a[@href='ws://']//div[contains(.,'%s')]" % member1
+        mbr_xpath = "//a[@href='ws://']/div/div/div[contains(.,'%s')]" % member1
         new_mbr = driver.find_element_by_xpath(mbr_xpath)
         driver.execute_script("arguments[0].scrollIntoView(true);", new_mbr)
         time.sleep(2)
@@ -67,11 +67,11 @@ def group_test(driver):
         print "Inpunt second group member"
         search.clear()
         search.send_keys('Percyt')
-        time.sleep(1)
-        mbr_xpath_2 = "//a[@href='ws://']//div[contains(.,'%s')]" % member2
-        new_mbr_2 = driver.find_element_by_xpath(mbr_xpath)
-        driver.execute_script("arguments[0].scrollIntoView(true);", new_mbr_2)
-        time.sleep(3)
+        time.sleep(5)
+        mbr_xpath_2 = "//a[@href='ws://'][@title='percyt@esna.com']//div[contains(.,'%s')]" % member2
+        new_mbr_2 = driver.find_element_by_xpath(mbr_xpath_2)
+#         driver.execute_script("arguments[0].style.visibility = 'visible';", new_mbr_2)
+        time.sleep(2)
         new_mbr_2.click()
         print "Click member icon"  
         driver.find_element_by_xpath("//a[@title='Add to group']").click()

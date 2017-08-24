@@ -7,25 +7,27 @@ Created on Jul 20, 2017
 import time
 from selenium.webdriver.common.keys import Keys
 
-def messages_call_actions(driver):
+def messages_call_actions(driver1):
     print "Test the interact activities between two accounts"
-    def add_available_contact_to_favorite():
-        
+    def add_available_contact_to_favorite(driver1):
+        driver = driver1
         driver.find_element_by_xpath("//a[@title='People']").click()
-        time.sleep(1)
+        time.sleep(2)
         driver.find_element_by_link_text('GROUPS').click()
+        time.sleep(1)
         xpath = "//a[@class='header']//div[contains(.,'Favorites')]"
         driver.find_element_by_xpath(xpath).click()
-        time.sleep(5)
-        
-        xpath = "//a[@title='percyt@esna.com']//div[contains(.,'Percy')]"
-        conct = driver.find_element_by_xpath(xpath)
-        if conct.is_displayed():
-            print "Contact is in Favorite group already"
-            driver.find_element_by_xpath("//a[@title='People']").click()
-            time.sleep(3)
-        else:
-            print "Add contact to favorite group"
+        time.sleep(2)
+        try:
+            xpath = "//a[@href='ws://'][@title='percyt@esna.com']"
+            conct = driver.find_element_by_xpath(xpath)
+            if conct.is_displayed():
+                print "Contact is in Favorite group already"
+                driver.find_element_by_xpath("//a[@title='People']").click()
+                time.sleep(3)
+            else:
+                print "Add contact to favorite group"
+        except:
             driver.find_element_by_xpath("//a[@title='Manage group members']").click()
             time.sleep(2)
             xpath = "//input[@placeholder='Search people']"
@@ -49,13 +51,26 @@ def messages_call_actions(driver):
             driver.find_element_by_link_text("Close").click()
             time.sleep(1)
             driver.find_element_by_xpath("//a[@title='People']").click()
-            time.sleep(2)
+            time.sleep(5)
+            
     
     def get_the_available_contact():
-        xpath = "//ul[@class='list people square']/li[1]/ul/li/a[1]/div/div[contains(.,'Percy Teng')]"
-        conct = driver.find_element_by_xpath(xpath)
-        conct.click()
-        time.sleep(2)
+        driver = driver1
+        try:
+            xpath = "//ul[@class='list']/li[@class='online chat dial']/a[@href='ws://'][@title='percyt@esna.com']"
+            conct = driver.find_element_by_xpath(xpath)
+            conct.click()
+            time.sleep(2)
+        except:
+            driver.find_element_by_link_text('GROUPS').click()
+            time.sleep(1)
+            xpath = "//a[@class='header']//div[contains(.,'Favorites')]"
+            driver.find_element_by_xpath(xpath).click()
+            time.sleep(2)
+            xpath = "//a[@href='ws://'][@title='percyt@esna.com']"
+            conct = driver.find_element_by_xpath(xpath)
+            conct.click()
+            time.sleep(2)
         try:
             driver.find_element_by_link_text("Skip tutorial").click()
             print "Skip the tutorial message"
@@ -64,6 +79,7 @@ def messages_call_actions(driver):
             print "Tutorial is not displayed"
         
     def send_message_to_contact():
+        driver = driver1
         msg_icon = driver.find_element_by_link_text('MESSAGES')
         msg_icon.click()
         print "Click the Messages icon"
@@ -76,6 +92,7 @@ def messages_call_actions(driver):
         print "test message sent to account 2"
         
     def contact_actions():
+        driver = driver1
         msg_icon = driver.find_element_by_link_text('ACTIONS')
         msg_icon.click()
         print "Click the Messages icon"
@@ -83,6 +100,7 @@ def messages_call_actions(driver):
         equinox = driver.find_element_by_link_text('Equinox Conferencing')
         print "Click the Equinox Conferencing link"
         equinox.click()
+        time.sleep(2)
         driver.switch_to_window(driver.window_handles[-1])
         try:
             xpath = "//span[contains(.,'Esna iLink for Avaya Scopia® Desktop not installed')]"
@@ -93,26 +111,99 @@ def messages_call_actions(driver):
                 print "Equinox link does not work"
         except:
             print "Equinox link is not displayed"
+        driver.find_element_by_xpath("//button[contains(.,'Close')]").click()
+        print "tab of Equinox is closed"
         driver.switch_to_window(driver.window_handles[0])
+        
         msg_icon.click()
-        driver.switch_to_window(driver.window_handles[-1])
-        driver.find_element_by_tag_name("body").send_keys(Keys.CONTROL + "\w")
-        driver.switch_to_window(driver.window_handles[0])
         hangout = driver.find_element_by_link_text('Hangout')
         hangout.click()
         time.sleep(1)
-        xpath = "//div[@class='chat'][contains(.,'I've invited you to join a Hangout via the following link: ')]"
-        link1 = driver.find_element_by_xpath(xpath)
-        print link1.text
-        link2 = driver.find_element_by_xpath("%s/a[contains(@href,'https://hougouts.google.com')]" % xpath) 
-        if link2.is_displayed():
-            print "Hougout link works"
+        driver.switch_to_window(driver.window_handles[-1])
+        hangouts_url = driver.current_url
+        if "https://hangouts.google.com" in hangouts_url:
+            print "Hangouts is activated"
         else:
-            print "Hougout link does not work"
+            print "Hangouts link does not work"
+        time.sleep(2)
+        driver.close()
+        shared_doc_url = 'https://docs.google.com/document/d/1sNwpUtoLALl2kD1WAhQPZMDFVBa9DmUKOok6-ywBYe4/edit'
+        driver.switch_to_window(driver.window_handles[1])
+        driver.get(shared_doc_url)
+        time.sleep(2)
+        driver.switch_to_window(driver.window_handles[0])
         
+        msg_icon.click()
+        share_loc = driver.find_element_by_link_text('Share location')
+        share_loc.click()
+        time.sleep(2)
+        map = driver.find_element_by_link_text('I\'m at')
+        if map.is_displayed():
+            print "Shared location is sent out"
+        else:
+            print "Shared location does not work"
+            
+        msg_icon.click()
+        share_doc = driver.find_element_by_link_text('Share document')
+        share_doc.click()
+        time.sleep(1)
+        xpath = "//li[@jsc_id='1sNwpUtoLALl2kD1WAhQPZMDFVBa9DmUKOok6-ywBYe4']/a[@href='ws://']"
+        shared_doc = driver.find_element_by_xpath(xpath)
+        shared_doc.click()
+        time.sleep(1)
+        xpath = "//a[contains(@href,'docs.google.com/a/esna')]"
+        shared_doc_link = driver.find_element_by_xpath(xpath)
+        if shared_doc_link.is_displayed():
+            print "Shared document is sent"
+        else:
+            print "Shared document link does not work"
+     
+        msg_icon.click()
+        share_doc = driver.find_element_by_link_text('Share web page').click()
+        time.sleep(1)
+        xpath = "//a[@href='ws://'][contains(@icon,'docs.google.com/document')]"
+        shared_web = driver.find_element_by_xpath(xpath)
+        shared_web.click()
+        print "shared web site clicked"
+        time.sleep(2)
+        xpath = "//a[contains(@href,'docs.google.com/document')]"
+        shared_web_link = driver.find_element_by_xpath(xpath)
+        if shared_web_link.is_displayed():
+            print "Shared website is sent"
+        else:
+            print "Shared website link does not work"
         
+        msg_icon.click()
+        clear_his = driver.find_element_by_link_text('Clear history').click()
+        time.sleep(1)
+        xpath = "//div[@class='nodata hidden']"
+        blank_area = driver.find_element_by_xpath(xpath)
+        if blank_area.is_displayed():
+            print "log histrory is cleared"
+        else:
+            print "Clear history does not work"
+            
+        msg_icon.click()
+        share_doc = driver.find_element_by_link_text('Groups').click()
+        time.sleep(2)
+        xpath = "//div[contains(.,'Favorites')]"
+        if driver.find_element_by_xpath(xpath).is_displayed():
+            print "Groups page is displayed"
+            driver.find_element_by_link_text('Close').click()
+            time.sleep(1)
+        else:
+            print "Groups link does not work"
         
-        
+        msg_icon.click()
+        share_doc = driver.find_element_by_link_text('Remove').click()
+        driver.find_element_by_xpath("//a[@title='People']").click()
+        try:
+            xpath = "//a[@href='ws://'][@title='percyt@esna.com']"
+            conct = driver.find_element_by_xpath(xpath)
+            conct.click()
+            print "Contact is not removed"
+        except:
+            print "Contact is removed"
      
     add_available_contact_to_favorite()
     get_the_available_contact()

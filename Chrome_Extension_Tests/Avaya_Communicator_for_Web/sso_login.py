@@ -13,7 +13,8 @@ sf_id = 'arnoe@esna.com'
 sf_pwd = 'EsnaAvaya06'
 
 def login_ext_with_google(driver):
-    xpath = "//a[@href='ws://'][@class='social google']/div"
+    time.sleep(2)
+    xpath = "//a[@href='ws://'][@class='social google']/div[contains(.,'Google')]"
     driver.find_element_by_xpath(xpath).click()
     time.sleep(2)
 #     driver.switch_to_window(driver.window_handles[1])
@@ -93,7 +94,7 @@ def login_ext_with_Salesforce(driver):
     driver.find_element_by_id('oaapprove').click()
     time.sleep(3)
     driver.switch_to_window(driver.window_handles[0])
-    time.sleep(8)
+    time.sleep(10)
     return driver
     
     

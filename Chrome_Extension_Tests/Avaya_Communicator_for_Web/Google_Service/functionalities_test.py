@@ -26,14 +26,14 @@ def login_acw_account_2():
     driver2 = acw_account_login.login_account_2(driver)
     return driver2
 
-# driver1 = login_acw_account_1()
-# time.sleep(2)
-
-driver = login_acw_account_2()
+driver1 = login_acw_account_1()
 time.sleep(2)
 
-# settings.settings_test(driver)
-# user_presence.presence_test(driver)
-# add_edit_delete_group.group_test(driver)
-# interact_activities.messages_call_actions(driver)
+# driver2 = login_acw_account_2()
+# time.sleep(2)
+
+# settings.settings_test(driver1)
+# user_presence.presence_test(driver1)
+# add_edit_delete_group.group_test(driver1)
+# interact_activities.messages_call_actions(driver1)
 

@@ -23,7 +23,7 @@ def select_sso_service(user_name, driver):
 #         driver = sso_login.login_ext_with_Salesforce()
 #     else:
 #         print "SSO service name is wrong"
-
+    driver.implicitly_wait(10)
     def select_login_server():
         print "Begin to login acw account"
         driver.switch_to_window(driver.window_handles[0])
@@ -43,6 +43,7 @@ def select_sso_service(user_name, driver):
         print "Input the presence and media server %s" % pre_server
     def input_user_credential():
         user_id = driver.find_element_by_id('jsc4')
+        driver.execute_script("arguments[0].scrollIntoView(true);", user_id)
         user_id.clear()
         user_id.send_keys(user_name)
         pswd = driver.find_element_by_id('jsc5')

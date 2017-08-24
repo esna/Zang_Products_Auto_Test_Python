@@ -226,6 +226,7 @@ def settings_test(driver):
         auto_answ_2.click()
         video_2 = driver.find_element_by_xpath(video_xpath_2)
         video_2.click()
+        time.sleep(1)
         e164_2 = driver.find_element_by_xpath(e164_xpath_2)
         e164_2.click()
         all_m_2 = driver.find_element_by_xpath(all_m_xpath_2)
