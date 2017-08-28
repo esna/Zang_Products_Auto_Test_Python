@@ -6,10 +6,11 @@ Created on Jul 20, 2017
 '''
 import time
 from selenium.webdriver.common.keys import Keys
+msg = 'test message from account1 to accont2'
 
-def messages_call_actions(driver1):
+def messages_call_actions(driver1, driver2):
     print "Test the interact activities between two accounts"
-    def add_available_contact_to_favorite(driver1):
+    def add_available_contact_to_favorite():
         driver = driver1
         driver.find_element_by_xpath("//a[@title='People']").click()
         time.sleep(2)
@@ -21,13 +22,12 @@ def messages_call_actions(driver1):
         try:
             xpath = "//a[@href='ws://'][@title='percyt@esna.com']"
             conct = driver.find_element_by_xpath(xpath)
-            if conct.is_displayed():
-                print "Contact is in Favorite group already"
-                driver.find_element_by_xpath("//a[@title='People']").click()
-                time.sleep(3)
-            else:
-                print "Add contact to favorite group"
+            conct.click()
+            print "Contact is in Favorite group already"
+            driver.find_element_by_xpath("//a[@title='People']").click()
+            time.sleep(3)
         except:
+            print "Add contact to favorite group"
             driver.find_element_by_xpath("//a[@title='Manage group members']").click()
             time.sleep(2)
             xpath = "//input[@placeholder='Search people']"
@@ -53,10 +53,10 @@ def messages_call_actions(driver1):
             driver.find_element_by_xpath("//a[@title='People']").click()
             time.sleep(5)
             
-    
     def get_the_available_contact():
         driver = driver1
         try:
+            driver.find_element_by_xpath("//a[@title='People']").click()
             xpath = "//ul[@class='list']/li[@class='online chat dial']/a[@href='ws://'][@title='percyt@esna.com']"
             conct = driver.find_element_by_xpath(xpath)
             conct.click()
@@ -79,17 +79,24 @@ def messages_call_actions(driver1):
             print "Tutorial is not displayed"
         
     def send_message_to_contact():
-        driver = driver1
-        msg_icon = driver.find_element_by_link_text('MESSAGES')
-        msg_icon.click()
-        print "Click the Messages icon"
-        xpath = "//div/textarea[@placeholder='Type a message...']"
-        type_box = driver.find_element_by_xpath(xpath)
-        type_box.clear()
-        type_box.send_keys('test message from account1 to accont2')
-        send_btn = driver.find_element_by_link_text('SEND')
-        send_btn.click()
-        print "test message sent to account 2"
+        def send_msg_from_account_1():
+            driver = driver1
+            msg_icon = driver.find_element_by_link_text('MESSAGES')
+            msg_icon.click()
+            print "Click the Messages icon"
+            try:
+                xpath = "//div/textarea[@placeholder='Type a message...']"
+                type_box = driver.find_element_by_xpath(xpath)
+                type_box.clear()
+                type_box.send_keys(msg)
+                send_btn = driver.find_element_by_link_text('SEND')
+                send_btn.click()
+                print "test message sent to account 2"
+            except:
+                print "The contact is not online"
+        def validate_msg_from_account_2():
+            driver = driver2
+            
         
     def contact_actions():
         driver = driver1

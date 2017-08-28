@@ -23,7 +23,7 @@ def select_sso_service(user_name, driver):
 #         driver = sso_login.login_ext_with_Salesforce()
 #     else:
 #         print "SSO service name is wrong"
-    driver.implicitly_wait(10)
+    driver.implicitly_wait(2)
     def select_login_server():
         print "Begin to login acw account"
         driver.switch_to_window(driver.window_handles[0])
