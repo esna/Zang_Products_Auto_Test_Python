@@ -13,18 +13,18 @@ from selenium.webdriver.chrome.options import Options
     #     print os.getcwd()
 dir_path = os.path.dirname(os.path.realpath(__file__))
 # print dir_path
-jabber_file = dir_path + '\/jabber_10.1.17.1801.crx'
+jabber_file = dir_path + '\/jabber_10.1.17.1830.crx'
 plugin_file = dir_path + '\/extension_3_1_0_363.crx'
 
 def add_chrome_extension():
-        chop = webdriver.ChromeOptions()
-        print "Add the Cisco Communicator for Web plugin"
-        chop.add_extension(plugin_file)
-        print "Add Cisco Jabber Extension"
-        chop.add_extension(jabber_file)
-        driver = webdriver.Chrome(chrome_options=chop)
-        time.sleep(2)
-        return driver
+    chop = webdriver.ChromeOptions()
+    print "Add the Cisco Communicator for Web plugin"
+    chop.add_extension(plugin_file)
+    print "Add Cisco Jabber Extension"
+    chop.add_extension(jabber_file)
+    driver = webdriver.Chrome(chrome_options=chop)
+    time.sleep(5)
+    return driver
 
 # driver = add_chrome_extension()
 

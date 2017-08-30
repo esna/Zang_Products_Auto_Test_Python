@@ -10,7 +10,7 @@ google_pwd = 'Esnareid4'
 o365_id = 'bryand@esnatech.onmicrosoft.com'
 o365_pwd = '!esnatech1234$'
 sf_id = 'arnoe@esna.com'
-sf_pwd = 'EsnaAvaya06'
+sf_pwd = 'EsnaAvaya8'
 
 def login_ext_with_google(driver):
     xpath = "//a[@href='ws://'][@class='social google']/div"

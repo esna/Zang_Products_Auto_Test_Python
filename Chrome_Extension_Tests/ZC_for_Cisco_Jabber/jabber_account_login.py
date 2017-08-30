@@ -5,7 +5,6 @@ Created on Jun 19, 2017
 '''
 import time
 from selenium.webdriver.support.ui import Select
-from Avaya_Communicator_for_Web import sso_login
 
 pre_server = 'esna-imp11.esna.com'
 med_server = 'esna-cucm11.esna.com'
