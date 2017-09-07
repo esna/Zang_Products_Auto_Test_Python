@@ -13,11 +13,12 @@ import contact_actions_test
 import message_and_call
 
 driver1 = login_jabber_account.login_jabber_account_1()
-# driver2 = login_jabber_account.login_jabber_account_2()
 
 # settings.settings_test(driver1)
 # user_presence.presence_test(driver1)
-group_test.group_test(driver1)
-# get_available_contact.add_get_available_contact(driver1)
-# contact_actions_test.contact_actions(driver1)
-# message_and_call.messages_and_calls(driver1)
+# group_test.group_test(driver1)
+
+driver2 = login_jabber_account.login_jabber_account_2()
+get_available_contact.add_get_available_contact(driver1, driver2)
+contact_actions_test.contact_actions(driver1, driver2)
+message_and_call.interact_messages_and_calls(driver1, driver2)

@@ -6,6 +6,8 @@ Created on Aug 29, 2017
 '''
 import time
 
+contact = 'Zang'
+
 def contact_actions(driver1):
     driver = driver1
     msg_icon = driver.find_element_by_link_text('ACTIONS')
@@ -108,26 +110,28 @@ def contact_actions(driver1):
     def groups_link():
         msg_icon.click()
         share_doc = driver.find_element_by_link_text('Groups').click()
-        time.sleep(2)
+        time.sleep(3)
         xpath = "//div[contains(.,'Favorites')]"
         if driver.find_element_by_xpath(xpath).is_displayed():
             print "Groups page is displayed"
             driver.find_element_by_link_text('Close').click()
-            time.sleep(1)
+            time.sleep(2)
         else:
             print "Groups link does not work"
     
     def remove_contact():
         msg_icon.click()
-        share_doc = driver.find_element_by_link_text('Remove').click()
-        driver.find_element_by_xpath("//a[@title='People']").click()
+        time.sleep(2)
+        driver.find_element_by_link_text('Remove').click()
+#         driver.find_element_by_xpath("//a[@title='People']").click()
         try:
-            xpath = "//a[@href='ws://'][@title='percyt@esna.com']"
+            xpath = "//a[@href='ws://'][contains(@title,'%s']" % contact
             conct = driver.find_element_by_xpath(xpath)
             conct.click()
             print "Contact is not removed"
         except:
             print "Contact is removed"
+            print ""
             
     equinox_link()
     google_hangouts()

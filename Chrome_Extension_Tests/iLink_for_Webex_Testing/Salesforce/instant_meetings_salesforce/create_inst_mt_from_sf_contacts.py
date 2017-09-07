@@ -35,7 +35,7 @@ def create_inst_mt_from_contact_classic():
         driver.switch_to_window(default_handle)
     except:
         print "No popup window"
-    xpath = "//a[@title='Reid Zhang']/following-sibling::div[@title='WebEx']"
+    xpath = "//a[contains(.,'Zhang, Reid')]/following-sibling::div[@title='WebEx']"
     driver.find_element_by_xpath(xpath).click()
     time.sleep(2)
     
@@ -118,6 +118,7 @@ def create_inst_mt_from_contact_lightning():
         except:
             print "No popup window"
         print ''
+        print "Created recurring meeting is finished"
     set_password_create_meeting()
     driver.close
     

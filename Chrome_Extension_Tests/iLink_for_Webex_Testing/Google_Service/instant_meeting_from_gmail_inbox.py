@@ -16,14 +16,15 @@ time_mins = '20'
 audio = 'VoIP'
 email1 = 'esnaqc.testing@gmail.com'
 email2 = 'itsupport@esna.com'
+sbjt = 'ACW from the Internet'
 url_mywebex = 'https://esna.webex.com/mw3200/mywebex/default.do?siteurl=esna&service=10'
 driver = add_login_webex_extension.driver
 
 def sso_with_google_service():
     add_login_webex_extension.login_ext_with_google()
-    time.sleep(30)
+    time.sleep(10)
     add_login_webex_extension.input_esna_webex_password()
-    time.sleep(6)
+    time.sleep(3)
 
 def get_specified_email():
     driver.get('https://mail.google.com')
@@ -35,7 +36,7 @@ def get_specified_email():
     search.send_keys(email1)
     xpath = "//button[@aria-label='Search Esna.com Mail']/span"
     driver.find_element_by_xpath(xpath).click()
-    time.sleep(2)
+    time.sleep(3)
     
 def create_meeting_with_webex_icon():
     def get_webex_meeting_window():
@@ -57,9 +58,10 @@ def create_meeting_with_webex_icon():
         xpath = "//button[@aria-label='Search Esna.com Mail']/span"
         driver.find_element_by_xpath(xpath).click()
         time.sleep(3)
-        xpath = "//div[@id=':m6']/span[@email='%s']" % email2
+        xpath = "//span[contains(.,'%s')]" % sbjt
         sender = driver.find_element_by_xpath(xpath)
         sender.click()
+        time.sleep(3)
         xpath = "//button[@class='wex_hotspot']"
         driver.find_element_by_xpath(xpath).click()
         driver.switch_to_frame('frameCreateWebex')
@@ -180,7 +182,9 @@ def delete_created_instant_meeting():
         print "Cancel Meeting checkbox is checked"
     select_created_inst_meeting()
     def delete_selected_meeting():
-        driver.find_element_by_id('mwx-btn-delete').click()
+        cancel = driver.find_element_by_id('mwx-btn-delete')
+        driver.execute_script("arguments[0].scrollIntoView(true);", cancel)
+        cancel.click()
         print "Cancel button is clicked"
         alert = driver.switch_to_alert()
         alert.accept()

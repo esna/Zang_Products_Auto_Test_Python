@@ -69,12 +69,14 @@ def select_sso_service(user_name, driver):
 def login_account_1(driver):
     select_sso_service(username_1, driver)
     print "Account 1 is logged in"
+    print ""
     time.sleep(2)
     return driver
     
 def login_account_2(driver):
     select_sso_service(username_2, driver)
     print "Account 2 is logged in"
+    print ""
     time.sleep(2)
     return driver
 

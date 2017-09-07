@@ -3,13 +3,13 @@ Created on Aug 16, 2017
 
 @author: qcadmin
 '''
-import create_scheduled_meeting
+import create_sf_repeat_meetings
 import datetime, time
 from selenium.webdriver.support.ui import Select
 
-topic = create_scheduled_meeting.topic
+topic = create_sf_repeat_meetings.topic
 new_topic = 'Edited Saleforce scheduled meeting'
-contact_url_classic = create_scheduled_meeting.contact_url_classic
+contact_url_classic = create_sf_repeat_meetings.contact_url_classic
 tmr_plus_one = datetime.date.today() + datetime.timedelta(days=2)
 d2 = datetime.datetime.strptime("%s" % tmr_plus_one, '%Y-%m-%d')
 tom_plus_one = datetime.date.strftime(d2, 'X%d/X%m/X%Y').replace('X0', 'X').replace('X', '')
@@ -17,7 +17,7 @@ from_time = "2:00 PM"
 until_time = "2:30 PM"
 al_host_invalid = "qc@esnaqc.com"
 al_host_valid = "reidz@esna.com"
-driver = create_scheduled_meeting.driver
+driver = create_sf_repeat_meetings.driver
 
 def edit_scheduled_meeting():
     
@@ -93,6 +93,7 @@ def edit_scheduled_meeting():
         audio.select_by_value('NONE')
         driver.find_element_by_xpath(xpath).click()
         print "Click Done button to send out the edit"
+        print "Edit the recurring meeting is finished"
         time.sleep(2)
         
     edit_webex_menu()

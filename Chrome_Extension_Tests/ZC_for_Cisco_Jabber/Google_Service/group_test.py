@@ -136,6 +136,7 @@ def group_test(driver):
         print "Added group %s is removed" % new_group
         time.sleep(1)
         print "Click People icon"
+        print ""
         driver.find_element_by_xpath("//a[@title='People']").click()
         time.sleep(2)
         return driver

@@ -26,8 +26,10 @@ driver = create_inst_mt_from_sf_contacts.driver
 
 driver.get(url_mywebex)
 driver.switch_to_frame('mainFrame')
-
-webex_account_login.webex_account_login(driver)
+try:
+    webex_account_login.webex_account_login(driver)
+except:
+    print "Webex account is logged in already"
 
 def verify_meeting_data():
     print "Verify the created meeting's details"

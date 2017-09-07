@@ -93,8 +93,9 @@ def edit_scheduled_meeting():
         audio.select_by_value('NONE')
         driver.find_element_by_xpath(xpath).click()
         print "Click Done button to send out the edit"
+        print ""
         time.sleep(2)
-        
+        print "Edit scheduled meeting is finished"
     edit_webex_menu()
     
 edit_scheduled_meeting()

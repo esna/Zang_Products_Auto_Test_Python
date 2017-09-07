@@ -13,12 +13,14 @@ google_id = 'reidz@esna.com'
 google_pwd = 'Esnareid4'
 o365_id = 'bryand@esnatech.onmicrosoft.com'
 o365_pwd = '!esnatech1234$'
+sforce_id = 'arnoe@esna.com'
+sforce_pwd = 'EsnaAvaya8'
 webex_pwd = 'Zang123!'
 # os.chdir(r'D:\Chrome_Extension_Tests\iLink_for_Webex_Testing')
     #     print os.getcwd()
 dir_path = os.path.dirname(os.path.realpath(__file__))
 # print dir_path
-webex_file = dir_path + '\wcl_9.1.17.1804.crx'
+webex_file = dir_path + '\wcl_9.1.17.1906.crx'
 
 def add_chrome_extension():
     chop = webdriver.ChromeOptions()
@@ -99,11 +101,11 @@ def login_ext_with_Salesforce():
     sf_id = driver.find_element_by_id('username')
     sf_id.clear()
     print "Input userid"
-    sf_id.send_keys('arnoe@esna.com')
+    sf_id.send_keys(sforce_id)
     sf_pwd = driver.find_element_by_id('password')
     sf_pwd.clear()
     print "Input password"
-    sf_pwd.send_keys('EsnaAvaya06')
+    sf_pwd.send_keys(sforce_pwd)
     login = driver.find_element_by_id('Login')
     login.click()
     time.sleep(3)

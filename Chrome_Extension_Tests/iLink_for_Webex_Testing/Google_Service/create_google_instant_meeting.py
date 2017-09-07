@@ -26,9 +26,9 @@ toll_number = '1-650-479-3207 Call-in toll number (US/Canada)'
 
 driver = add_login_webex_extension.driver
 add_login_webex_extension.login_ext_with_google()
-time.sleep(30)
+time.sleep(10)
 add_login_webex_extension.input_esna_webex_password()
-time.sleep(5)
+time.sleep(3)
 
 def get_inst_meeting_window():
     current_url = driver.current_url
@@ -181,7 +181,9 @@ def delete_created_instant_meeting():
         print "Cancel Meeting checkbox is checked"
     select_created_inst_meeting()
     def delete_selected_meeting():
-        driver.find_element_by_id('mwx-btn-delete').click()
+        cancel = driver.find_element_by_id('mwx-btn-delete')
+        driver.execute_script("arguments[0].scrollIntoView(true);", cancel)
+        cancel.click()
         print "Cancel button is clicked"
         alert = driver.switch_to_alert()
         alert.accept()

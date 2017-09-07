@@ -5,12 +5,13 @@ Created on Aug 29, 2017
 @author: qcadmin
 '''
 import time
+url = 'https://www.salesforce.com'
 
-def contact_actions(driver1):
+def contact_actions(driver1, driver2):
     driver = driver1
     msg_icon = driver.find_element_by_link_text('ACTIONS')
     
-    def equinox_link():
+    def webex_link():
         msg_icon.click()
         print "Click the Messages icon"
         time.sleep(1)
@@ -58,36 +59,20 @@ def contact_actions(driver1):
         else:
             print "Shared location does not work"
         
-    def share_document():
-        shared_doc_url = 'https://docs.google.com/document/d/1sNwpUtoLALl2kD1WAhQPZMDFVBa9DmUKOok6-ywBYe4/edit'
-        driver.switch_to_window(driver.window_handles[1])
-        driver.get(shared_doc_url)
-        time.sleep(2)
-        driver.switch_to_window(driver.window_handles[0])
-        msg_icon.click()
-        share_doc = driver.find_element_by_link_text('Share document')
-        share_doc.click()
-        time.sleep(2)
-        xpath = "//li[@jsc_id='1sNwpUtoLALl2kD1WAhQPZMDFVBa9DmUKOok6-ywBYe4']/a[@href='ws://']"
-        shared_doc = driver.find_element_by_xpath(xpath)
-        shared_doc.click()
-        time.sleep(2)
-        xpath = "//a[contains(@href,'docs.google.com/a/esna')]"
-        shared_doc_link = driver.find_element_by_xpath(xpath)
-        if shared_doc_link.is_displayed():
-            print "Shared document is sent"
-        else:
-            print "Shared document link does not work"
     def share_web_page():
+        driver.switch_to_window(driver.window_handles[-1])
+        driver.get(url)
+        time.sleep(5)
+        driver.switch_to_window(driver.window_handles[0])
         msg_icon.click()
         share_doc = driver.find_element_by_link_text('Share web page').click()
         time.sleep(2)
-        xpath = "//a[@href='ws://'][contains(@icon,'docs.google.com/document')]"
+        xpath = "//a[@href='ws://'][contains(@icon,'%s')]" % url
         shared_web = driver.find_element_by_xpath(xpath)
         shared_web.click()
         print "shared web site clicked"
         time.sleep(2)
-        xpath = "//a[contains(@href,'docs.google.com/document')]"
+        xpath = "//a[contains(@href,'%s')]" % url
         shared_web_link = driver.find_element_by_xpath(xpath)
         if shared_web_link.is_displayed():
             print "Shared website is sent"
@@ -128,11 +113,11 @@ def contact_actions(driver1):
             print "Contact is not removed"
         except:
             print "Contact is removed"
-            
-    equinox_link()
+        time.sleep(2)
+        
+    webex_link()
     google_hangouts()
     share_location()
-    share_document()
     share_web_page()
     clear_history()
     groups_link()

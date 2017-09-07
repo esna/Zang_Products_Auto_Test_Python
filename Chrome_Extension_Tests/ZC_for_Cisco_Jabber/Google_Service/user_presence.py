@@ -73,6 +73,7 @@ def presence_test(driver):
     aval_label = 'Available'
     assert aval_label == aval.text
     print "%s is displayed on the main panel" % aval_label
+    print ""
     time.sleep(2)
     return driver
     

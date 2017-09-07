@@ -254,6 +254,7 @@ def settings_test(driver):
         driver.find_element_by_xpath(prechg_xpath_2).click()
         driver.find_element_by_xpath(calls_xpath_2).click()
         print "All the Alerts options are unchecked"
+        print ""
         time.sleep(2)
         return driver
 

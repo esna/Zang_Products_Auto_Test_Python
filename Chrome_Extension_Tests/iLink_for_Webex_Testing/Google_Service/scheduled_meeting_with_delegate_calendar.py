@@ -12,11 +12,11 @@ tom_plus_one = datetime.date.strftime(d2, 'X%m/X%d/X%Y').replace('X0', 'X').repl
 fromtime = "12:00 PM"
 untiltime = "1:00 PM"
 time_taken = '1 hour'
-title = "Scheduled meeting from google calendar"
+title = "Instant meeting with office 365"
 template = 'reid test template'
 al_host_email = 'reidz@esna.com'
 al_hostname = 'Reid Zhang'
-mt_type = 'Pro 1000'
+mt_type = 'Pro 25'
 ph_num = '(905)707-9700'
 delegate_cl = 'Matheesan Manokaran'
 url_mywebex = 'https://esna.webex.com/mw3200/mywebex/default.do?siteurl=esna&service=10'
@@ -25,7 +25,7 @@ url_calendar = 'https://calendar.google.com/calendar/render?tab=mc#main_7'
 
 driver = add_login_webex_extension.driver
 add_login_webex_extension.login_ext_with_google()
-time.sleep(20)
+time.sleep(10)
 add_login_webex_extension.input_esna_webex_password()
 
 def go_to_google_mail_calendar():
@@ -235,10 +235,13 @@ def delete_created_schdeuled_meeting():
         chkbox_id = 'checkbox-link-mwx-checkbox-event-' + event_num
         chkbox = driver.find_element_by_id(chkbox_id)
         chkbox.click()
+        time.sleep(2)
         print "Cancel Meeting checkbox is checked"
     select_created_inst_meeting()
     def delete_selected_meeting():
-        driver.find_element_by_id('mwx-link-delete').click()
+        cancel = driver.find_element_by_id('mwx-link-delete')
+        driver.execute_script("arguments[0].scrollIntoView(true);", cancel)
+        cancel.click()
         print "Cancel button is clicked"
         alert = driver.switch_to_alert()
         alert.accept()

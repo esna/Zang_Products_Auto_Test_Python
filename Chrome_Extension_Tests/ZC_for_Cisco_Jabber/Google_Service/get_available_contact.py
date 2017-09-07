@@ -8,7 +8,7 @@ import time
 from selenium.webdriver.common.keys import Keys
 
 contact = 'Zang'
-contact_email = 'dev2@esna.com'
+contact_email = 'dev2'
 
 def add_get_available_contact(driver1):
     print "Test the interact activities between two accounts"
@@ -25,12 +25,11 @@ def add_get_available_contact(driver1):
             xpath = "//a[@href='ws://'][contains(@title,'%s')]"% contact_email
             conct = driver.find_element_by_xpath(xpath)
             conct.click()
+            time.sleep(2)
             print "Contact is in Favorite group already"
-            driver.find_element_by_xpath("//a[@title='People']").click()
-            print "Click People icon"
-            time.sleep(3)
         except:
             print "Add contact to favorite group"
+             
             try:
                 xpath = "//a[contains(.,'Skip tutorial')]"
                 driver.find_element_by_xpath(xpath).click()
@@ -38,6 +37,7 @@ def add_get_available_contact(driver1):
                 print "Account logged in, skipped tutorial"
             except:
                 print "Account logged in, tutorial is not popped up"
+                
             driver.find_element_by_xpath("//a[@title='Manage group members']").click()
             time.sleep(2)
             xpath = "//input[@placeholder='Search people']"
@@ -53,10 +53,11 @@ def add_get_available_contact(driver1):
             xpath = "//a[contains(@title,'%s')]/div/div" % contact_email
             conct = driver.find_element_by_xpath(xpath)
             conct.click()
-            time.sleep(1)
+            time.sleep(2)
             print "Add the contact"
-            driver.find_element_by_xpath("//a[@class='icon iPlus']").click()
-            time.sleep(1)
+            xpath = "//a[contains(@title,'%s')]/following-sibling::a[@class='icon iPlus']" % contact_email
+            driver.find_element_by_xpath(xpath).click()
+            time.sleep(2)
             print "The contact is added in"
             driver.find_element_by_link_text("Close").click()
             time.sleep(1)
@@ -67,26 +68,40 @@ def add_get_available_contact(driver1):
         driver = driver1
         try:
             driver.find_element_by_xpath("//a[@title='People']").click()
-            xpath = "//ul[@class='list']/li[@class='online chat dial']/a[@href='ws://'][contains(@title,'%s']"% contact
+            xpath = "//ul[@class='list']/li[@class='online chat dial']/a[@href='ws://'][contains(@title,'%s']"% contact_email
             conct = driver.find_element_by_xpath(xpath)
             conct.click()
             time.sleep(2)
         except:
-            driver.find_element_by_link_text('GROUPS').click()
-            time.sleep(1)
-            xpath = "//a[@class='header']//div[contains(.,'Favorites')]"
-            driver.find_element_by_xpath(xpath).click()
-            time.sleep(2)
-            xpath = "//a[@href='ws://'][contains(@title,'%s')]" % contact_email
+            xpath = "//input[@placeholder='Search or dial']"
+            search_box = driver.find_element_by_xpath(xpath)
+            print "Search the specified contact"
+            try:
+                xpath = "//a[contains(.,'Skip tutorial')]"
+                driver.find_element_by_xpath(xpath).click()
+                time.sleep(3)
+                print "Account logged in, skipped tutorial"
+            except:
+                print "Account logged in, tutorial is not popped up"
+            search_box.send_keys(contact)
+            time.sleep(5)
+            try:
+                driver.find_element_by_link_text('Got it')
+                print "Acknowledge the remind message"
+            except:
+                print "Remind message is not displayed"
+            xpath = "//a[contains(@title,'%s')]/div/div" % contact_email
             conct = driver.find_element_by_xpath(xpath)
+            driver.execute_script("arguments[0].scrollIntoView(true);", conct)
             conct.click()
             time.sleep(2)
         try:
             driver.find_element_by_link_text("Skip tutorial").click()
             print "Skip the tutorial message"
-            time.sleep(1)
+            time.sleep(2)
         except:
             print "Tutorial is not displayed"
+            print ""
         
     add_available_contact_to_favorite()
     get_the_available_contact()

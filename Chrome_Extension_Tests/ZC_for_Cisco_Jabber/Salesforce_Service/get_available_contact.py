@@ -10,7 +10,7 @@ from selenium.webdriver.common.keys import Keys
 contact = 'Zang'
 contact_email = 'dev2@esna.com'
 
-def add_get_available_contact(driver1):
+def add_get_available_contact(driver1, driver2):
     print "Test the interact activities between two accounts"
     def add_available_contact_to_favorite():
         driver = driver1
@@ -39,7 +39,7 @@ def add_get_available_contact(driver1):
             except:
                 print "Account logged in, tutorial is not popped up"
             driver.find_element_by_xpath("//a[@title='Manage group members']").click()
-            time.sleep(2)
+            time.sleep(3)
             xpath = "//input[@placeholder='Search people']"
             search_box = driver.find_element_by_xpath(xpath)
             print "Search the specified contact"

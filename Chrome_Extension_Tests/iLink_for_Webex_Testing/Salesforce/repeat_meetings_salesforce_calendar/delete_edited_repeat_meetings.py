@@ -2,12 +2,12 @@
 # -*- coding: utf-8 -*-
 
 from iLink_for_Webex_Testing import add_login_webex_extension
-from iLink_for_Webex_Testing.Salesforce.repeat_meeting_salesforce_calendar import edit_sf_repeat_meetings
+import edit_sf_repeat_meetings
 import time, re
 
 url_mywebex = 'https://esna.webex.com/mw3200/mywebex/default.do?siteurl=esna&service=10'
-url_o365 = "https://login.microsoftonline.com/"
-new_title = edit_sf_repeat_meetings.new_title
+url_sf = "https://login.salesforse.com/"
+new_title = edit_sf_repeat_meetings.new_topic
 
 driver = add_login_webex_extension.driver
 
@@ -85,10 +85,10 @@ def delete_edited_repeat_meetings_from_webex_server():
     delete_selected_meeting()
     
     
-def delete_repeat_meetings_from_o365_calendar():
-    def go_to_O365_calendar():
-        print "Go to O365 account"
-        driver.get(url_o365)
+def delete_repeat_meetings_from_sf_calendar():
+    def go_to_sf_calendar():
+        print "Go to sf account"
+        driver.get(url_sf)
         time.sleep(3)
         driver.find_element_by_id('O365_MainLink_NavMenu').click()
         print "Click menu"
@@ -122,8 +122,8 @@ def delete_repeat_meetings_from_o365_calendar():
                 print "The created meeting is still there"
         except:
             print "The repeat meetings are deleted from google calendar"
-    go_to_O365_calendar()
+    go_to_sf_calendar()
     delete_edited_meeting()
     
 # delete_edited_repeat_meetings_from_webex_server()
-delete_repeat_meetings_from_o365_calendar()
+delete_repeat_meetings_from_sf_calendar()

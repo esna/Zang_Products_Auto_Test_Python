@@ -10,7 +10,7 @@ import time
 new_templt = 'Webex New Template Testing'
 
 def sso_with_sf_credential():
-    driver = add_extention_sso_sf()
+    driver = add_extention_sso_sf.extenstion_and_sso()
     return driver
 driver = sso_with_sf_credential()
 

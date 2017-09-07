@@ -89,6 +89,7 @@ def create_repeat_mt_with_classic_interface():
         
     driver.find_element_by_name('save').click()
     time.sleep(2)
+    print "Created repeat meetings is finished"
 
 create_repeat_mt_with_classic_interface()
     

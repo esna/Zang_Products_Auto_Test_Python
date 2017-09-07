@@ -3,16 +3,16 @@ Created on Aug 15, 2017
 
 @author: qcadmin
 '''
-import create_scheduled_meeting
+import create_sf_repeat_meetings
 import datetime, time, re
 from iLink_for_Webex_Testing.Salesforce import webex_account_login
-topic = create_scheduled_meeting.topic
+topic = create_sf_repeat_meetings.topic
 templt_topic = 'WebEx Meeting #111'
-fromtime = create_scheduled_meeting.fromtime
+fromtime = create_sf_repeat_meetings.fromtime
 tmr = datetime.date.today() + datetime.timedelta(days=1)
 time_taken = '1 hour'
 sele_autio = "Use VoIP only"
-driver = create_scheduled_meeting.driver
+driver = create_sf_repeat_meetings.driver
 webex_account_login.webex_account_login(driver)
 
 def verify_meeting_data():
@@ -65,8 +65,8 @@ def verify_meeting_data():
             xpath = "//div[@id='mc-txt-teleconference']"
             audio = driver.find_element_by_xpath(xpath)
             assert  sele_autio == audio.text
-            
             print "Audio connection phone number is verified correct"
+            print "Verify edited recurring meeting is finished"
         verify_audio_connection()
         
     verify_created_meeting_data()

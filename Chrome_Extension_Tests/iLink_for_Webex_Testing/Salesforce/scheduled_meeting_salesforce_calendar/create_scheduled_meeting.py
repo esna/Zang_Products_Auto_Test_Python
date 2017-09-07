@@ -2,7 +2,7 @@ from selenium.webdriver.support.ui import Select
 from iLink_for_Webex_Testing import add_login_webex_extension
 import datetime, time
 
-contact_url_classic = 'https://na88.salesforce.com/003/o'
+contact_url_classic = 'https://na88.salesforce.com/home/home.jsp'
 template = 'Test#Template 1'
 topic = 'Salesforce scheduled meeting'
 passwd = '5555e'
@@ -74,6 +74,7 @@ def create_schdeuled_mting_with_classic_interface():
         
     driver.find_element_by_name('save').click()
     time.sleep(2)
+    print "Create scheduled meeting is finished"
 
-create_schdeuled_mting_with_classic_interface()
+# create_schdeuled_mting_with_classic_interface()
     
