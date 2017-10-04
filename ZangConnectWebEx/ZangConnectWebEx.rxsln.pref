@@ -1,0 +1,12 @@
+﻿<Properties>
+  <ActiveConfiguration value="Debug" />
+  <ActivePlatform value="x86" />
+  <SerializedValue name="ModuleBrowserState">
+    <ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <string>{BB7D7909-D474-4839-B8A9-2EC6E02ACF01}</string>
+      <string>60513a05-eab7-41e7-8c10-e51c735edc2e</string>
+    </ArrayOfString>
+  </SerializedValue>
+  <ProjectBrowserState value="[Solution ZangConnectWebEx[ZangConnectWebEx[]]]&#xD;&#xA;Solution ZangConnectWebEx&#xD;&#xA;Solution ZangConnectWebEx" />
+  <StartupProject value="{BB7D7909-D474-4839-B8A9-2EC6E02ACF01}" />
+</Properties>

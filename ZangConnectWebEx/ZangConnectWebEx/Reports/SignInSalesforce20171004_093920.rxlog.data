@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<report
+	progress="">
+	<activity
+		result="Failed"
+		duration="0ms"
+		durationms="0"
+		type="root"
+		rid="33ae2df057ee893"
+		totalerrorcount="1"
+		totalwarningcount="0"
+		totalsuccesstestcasecount="0"
+		totalfailedtestcasecount="0"
+		totalblockedtestcasecount="0"
+		childsuccesscount="0"
+		childfailedcount="0"
+		childblockedcount="0"
+		totalsuccesscount="0"
+		totalfailedcount="0"
+		totalblockedcount="0"
+		user="Administrator"
+		rxversion="7.2.0.0"
+		host="QC-ADMIN-PCMM"
+		osversion="Windows 7 Service Pack 1 64bit"
+		runtimeversion="4.0.30319.42000"
+		procarch="32bit"
+		oslanguage="en-US"
+		dtnlanguage="en-US"
+		screenresolution="3200x1080"
+		timestamp="10/4/2017 9:39:21 AM"
+		timestampiso="2017-10-04T13:39:21"
+		endtime="10/4/2017 9:42:18 AM"
+		timeoutfactor="1"
+		module="SignInSalesforce">
+		<detail>
+			SignInSalesforce
+		</detail>
+		<errormessage>
+			Screenshot of item 'ZangConnectWebExRepository.ZangConnect.ZangConnect' does not contain the specified image.
+		</errormessage>
+		<varbindings>
+		</varbindings>
+		<item
+			timeRelativeToTestSuiteStartTime="00:00.426"
+			timeRelativeToTestModuleStartTime="00:00.426"
+			timeWallClock="09:39:22"
+			time="00:00.426"
+			level="Info"
+			category="Mouse">
+			<message>
+				Mouse Left Click item 'ZangConnect' at 931;306.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/dom[@domain='hdhdfgbiafacojageghcplflcahlokji']"
+				fullname="ZangConnectWebExRepository.ZangConnect.Self"
+				id="7ead6e87c27447469f5c623296cbe900"
+				timeout="30000"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\SignInSalesforce.cs"
+				codeline="82"
+				itemindex="0"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:01.822"
+			timeRelativeToTestModuleStartTime="00:01.822"
+			timeWallClock="09:39:23"
+			time="00:01.822"
+			level="Info"
+			category="Mouse">
+			<message>
+				Mouse Left Click item 'LoginSalesforce.Username' at 109;29.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/dom[@domain='login.salesforce.com']//input[#'username']"
+				fullname="ZangConnectWebExRepository.LoginSalesforce.Username"
+				id="bb9bacfe9faf4034b6183b89ea623fed"
+				timeout="60000"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\SignInSalesforce.cs"
+				codeline="86"
+				itemindex="1"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:06.015"
+			timeRelativeToTestModuleStartTime="00:06.015"
+			timeWallClock="09:39:27"
+			time="00:06.015"
+			level="Info"
+			category="Keyboard">
+			<message>
+				Key sequence 'arnoe@esna.com{Tab}EsnaAvaya09' with focus on 'LoginSalesforce.Username'.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/dom[@domain='login.salesforce.com']//input[#'username']"
+				fullname="ZangConnectWebExRepository.LoginSalesforce.Username"
+				id="bb9bacfe9faf4034b6183b89ea623fed"
+				timeout="60000"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\SignInSalesforce.cs"
+				codeline="90"
+				itemindex="2"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:09.058"
+			timeRelativeToTestModuleStartTime="00:09.058"
+			timeWallClock="09:39:31"
+			time="00:09.058"
+			level="Info"
+			category="Keyboard">
+			<message>
+				Key sequence '{Return}'.
+			</message>
+			<metainfo
+				itemindex="3"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\SignInSalesforce.cs"
+				codeline="94"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:09.265"
+			timeRelativeToTestModuleStartTime="00:09.265"
+			timeWallClock="09:39:31"
+			time="00:09.265"
+			level="Info"
+			category="Mouse">
+			<message>
+				Mouse Left Click item 'AllowAccessSalesforce.Oaapprove' at 111;11.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/dom[@domain='na88.salesforce.com']//input[#'oaapprove']"
+				fullname="ZangConnectWebExRepository.AllowAccessSalesforce.Oaapprove"
+				id="0214ee74b6534c4fa6cb645bf91535b3"
+				timeout="60000"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\SignInSalesforce.cs"
+				codeline="98"
+				itemindex="4"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:12.082"
+			timeRelativeToTestModuleStartTime="00:12.082"
+			timeWallClock="09:39:34"
+			time="00:12.082"
+			level="Info"
+			category="Validation"
+			errimg=".\SignInSa_b9aec1fe_1561c122_trace.jpg"
+			errthumb=".\SignInSa_b9aec1fe_1561c122_trace_thumb.jpg">
+			<message>
+				Validating ContainsImage (Screenshot: 'Screenshot1' with region {X=653,Y=128,Width=636,Height=410}) on item 'ZangConnect.ZangConnect'.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/dom[@domain='hdhdfgbiafacojageghcplflcahlokji']"
+				fullname="ZangConnectWebExRepository.ZangConnect.ZangConnect"
+				id="35f997fcb4044be4bd7ee52b3fd59ff0"
+				timeout="60000"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\SignInSalesforce.cs"
+				codeline="102"
+				itemindex="5"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="02:56.081"
+			timeRelativeToTestModuleStartTime="02:56.081"
+			timeWallClock="09:42:18"
+			time="02:56.081"
+			level="Failure"
+			category="Validation"
+			errimg=".\SignInSa_b9aec1fe_d6559931_trace.jpg"
+			errthumb=".\SignInSa_b9aec1fe_d6559931_trace_thumb.jpg">
+			<message>
+				Screenshot of item 'ZangConnectWebExRepository.ZangConnect.ZangConnect' does not contain the specified image.
+			</message>
+			<metainfo
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\SignInSalesforce.cs"
+				codeline="103"
+				loglvl="Failure"
+				id="35f997fcb4044be4bd7ee52b3fd59ff0"
+				path="/dom[@domain='hdhdfgbiafacojageghcplflcahlokji']"
+				fullname="ZangConnectWebExRepository.ZangConnect.ZangConnect"
+				itemindex="5">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="02:56.099"
+			timeRelativeToTestModuleStartTime="02:56.099"
+			timeWallClock="09:42:18"
+			time="02:56.099"
+			level="Failure"
+			category="Expected image"
+			errimg=".\SignInSa_672a243d_rxlog.jpg"
+			errthumb=".\SignInSa_672a243d_rxlog_thumb.jpg">
+			<message>
+				
+			</message>
+			<metainfo
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\SignInSalesforce.cs"
+				codeline="103"
+				loglvl="Failure"
+				itemindex="5">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="02:56.144"
+			timeRelativeToTestModuleStartTime="02:56.144"
+			timeWallClock="09:42:18"
+			time="02:56.144"
+			level="Failure"
+			category="Actual image"
+			errimg=".\SignInSa_672a243c_rxlog.png"
+			errthumb=".\SignInSa_672a243c_rxlog_thumb.jpg">
+			<message>
+				
+			</message>
+			<metainfo
+				replaceImage="true"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\SignInSalesforce.cs"
+				codeline="103"
+				loglvl="Failure"
+				itemindex="5">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="02:56.175"
+			timeRelativeToTestModuleStartTime="02:56.175"
+			timeWallClock="09:42:18"
+			time="02:56.175"
+			level="Error"
+			category="Module"
+			errimg=".\SignInSa_b9aec1fe_d6559931_trace.jpg"
+			errthumb=".\SignInSa_b9aec1fe_d6559931_trace_thumb.jpg">
+			<message>
+				Module execution was aborted because a validation step has failed. Screenshot of item 'ZangConnectWebExRepository.ZangConnect.ZangConnect' does not contain the specified image.
+			</message>
+			<metainfo
+				stacktrace="   at Ranorex.Validate.ValidateImage(ValidateImageMethod validationMethod, Element element, Bitmap image, FindOptions findOptions, String message, Options options, RepoItemInfo itemInfo)
+   at Ranorex.Validate.ContainsImage(Element element, Bitmap image, FindOptions findOptions, String message, Options options)
+   at Ranorex.Validate.ContainsImage(RepoItemInfo itemInfo, Bitmap image, FindOptions findOptions, String message, Options options)
+   at Ranorex.Validate.ContainsImage(RepoItemInfo itemInfo, Bitmap image, FindOptions findOptions)
+   at ZangConnectWebEx.SignInSalesforce.Ranorex.Core.Testing.ITestModule.Run() in c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\SignInSalesforce.cs:line 103
+   at Ranorex.Core.Testing.TestModuleLeaf.RunInternal(DataContext parentDataContext, Int32 iteration, Int32 iterationCount, Boolean skipIteration)"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\SignInSalesforce.cs"
+				codeline="103"
+				loglvl="Error"
+				id="35f997fcb4044be4bd7ee52b3fd59ff0"
+				path="/dom[@domain='hdhdfgbiafacojageghcplflcahlokji']"
+				fullname="ZangConnectWebExRepository.ZangConnect.ZangConnect"
+				itemindex="5">
+			</metainfo>
+		</item>
+	</activity>
+</report>

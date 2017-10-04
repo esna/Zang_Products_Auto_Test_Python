@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<report
+	progress="">
+	<activity
+		result="Failed"
+		duration="0ms"
+		durationms="0"
+		type="root"
+		rid="2049c372ef9fbd4"
+		totalerrorcount="1"
+		totalwarningcount="0"
+		totalsuccesstestcasecount="0"
+		totalfailedtestcasecount="1"
+		totalblockedtestcasecount="0"
+		childsuccesscount="0"
+		childfailedcount="0"
+		childblockedcount="0"
+		totalsuccesscount="0"
+		totalfailedcount="0"
+		totalblockedcount="0"
+		user="Administrator"
+		rxversion="7.2.0.0"
+		host="QC-ADMIN-PCMM"
+		osversion="Windows 7 Service Pack 1 64bit"
+		runtimeversion="4.0.30319.42000"
+		procarch="32bit"
+		oslanguage="en-US"
+		dtnlanguage="en-US"
+		screenresolution="3200x1080"
+		timestamp="10/4/2017 2:44:36 PM"
+		timestampiso="2017-10-04T18:44:36"
+		endtime="10/4/2017 2:44:51 PM"
+		timeoutfactor="1"
+		module="GoogleCard">
+		<detail>
+			GoogleCard
+		</detail>
+		<varbindings>
+		</varbindings>
+		<item
+			timeRelativeToTestSuiteStartTime="00:00.765"
+			timeRelativeToTestModuleStartTime="00:00.765"
+			timeWallClock="14:44:37"
+			time="00:00.765"
+			level="Info"
+			category="Website"
+			errimg=".\GoogleCa_1305eb62_418850e6_trace.jpg"
+			errthumb=".\GoogleCa_1305eb62_418850e6_trace_thumb.jpg">
+			<message>
+				Opening web site 'https://mail.google.com/mail/u/0/#contacts' with browser 'chrome' in normal mode.
+			</message>
+			<metainfo
+				itemindex="0"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\GoogleCard.cs"
+				codeline="82"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:01.026"
+			timeRelativeToTestModuleStartTime="00:01.026"
+			timeWallClock="14:44:37"
+			time="00:01.026"
+			level="Info"
+			category="Mouse"
+			errimg=".\GoogleCa_1305eb62_c97d66bd_trace.jpg"
+			errthumb=".\GoogleCa_1305eb62_c97d66bd_trace_thumb.jpg">
+			<message>
+				Mouse Left Move item 'ContactManagerMatheesanmAtesnaCom.EsnaTech' at Center.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/dom[13]//tr[#':2t']//span[@innertext='Esna Tech']"
+				fullname="ZangConnectWebExRepository.ContactManagerMatheesanmAtesnaCom.EsnaTech"
+				id="ad7387474f3942f0b9e3578c03be4e9b"
+				timeout="60000"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\GoogleCard.cs"
+				codeline="86"
+				itemindex="1"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:14.234"
+			timeRelativeToTestModuleStartTime="00:14.234"
+			timeWallClock="14:44:50"
+			time="00:14.234"
+			level="Error"
+			category="User"
+			errimg=".\GoogleCa_1305eb62_3ec9928d_trace.jpg"
+			errthumb=".\GoogleCa_1305eb62_3ec9928d_trace_thumb.jpg">
+			<message>
+				The test run has been aborted by the user.
+			</message>
+			<metainfo
+				loglvl="Error">
+			</metainfo>
+		</item>
+	</activity>
+</report>

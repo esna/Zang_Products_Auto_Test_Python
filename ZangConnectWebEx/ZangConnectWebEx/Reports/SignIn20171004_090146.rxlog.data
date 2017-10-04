@@ -1,0 +1,437 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<report
+	progress="">
+	<activity
+		result="Failed"
+		duration="0ms"
+		durationms="0"
+		type="root"
+		rid="90359c886a548b1"
+		totalerrorcount="1"
+		totalwarningcount="0"
+		totalsuccesstestcasecount="0"
+		totalfailedtestcasecount="1"
+		totalblockedtestcasecount="0"
+		childsuccesscount="0"
+		childfailedcount="0"
+		childblockedcount="0"
+		totalsuccesscount="0"
+		totalfailedcount="0"
+		totalblockedcount="0"
+		user="Administrator"
+		rxversion="7.2.0.0"
+		host="QC-ADMIN-PCMM"
+		osversion="Windows 7 Service Pack 1 64bit"
+		runtimeversion="4.0.30319.42000"
+		procarch="32bit"
+		oslanguage="en-US"
+		dtnlanguage="en-US"
+		screenresolution="3200x1080"
+		timestamp="10/4/2017 9:01:48 AM"
+		timestampiso="2017-10-04T13:01:48"
+		endtime="10/4/2017 9:02:25 AM"
+		timeoutfactor="1"
+		module="SignIn">
+		<detail>
+			SignIn
+		</detail>
+		<varbindings>
+		</varbindings>
+		<item
+			timeRelativeToTestSuiteStartTime="00:00.505"
+			timeRelativeToTestModuleStartTime="00:00.505"
+			timeWallClock="09:01:48"
+			time="00:00.505"
+			level="Info"
+			category="Website">
+			<message>
+				Opening web site 'chrome-extension://hdhdfgbiafacojageghcplflcahlokji/options.html' with browser 'Chrome' in maximized mode.
+			</message>
+			<metainfo
+				itemindex="0"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\SignIn.cs"
+				codeline="82"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:00.570"
+			timeRelativeToTestModuleStartTime="00:00.570"
+			timeWallClock="09:01:48"
+			time="00:00.570"
+			level="Info"
+			category="Mouse">
+			<message>
+				Mouse Left Click item 'ZangConnect' at 946;250.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/dom[@domain='hdhdfgbiafacojageghcplflcahlokji']"
+				fullname="ZangConnectWebExRepository.ZangConnect.Self"
+				id="7ead6e87c27447469f5c623296cbe900"
+				timeout="30000"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\SignIn.cs"
+				codeline="86"
+				itemindex="1"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:02.152"
+			timeRelativeToTestModuleStartTime="00:02.152"
+			timeWallClock="09:01:50"
+			time="00:02.152"
+			level="Info"
+			category="Mouse">
+			<message>
+				Mouse Left Click item 'SignInGoogleAccounts.UseAnotherAccount' at 12;10.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/dom[@domain='accounts.google.com']//div[#'identifierLink']/?/?/p[@innertext='Use another account']"
+				fullname="ZangConnectWebExRepository.SignInGoogleAccounts.UseAnotherAccount"
+				id="0586fc2d61cb4e90a0fed1dad232f677"
+				timeout="60000"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\SignIn.cs"
+				codeline="90"
+				itemindex="2"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:05.906"
+			timeRelativeToTestModuleStartTime="00:05.906"
+			timeWallClock="09:01:54"
+			time="00:05.906"
+			level="Info"
+			category="Mouse">
+			<message>
+				Mouse Left Down item 'SignInGoogleAccounts.IdentifierId' at 213;12.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/dom[@domain='accounts.google.com']//input[#'identifierId']"
+				fullname="ZangConnectWebExRepository.SignInGoogleAccounts.IdentifierId"
+				id="5f4fe2f57c1843048d81cb4e56133c0c"
+				timeout="60000"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\SignIn.cs"
+				codeline="94"
+				itemindex="3"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:07.032"
+			timeRelativeToTestModuleStartTime="00:07.032"
+			timeWallClock="09:01:55"
+			time="00:07.032"
+			level="Info"
+			category="Mouse">
+			<message>
+				Mouse Left Move item 'SignInGoogleAccounts.IdentifierId' at 221;4.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/dom[@domain='accounts.google.com']//input[#'identifierId']"
+				fullname="ZangConnectWebExRepository.SignInGoogleAccounts.IdentifierId"
+				id="5f4fe2f57c1843048d81cb4e56133c0c"
+				timeout="60000"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\SignIn.cs"
+				codeline="99"
+				itemindex="4"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:07.917"
+			timeRelativeToTestModuleStartTime="00:07.917"
+			timeWallClock="09:01:56"
+			time="00:07.917"
+			level="Info"
+			category="Mouse">
+			<message>
+				Mouse Left Up item 'SignInGoogleAccounts.Path' at 165;198.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/dom[@domain='accounts.google.com']//body[#'yDmH0d']/div[1]/?/?/tag[@tagname='svg']/tag[2]"
+				fullname="ZangConnectWebExRepository.SignInGoogleAccounts.Path"
+				id="14537b5fe84b408e88d7315063d17092"
+				timeout="60000"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\SignIn.cs"
+				codeline="103"
+				itemindex="5"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:08.651"
+			timeRelativeToTestModuleStartTime="00:08.651"
+			timeWallClock="09:01:56"
+			time="00:08.651"
+			level="Info"
+			category="Keyboard">
+			<message>
+				Key sequence '{Back}'.
+			</message>
+			<metainfo
+				itemindex="6"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\SignIn.cs"
+				codeline="108"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:08.856"
+			timeRelativeToTestModuleStartTime="00:08.856"
+			timeWallClock="09:01:57"
+			time="00:08.856"
+			level="Info"
+			category="Keyboard">
+			<message>
+				Key sequence 'matheesanm@esna.com{Return}' with focus on 'SignInGoogleAccounts.IdentifierId'.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/dom[@domain='accounts.google.com']//input[#'identifierId']"
+				fullname="ZangConnectWebExRepository.SignInGoogleAccounts.IdentifierId"
+				id="5f4fe2f57c1843048d81cb4e56133c0c"
+				timeout="60000"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\SignIn.cs"
+				codeline="112"
+				itemindex="7"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:11.350"
+			timeRelativeToTestModuleStartTime="00:11.350"
+			timeWallClock="09:01:59"
+			time="00:11.350"
+			level="Info"
+			category="Delay">
+			<message>
+				Waiting for 2s.
+			</message>
+			<metainfo
+				itemindex="8"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\SignIn.cs"
+				codeline="116"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:13.361"
+			timeRelativeToTestModuleStartTime="00:13.361"
+			timeWallClock="09:02:01"
+			time="00:13.361"
+			level="Info"
+			category="Keyboard">
+			<message>
+				Key sequence 'preveena2113!{Return}'.
+			</message>
+			<metainfo
+				itemindex="9"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\SignIn.cs"
+				codeline="119"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:14.872"
+			timeRelativeToTestModuleStartTime="00:14.872"
+			timeWallClock="09:02:03"
+			time="00:14.872"
+			level="Info"
+			category="Delay">
+			<message>
+				Waiting for 500ms.
+			</message>
+			<metainfo
+				itemindex="10"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\SignIn.cs"
+				codeline="123"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:15.387"
+			timeRelativeToTestModuleStartTime="00:15.387"
+			timeWallClock="09:02:03"
+			time="00:15.387"
+			level="Info"
+			category="Mouse">
+			<message>
+				Mouse Left Click item 'SignInGoogleAccounts.ALLOW' at 27;7.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/dom[@domain='accounts.google.com']//div[#'submit_approve_access']/?/?/span[@innertext='ALLOW']"
+				fullname="ZangConnectWebExRepository.SignInGoogleAccounts.ALLOW"
+				id="4b4a9c56f2d7454bbf19b1799f2071ba"
+				timeout="60000"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\SignIn.cs"
+				codeline="126"
+				itemindex="11"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:17.770"
+			timeRelativeToTestModuleStartTime="00:17.770"
+			timeWallClock="09:02:05"
+			time="00:17.770"
+			level="Info"
+			category="Delay">
+			<message>
+				Waiting for 10s.
+			</message>
+			<metainfo
+				itemindex="12"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\SignIn.cs"
+				codeline="130"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:27.781"
+			timeRelativeToTestModuleStartTime="00:27.781"
+			timeWallClock="09:02:15"
+			time="00:27.781"
+			level="Info"
+			category="Validation">
+			<message>
+				Validating CompareImage (Screenshot: 'Screenshot3' with region {X=0,Y=0,Width=1920,Height=949}) on item 'ZangConnect'.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/dom[@domain='hdhdfgbiafacojageghcplflcahlokji']"
+				fullname="ZangConnectWebExRepository.ZangConnect.Self"
+				id="7ead6e87c27447469f5c623296cbe900"
+				timeout="30000"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\SignIn.cs"
+				codeline="133"
+				itemindex="13"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:28.158"
+			timeRelativeToTestModuleStartTime="00:28.158"
+			timeWallClock="09:02:16"
+			time="00:28.158"
+			level="Success"
+			category="Validation">
+			<message>
+				Screenshot of item 'ZangConnectWebExRepository.ZangConnect.Self' does match the specified image.
+			</message>
+			<metainfo
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\SignIn.cs"
+				codeline="134"
+				loglvl="Success"
+				id="7ead6e87c27447469f5c623296cbe900"
+				path="/dom[@domain='hdhdfgbiafacojageghcplflcahlokji']"
+				fullname="ZangConnectWebExRepository.ZangConnect.Self"
+				itemindex="13">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:28.262"
+			timeRelativeToTestModuleStartTime="00:28.262"
+			timeWallClock="09:02:16"
+			time="00:28.262"
+			level="Info"
+			category="Mouse">
+			<message>
+				Mouse Left Click item 'ZangConnect' at 985;382.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/dom[@domain='hdhdfgbiafacojageghcplflcahlokji']"
+				fullname="ZangConnectWebExRepository.ZangConnect.Self"
+				id="7ead6e87c27447469f5c623296cbe900"
+				timeout="30000"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\SignIn.cs"
+				codeline="137"
+				itemindex="14"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:29.067"
+			timeRelativeToTestModuleStartTime="00:29.067"
+			timeWallClock="09:02:17"
+			time="00:29.067"
+			level="Info"
+			category="Keyboard">
+			<message>
+				Key sequence 'Zang123!'.
+			</message>
+			<metainfo
+				itemindex="15"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\SignIn.cs"
+				codeline="141"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:29.973"
+			timeRelativeToTestModuleStartTime="00:29.973"
+			timeWallClock="09:02:18"
+			time="00:29.973"
+			level="Info"
+			category="Mouse"
+			errimg=".\SignIn20_21a417ce_33d9ec67_trace.jpg"
+			errthumb=".\SignIn20_21a417ce_33d9ec67_trace_thumb.jpg">
+			<message>
+				Mouse Left Click item 'ZangConnect' at 1204;469.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/dom[@domain='hdhdfgbiafacojageghcplflcahlokji']"
+				fullname="ZangConnectWebExRepository.ZangConnect.Self"
+				id="7ead6e87c27447469f5c623296cbe900"
+				timeout="30000"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\SignIn.cs"
+				codeline="145"
+				itemindex="16"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:30.791"
+			timeRelativeToTestModuleStartTime="00:30.791"
+			timeWallClock="09:02:18"
+			time="00:30.791"
+			level="Info"
+			category="Delay"
+			errimg=".\SignIn20_21a417ce_cbadd1fb_trace.jpg"
+			errthumb=".\SignIn20_21a417ce_cbadd1fb_trace_thumb.jpg">
+			<message>
+				Waiting for 15s.
+			</message>
+			<metainfo
+				itemindex="17"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\SignIn.cs"
+				codeline="149"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:37.017"
+			timeRelativeToTestModuleStartTime="00:37.017"
+			timeWallClock="09:02:25"
+			time="00:37.017"
+			level="Error"
+			category="User"
+			errimg=".\SignIn20_21a417ce_7ea5bfae_trace.jpg"
+			errthumb=".\SignIn20_21a417ce_7ea5bfae_trace_thumb.jpg">
+			<message>
+				The test run has been aborted by the user.
+			</message>
+			<metainfo
+				loglvl="Error">
+			</metainfo>
+		</item>
+	</activity>
+</report>

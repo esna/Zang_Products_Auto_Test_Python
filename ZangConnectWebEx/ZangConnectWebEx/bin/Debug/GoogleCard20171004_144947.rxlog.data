@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<report
+	progress="">
+	<activity
+		result="Failed"
+		duration="0ms"
+		durationms="0"
+		type="root"
+		rid="2d7c8f4df93baa8c"
+		totalerrorcount="1"
+		totalwarningcount="0"
+		totalsuccesstestcasecount="0"
+		totalfailedtestcasecount="1"
+		totalblockedtestcasecount="0"
+		childsuccesscount="0"
+		childfailedcount="0"
+		childblockedcount="0"
+		totalsuccesscount="0"
+		totalfailedcount="0"
+		totalblockedcount="0"
+		user="Administrator"
+		rxversion="7.2.0.0"
+		host="QC-ADMIN-PCMM"
+		osversion="Windows 7 Service Pack 1 64bit"
+		runtimeversion="4.0.30319.42000"
+		procarch="32bit"
+		oslanguage="en-US"
+		dtnlanguage="en-US"
+		screenresolution="3200x1080"
+		timestamp="10/4/2017 2:49:49 PM"
+		timestampiso="2017-10-04T18:49:49"
+		endtime="10/4/2017 2:50:14 PM"
+		timeoutfactor="1"
+		module="GoogleCard">
+		<detail>
+			GoogleCard
+		</detail>
+		<varbindings>
+		</varbindings>
+		<item
+			timeRelativeToTestSuiteStartTime="00:00.706"
+			timeRelativeToTestModuleStartTime="00:00.706"
+			timeWallClock="14:49:50"
+			time="00:00.706"
+			level="Info"
+			category="Mouse">
+			<message>
+				Mouse Left Move item 'ContactManagerMatheesanmAtesnaCom1.EsnaTech' at Center.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/dom[10]//tr[#':2t']//span[@innertext='Esna Tech']"
+				fullname="ZangConnectWebExRepository.ContactManagerMatheesanmAtesnaCom1.EsnaTech"
+				id="8b1b1150b0f3474089b95f273cc4d1f2"
+				timeout="60000"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\GoogleCard.cs"
+				codeline="89"
+				itemindex="2"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:03.731"
+			timeRelativeToTestModuleStartTime="00:03.731"
+			timeWallClock="14:49:53"
+			time="00:03.731"
+			level="Info"
+			category="Delay"
+			errimg=".\GoogleCa_58cd4936_42f6d027_trace.jpg"
+			errthumb=".\GoogleCa_58cd4936_42f6d027_trace_thumb.jpg">
+			<message>
+				Waiting for 2s.
+			</message>
+			<metainfo
+				itemindex="3"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\GoogleCard.cs"
+				codeline="93"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:06.009"
+			timeRelativeToTestModuleStartTime="00:06.009"
+			timeWallClock="14:49:55"
+			time="00:06.009"
+			level="Info"
+			category="Mouse"
+			errimg=".\GoogleCa_58cd4936_8b0c82de_trace.jpg"
+			errthumb=".\GoogleCa_58cd4936_8b0c82de_trace_thumb.jpg">
+			<message>
+				Mouse Left Click item 'ContactManagerMatheesanmAtesnaCom' at 618;437.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/dom[13]"
+				fullname="ZangConnectWebExRepository.ContactManagerMatheesanmAtesnaCom.Self"
+				id="edaff561c4904720bb3608ce2d71f26e"
+				timeout="30000"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\GoogleCard.cs"
+				codeline="96"
+				itemindex="4"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:24.676"
+			timeRelativeToTestModuleStartTime="00:24.676"
+			timeWallClock="14:50:14"
+			time="00:24.676"
+			level="Error"
+			category="User"
+			errimg=".\GoogleCa_58cd4936_64e70ace_trace.jpg"
+			errthumb=".\GoogleCa_58cd4936_64e70ace_trace_thumb.jpg">
+			<message>
+				The test run has been aborted by the user.
+			</message>
+			<metainfo
+				loglvl="Error">
+			</metainfo>
+		</item>
+	</activity>
+</report>

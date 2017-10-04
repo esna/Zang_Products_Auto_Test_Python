@@ -1,0 +1,364 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<report
+	progress="">
+	<activity
+		result="Failed"
+		duration="0ms"
+		durationms="0"
+		type="root"
+		rid="1db73804688d6b25"
+		totalerrorcount="1"
+		totalwarningcount="0"
+		totalsuccesstestcasecount="0"
+		totalfailedtestcasecount="1"
+		totalblockedtestcasecount="0"
+		childsuccesscount="0"
+		childfailedcount="0"
+		childblockedcount="0"
+		totalsuccesscount="0"
+		totalfailedcount="0"
+		totalblockedcount="0"
+		user="Administrator"
+		rxversion="7.2.0.0"
+		host="QC-ADMIN-PCMM"
+		osversion="Windows 7 Service Pack 1 64bit"
+		runtimeversion="4.0.30319.42000"
+		procarch="32bit"
+		oslanguage="en-US"
+		dtnlanguage="en-US"
+		screenresolution="3200x1080"
+		timestamp="10/4/2017 2:00:57 PM"
+		timestampiso="2017-10-04T18:00:57"
+		endtime="10/4/2017 2:01:19 PM"
+		timeoutfactor="1"
+		module="googleCalendarValidation">
+		<detail>
+			googleCalendarValidation
+		</detail>
+		<varbindings>
+		</varbindings>
+		<item
+			timeRelativeToTestSuiteStartTime="00:00.501"
+			timeRelativeToTestModuleStartTime="00:00.502"
+			timeWallClock="14:00:58"
+			time="00:00.501"
+			level="Info"
+			category="Website">
+			<message>
+				Opening web site 'https://calendar.google.com/calendar/r' with browser 'chrome' in normal mode.
+			</message>
+			<metainfo
+				itemindex="0"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\googleCalendarValidation.cs"
+				codeline="82"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:00.537"
+			timeRelativeToTestModuleStartTime="00:00.538"
+			timeWallClock="14:00:58"
+			time="00:00.537"
+			level="Info"
+			category="Mouse">
+			<message>
+				Mouse Left Click item 'EsnaComCalendarWeekOfOctober2.Gw6Zhc' at 6;10.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/dom[@domain='calendar.google.com']//body[#'yDmH0d']/div[3]//i"
+				fullname="ZangConnectWebExRepository.EsnaComCalendarWeekOfOctober2.Gw6Zhc"
+				id="653372c6a5f04601b2c7d3860698f0a3"
+				timeout="60000"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\googleCalendarValidation.cs"
+				codeline="86"
+				itemindex="1"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:02.208"
+			timeRelativeToTestModuleStartTime="00:02.209"
+			timeWallClock="14:00:59"
+			time="00:02.208"
+			level="Info"
+			category="Mouse">
+			<message>
+				Mouse Left Click item 'EsnaComCalendarWeekOfOctober2.Webex0addtext' at 63;7.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/dom[@domain='calendar.google.com']//span[#'webex0addtext']"
+				fullname="ZangConnectWebExRepository.EsnaComCalendarWeekOfOctober2.Webex0addtext"
+				id="06e7811fdf604929900a0df420b35dee"
+				timeout="60000"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\googleCalendarValidation.cs"
+				codeline="90"
+				itemindex="2"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:04.263"
+			timeRelativeToTestModuleStartTime="00:04.264"
+			timeWallClock="14:01:01"
+			time="00:04.263"
+			level="Info"
+			category="Mouse">
+			<message>
+				Mouse Left Click item 'EsnaComCalendarWeekOfOctober2' at 1142;118.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/dom[@domain='calendar.google.com']"
+				fullname="ZangConnectWebExRepository.EsnaComCalendarWeekOfOctober2.Self"
+				id="9eda974321b844e4ba40ea522f435255"
+				timeout="30000"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\googleCalendarValidation.cs"
+				codeline="94"
+				itemindex="3"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:05.215"
+			timeRelativeToTestModuleStartTime="00:05.216"
+			timeWallClock="14:01:02"
+			time="00:05.215"
+			level="Info"
+			category="Mouse">
+			<message>
+				Mouse Left Click item 'Dropdown' at 80;25.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/container[@caption='dropdown']"
+				fullname="ZangConnectWebExRepository.Dropdown.Self"
+				id="d6a7a029e11447e59070c16335381b3d"
+				timeout="30000"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\googleCalendarValidation.cs"
+				codeline="98"
+				itemindex="4"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:06.010"
+			timeRelativeToTestModuleStartTime="00:06.011"
+			timeWallClock="14:01:03"
+			time="00:06.010"
+			level="Info"
+			category="Mouse">
+			<message>
+				Mouse Left Click item 'EsnaComCalendarWeekOfOctober2' at 995;237.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/dom[@domain='calendar.google.com']"
+				fullname="ZangConnectWebExRepository.EsnaComCalendarWeekOfOctober2.Self"
+				id="9eda974321b844e4ba40ea522f435255"
+				timeout="30000"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\googleCalendarValidation.cs"
+				codeline="102"
+				itemindex="5"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:06.939"
+			timeRelativeToTestModuleStartTime="00:06.940"
+			timeWallClock="14:01:04"
+			time="00:06.939"
+			level="Info"
+			category="Mouse">
+			<message>
+				Mouse Left Click item 'Dropdown' at 58;27.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/container[@caption='dropdown']"
+				fullname="ZangConnectWebExRepository.Dropdown.Self"
+				id="d6a7a029e11447e59070c16335381b3d"
+				timeout="30000"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\googleCalendarValidation.cs"
+				codeline="106"
+				itemindex="6"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:07.748"
+			timeRelativeToTestModuleStartTime="00:07.749"
+			timeWallClock="14:01:05"
+			time="00:07.748"
+			level="Info"
+			category="Mouse">
+			<message>
+				Mouse Left Click item 'EsnaComCalendarWeekOfOctober2' at 980;281.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/dom[@domain='calendar.google.com']"
+				fullname="ZangConnectWebExRepository.EsnaComCalendarWeekOfOctober2.Self"
+				id="9eda974321b844e4ba40ea522f435255"
+				timeout="30000"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\googleCalendarValidation.cs"
+				codeline="110"
+				itemindex="7"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:08.586"
+			timeRelativeToTestModuleStartTime="00:08.587"
+			timeWallClock="14:01:06"
+			time="00:08.586"
+			level="Info"
+			category="Mouse">
+			<message>
+				Mouse Left Click item 'Dropdown' at 52;28.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/container[@caption='dropdown']"
+				fullname="ZangConnectWebExRepository.Dropdown.Self"
+				id="d6a7a029e11447e59070c16335381b3d"
+				timeout="30000"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\googleCalendarValidation.cs"
+				codeline="114"
+				itemindex="8"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:09.416"
+			timeRelativeToTestModuleStartTime="00:09.417"
+			timeWallClock="14:01:07"
+			time="00:09.416"
+			level="Info"
+			category="Mouse">
+			<message>
+				Mouse Left Click item 'EsnaComCalendarWeekOfOctober2' at 976;355.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/dom[@domain='calendar.google.com']"
+				fullname="ZangConnectWebExRepository.EsnaComCalendarWeekOfOctober2.Self"
+				id="9eda974321b844e4ba40ea522f435255"
+				timeout="30000"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\googleCalendarValidation.cs"
+				codeline="118"
+				itemindex="9"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:10.266"
+			timeRelativeToTestModuleStartTime="00:10.267"
+			timeWallClock="14:01:07"
+			time="00:10.266"
+			level="Info"
+			category="Mouse">
+			<message>
+				Mouse Left Click item 'Dropdown' at 58;7.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/container[@caption='dropdown']"
+				fullname="ZangConnectWebExRepository.Dropdown.Self"
+				id="d6a7a029e11447e59070c16335381b3d"
+				timeout="30000"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\googleCalendarValidation.cs"
+				codeline="122"
+				itemindex="10"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:11.057"
+			timeRelativeToTestModuleStartTime="00:11.058"
+			timeWallClock="14:01:08"
+			time="00:11.057"
+			level="Info"
+			category="Mouse">
+			<message>
+				Mouse Left Click item 'EsnaComCalendarWeekOfOctober2' at 928;319.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/dom[@domain='calendar.google.com']"
+				fullname="ZangConnectWebExRepository.EsnaComCalendarWeekOfOctober2.Self"
+				id="9eda974321b844e4ba40ea522f435255"
+				timeout="30000"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\googleCalendarValidation.cs"
+				codeline="126"
+				itemindex="11"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:11.907"
+			timeRelativeToTestModuleStartTime="00:11.908"
+			timeWallClock="14:01:09"
+			time="00:11.907"
+			level="Info"
+			category="Mouse"
+			errimg=".\googleCa_5d12b6a_15f8692a_trace.jpg"
+			errthumb=".\googleCa_5d12b6a_15f8692a_trace_thumb.jpg">
+			<message>
+				Mouse Left Click item 'EsnaComCalendarWeekOfOctober2' at 950;577.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/dom[@domain='calendar.google.com']"
+				fullname="ZangConnectWebExRepository.EsnaComCalendarWeekOfOctober2.Self"
+				id="9eda974321b844e4ba40ea522f435255"
+				timeout="30000"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\googleCalendarValidation.cs"
+				codeline="130"
+				itemindex="12"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:12.772"
+			timeRelativeToTestModuleStartTime="00:12.773"
+			timeWallClock="14:01:10"
+			time="00:12.772"
+			level="Info"
+			category="Validation"
+			errimg=".\googleCa_5d12b6a_4f4d30b2_trace.jpg"
+			errthumb=".\googleCa_5d12b6a_4f4d30b2_trace_thumb.jpg">
+			<message>
+				Validating ContainsImage (Screenshot: 'Screenshot1' with region {X=7,Y=0,Width=263,Height=22}) on item 'EsnaComCalendarWeekOfOctober2.CghhOe0'.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/dom[@domain='calendar.google.com']//div[#'CghhOe0']"
+				fullname="ZangConnectWebExRepository.EsnaComCalendarWeekOfOctober2.CghhOe0"
+				id="1a6679af96ff4a8eb75a13407f2127c1"
+				timeout="60000"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\googleCalendarValidation.cs"
+				codeline="134"
+				itemindex="13"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:21.318"
+			timeRelativeToTestModuleStartTime="00:21.319"
+			timeWallClock="14:01:18"
+			time="00:21.318"
+			level="Error"
+			category="User"
+			errimg=".\googleCa_5d12b6a_91362437_trace.jpg"
+			errthumb=".\googleCa_5d12b6a_91362437_trace_thumb.jpg">
+			<message>
+				The test run has been aborted by the user.
+			</message>
+			<metainfo
+				loglvl="Error">
+			</metainfo>
+		</item>
+	</activity>
+</report>

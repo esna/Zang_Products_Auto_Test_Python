@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<report
+	progress="">
+	<activity
+		result="Failed"
+		duration="0ms"
+		durationms="0"
+		type="root"
+		rid="166ec71f67ffc180"
+		totalerrorcount="1"
+		totalwarningcount="0"
+		totalsuccesstestcasecount="0"
+		totalfailedtestcasecount="0"
+		totalblockedtestcasecount="0"
+		childsuccesscount="0"
+		childfailedcount="0"
+		childblockedcount="0"
+		totalsuccesscount="0"
+		totalfailedcount="0"
+		totalblockedcount="0"
+		user="Administrator"
+		rxversion="7.2.0.0"
+		host="QC-ADMIN-PCMM"
+		osversion="Windows 7 Service Pack 1 64bit"
+		runtimeversion="4.0.30319.42000"
+		procarch="32bit"
+		oslanguage="en-US"
+		dtnlanguage="en-US"
+		screenresolution="3200x1080"
+		timestamp="10/4/2017 10:06:36 AM"
+		timestampiso="2017-10-04T14:06:36"
+		endtime="10/4/2017 10:07:39 AM"
+		timeoutfactor="1"
+		module="SignInO365">
+		<detail>
+			SignInO365
+		</detail>
+		<errormessage>
+			Failed to find item 'ZangConnectWebExRepository.SignInToYourAccount.DivTagUseA'.
+		</errormessage>
+		<varbindings>
+		</varbindings>
+		<item
+			timeRelativeToTestSuiteStartTime="00:00.614"
+			timeRelativeToTestModuleStartTime="00:00.614"
+			timeWallClock="10:06:37"
+			time="00:00.614"
+			level="Info"
+			category="Mouse"
+			errimg=".\SignInO3_b31ec392_f5bf5b36_trace.jpg"
+			errthumb=".\SignInO3_b31ec392_f5bf5b36_trace_thumb.jpg">
+			<message>
+				Mouse Left Click item 'ZangConnect.ZangConnect' at 952;360.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/dom[@domain='hdhdfgbiafacojageghcplflcahlokji']"
+				fullname="ZangConnectWebExRepository.ZangConnect.ZangConnect"
+				id="35f997fcb4044be4bd7ee52b3fd59ff0"
+				timeout="60000"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\SignInO365.cs"
+				codeline="82"
+				itemindex="0"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:02.330"
+			timeRelativeToTestModuleStartTime="00:02.330"
+			timeWallClock="10:06:38"
+			time="00:02.330"
+			level="Info"
+			category="Mouse"
+			errimg=".\SignInO3_b31ec392_b0d3a8bd_trace.jpg"
+			errthumb=".\SignInO3_b31ec392_b0d3a8bd_trace_thumb.jpg">
+			<message>
+				Mouse Left Click item 'SignInToYourAccount.DivTagUseA' at 48;14.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/dom[@domain='login.microsoftonline.com']//table[#'use_another_account']//td/table/tbody/tr[2]/td[2]/div[@innertext~'^\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ']"
+				fullname="ZangConnectWebExRepository.SignInToYourAccount.DivTagUseA"
+				id="ef7dcab691a8475c8984ec5873748581"
+				timeout="60000"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\SignInO365.cs"
+				codeline="86"
+				itemindex="1"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="01:02.470"
+			timeRelativeToTestModuleStartTime="01:02.470"
+			timeWallClock="10:07:39"
+			time="01:02.470"
+			level="Error"
+			category="Module"
+			errimg=".\SignInO3_b31ec392_d962c13e_trace.jpg"
+			errthumb=".\SignInO3_b31ec392_d962c13e_trace_thumb.jpg">
+			<message>
+				Failed to find item 'ZangConnectWebExRepository.SignInToYourAccount.DivTagUseA'.<br/>No element found for path '/dom[@domain='login.microsoftonline.com']//table[#'use_another_account']//td/table/tbody/tr[2]/td[2]/div[@innertext~'^\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ']' within 1m.
+			</message>
+			<metainfo
+				stacktrace="   at Ranorex.Core.Repository.RepoItemInfo.Find[T](Boolean findSingle, Boolean throwException, Duration effectiveTimeoutOverride)
+   at Ranorex.Core.Repository.RepoItemInfo.CreateAdapter[T](Boolean throwException, Duration waitTimeout)
+   at Ranorex.Core.Repository.RepoItemInfo.CreateAdapter[T](Boolean throwException)
+   at ZangConnectWebEx.ZangConnectWebExRepositoryFolders.SignInToYourAccountAppFolder.get_DivTagUseA() in c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\ZangConnectWebExRepository.cs:line 677
+   at ZangConnectWebEx.SignInO365.Ranorex.Core.Testing.ITestModule.Run() in c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\SignInO365.cs:line 87
+   at Ranorex.Core.Testing.TestModuleLeaf.RunInternal(DataContext parentDataContext, Int32 iteration, Int32 iterationCount, Boolean skipIteration)"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\SignInO365.cs"
+				codeline="87"
+				type="repoitem"
+				path="/dom[@domain='login.microsoftonline.com']//table[#'use_another_account']//td/table/tbody/tr[2]/td[2]/div[@innertext~'^\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ']"
+				fullname="ZangConnectWebExRepository.SignInToYourAccount.DivTagUseA"
+				id="ef7dcab691a8475c8984ec5873748581"
+				timeout="60000"
+				loglvl="Error"
+				itemindex="1">
+			</metainfo>
+		</item>
+	</activity>
+</report>

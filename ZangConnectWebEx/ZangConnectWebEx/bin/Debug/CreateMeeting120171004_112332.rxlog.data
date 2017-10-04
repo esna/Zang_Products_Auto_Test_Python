@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<report
+	progress="">
+	<activity
+		result="Success"
+		duration="0ms"
+		durationms="0"
+		type="root"
+		rid="1cfc8461a6cce673"
+		totalerrorcount="0"
+		totalwarningcount="0"
+		totalsuccesstestcasecount="0"
+		totalfailedtestcasecount="0"
+		totalblockedtestcasecount="0"
+		childsuccesscount="0"
+		childfailedcount="0"
+		childblockedcount="0"
+		totalsuccesscount="0"
+		totalfailedcount="0"
+		totalblockedcount="0"
+		user="Administrator"
+		rxversion="7.2.0.0"
+		host="QC-ADMIN-PCMM"
+		osversion="Windows 7 Service Pack 1 64bit"
+		runtimeversion="4.0.30319.42000"
+		procarch="32bit"
+		oslanguage="en-US"
+		dtnlanguage="en-US"
+		screenresolution="3200x1080"
+		timestamp="10/4/2017 11:23:33 AM"
+		timestampiso="2017-10-04T15:23:33"
+		endtime="10/4/2017 11:23:35 AM"
+		timeoutfactor="1"
+		module="CreateMeeting1">
+		<detail>
+			CreateMeeting1
+		</detail>
+		<varbindings>
+		</varbindings>
+		<item
+			timeRelativeToTestSuiteStartTime="00:00.437"
+			timeRelativeToTestModuleStartTime="00:00.437"
+			timeWallClock="11:23:33"
+			time="00:00.437"
+			level="Info"
+			category="Mouse">
+			<message>
+				Mouse Left Click item 'ZangConnectGoogleChrome.ZangConnectForWebEx' at 17;15.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/form[@title~'^Zang\ Connect\ -\ Google\ Chr']/container[@accessiblename='Google Chrome']//toolbar[@accessiblename='main']/?/?/button[@accessiblename='Zang Connect for WebEx' and @accessiblerole='PushButton']"
+				fullname="ZangConnectWebExRepository.ZangConnectGoogleChrome.ZangConnectForWebEx"
+				id="30deba7c18784a65a706b90ebd30ba1d"
+				timeout="60000"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\CreateMeeting1.cs"
+				codeline="82"
+				itemindex="0"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:01.607"
+			timeRelativeToTestModuleStartTime="00:01.607"
+			timeWallClock="11:23:34"
+			time="00:01.607"
+			level="Info"
+			category="Mouse">
+			<message>
+				Mouse Left Move at {X=1850,Y=100}.
+			</message>
+			<metainfo
+				itemindex="1"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\CreateMeeting1.cs"
+				codeline="86"
+				loglvl="Info">
+			</metainfo>
+		</item>
+	</activity>
+</report>

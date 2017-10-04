@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<report
+	progress="">
+	<activity
+		result="Failed"
+		duration="0ms"
+		durationms="0"
+		type="root"
+		rid="24a0452a1a9cc175"
+		totalerrorcount="1"
+		totalwarningcount="0"
+		totalsuccesstestcasecount="0"
+		totalfailedtestcasecount="1"
+		totalblockedtestcasecount="0"
+		childsuccesscount="0"
+		childfailedcount="0"
+		childblockedcount="0"
+		totalsuccesscount="0"
+		totalfailedcount="0"
+		totalblockedcount="0"
+		user="Administrator"
+		rxversion="7.2.0.0"
+		host="QC-ADMIN-PCMM"
+		osversion="Windows 7 Service Pack 1 64bit"
+		runtimeversion="4.0.30319.42000"
+		procarch="32bit"
+		oslanguage="en-US"
+		dtnlanguage="en-US"
+		screenresolution="3200x1080"
+		timestamp="10/4/2017 10:08:58 AM"
+		timestampiso="2017-10-04T14:08:58"
+		endtime="10/4/2017 10:09:11 AM"
+		timeoutfactor="1"
+		module="SignInO365">
+		<detail>
+			SignInO365
+		</detail>
+		<varbindings>
+		</varbindings>
+		<item
+			timeRelativeToTestSuiteStartTime="00:00.426"
+			timeRelativeToTestModuleStartTime="00:00.427"
+			timeWallClock="10:08:58"
+			time="00:00.426"
+			level="Info"
+			category="Mouse"
+			errimg=".\SignInO3_3ccbacca_1afb1424_trace.jpg"
+			errthumb=".\SignInO3_3ccbacca_1afb1424_trace_thumb.jpg">
+			<message>
+				Mouse Left Click item 'ZangConnect.ZangConnect' at 952;360.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/dom[@domain='hdhdfgbiafacojageghcplflcahlokji']"
+				fullname="ZangConnectWebExRepository.ZangConnect.ZangConnect"
+				id="35f997fcb4044be4bd7ee52b3fd59ff0"
+				timeout="60000"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\SignInO365.cs"
+				codeline="82"
+				itemindex="0"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:01.847"
+			timeRelativeToTestModuleStartTime="00:01.848"
+			timeWallClock="10:09:00"
+			time="00:01.847"
+			level="Info"
+			category="Mouse"
+			errimg=".\SignInO3_3ccbacca_d616763a_trace.jpg"
+			errthumb=".\SignInO3_3ccbacca_d616763a_trace_thumb.jpg">
+			<message>
+				Mouse Left Click item 'SignInToYourAccount.DivTagUseA' at 48;14.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/dom[@domain='login.microsoftonline.com']//table[#'use_another_account']//td/table/tbody/tr[2]/td[2]/div[@innertext~'^\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ']"
+				fullname="ZangConnectWebExRepository.SignInToYourAccount.DivTagUseA"
+				id="ef7dcab691a8475c8984ec5873748581"
+				timeout="60000"
+				codefile="c:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\SignInO365.cs"
+				codeline="86"
+				itemindex="1"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:12.802"
+			timeRelativeToTestModuleStartTime="00:12.803"
+			timeWallClock="10:09:11"
+			time="00:12.802"
+			level="Error"
+			category="User"
+			errimg=".\SignInO3_3ccbacca_94989cc0_trace.jpg"
+			errthumb=".\SignInO3_3ccbacca_94989cc0_trace_thumb.jpg">
+			<message>
+				The test run has been aborted by the user.
+			</message>
+			<metainfo
+				loglvl="Error">
+			</metainfo>
+		</item>
+	</activity>
+</report>

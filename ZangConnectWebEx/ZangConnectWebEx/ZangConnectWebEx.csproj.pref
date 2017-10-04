@@ -1,0 +1,16 @@
+﻿<Properties>
+  <Array name="active">
+    <Element value="GoogleCard.rxrec" />
+  </Array>
+  <Array name="bookmarks" />
+  <Array name="files">
+    <Element value="ZangConnectWebEx.rxtst" />
+    <Element value="GoogleCard.rxrec" />
+  </Array>
+  <Properties name="projectSavedData">
+    <Properties name="customTool">
+      <runOnBuild value="False" />
+    </Properties>
+    <Array name="recentusercodeselections" />
+  </Properties>
+</Properties>

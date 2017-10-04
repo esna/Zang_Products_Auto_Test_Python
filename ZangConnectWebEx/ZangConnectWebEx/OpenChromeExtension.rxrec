@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<recordtable
+embeddedrepository="False"
+id="dfe3cf4b-401a-4202-a053-ec04eaddd46c"
+mode="Global"
+rxversion="7.2">
+	<name>
+		OpenChromeExtension
+	</name>
+	<repeatcount>
+		1
+	</repeatcount>
+	<turbomode>
+		False
+	</turbomode>
+	<genreport>
+		True
+	</genreport>
+	<speedfactor>
+		1
+	</speedfactor>
+	<useDefaultItemLogging>
+		True
+	</useDefaultItemLogging>
+	<codegen
+	classname="OpenChromeExtension"
+	namespace="ZangConnectWebEx">
+	</codegen>
+	<variables>
+	</variables>
+	<recorditems>
+		<openwebsiterecorditem
+		args=""
+		browser="Chrome"
+		clearcache="False"
+		clearcookies="False"
+		enabled="True"
+		incognito="False"
+		killexisting="False"
+		maximized="True"
+		optional="False">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<url>
+				chrome-extension://hdhdfgbiafacojageghcplflcahlokji/options.html
+			</url>
+		</openwebsiterecorditem>
+	</recorditems>
+	<repository
+	id="c31923ab-4d09-461e-aab8-c0bbce0c9630"
+	name="ZangConnectWebExRepository"
+	relativepath="ZangConnectWebExRepository.rxrep"
+	rxversion="7.2">
+		<codegen
+		classname="ZangConnectWebExRepository"
+		namespace="ZangConnectWebEx">
+		</codegen>
+		<rootfolder
+		id="b007516a-69b7-41e0-bd23-34204f58e5f7"
+		name="_rootdummy_">
+		</rootfolder>
+	</repository>
+	<usercodefile
+	lang="CSharp">
+		OpenChromeExtension.UserCode.cs
+	</usercodefile>
+	<references>
+	</references>
+</recordtable>

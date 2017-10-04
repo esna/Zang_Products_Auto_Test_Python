@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modulegroupdoc
+rxversion="7.2">
+  <testsuiteentryhierarchy>
+    <flatlistofchildren>
+      <modulegroups
+      name="ZangConnectWebEx"
+      id="567c13c8-79d4-45af-86c3-6858475b1e80"/>
+    </flatlistofchildren>
+    <childhierarchy>
+      <modulegroups
+      name="ZangConnectWebEx"
+      id="567c13c8-79d4-45af-86c3-6858475b1e80"/>
+    </childhierarchy>
+  </testsuiteentryhierarchy>
+</modulegroupdoc>
