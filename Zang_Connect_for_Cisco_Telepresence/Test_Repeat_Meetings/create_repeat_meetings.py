@@ -6,6 +6,7 @@ Created on May 11, 2017
 import Login_Gmail_Get_Calendar
 import time
 import datetime
+from selenium.webdriver.common.keys import Keys
 
 tmr = datetime.date.today() + datetime.timedelta(days=1)
 tmr_plus_one = datetime.date.today() + datetime.timedelta(days=2)
@@ -17,8 +18,11 @@ fromtime = "12:00 PM"
 untiltime = "1:00 PM"
 ori_title = 'Repeat meeting, two meeting rooms, repeat daily for 5 times'
 new_title = "Repeat meeting edited, three meeting rooms, start time 1:00pm"
-meeting_room_1 = 'New Room A'
-meeting_room_2 = 'No Name (192.168.0.138)'
+meeting_room_1 = 'new intern testing room'
+meeting_room_2 = 'Test ABC1'
+guest_1 = 'dev02@esnaqc.com'
+guest_2 = 'dev01@esnaqc.com'
+guestlist_1 = (guest_1, guest_2)
 room_list_1 = (meeting_room_1, meeting_room_2)
 userid = Login_Gmail_Get_Calendar.ConfigSectionMap("Account")['essultn_id_2']
 passwd = Login_Gmail_Get_Calendar.ConfigSectionMap("Account")['essultn_pwd']
@@ -89,11 +93,36 @@ def select_meeting_rooms():
             print "The meeting room is not available."
     print "Meeting rooms are selected"
     time.sleep(5)
+    
+def add_guests():
+    guests = driver.find_element_by_id("ui-ltsr-tab-0")
+    guests.click()
+    time.sleep(1)
+    add_box = driver.find_element_by_xpath("//input[@title='Add guests']")
+    for guests in (guestlist_1):
+        add_box.clear()
+        add_box.send_keys(guests)
+        add_box.send_keys(Keys.RETURN)
+        time.sleep(2)
+        print "Invited guest %s is added" % guests
         
 def save_created_meeting():
     xpath = "//div[@class='goog-imageless-button-content'][contains(., 'Save')]"
     save_btn = driver.find_element_by_xpath(xpath)
     save_btn.click()
+    print "Save button"
+    driver.switch_to_active_element()
+    time.sleep(2)
+    print "Click Send button for sending email"
+    try:
+        driver.switch_to_active_element()
+        send_btn = driver.find_element_by_name('yes')
+        send_btn.click()
+        print "Created meeting is saved"
+        print ''
+    except:
+        print "Created meeting is saved"
+        print ''
     print "Scheduled repeat meeting is saved"
     print ''
 

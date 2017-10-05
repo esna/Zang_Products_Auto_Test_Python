@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
 
 from iLink_for_Webex_Testing import add_login_webex_extension
+from iLink_for_Webex_Testing import login_webex_account
 import edit_repeat_meetings
 import time, re
-from test.test_xml_etree import xpath_tokenizer
 
 url_mywebex = 'https://esna.webex.com/mw3200/mywebex/default.do?siteurl=esna&service=10'
 url_gmail = 'https://mail.google.com'
@@ -13,24 +13,10 @@ new_title = edit_repeat_meetings.new_title
 
 driver = add_login_webex_extension.driver
 
+def webex_account_login():
+        login_webex_account.webex_account_login(driver)
+
 def delete_edited_repeat_meetings_from_webex_server():
-    def webex_account_login():
-        driver.get(url_mywebex)
-        time.sleep(2)
-        driver.switch_to_frame('mainFrame')
-        user_id = driver.find_element_by_id('mwx-ipt-username')
-        user_id.click()
-        user_id.send_keys('reidz')
-        print "Input user id"
-        passwd = driver.find_element_by_id('mwx-ipt-password')
-        passwd.click()
-        passwd.send_keys('Zang123!')
-        time.sleep(2)
-        print "Input password"
-        driver.find_element_by_id('mwx-btn-logon').click()
-        print "Webex account is logged in"
-        time.sleep(2)
-    webex_account_login()
     def go_to_meeting_list():
         driver.switch_to_default_content()
         driver.switch_to_frame('mainFrame')
@@ -91,19 +77,33 @@ def delete_repeat_meetings_from_google_calendar():
     print "Delete the repeat meetings from calendar"
     def locate_edited_meeting():
         try:
-            xpath = "//div[@class='cpchip']/span[contains(., '%s')]" % new_title
-            edt_meeting = driver.find_element_by_xpath(xpath)
-            print "Found the edited meeting"
+            mt_xpath = "//div[@class='cpchip']/span[contains(., '%s')]" % new_title
+            edt_meeting = driver.find_element_by_xpath(mt_xpath)
+            if edt_meeting.is_displayed():
+                print "Found the edited meeting"
             xpath = "//span[@class='chip-caption'][contains(.,'1p – 2p ')]"
             driver.find_element_by_xpath(xpath).click()
             print "Meeting link is clicked"
             time.sleep(2)
         except:
-            print 'The edited meeting is not found'
+            xpath = "//div[@title='Next period']"
+            nav_next = driver.find_element_by_xpath(xpath)
+            print "Click the navigation Next button"
+            nav_next.click()
+            time.sleep(2)
+            
+            mt_xpath = "//div[@class='cpchip']/span[contains(., '%s')]" % new_title
+            edt_meeting = driver.find_element_by_xpath(mt_xpath)
+            if edt_meeting.is_displayed():
+                print "Found the edited meeting"
+            xpath = "//span[@class='chip-caption'][contains(.,'1p – 2p ')]"
+            driver.find_element_by_xpath(xpath).click()
+            print "Meeting link is clicked"
+            time.sleep(2)
             
     def delete_edited_meeting():
 
-        def switch_to_pipup_delete_edit_iframe():
+        def switch_to_popup_delete_edit_iframe():
             name_str = 'apiproxyfaec9916fba1fb06304bf2a746a1d8ffabcab4ec0'
             frame_ref = driver.find_element_by_xpath("//iframe[contains(@name,'%s')]"% name_str)
             driver.switch_to_frame(frame_ref) 
@@ -114,10 +114,15 @@ def delete_repeat_meetings_from_google_calendar():
             del_btn.click()
 
         xpath = "//div[@class='goog-imageless-button-content'][contains(.,'Delete')]"
-        del_btn = driver.find_element_by_xpath(xpath)
-        del_btn.click()
-        print "Click Delete button"
-        time.sleep(1)
+        try:
+            del_btn = driver.find_element_by_xpath(xpath)
+            del_btn.click()
+            print "Click Delete button"
+            time.sleep(1)
+        except:
+            driver.switch_to_active_element
+            delete_from_popup_iframe()
+            print "Click Delete button on the popup menu"
         driver.switch_to_active_element
         xpath = "//div[@class='goog-imageless-button-content'][contains(.,'All events in the series')]"
         del_btn = driver.find_element_by_xpath(xpath)
@@ -133,6 +138,7 @@ def delete_repeat_meetings_from_google_calendar():
             print "The repeat meetings are deleted from google calendar"
     locate_edited_meeting()
     delete_edited_meeting()
-    
-delete_edited_repeat_meetings_from_webex_server()
-delete_repeat_meetings_from_google_calendar()
+
+# webex_account_login()
+# delete_edited_repeat_meetings_from_webex_server()
+# delete_repeat_meetings_from_google_calendar()

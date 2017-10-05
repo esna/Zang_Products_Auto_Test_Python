@@ -1,5 +1,13 @@
 eclipse.preferences.version=1
+encoding//Avaya_Communicator_for_Web/Google_Service/contact_actions_test.py=utf-8
+encoding//Avaya_Communicator_for_Web/Google_Service/get_available_contact.py=utf-8
+encoding//ZC_for_Cisco_Jabber/Google_Service/contact_actions_test.py=utf-8
+encoding//ZC_for_Cisco_Jabber/Google_Service/get_available_contact.py=utf-8
+encoding//ZC_for_Cisco_Jabber/Salesforce_Service/contact_actions_test.py=utf-8
+encoding//ZC_for_Cisco_Jabber/Salesforce_Service/get_available_contact.py=utf-8
 encoding//iLink_for_Webex_Testing/Google_Service/repeat_meeting_with_google_calendar/delete_repeat_meetings.py=utf-8
 encoding//iLink_for_Webex_Testing/Google_Service/scheduled_meeting_with_delegate_calendar.py=utf-8
 encoding//iLink_for_Webex_Testing/Office_365_Service/repeat_meeting_with_O365_calendar/delete_edited_repeat_meetings.py=utf-8
-encoding//iLink_for_Webex_Testing/Salesforce/repeat_meeting_salesforce_calendar/delete_edited_repeat_meetings.py=utf-8
+encoding//iLink_for_Webex_Testing/Salesforce/instant_meetings_salesforce/delete_instant_meeting_from_webex.py=utf-8
+encoding//iLink_for_Webex_Testing/Salesforce/repeat_meetings_salesforce_calendar/delete_edited_repeat_meetings.py=utf-8
+encoding//iLink_for_Webex_Testing/Salesforce/scheduled_meeting_salesforce_calendar/create_scheduled_meeting.py=utf-8

@@ -52,8 +52,14 @@ def delete_edited_meeting():
         print ''
     except:
         print "The edited repeat meeting is deleted from google calendar"
-    
-    
+    try:
+        driver.switch_to_active_element
+        xpath = "//button[@name='no'][contains(.,'Delete without updating guests')]"
+        del_button = driver.find_element_by_xpath(xpath)
+        del_button.click()
+        print "Selected 'Delete without updating guests'"
+    except:
+        print "No confirmation dialog popped up"
     
 # if __name__ == '__main__':
 #     

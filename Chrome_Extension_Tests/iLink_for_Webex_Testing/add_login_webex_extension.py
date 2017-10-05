@@ -13,12 +13,14 @@ google_id = 'reidz@esna.com'
 google_pwd = 'Esnareid4'
 o365_id = 'bryand@esnatech.onmicrosoft.com'
 o365_pwd = '!esnatech1234$'
+sforce_id = 'arnoe@esna.com'
+sforce_pwd = 'EsnaAvaya8'
 webex_pwd = 'Zang123!'
 # os.chdir(r'D:\Chrome_Extension_Tests\iLink_for_Webex_Testing')
     #     print os.getcwd()
 dir_path = os.path.dirname(os.path.realpath(__file__))
 # print dir_path
-webex_file = dir_path + '\wcl9.1.17.1516.crx'
+webex_file = dir_path + '\wcl_9.1.17.1906.crx'
 
 def add_chrome_extension():
     chop = webdriver.ChromeOptions()
@@ -28,9 +30,9 @@ def add_chrome_extension():
     time.sleep(5)
     driver.switch_to_window(driver.window_handles[-2])
     driver.close()
-    time.sleep(2)
+    time.sleep(3)
     driver.switch_to_window(driver.window_handles[0])
-    time.sleep(2)
+    time.sleep(3)
     return driver
 driver = add_chrome_extension()
 
@@ -95,12 +97,15 @@ def login_ext_with_Salesforce():
     sf.click()
     time.sleep(3)
     driver.switch_to_window(driver.window_handles[1])
+    print "Go to Salesforce login interface"
     sf_id = driver.find_element_by_id('username')
     sf_id.clear()
-    sf_id.send_keys('arnoe@esna.com')
+    print "Input userid"
+    sf_id.send_keys(sforce_id)
     sf_pwd = driver.find_element_by_id('password')
     sf_pwd.clear()
-    sf_pwd.send_keys('EsnaAvaya03')
+    print "Input password"
+    sf_pwd.send_keys(sforce_pwd)
     login = driver.find_element_by_id('Login')
     login.click()
     time.sleep(3)
@@ -115,6 +120,8 @@ def input_esna_webex_password():
     pwd.send_keys(webex_pwd)
     print "Input webex passowrd"
     time.sleep(2)
+    driver.find_element_by_id('chkSec').click()
+    print "Check Save Password option"
     driver.find_element_by_xpath("//button[@id='buttonApply']").click()
     print "Click Save button"
     time.sleep(5)

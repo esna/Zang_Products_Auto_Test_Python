@@ -31,7 +31,7 @@ def delete_edited_meeting():
     del_btn.click()
     driver.switch_to_active_element()
     try:
-        confirm_btn = driver.find_element_by_name("no")
+        confirm_btn = driver.find_element_by_name("yes")
         confirm_btn.click()
         print "The simple meeting is deleted from google calendar"
     except:

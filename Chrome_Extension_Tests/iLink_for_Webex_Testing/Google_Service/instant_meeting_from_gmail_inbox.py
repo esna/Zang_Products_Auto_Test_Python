@@ -16,26 +16,31 @@ time_mins = '20'
 audio = 'VoIP'
 email1 = 'esnaqc.testing@gmail.com'
 email2 = 'itsupport@esna.com'
+sbjt = 'ACW from the Internet'
 url_mywebex = 'https://esna.webex.com/mw3200/mywebex/default.do?siteurl=esna&service=10'
 driver = add_login_webex_extension.driver
 
 def sso_with_google_service():
     add_login_webex_extension.login_ext_with_google()
+    time.sleep(10)
     add_login_webex_extension.input_esna_webex_password()
-    time.sleep(6)
+    time.sleep(3)
 
 def get_specified_email():
     driver.get('https://mail.google.com')
+    time.sleep(5)
+    driver.get('https://mail.google.com')
+    time.sleep(5)
     search = driver.find_element_by_id('gbqfq')
     search.clear()
     search.send_keys(email1)
     xpath = "//button[@aria-label='Search Esna.com Mail']/span"
     driver.find_element_by_xpath(xpath).click()
-    time.sleep(2)
+    time.sleep(3)
     
 def create_meeting_with_webex_icon():
     def get_webex_meeting_window():
-        xpath = "//div[@id=':ne']/span[@name='EsnaQC Testing']"
+        xpath = "//span[contains(.,'Instant meeting from gmail icon')]"
         driver.find_element_by_xpath(xpath).click()
         xpath = "//button[@class='wex_hotspot']"
         driver.find_element_by_xpath(xpath).click()
@@ -53,9 +58,10 @@ def create_meeting_with_webex_icon():
         xpath = "//button[@aria-label='Search Esna.com Mail']/span"
         driver.find_element_by_xpath(xpath).click()
         time.sleep(3)
-        xpath = "//div[@id=':m6']/span[@email='%s']" % email2
+        xpath = "//span[contains(.,'%s')]" % sbjt
         sender = driver.find_element_by_xpath(xpath)
         sender.click()
+        time.sleep(3)
         xpath = "//button[@class='wex_hotspot']"
         driver.find_element_by_xpath(xpath).click()
         driver.switch_to_frame('frameCreateWebex')
@@ -85,6 +91,8 @@ def create_meeting_with_webex_icon():
     driver.switch_to_frame('frameCreateWebex')
     time.sleep(2)
     print "Use the default values with groupe based template"
+    templt = Select(driver.find_element_by_id('comboTemplates'))
+    templt.select_by_value('siteLevel1')
     driver.find_element_by_id('createWebexSpan').click()
     print "Click 'Create' button"
     print "Instant meeting is created"
@@ -118,6 +126,7 @@ def verify_created_meeting():
         driver.switch_to_frame('menu')
         xpath = "//span[contains(.,'My Meetings')]"
         driver.find_element_by_xpath(xpath).click()
+        time.sleep(2)
         driver.switch_to_default_content()
         driver.switch_to_frame('mainFrame')
         driver.switch_to_frame('main')
@@ -173,7 +182,9 @@ def delete_created_instant_meeting():
         print "Cancel Meeting checkbox is checked"
     select_created_inst_meeting()
     def delete_selected_meeting():
-        driver.find_element_by_id('mwx-btn-delete').click()
+        cancel = driver.find_element_by_id('mwx-btn-delete')
+        driver.execute_script("arguments[0].scrollIntoView(true);", cancel)
+        cancel.click()
         print "Cancel button is clicked"
         alert = driver.switch_to_alert()
         alert.accept()
@@ -199,6 +210,7 @@ get_specified_email()
 create_meeting_with_webex_icon()
 verify_created_meeting()
 delete_created_instant_meeting()
+print "test ends"
 driver.quit()
     
     

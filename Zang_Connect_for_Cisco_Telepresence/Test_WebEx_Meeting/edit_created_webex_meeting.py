@@ -19,6 +19,8 @@ guest2 = 'esnaqc.testing@gmail.com'
 tom_plus_one = create_webex_meeting.tom_plus_one
 new_fromtime = '11:00 AM'
 new_untltime = '12:00 PM'
+mt_descp = "Reid Zhang invites you to this meeting."
+
 
 def change_meeting_title():
     try:
@@ -37,6 +39,11 @@ def change_meeting_title():
     meeting_title.clear()
     meeting_title.send_keys(new_title)
     print "Meeting title is changed to a new one"
+    
+#     xpath = "//textarea[contains(.,'%s')]" % mt_descp
+#     text_area = driver.find_element_by_xpath(xpath)
+#     if text_area.is_displayed():
+#         print "Meeting description is displayed"
     
 def change_meeting_schedule():
     from_date = driver.find_element_by_xpath("//input[@title = 'From date']")

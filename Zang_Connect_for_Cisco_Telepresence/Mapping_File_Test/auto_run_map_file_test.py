@@ -20,11 +20,11 @@ create_meeting_with_mapping_resource.set_meeting_schedule()
 create_meeting_with_mapping_resource.select_meeting_room()
 create_meeting_with_mapping_resource.save_created_meeting()
 time.sleep(90)
-
+ 
 login_tms_server.login_tms_server()
 verify_meeting_with_mapping_resource.verify_created_meeting_details()
 time.sleep(2)
- 
+  
 Login_Gmail_Get_Calendar.go_to_google_calendar()
 edit_meeting_with_mapping_resource.change_meeting_title()
 edit_meeting_with_mapping_resource.change_meeting_room()

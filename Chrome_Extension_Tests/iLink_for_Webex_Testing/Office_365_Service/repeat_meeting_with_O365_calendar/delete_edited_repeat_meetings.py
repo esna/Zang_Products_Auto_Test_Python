@@ -28,7 +28,10 @@ def delete_edited_repeat_meetings_from_webex_server():
         driver.find_element_by_id('mwx-btn-logon').click()
         print "Webex account is logged in"
         time.sleep(2)
-    webex_account_login()
+    try:
+        webex_account_login()
+    except:
+        print "Webex account has login already"
     def go_to_meeting_list():
         driver.switch_to_default_content()
         driver.switch_to_frame('mainFrame')
@@ -87,22 +90,34 @@ def delete_edited_repeat_meetings_from_webex_server():
     
 def delete_repeat_meetings_from_o365_calendar():
     def go_to_O365_calendar():
-        print "Go to O365 account"
-        driver.get(url_o365)
-        time.sleep(3)
-        driver.find_element_by_id('O365_MainLink_NavMenu').click()
-        print "Click menu"
-        time.sleep(8)
-        print "Click calendar icon"
-        xpath = "//a[@title='Calendar']"
-    #     xpath = "//span[@class='o365cs-nav-appTileIcon owaimg ms-Icon-- ms-icon-font-size-22 ms-Icon--calendar ms-fcl-w']"
-        driver.find_element_by_xpath(xpath).click()
-        time.sleep(15)
-        print "Delete the repeat meetings from calendar"
+#         print "Go to O365 account"
+#         driver.get(url_o365)
+#         time.sleep(3)
+#         driver.find_element_by_id('O365_MainLink_NavMenu').click()
+#         print "Click menu"
+#         time.sleep(8)
+#         print "Click calendar icon"
+#         xpath = "//a[@title='Calendar']"
+#         driver.find_element_by_xpath(xpath).click()
+#         time.sleep(15)
+#         print "Delete the repeat meetings from calendar"
+        cal_url = 'https://outlook.office365.com/owa/?realm=esnatech.onmicrosoft.com&exsvurl=1&ll-cc=1033&modurl=1&path=/calendar'
+        print "Go to o365 calendar"
+        driver.get(cal_url)
+        time.sleep(20)
+        
     def delete_edited_meeting():
-        xpath = "//span[contains(., '%s')]" % new_title
-        edt_meeting = driver.find_element_by_xpath(xpath)
-        print "Found the edited meeting"
+        try:
+            xpath = "//span[contains(., '%s')]" % new_title
+            edt_meeting = driver.find_element_by_xpath(xpath)
+            print "Found the edited meeting"
+        except:
+            xpath = "//button[@aria-label='NextWeek go to ']/span"
+            driver.find_element_by_xpath(xpath).click()
+            time.sleep(2)
+            xpath = "//span[contains(., '%s')]" % new_title
+            edt_meeting = driver.find_element_by_xpath(xpath)
+            print "Found the edited meeting"
         edt_meeting.click()
         print "Click the meeting label"
         time.sleep(2)
@@ -121,9 +136,9 @@ def delete_repeat_meetings_from_o365_calendar():
             if edt_meeting.is_displayed():
                 print "The created meeting is still there"
         except:
-            print "The repeat meetings are deleted from google calendar"
+            print "The repeat meetings are deleted from o365 calendar"
     go_to_O365_calendar()
     delete_edited_meeting()
     
 # delete_edited_repeat_meetings_from_webex_server()
-delete_repeat_meetings_from_o365_calendar()
+# delete_repeat_meetings_from_o365_calendar()

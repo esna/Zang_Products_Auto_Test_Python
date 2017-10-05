@@ -12,11 +12,11 @@ tom_plus_one = datetime.date.strftime(d2, 'X%m/X%d/X%Y').replace('X0', 'X').repl
 fromtime = "12:00 PM"
 untiltime = "1:00 PM"
 time_taken = '1 hour'
-title = "Scheduled meeting from google calendar"
+title = "Instant meeting with office 365"
 template = 'reid test template'
 al_host_email = 'reidz@esna.com'
 al_hostname = 'Reid Zhang'
-mt_type = 'Pro 1000'
+mt_type = 'Pro 25'
 ph_num = '(905)707-9700'
 delegate_cl = 'Matheesan Manokaran'
 url_mywebex = 'https://esna.webex.com/mw3200/mywebex/default.do?siteurl=esna&service=10'
@@ -25,6 +25,7 @@ url_calendar = 'https://calendar.google.com/calendar/render?tab=mc#main_7'
 
 driver = add_login_webex_extension.driver
 add_login_webex_extension.login_ext_with_google()
+time.sleep(10)
 add_login_webex_extension.input_esna_webex_password()
 
 def go_to_google_mail_calendar():
@@ -164,13 +165,18 @@ def verify_created_google_inst_meeting():
             xpath = "//a[@title='%s']/i" % title
             mt_title = driver.find_element_by_xpath(xpath)
             print "Meeting title is verified correct"
-        verify_meeting_title()
+        
         def verify_meeting_time():
             xpath = "//td[contains(.,'%s')]" % fromtime.lower()
             mt_st_time = driver.find_element_by_xpath(xpath)
-            input_time = tmr.strftime("%B %d, %Y ") + fromtime.lower()
+            input_time = tmr.strftime("%b %d, %Y ").lstrip("0").replace(" 0", " ") + fromtime.lower()
             get_mt_time = mt_st_time.text
+            
+            print input_time
+            print get_mt_time
+            
             assert input_time == get_mt_time
+            
             print "Meeting start time is verified correct"
             xpath = "//a[@title='%s']/i" % title
             mt_title = driver.find_element_by_xpath(xpath)
@@ -180,7 +186,7 @@ def verify_created_google_inst_meeting():
             assert time_taken == get_time_period
             print "Meeting duration is verified correct"
             time.sleep(2)
-        verify_meeting_time()
+
         def verify_meeting_hosts_audio_connection():
             driver.find_element_by_id('mc-lnk-moreInfo').click()
             host = driver.find_element_by_id('mc-txt-hostname')
@@ -195,7 +201,11 @@ def verify_created_google_inst_meeting():
             audio = driver.find_element_by_xpath(xpath)
             assert  ph_num == audio.text
             print "Audio connection phone number is verified correct"
+            
+        verify_meeting_title()
+        verify_meeting_time()
         verify_meeting_hosts_audio_connection()
+        
     verify_meeting_data()
     print ''
     
@@ -225,10 +235,13 @@ def delete_created_schdeuled_meeting():
         chkbox_id = 'checkbox-link-mwx-checkbox-event-' + event_num
         chkbox = driver.find_element_by_id(chkbox_id)
         chkbox.click()
+        time.sleep(2)
         print "Cancel Meeting checkbox is checked"
     select_created_inst_meeting()
     def delete_selected_meeting():
-        driver.find_element_by_id('mwx-link-delete').click()
+        cancel = driver.find_element_by_id('mwx-link-delete')
+        driver.execute_script("arguments[0].scrollIntoView(true);", cancel)
+        cancel.click()
         print "Cancel button is clicked"
         alert = driver.switch_to_alert()
         alert.accept()
@@ -282,7 +295,8 @@ save_meeting()
 verify_created_google_inst_meeting()
 delete_created_schdeuled_meeting()
 delete_meeting_on_calendar()
-driver.quit()
+print "test ends"
+# driver.quit()
 
 
     

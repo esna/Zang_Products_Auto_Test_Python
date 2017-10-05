@@ -16,7 +16,7 @@ meeting_room_1 = create_webex_meeting.meeting_room_1
 
 def locate_edited_webex_meeting():
     try:
-        xpath = "//div[@class='cpchip']/span[contains(., '%s')]" % meeting_room_1
+        xpath = "//div[@class='cpchip']/div/span[contains(., '%s')]" % meeting_room_1
         driver.find_element_by_xpath(xpath)
         edt_meeting = driver.find_element_by_xpath(xpath)
         print "Found the edited meeting"
@@ -24,16 +24,41 @@ def locate_edited_webex_meeting():
         print "Meeting link is clicked"
         time.sleep(2)
     except:
-        print 'The edited meeting is not found'
-        driver.close()
-        driver.service.process.send_signal(signal.SIGTERM)
+        print "Meeting is not found on current week."
+        try:
+            xpath = "//div[@class='navbutton navForward goog-inline-block']"
+            nav_btn = driver.find_element_by_xpath(xpath)
+            nav_btn.click()
+            time.sleep(1)
+            xpath = "//div[@class='cpchip']/div/span[contains(., '%s')]" % meeting_room_1
+            driver.find_element_by_xpath(xpath)
+            edt_meeting = driver.find_element_by_xpath(xpath)
+            print "Found the edited meeting"
+            edt_meeting.click()
+            print "Meeting link is clicked"
+            time.sleep(2)
+        except:
+            print 'The edited meeting is not found'
+            driver.close()
     
 def delete_edited_webex_meeting():
-    driver.switch_to_active_element()
-    xpath = "//div[@class='neb-footer']/span[2]/div[1]"
-    del_btn = driver.find_element_by_xpath(xpath)
-    del_btn.click()
-    driver.switch_to_active_element()
+#     driver.switch_to_active_element()
+    try:
+        xpath = "//div[@class='goog-imageless-button-content'][contains(.,'Delete')]"
+        xpath = "//div[@class='goog-imageless-button-content'][contains(.,'Delete')]"
+        del_btn = driver.find_element_by_xpath(xpath)
+        del_btn.click()
+        driver.switch_to_active_element()
+    except:
+        xpath = "//div[@title='Next period']"
+        nav_next = driver.find_element_by_xpath(xpath)
+        print "Click the navigation Next button"
+        nav_next.click()
+        time.sleep(2)
+        xpath = "//div[@class='goog-imageless-button-content'][contains(.,'Delete')]"
+        del_btn = driver.find_element_by_xpath(xpath)
+        del_btn.click()
+        driver.switch_to_active_element()
     try:
         confirm_btn = driver.find_element_by_name("no")
         confirm_btn.click()
@@ -41,8 +66,6 @@ def delete_edited_webex_meeting():
     except:
         print "The webex meeting is deleted from google calendar"
         
-    
-
 # if __name__ == '__main__':
 #     
 #     Login_Gmail_Get_Calendar.login_gmail_account()

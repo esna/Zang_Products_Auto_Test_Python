@@ -6,7 +6,7 @@ Created on May 11, 2017
 import Login_Gmail_Get_Calendar
 import time
 import datetime
-
+from selenium.webdriver.common.keys import Keys
 
 tmr = datetime.date.today() + datetime.timedelta(days=1)
 tmr_plus_one = datetime.date.today() + datetime.timedelta(days=2)
@@ -18,8 +18,11 @@ fromtime = "12:00 PM"
 untiltime = "1:00 PM"
 title = 'Default meeting with single meeting room'
 new_title = 'Default meeting is changed to WebEx CMR meeting'
-meeting_room = 'test1'
+meeting_room = 'new intern testing room'
 new_mt_room = 'WebEx CMR meeting'
+guest_1 = 'dev02@esnaqc.com'
+guest_2 = 'dev01@esnaqc.com'
+guestlist_1 = (guest_1, guest_2)
 userid = Login_Gmail_Get_Calendar.ConfigSectionMap("Account")['essultn_id_2']
 passwd = Login_Gmail_Get_Calendar.ConfigSectionMap("Account")['essultn_pwd']
 
@@ -77,24 +80,47 @@ def select_meeting_room():
         print "Selected meeting room is not available, meeting cannot be created"
         driver.quit()
         
+def add_guests():
+    guests = driver.find_element_by_id("ui-ltsr-tab-0")
+    guests.click()
+    time.sleep(1)
+    add_box = driver.find_element_by_xpath("//input[@title='Add guests']")
+    for guests in (guestlist_1):
+        add_box.clear()
+        add_box.send_keys(guests)
+        add_box.send_keys(Keys.RETURN)
+        time.sleep(2)
+        print "Invited guest %s is added" % guests
+        
 def save_created_meeting():
     print "Save the created meeting"
     xpath = "//div[@class='goog-imageless-button-content'][contains(., 'Save')]"
     save_btn = driver.find_element_by_xpath(xpath)
+    print "Click Save button"
     save_btn.click()
-    time.sleep(5)
-    print "Created meeting is saved"
+    driver.switch_to_active_element()
+    time.sleep(2)
+    print "Click Send button for sending email"
+    try:
+        driver.switch_to_active_element()
+        send_btn = driver.find_element_by_name('yes')
+        send_btn.click()
+        print "Created meeting is saved"
+        print ''
+    except:
+        print "Created meeting is saved"
+        print ''
+    time.sleep(2)
     print ''
 
         
-        
 # if __name__ == '__main__':
-#     
+#       
 #     Login_Gmail_Get_Calendar.login_gmail_account()
 #     Login_Gmail_Get_Calendar.go_to_google_calendar()
 #     input_meeting_title()
 #     set_meeting_schedule()
 #     select_room = select_meeting_room()
+#     add_guests()
 #     save_created_meeting()
-#     driver.quit()
     
