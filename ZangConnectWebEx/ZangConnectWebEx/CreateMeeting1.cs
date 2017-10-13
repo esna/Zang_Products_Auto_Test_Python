@@ -146,8 +146,8 @@ namespace ZangConnectWebEx
             Validate.Attribute(repo.CiscoWebExMeetingCenter.WebExMeetingHash111Info, "Visible", "True");
             Delay.Milliseconds(100);
             
-            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='WebEx Meeting #111') on item 'CiscoWebExMeetingCenter.WebExMeetingHash111'.", repo.CiscoWebExMeetingCenter.WebExMeetingHash111Info, new RecordItemIndex(12));
-            Validate.Attribute(repo.CiscoWebExMeetingCenter.WebExMeetingHash111Info, "Text", "WebEx Meeting #111");
+            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='WebEx Meeting #112') on item 'CiscoWebExMeetingCenter.WebExMeetingHash111'.", repo.CiscoWebExMeetingCenter.WebExMeetingHash111Info, new RecordItemIndex(12));
+            Validate.Attribute(repo.CiscoWebExMeetingCenter.WebExMeetingHash111Info, "Text", "WebEx Meeting #112");
             Delay.Milliseconds(100);
             
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'CiscoWebExMeetingCenter.EndMeeting' at 54;17.", repo.CiscoWebExMeetingCenter.EndMeetingInfo, new RecordItemIndex(13));

@@ -26,6 +26,18 @@ rxversion="7.2">
 					<![CDATA[WORKS BUT MUST CHANGE REPO Item PER WEEK]]>
 				</description>
 			</testcase>
+			<testmodule
+			id="25a88251-a731-419e-b0c2-a93c415a035b"
+			name="WebExSignInPostSSO"
+			ref="17c82bf0-ebb2-48e4-96e2-c59e268245d4"
+			type="Recording">
+			</testmodule>
+			<testmodule
+			id="4a0ced1f-0b58-4c6a-b627-618616859503"
+			name="SalesforceMeeting"
+			ref="7080c313-e8b8-44cd-bf75-5954bcd62996"
+			type="Recording">
+			</testmodule>
 			<testcase
 			id="53d99257-8cbd-4b21-8e23-e53df32b487a"
 			name="LogInTrialGoogle">
@@ -34,6 +46,12 @@ rxversion="7.2">
 			id="59d59e3a-a394-4038-97d4-9d2cba4b1c48"
 			name="LoggingIn">
 			</testcase>
+			<testmodule
+			id="6352a52a-e653-4332-a43b-1309af3d2cd7"
+			name="OpenChromeExtension"
+			ref="dfe3cf4b-401a-4202-a053-ec04eaddd46c"
+			type="Recording">
+			</testmodule>
 			<testcase
 			id="73f6f153-7ba6-47ee-8c88-df8b1e916006"
 			name="O365Calendar">
@@ -64,12 +82,23 @@ rxversion="7.2">
 			reportwriteinterval="30000ms"
 			showinvisiblechars="True">
 			</testsuite>
+			<testmodule
+			enabled="False"
+			id="8f858ec0-b2ff-4f68-8262-48761099fe59"
+			name="SignInSalesforce"
+			ref="df38ead6-5417-47b6-8847-7a292dcf4093"
+			type="Recording">
+				<description>
+					<![CDATA[MUST SIGN OUT OF SALESFORCE FIRST]]>
+				</description>
+			</testmodule>
 			<testcase
 			id="a333a2b0-02f7-4e00-af88-d702900cb31e"
 			name="ZangConnectWebEx"
 			reportlevel="Info;20">
 			</testcase>
 			<testmodule
+			enabled="False"
 			id="a393a88c-926a-443f-8e2f-3db3bf4cfd6a"
 			name="googleCalendarValidation"
 			ref="b1359b62-1748-45a9-a2e2-c589ff80977e"
@@ -98,7 +127,6 @@ rxversion="7.2">
 			name="O365People">
 			</testcase>
 			<testmodule
-			enabled="False"
 			id="da8411ef-078a-4e8a-9580-b55a15cba389"
 			name="SignInSalesforce"
 			ref="df38ead6-5417-47b6-8847-7a292dcf4093"
@@ -118,9 +146,19 @@ rxversion="7.2">
 			name="WebexInstantMeeting">
 			</testcase>
 			<testcase
+			id="e791fed1-8712-4681-b440-17499b106c41"
+			name="GoogleHangOutsIntegration">
+			</testcase>
+			<testcase
 			id="f4294086-8d4b-43dc-8479-dbbd6f96f552"
 			name="O365Mail">
 			</testcase>
+			<testmodule
+			id="f9c2e1bd-354c-414d-95a8-512b16fbc0d9"
+			name="Hangouts"
+			ref="5a26c7c9-816c-4b9e-bfb2-f358f5a824e3"
+			type="Recording">
+			</testmodule>
 		</flatlistofchildren>
 		<childhierarchy>
 			<testsuite
@@ -137,7 +175,7 @@ rxversion="7.2">
 						name="OpenChromeExtension">
 						</testmodule>
 						<testmodule
-						id="da8411ef-078a-4e8a-9580-b55a15cba389"
+						id="8f858ec0-b2ff-4f68-8262-48761099fe59"
 						name="SignInSalesforce">
 						</testmodule>
 						<testmodule
@@ -178,8 +216,32 @@ rxversion="7.2">
 						</testmodule>
 					</testcase>
 					<testcase
+					id="e791fed1-8712-4681-b440-17499b106c41"
+					name="GoogleHangOutsIntegration">
+						<testmodule
+						id="f9c2e1bd-354c-414d-95a8-512b16fbc0d9"
+						name="Hangouts">
+						</testmodule>
+					</testcase>
+					<testcase
 					id="19ffaadb-a251-41a6-8d0c-4c58ad6ed9bf"
 					name="SalesforceMeeting">
+						<testmodule
+						id="6352a52a-e653-4332-a43b-1309af3d2cd7"
+						name="OpenChromeExtension">
+						</testmodule>
+						<testmodule
+						id="da8411ef-078a-4e8a-9580-b55a15cba389"
+						name="SignInSalesforce">
+						</testmodule>
+						<testmodule
+						id="25a88251-a731-419e-b0c2-a93c415a035b"
+						name="WebExSignInPostSSO">
+						</testmodule>
+						<testmodule
+						id="4a0ced1f-0b58-4c6a-b627-618616859503"
+						name="SalesforceMeeting">
+						</testmodule>
 					</testcase>
 					<testcase
 					id="f4294086-8d4b-43dc-8479-dbbd6f96f552"
@@ -215,34 +277,7 @@ rxversion="7.2">
 			id="19ffaadb-a251-41a6-8d0c-4c58ad6ed9bf">
 			</testcontainer>
 			<testcontainer
-			id="21774fc7-d2ab-43d5-9ced-1a2b068e162b">
-			</testcontainer>
-			<testcontainer
-			id="53d99257-8cbd-4b21-8e23-e53df32b487a">
-			</testcontainer>
-			<testcontainer
-			id="59d59e3a-a394-4038-97d4-9d2cba4b1c48">
-			</testcontainer>
-			<testcontainer
-			id="73f6f153-7ba6-47ee-8c88-df8b1e916006">
-			</testcontainer>
-			<testcontainer
 			id="a333a2b0-02f7-4e00-af88-d702900cb31e">
-			</testcontainer>
-			<testcontainer
-			id="ad82b57c-f9ce-41d9-b8b8-5332d8de185f">
-			</testcontainer>
-			<testcontainer
-			id="cd704c4a-31c6-4458-8a36-9bd7faa77e5e">
-			</testcontainer>
-			<testcontainer
-			id="cf2fcd74-00ba-4113-9831-24dba8ec92a3">
-			</testcontainer>
-			<testcontainer
-			id="e48e6418-c3a2-4546-96c4-63fd032d2b0b">
-			</testcontainer>
-			<testcontainer
-			id="f4294086-8d4b-43dc-8479-dbbd6f96f552">
 			</testcontainer>
 		</testconfiguration>
 	</testconfigurations>

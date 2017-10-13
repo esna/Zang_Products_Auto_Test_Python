@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<report
+	progress="">
+	<activity
+		result="Failed"
+		duration="0ms"
+		durationms="0"
+		type="root"
+		rid="69583a74cc1cdc0"
+		totalerrorcount="1"
+		totalwarningcount="0"
+		totalsuccesstestcasecount="0"
+		totalfailedtestcasecount="1"
+		totalblockedtestcasecount="0"
+		childsuccesscount="0"
+		childfailedcount="0"
+		childblockedcount="0"
+		totalsuccesscount="0"
+		totalfailedcount="0"
+		totalblockedcount="0"
+		user="Administrator"
+		rxversion="7.2.0.0"
+		host="QC-ADMIN-PCMM"
+		osversion="Windows 7 Service Pack 1 64bit"
+		runtimeversion="4.0.30319.42000"
+		procarch="32bit"
+		oslanguage="en-US"
+		dtnlanguage="en-US"
+		screenresolution="3200x1080"
+		timestamp="10/13/2017 2:29:58 PM"
+		timestampiso="2017-10-13T18:29:58"
+		endtime="10/13/2017 2:30:10 PM"
+		timeoutfactor="1"
+		module="SalesforceMeeting">
+		<detail>
+			SalesforceMeeting
+		</detail>
+		<varbindings>
+		</varbindings>
+		<item
+			timeRelativeToTestSuiteStartTime="00:00.500"
+			timeRelativeToTestModuleStartTime="00:00.500"
+			timeWallClock="14:29:58"
+			time="00:00.500"
+			level="Info"
+			category="Website"
+			errimg=".\Salesfor_acfb1853_49bb3d8f_trace.jpg"
+			errthumb=".\Salesfor_acfb1853_49bb3d8f_trace_thumb.jpg">
+			<message>
+				Opening web site 'https://na88.salesforce.com/home/home.jsp?tsid=02ui0000000eIX4' with browser 'Chrome' in normal mode.
+			</message>
+			<metainfo
+				itemindex="0"
+				codefile="c:\Users\Administrator\Documents\GitHub\Zang_Products_Auto_Test_Python\ZangConnectWebEx\ZangConnectWebEx\SalesforceMeeting.cs"
+				codeline="82"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:00.535"
+			timeRelativeToTestModuleStartTime="00:00.535"
+			timeWallClock="14:29:58"
+			time="00:00.535"
+			level="Info"
+			category="Mouse"
+			errimg=".\Salesfor_acfb1853_49bb3d8f_trace.jpg"
+			errthumb=".\Salesfor_acfb1853_49bb3d8f_trace_thumb.jpg">
+			<message>
+				Mouse Left Click item 'LoginSalesforce.Username' at 109;29.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/dom[@domain='login.salesforce.com']//input[#'username']"
+				fullname="ZangConnectWebExRepository.LoginSalesforce.Username"
+				id="bb9bacfe9faf4034b6183b89ea623fed"
+				timeout="60000"
+				codefile="c:\Users\Administrator\Documents\GitHub\Zang_Products_Auto_Test_Python\ZangConnectWebEx\ZangConnectWebEx\SalesforceMeeting.cs"
+				codeline="86"
+				itemindex="1"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:12.320"
+			timeRelativeToTestModuleStartTime="00:12.320"
+			timeWallClock="14:30:10"
+			time="00:12.320"
+			level="Error"
+			category="User"
+			errimg=".\Salesfor_acfb1853_04e146be_trace.jpg"
+			errthumb=".\Salesfor_acfb1853_04e146be_trace_thumb.jpg">
+			<message>
+				The test run has been aborted by the user.
+			</message>
+			<metainfo
+				loglvl="Error">
+			</metainfo>
+		</item>
+	</activity>
+</report>

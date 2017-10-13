@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<report
+	progress="">
+	<activity
+		result="Failed"
+		duration="0ms"
+		durationms="0"
+		type="root"
+		rid="20587f9ecc5db85"
+		totalerrorcount="1"
+		totalwarningcount="0"
+		totalsuccesstestcasecount="0"
+		totalfailedtestcasecount="0"
+		totalblockedtestcasecount="0"
+		childsuccesscount="0"
+		childfailedcount="0"
+		childblockedcount="0"
+		totalsuccesscount="0"
+		totalfailedcount="0"
+		totalblockedcount="0"
+		user="Administrator"
+		rxversion="7.2.0.0"
+		host="QC-ADMIN-PCMM"
+		osversion="Windows 7 Service Pack 1 64bit"
+		runtimeversion="4.0.30319.42000"
+		procarch="32bit"
+		oslanguage="en-US"
+		dtnlanguage="en-US"
+		screenresolution="3200x1080"
+		timestamp="10/13/2017 1:30:22 PM"
+		timestampiso="2017-10-13T17:30:22"
+		endtime="10/13/2017 1:31:38 PM"
+		timeoutfactor="1"
+		module="Hangouts">
+		<detail>
+			Hangouts
+		</detail>
+		<errormessage>
+			Failed to find item 'ZangConnectWebExRepository.ContactManagerMatheesanmAtesnaCom.EsnaTech'.
+		</errormessage>
+		<varbindings>
+		</varbindings>
+		<item
+			timeRelativeToTestSuiteStartTime="00:00.491"
+			timeRelativeToTestModuleStartTime="00:00.492"
+			timeWallClock="13:30:23"
+			time="00:00.491"
+			level="Info"
+			category="Website"
+			errimg=".\Hangouts_80b09962_1af8eae5_trace.jpg"
+			errthumb=".\Hangouts_80b09962_1af8eae5_trace_thumb.jpg">
+			<message>
+				Opening web site 'https://mail.google.com/mail/u/0/#contacts' with browser 'chrome' in normal mode.
+			</message>
+			<metainfo
+				itemindex="0"
+				codefile="c:\Users\Administrator\Documents\GitHub\Zang_Products_Auto_Test_Python\ZangConnectWebEx\ZangConnectWebEx\Hangouts.cs"
+				codeline="82"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:00.522"
+			timeRelativeToTestModuleStartTime="00:00.523"
+			timeWallClock="13:30:23"
+			time="00:00.522"
+			level="Info"
+			category="Delay"
+			errimg=".\Hangouts_80b09962_1af8eae5_trace.jpg"
+			errthumb=".\Hangouts_80b09962_1af8eae5_trace_thumb.jpg">
+			<message>
+				Waiting for 15s.
+			</message>
+			<metainfo
+				itemindex="1"
+				codefile="c:\Users\Administrator\Documents\GitHub\Zang_Products_Auto_Test_Python\ZangConnectWebEx\ZangConnectWebEx\Hangouts.cs"
+				codeline="86"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:15.531"
+			timeRelativeToTestModuleStartTime="00:15.532"
+			timeWallClock="13:30:38"
+			time="00:15.531"
+			level="Info"
+			category="Mouse"
+			errimg=".\Hangouts_80b09962_7681b466_trace.jpg"
+			errthumb=".\Hangouts_80b09962_7681b466_trace_thumb.jpg">
+			<message>
+				Mouse Left Move item 'ContactManagerMatheesanmAtesnaCom.EsnaTech' at Center.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/dom[13]//tr[#':2t']//span[@innertext='Esna Tech']"
+				fullname="ZangConnectWebExRepository.ContactManagerMatheesanmAtesnaCom.EsnaTech"
+				id="ad7387474f3942f0b9e3578c03be4e9b"
+				timeout="60000"
+				codefile="c:\Users\Administrator\Documents\GitHub\Zang_Products_Auto_Test_Python\ZangConnectWebEx\ZangConnectWebEx\Hangouts.cs"
+				codeline="89"
+				itemindex="2"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="01:15.699"
+			timeRelativeToTestModuleStartTime="01:15.700"
+			timeWallClock="13:31:38"
+			time="01:15.699"
+			level="Error"
+			category="Module"
+			errimg=".\Hangouts_80b09962_25a4b3fb_trace.jpg"
+			errthumb=".\Hangouts_80b09962_25a4b3fb_trace_thumb.jpg">
+			<message>
+				Failed to find item 'ZangConnectWebExRepository.ContactManagerMatheesanmAtesnaCom.EsnaTech'.<br/>No element found for path '/dom[13]//tr[#':2t']//span[@innertext='Esna Tech']' within 1m.
+			</message>
+			<metainfo
+				stacktrace="   at Ranorex.Core.Repository.RepoItemInfo.Find[T](Boolean findSingle, Boolean throwException, Duration effectiveTimeoutOverride)
+   at Ranorex.Core.Repository.RepoItemInfo.CreateAdapter[T](Boolean throwException, Duration waitTimeout)
+   at Ranorex.Core.Repository.RepoItemInfo.CreateAdapter[T](Boolean throwException)
+   at ZangConnectWebEx.ZangConnectWebExRepositoryFolders.ContactManagerMatheesanmAtesnaComAppFolder.get_EsnaTech() in c:\Users\Administrator\Documents\GitHub\Zang_Products_Auto_Test_Python\ZangConnectWebEx\ZangConnectWebEx\ZangConnectWebExRepository.cs:line 1808
+   at ZangConnectWebEx.Hangouts.Ranorex.Core.Testing.ITestModule.Run() in c:\Users\Administrator\Documents\GitHub\Zang_Products_Auto_Test_Python\ZangConnectWebEx\ZangConnectWebEx\Hangouts.cs:line 90
+   at Ranorex.Core.Testing.TestModuleLeaf.RunInternal(DataContext parentDataContext, Int32 iteration, Int32 iterationCount, Boolean skipIteration)"
+				codefile="c:\Users\Administrator\Documents\GitHub\Zang_Products_Auto_Test_Python\ZangConnectWebEx\ZangConnectWebEx\Hangouts.cs"
+				codeline="90"
+				type="repoitem"
+				path="/dom[13]//tr[#':2t']//span[@innertext='Esna Tech']"
+				fullname="ZangConnectWebExRepository.ContactManagerMatheesanmAtesnaCom.EsnaTech"
+				id="ad7387474f3942f0b9e3578c03be4e9b"
+				timeout="60000"
+				loglvl="Error"
+				itemindex="2">
+			</metainfo>
+		</item>
+	</activity>
+</report>

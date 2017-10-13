@@ -8,3 +8,13 @@ C:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx
 C:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\obj\x86\Debug\ZangConnectWebEx.exe
 C:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\obj\x86\Debug\ZangConnectWebEx.pdb
 C:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ZangConnectWebEx\ZangConnectWebEx\bin\Debug\RepositoryImages\ZangConnectWebExRepositoryb007516a.rximgres
+C:\Users\Administrator\Documents\GitHub\Zang_Products_Auto_Test_Python\ZangConnectWebEx\ZangConnectWebEx\bin\Debug\ZangConnectWebEx.rxtmg
+C:\Users\Administrator\Documents\GitHub\Zang_Products_Auto_Test_Python\ZangConnectWebEx\ZangConnectWebEx\bin\Debug\ZangConnectWebEx.rxtst
+C:\Users\Administrator\Documents\GitHub\Zang_Products_Auto_Test_Python\ZangConnectWebEx\ZangConnectWebEx\bin\Debug\RepositoryImages\ZangConnectWebExRepositoryb007516a.rximgres
+C:\Users\Administrator\Documents\GitHub\Zang_Products_Auto_Test_Python\ZangConnectWebEx\ZangConnectWebEx\bin\Debug\ZangConnectWebEx.exe.config
+C:\Users\Administrator\Documents\GitHub\Zang_Products_Auto_Test_Python\ZangConnectWebEx\ZangConnectWebEx\bin\Debug\ZangConnectWebEx.exe
+C:\Users\Administrator\Documents\GitHub\Zang_Products_Auto_Test_Python\ZangConnectWebEx\ZangConnectWebEx\bin\Debug\ZangConnectWebEx.pdb
+C:\Users\Administrator\Documents\GitHub\Zang_Products_Auto_Test_Python\ZangConnectWebEx\ZangConnectWebEx\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Administrator\Documents\GitHub\Zang_Products_Auto_Test_Python\ZangConnectWebEx\ZangConnectWebEx\obj\x86\Debug\ZangConnectWebEx.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\GitHub\Zang_Products_Auto_Test_Python\ZangConnectWebEx\ZangConnectWebEx\obj\x86\Debug\ZangConnectWebEx.exe
+C:\Users\Administrator\Documents\GitHub\Zang_Products_Auto_Test_Python\ZangConnectWebEx\ZangConnectWebEx\obj\x86\Debug\ZangConnectWebEx.pdb

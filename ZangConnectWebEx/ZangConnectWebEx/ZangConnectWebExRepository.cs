@@ -41,6 +41,9 @@ namespace ZangConnectWebEx
         ZangConnectWebExRepositoryFolders.AtmgrAppFolder _atmgr;
         ZangConnectWebExRepositoryFolders.ContactManagerMatheesanmAtesnaComAppFolder _contactmanagermatheesanmatesnacom;
         ZangConnectWebExRepositoryFolders.ContactManagerMatheesanmAtesnaCom1AppFolder _contactmanagermatheesanmatesnacom1;
+        ZangConnectWebExRepositoryFolders.GoogleHangoutsGoogleChromeAppFolder _googlehangoutsgooglechrome;
+        ZangConnectWebExRepositoryFolders.EsnaTechnologiesIncWebExEnterpriseSAppFolder _esnatechnologiesincwebexenterprises;
+        ZangConnectWebExRepositoryFolders.SalesforceDeveloperEditionGoogleAppFolder _salesforcedevelopereditiongoogle;
 
         /// <summary>
         /// Gets the singleton class instance representing the ZangConnectWebExRepository element repository.
@@ -71,6 +74,9 @@ namespace ZangConnectWebEx
             _atmgr = new ZangConnectWebExRepositoryFolders.AtmgrAppFolder(this);
             _contactmanagermatheesanmatesnacom = new ZangConnectWebExRepositoryFolders.ContactManagerMatheesanmAtesnaComAppFolder(this);
             _contactmanagermatheesanmatesnacom1 = new ZangConnectWebExRepositoryFolders.ContactManagerMatheesanmAtesnaCom1AppFolder(this);
+            _googlehangoutsgooglechrome = new ZangConnectWebExRepositoryFolders.GoogleHangoutsGoogleChromeAppFolder(this);
+            _esnatechnologiesincwebexenterprises = new ZangConnectWebExRepositoryFolders.EsnaTechnologiesIncWebExEnterpriseSAppFolder(this);
+            _salesforcedevelopereditiongoogle = new ZangConnectWebExRepositoryFolders.SalesforceDeveloperEditionGoogleAppFolder(this);
         }
 
 #region Variables
@@ -213,6 +219,33 @@ namespace ZangConnectWebEx
         public virtual ZangConnectWebExRepositoryFolders.ContactManagerMatheesanmAtesnaCom1AppFolder ContactManagerMatheesanmAtesnaCom1
         {
             get { return _contactmanagermatheesanmatesnacom1; }
+        }
+
+        /// <summary>
+        /// The GoogleHangoutsGoogleChrome folder.
+        /// </summary>
+        [RepositoryFolder("0adc565f-e8ae-4505-be6f-a702b347b6fd")]
+        public virtual ZangConnectWebExRepositoryFolders.GoogleHangoutsGoogleChromeAppFolder GoogleHangoutsGoogleChrome
+        {
+            get { return _googlehangoutsgooglechrome; }
+        }
+
+        /// <summary>
+        /// The EsnaTechnologiesIncWebExEnterpriseS folder.
+        /// </summary>
+        [RepositoryFolder("2939c9c3-54ed-4020-a8ee-43fdc572ec81")]
+        public virtual ZangConnectWebExRepositoryFolders.EsnaTechnologiesIncWebExEnterpriseSAppFolder EsnaTechnologiesIncWebExEnterpriseS
+        {
+            get { return _esnatechnologiesincwebexenterprises; }
+        }
+
+        /// <summary>
+        /// The SalesforceDeveloperEditionGoogle folder.
+        /// </summary>
+        [RepositoryFolder("f99f91c9-1001-477d-a18f-e0adf1694570")]
+        public virtual ZangConnectWebExRepositoryFolders.SalesforceDeveloperEditionGoogleAppFolder SalesforceDeveloperEditionGoogle
+        {
+            get { return _salesforcedevelopereditiongoogle; }
         }
     }
 
@@ -703,6 +736,14 @@ namespace ZangConnectWebEx
         public partial class AllowAccessSalesforceAppFolder : RepoGenBaseFolder
         {
             RepoItemInfo _oaapproveInfo;
+            RepoItemInfo _neweventInfo;
+            RepoItemInfo _wex0b7cr1Info;
+            RepoItemInfo _wex0b7md1Info;
+            RepoItemInfo _saveInfo;
+            RepoItemInfo _evt5Info;
+            RepoItemInfo _test1115Info;
+            RepoItemInfo _usernavbuttonInfo;
+            RepoItemInfo _logoutInfo;
 
             /// <summary>
             /// Creates a new AllowAccessSalesforce  folder.
@@ -711,6 +752,14 @@ namespace ZangConnectWebEx
                     base("AllowAccessSalesforce", "/dom[@domain='na88.salesforce.com']", parentFolder, 30000, null, false, "00f10c76-02f9-4eb1-bfc3-c721a370e610", "")
             {
                 _oaapproveInfo = new RepoItemInfo(this, "Oaapprove", ".//input[#'oaapprove']", 30000, null, "0214ee74-b653-4c4f-a6cb-645bf91535b3");
+                _neweventInfo = new RepoItemInfo(this, "NewEvent", ".//div[#'homeCalendarSection']//table/?/?/tr/td[2]/input[@title='New Event']", 30000, null, "f5e8cec6-2b9e-4c28-86dc-0276a1f08f51");
+                _wex0b7cr1Info = new RepoItemInfo(this, "Wex0B7Cr1", ".//input[#'wex0B7Cr1']", 30000, null, "0b79a335-d254-4ad8-ab83-d7c90089b15a");
+                _wex0b7md1Info = new RepoItemInfo(this, "Wex0B7Md1", ".//input[#'wex0B7Md1']", 30000, null, "7568f0e3-cb57-4e3c-9d4c-8e847e008d3e");
+                _saveInfo = new RepoItemInfo(this, "Save", ".//td[#'topButtonRow']/input[@title='Save']", 30000, null, "1f0c5422-0d09-405f-8ce7-773840f84429");
+                _evt5Info = new RepoItemInfo(this, "Evt5", ".//input[#'evt5']", 30000, null, "b8abcd28-97e6-4641-a5c7-f22f39b6b1e6");
+                _test1115Info = new RepoItemInfo(this, "Test1115", ".//div[#'homeCalendarSection']/div/div[2]/table/?/?/tr/td[1]/div[2]/ul/?/?/span[@innertext=' (WebExID: 315634032)']/a[@innertext='test1115']", 30000, null, "ac529eb2-4375-4004-8f49-6713bfd8afe8");
+                _usernavbuttonInfo = new RepoItemInfo(this, "UserNavButton", ".//div[#'userNavButton']", 30000, null, "c8623108-13f7-430d-bd4e-39dae6dc1339");
+                _logoutInfo = new RepoItemInfo(this, "Logout", ".//div[#'userNav-menuItems']/a[@innertext='Logout']", 30000, null, "f4745695-3569-4647-b73b-e51bd8ebe1e7");
             }
 
             /// <summary>
@@ -758,6 +807,198 @@ namespace ZangConnectWebEx
                 get
                 {
                     return _oaapproveInfo;
+                }
+            }
+
+            /// <summary>
+            /// The NewEvent item.
+            /// </summary>
+            [RepositoryItem("f5e8cec6-2b9e-4c28-86dc-0276a1f08f51")]
+            public virtual Ranorex.InputTag NewEvent
+            {
+                get
+                {
+                    return _neweventInfo.CreateAdapter<Ranorex.InputTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The NewEvent item info.
+            /// </summary>
+            [RepositoryItemInfo("f5e8cec6-2b9e-4c28-86dc-0276a1f08f51")]
+            public virtual RepoItemInfo NewEventInfo
+            {
+                get
+                {
+                    return _neweventInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Wex0B7Cr1 item.
+            /// </summary>
+            [RepositoryItem("0b79a335-d254-4ad8-ab83-d7c90089b15a")]
+            public virtual Ranorex.InputTag Wex0B7Cr1
+            {
+                get
+                {
+                    return _wex0b7cr1Info.CreateAdapter<Ranorex.InputTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Wex0B7Cr1 item info.
+            /// </summary>
+            [RepositoryItemInfo("0b79a335-d254-4ad8-ab83-d7c90089b15a")]
+            public virtual RepoItemInfo Wex0B7Cr1Info
+            {
+                get
+                {
+                    return _wex0b7cr1Info;
+                }
+            }
+
+            /// <summary>
+            /// The Wex0B7Md1 item.
+            /// </summary>
+            [RepositoryItem("7568f0e3-cb57-4e3c-9d4c-8e847e008d3e")]
+            public virtual Ranorex.InputTag Wex0B7Md1
+            {
+                get
+                {
+                    return _wex0b7md1Info.CreateAdapter<Ranorex.InputTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Wex0B7Md1 item info.
+            /// </summary>
+            [RepositoryItemInfo("7568f0e3-cb57-4e3c-9d4c-8e847e008d3e")]
+            public virtual RepoItemInfo Wex0B7Md1Info
+            {
+                get
+                {
+                    return _wex0b7md1Info;
+                }
+            }
+
+            /// <summary>
+            /// The Save item.
+            /// </summary>
+            [RepositoryItem("1f0c5422-0d09-405f-8ce7-773840f84429")]
+            public virtual Ranorex.InputTag Save
+            {
+                get
+                {
+                    return _saveInfo.CreateAdapter<Ranorex.InputTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Save item info.
+            /// </summary>
+            [RepositoryItemInfo("1f0c5422-0d09-405f-8ce7-773840f84429")]
+            public virtual RepoItemInfo SaveInfo
+            {
+                get
+                {
+                    return _saveInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Evt5 item.
+            /// </summary>
+            [RepositoryItem("b8abcd28-97e6-4641-a5c7-f22f39b6b1e6")]
+            public virtual Ranorex.InputTag Evt5
+            {
+                get
+                {
+                    return _evt5Info.CreateAdapter<Ranorex.InputTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Evt5 item info.
+            /// </summary>
+            [RepositoryItemInfo("b8abcd28-97e6-4641-a5c7-f22f39b6b1e6")]
+            public virtual RepoItemInfo Evt5Info
+            {
+                get
+                {
+                    return _evt5Info;
+                }
+            }
+
+            /// <summary>
+            /// The Test1115 item.
+            /// </summary>
+            [RepositoryItem("ac529eb2-4375-4004-8f49-6713bfd8afe8")]
+            public virtual Ranorex.ATag Test1115
+            {
+                get
+                {
+                    return _test1115Info.CreateAdapter<Ranorex.ATag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Test1115 item info.
+            /// </summary>
+            [RepositoryItemInfo("ac529eb2-4375-4004-8f49-6713bfd8afe8")]
+            public virtual RepoItemInfo Test1115Info
+            {
+                get
+                {
+                    return _test1115Info;
+                }
+            }
+
+            /// <summary>
+            /// The UserNavButton item.
+            /// </summary>
+            [RepositoryItem("c8623108-13f7-430d-bd4e-39dae6dc1339")]
+            public virtual Ranorex.DivTag UserNavButton
+            {
+                get
+                {
+                    return _usernavbuttonInfo.CreateAdapter<Ranorex.DivTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The UserNavButton item info.
+            /// </summary>
+            [RepositoryItemInfo("c8623108-13f7-430d-bd4e-39dae6dc1339")]
+            public virtual RepoItemInfo UserNavButtonInfo
+            {
+                get
+                {
+                    return _usernavbuttonInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Logout item.
+            /// </summary>
+            [RepositoryItem("f4745695-3569-4647-b73b-e51bd8ebe1e7")]
+            public virtual Ranorex.ATag Logout
+            {
+                get
+                {
+                    return _logoutInfo.CreateAdapter<Ranorex.ATag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Logout item info.
+            /// </summary>
+            [RepositoryItemInfo("f4745695-3569-4647-b73b-e51bd8ebe1e7")]
+            public virtual RepoItemInfo LogoutInfo
+            {
+                get
+                {
+                    return _logoutInfo;
                 }
             }
         }
@@ -978,6 +1219,7 @@ namespace ZangConnectWebEx
         [RepositoryFolder("9c4c7428-8c47-4a17-b67a-eff7de12bd9a")]
         public partial class ChromeAppFolder : RepoGenBaseFolder
         {
+            SelfInfoClass _selfInfo;
             RepoItemInfo _element216437072Info;
             RepoItemInfo _element309695888Info;
 
@@ -987,8 +1229,44 @@ namespace ZangConnectWebEx
             public ChromeAppFolder(RepoGenBaseFolder parentFolder) :
                     base("Chrome", "/form[@title='' and @processname='chrome']", parentFolder, 30000, null, true, "9c4c7428-8c47-4a17-b67a-eff7de12bd9a", "")
             {
+                _selfInfo = new SelfInfoClass(this);
                 _element216437072Info = new RepoItemInfo(this, "Element216437072", "element[@controlid='216437072']", 30000, null, "4fe1e8fa-2676-478f-875b-47ecc41c1168");
                 _element309695888Info = new RepoItemInfo(this, "Element309695888", "element[@controlid='309695888']", 30000, null, "057d3c5a-4fed-4b59-b8c9-147808f28106");
+            }
+
+            /// <summary>
+            /// The SelfInfoClass folder.
+            /// </summary>
+            [RepositoryItemInfo("9c4c7428-8c47-4a17-b67a-eff7de12bd9a")]
+            public class SelfInfoClass : RepoItemInfo
+            {
+                /// <summary>
+                /// SelfInfoClass class constructor.
+                /// </summary>
+                public SelfInfoClass(RepoGenBaseFolder parentFolder)
+                    : base(parentFolder, "Self", "", 0, null, "9c4c7428-8c47-4a17-b67a-eff7de12bd9a")
+                { }
+
+                /// <summary>
+                /// Gets the Screenshot1 item image.
+                /// </summary>
+                /// <returns>The Screenshot1 image.</returns>
+                [RepositoryImage("c7ca7799-72fb-4baa-b9fd-4c1d9cff1123")]
+                public CompressedImage GetScreenshot1()
+                {
+                    return GetImage("c7ca7799-72fb-4baa-b9fd-4c1d9cff1123");
+                }
+
+                /// <summary>
+                /// Gets the Screenshot1 item image.
+                /// </summary>
+                /// <param name="cropRect">The bounds of the sub-image to return.</param>
+                /// <returns>The cropped image.</returns>
+                [RepositoryImage("c7ca7799-72fb-4baa-b9fd-4c1d9cff1123")]
+                public CompressedImage GetScreenshot1(System.Drawing.Rectangle cropRect)
+                {
+                    return GetImage("c7ca7799-72fb-4baa-b9fd-4c1d9cff1123", cropRect);
+                }
             }
 
             /// <summary>
@@ -1007,7 +1285,7 @@ namespace ZangConnectWebEx
             /// The Self item info.
             /// </summary>
             [RepositoryItemInfo("9c4c7428-8c47-4a17-b67a-eff7de12bd9a")]
-            public virtual RepoItemInfo SelfInfo
+            public virtual SelfInfoClass SelfInfo
             {
                 get
                 {
@@ -1309,7 +1587,7 @@ namespace ZangConnectWebEx
             public EsnaComCalendarWeekOfOctober2AppFolder(RepoGenBaseFolder parentFolder) :
                     base("EsnaComCalendarWeekOfOctober2", "/dom[@domain='calendar.google.com']", parentFolder, 30000, null, false, "9eda9743-21b8-44e4-ba40-ea522f435255", "")
             {
-                _gw6zhcInfo = new RepoItemInfo(this, "Gw6Zhc", ".//body[#'yDmH0d']/div[3]//i", 30000, null, "653372c6-a5f0-4601-b2c7-d3860698f0a3");
+                _gw6zhcInfo = new RepoItemInfo(this, "Gw6Zhc", "body/div[3]", 30000, null, "653372c6-a5f0-4601-b2c7-d3860698f0a3");
                 _j3nywInfo = new RepoItemInfo(this, "J3nyw", ".//tag[#'tabEventDetails']/div[2]/div[2]", 30000, null, "dca1a61f-cbb4-47a5-bbe7-90f0aa14faa1");
                 _usx8odp86ukebz112cucxfnticoucxplgicoInfo = new RepoItemInfo(this, "USx8OdP86ukeBz112cUcxFntIcoUcxPlgIco", ".//tag[#'tabEventDetails']/div[2]/div[1]/div", 30000, null, "5f1cdc7d-a8b6-419b-ba6d-46c2b5650ec0");
                 _webex0addtextInfo = new RepoItemInfo(this, "Webex0addtext", ".//span[#'webex0addtext']", 30000, null, "06e7811f-df60-4929-900a-0df420b35dee");
@@ -1417,11 +1695,11 @@ namespace ZangConnectWebEx
             /// The Gw6Zhc item.
             /// </summary>
             [RepositoryItem("653372c6-a5f0-4601-b2c7-d3860698f0a3")]
-            public virtual Ranorex.ITag Gw6Zhc
+            public virtual Ranorex.DivTag Gw6Zhc
             {
                 get
                 {
-                    return _gw6zhcInfo.CreateAdapter<Ranorex.ITag>(true);
+                    return _gw6zhcInfo.CreateAdapter<Ranorex.DivTag>(true);
                 }
             }
 
@@ -1615,6 +1893,7 @@ namespace ZangConnectWebEx
             RepoItemInfo _skipInfo;
             RepoItemInfo _esnatechqcatgmailcomInfo;
             RepoItemInfo _closeInfo;
+            RepoItemInfo _esnatechqcatgmailcom1Info;
 
             /// <summary>
             /// Creates a new Atmgr  folder.
@@ -1625,6 +1904,7 @@ namespace ZangConnectWebEx
                 _skipInfo = new RepoItemInfo(this, "Skip", ".//container[@caption='' and @accessiblerole='Client' and @accessibledescription='o17200']/button[@accessiblename='Skip']", 30000, null, "e9d2fd1c-060e-4999-91d9-eab6a4d8e135");
                 _esnatechqcatgmailcomInfo = new RepoItemInfo(this, "EsnatechqcAtgmailCom", "container[@caption='' and @accessiblerole='Client' and @accessibledescription='c10016']//tree[@accessiblename='esnatechqc@gmail.com']/treeitem[@accessiblename='esnatechqc@gmail.com']", 30000, null, "f969cc3c-0a43-493c-bb03-3b5d1c058f6a");
                 _closeInfo = new RepoItemInfo(this, "Close", "button[@accessiblename='Close']", 30000, null, "bc64cb8c-5cf5-45f5-999f-3962ed24b2b6");
+                _esnatechqcatgmailcom1Info = new RepoItemInfo(this, "EsnatechqcAtgmailCom1", "container[@caption='' and @accessiblerole='Client' and @accessibledescription='c10016']//tree[@accessiblename='esnatechqc@gmail.com']", 30000, null, "b4364eed-01d9-427b-afc9-14410302bf26");
             }
 
             /// <summary>
@@ -1722,6 +2002,30 @@ namespace ZangConnectWebEx
                     return _closeInfo;
                 }
             }
+
+            /// <summary>
+            /// The EsnatechqcAtgmailCom1 item.
+            /// </summary>
+            [RepositoryItem("b4364eed-01d9-427b-afc9-14410302bf26")]
+            public virtual Ranorex.Tree EsnatechqcAtgmailCom1
+            {
+                get
+                {
+                    return _esnatechqcatgmailcom1Info.CreateAdapter<Ranorex.Tree>(true);
+                }
+            }
+
+            /// <summary>
+            /// The EsnatechqcAtgmailCom1 item info.
+            /// </summary>
+            [RepositoryItemInfo("b4364eed-01d9-427b-afc9-14410302bf26")]
+            public virtual RepoItemInfo EsnatechqcAtgmailCom1Info
+            {
+                get
+                {
+                    return _esnatechqcatgmailcom1Info;
+                }
+            }
         }
 
         /// <summary>
@@ -1731,6 +2035,9 @@ namespace ZangConnectWebEx
         public partial class ContactManagerMatheesanmAtesnaComAppFolder : RepoGenBaseFolder
         {
             RepoItemInfo _esnatechInfo;
+            RepoItemInfo _divtagtvigInfo;
+            RepoItemInfo _inviteInfo;
+            RepoItemInfo _juxhvpuxyfqc0l8pbInfo;
 
             /// <summary>
             /// Creates a new ContactManagerMatheesanmAtesnaCom  folder.
@@ -1739,6 +2046,9 @@ namespace ZangConnectWebEx
                     base("ContactManagerMatheesanmAtesnaCom", "/dom[13]", parentFolder, 30000, null, false, "edaff561-c490-4720-bb36-08ce2d71f26e", "")
             {
                 _esnatechInfo = new RepoItemInfo(this, "EsnaTech", ".//tr[#':2t']//span[@innertext='Esna Tech']", 30000, null, "ad738747-4f39-42f0-b9e3-578c03be4e9b");
+                _divtagtvigInfo = new RepoItemInfo(this, "DivTagTvIg", ".//div[#':tv.ig']", 30000, null, "143489bc-1da7-4104-be9e-967c0b1fb7ed");
+                _inviteInfo = new RepoItemInfo(this, "Invite", ".//div[#':tj.Wh']/span[@innertext='Invite']", 30000, null, "cfe9bcb9-8732-43f7-8ce2-168d7ad5c28a");
+                _juxhvpuxyfqc0l8pbInfo = new RepoItemInfo(this, "JUXHvPUXYFQC0L8pb", ".//div[#'wex_hangout2webexbutton0']/div/div/div/div[1]/div[2]", 30000, null, "b22eaf4d-6b80-48d2-9d3f-4e7e8e364e22");
             }
 
             /// <summary>
@@ -1786,6 +2096,78 @@ namespace ZangConnectWebEx
                 get
                 {
                     return _esnatechInfo;
+                }
+            }
+
+            /// <summary>
+            /// The DivTagTvIg item.
+            /// </summary>
+            [RepositoryItem("143489bc-1da7-4104-be9e-967c0b1fb7ed")]
+            public virtual Ranorex.DivTag DivTagTvIg
+            {
+                get
+                {
+                    return _divtagtvigInfo.CreateAdapter<Ranorex.DivTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The DivTagTvIg item info.
+            /// </summary>
+            [RepositoryItemInfo("143489bc-1da7-4104-be9e-967c0b1fb7ed")]
+            public virtual RepoItemInfo DivTagTvIgInfo
+            {
+                get
+                {
+                    return _divtagtvigInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Invite item.
+            /// </summary>
+            [RepositoryItem("cfe9bcb9-8732-43f7-8ce2-168d7ad5c28a")]
+            public virtual Ranorex.SpanTag Invite
+            {
+                get
+                {
+                    return _inviteInfo.CreateAdapter<Ranorex.SpanTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Invite item info.
+            /// </summary>
+            [RepositoryItemInfo("cfe9bcb9-8732-43f7-8ce2-168d7ad5c28a")]
+            public virtual RepoItemInfo InviteInfo
+            {
+                get
+                {
+                    return _inviteInfo;
+                }
+            }
+
+            /// <summary>
+            /// The JUXHvPUXYFQC0L8pb item.
+            /// </summary>
+            [RepositoryItem("b22eaf4d-6b80-48d2-9d3f-4e7e8e364e22")]
+            public virtual Ranorex.DivTag JUXHvPUXYFQC0L8pb
+            {
+                get
+                {
+                    return _juxhvpuxyfqc0l8pbInfo.CreateAdapter<Ranorex.DivTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The JUXHvPUXYFQC0L8pb item info.
+            /// </summary>
+            [RepositoryItemInfo("b22eaf4d-6b80-48d2-9d3f-4e7e8e364e22")]
+            public virtual RepoItemInfo JUXHvPUXYFQC0L8pbInfo
+            {
+                get
+                {
+                    return _juxhvpuxyfqc0l8pbInfo;
                 }
             }
         }
@@ -1852,6 +2234,204 @@ namespace ZangConnectWebEx
                 get
                 {
                     return _esnatechInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The GoogleHangoutsGoogleChromeAppFolder folder.
+        /// </summary>
+        [RepositoryFolder("0adc565f-e8ae-4505-be6f-a702b347b6fd")]
+        public partial class GoogleHangoutsGoogleChromeAppFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _closeInfo;
+
+            /// <summary>
+            /// Creates a new GoogleHangoutsGoogleChrome  folder.
+            /// </summary>
+            public GoogleHangoutsGoogleChromeAppFolder(RepoGenBaseFolder parentFolder) :
+                    base("GoogleHangoutsGoogleChrome", "/form[@title~'^Google\\ Hangouts\\ -\\ Google\\ ']", parentFolder, 30000, null, true, "0adc565f-e8ae-4505-be6f-a702b347b6fd", "")
+            {
+                _closeInfo = new RepoItemInfo(this, "Close", "?/?/button[@accessiblename='Close']", 30000, null, "c3736fd6-e428-4b45-9eb1-691e25f85a25");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("0adc565f-e8ae-4505-be6f-a702b347b6fd")]
+            public virtual Ranorex.Form Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Form>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("0adc565f-e8ae-4505-be6f-a702b347b6fd")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Close item.
+            /// </summary>
+            [RepositoryItem("c3736fd6-e428-4b45-9eb1-691e25f85a25")]
+            public virtual Ranorex.Button Close
+            {
+                get
+                {
+                    return _closeInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Close item info.
+            /// </summary>
+            [RepositoryItemInfo("c3736fd6-e428-4b45-9eb1-691e25f85a25")]
+            public virtual RepoItemInfo CloseInfo
+            {
+                get
+                {
+                    return _closeInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The EsnaTechnologiesIncWebExEnterpriseSAppFolder folder.
+        /// </summary>
+        [RepositoryFolder("2939c9c3-54ed-4020-a8ee-43fdc572ec81")]
+        public partial class EsnaTechnologiesIncWebExEnterpriseSAppFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _closeInfo;
+
+            /// <summary>
+            /// Creates a new EsnaTechnologiesIncWebExEnterpriseS  folder.
+            /// </summary>
+            public EsnaTechnologiesIncWebExEnterpriseSAppFolder(RepoGenBaseFolder parentFolder) :
+                    base("EsnaTechnologiesIncWebExEnterpriseS", "/form[@title~'^Esna\\ Technologies\\ Inc\\ Web']", parentFolder, 30000, null, true, "2939c9c3-54ed-4020-a8ee-43fdc572ec81", "")
+            {
+                _closeInfo = new RepoItemInfo(this, "Close", "container[@accessiblename='Google Chrome']//tabpage[@accessiblerole='PageTab' and @accessibledescription~'^Esna\\ Technologies\\ Inc\\ Web' and @title~'^Esna\\ Technologies\\ Inc\\ Web' and @index='12']/button[@accessiblename='Close']", 30000, null, "706ebcd7-4c27-457a-b3bf-ad13163a2d6c");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("2939c9c3-54ed-4020-a8ee-43fdc572ec81")]
+            public virtual Ranorex.Form Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Form>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("2939c9c3-54ed-4020-a8ee-43fdc572ec81")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Close item.
+            /// </summary>
+            [RepositoryItem("706ebcd7-4c27-457a-b3bf-ad13163a2d6c")]
+            public virtual Ranorex.Button Close
+            {
+                get
+                {
+                    return _closeInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Close item info.
+            /// </summary>
+            [RepositoryItemInfo("706ebcd7-4c27-457a-b3bf-ad13163a2d6c")]
+            public virtual RepoItemInfo CloseInfo
+            {
+                get
+                {
+                    return _closeInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The SalesforceDeveloperEditionGoogleAppFolder folder.
+        /// </summary>
+        [RepositoryFolder("f99f91c9-1001-477d-a18f-e0adf1694570")]
+        public partial class SalesforceDeveloperEditionGoogleAppFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _zangconnectforwebexInfo;
+
+            /// <summary>
+            /// Creates a new SalesforceDeveloperEditionGoogle  folder.
+            /// </summary>
+            public SalesforceDeveloperEditionGoogleAppFolder(RepoGenBaseFolder parentFolder) :
+                    base("SalesforceDeveloperEditionGoogle", "/form[@title~'^Salesforce\\ -\\ Developer\\ Ed']", parentFolder, 30000, null, true, "f99f91c9-1001-477d-a18f-e0adf1694570", "")
+            {
+                _zangconnectforwebexInfo = new RepoItemInfo(this, "ZangConnectForWebEx", "container[@accessiblename='Google Chrome']//toolbar[@accessiblename='main']/?/?/button[@accessiblename='Zang Connect for WebEx']", 30000, null, "0d9cb4ad-5359-44c6-92f2-0f5c444241c3");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("f99f91c9-1001-477d-a18f-e0adf1694570")]
+            public virtual Ranorex.Form Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Form>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("f99f91c9-1001-477d-a18f-e0adf1694570")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The ZangConnectForWebEx item.
+            /// </summary>
+            [RepositoryItem("0d9cb4ad-5359-44c6-92f2-0f5c444241c3")]
+            public virtual Ranorex.Button ZangConnectForWebEx
+            {
+                get
+                {
+                    return _zangconnectforwebexInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ZangConnectForWebEx item info.
+            /// </summary>
+            [RepositoryItemInfo("0d9cb4ad-5359-44c6-92f2-0f5c444241c3")]
+            public virtual RepoItemInfo ZangConnectForWebExInfo
+            {
+                get
+                {
+                    return _zangconnectforwebexInfo;
                 }
             }
         }

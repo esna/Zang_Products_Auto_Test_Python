@@ -106,6 +106,18 @@
       <UserCode>true</UserCode>
       <id>bb7744b1-f0a5-439a-9fad-154759aed6c8</id>
     </Compile>
+    <Compile Include="Hangouts.cs">
+      <BoundTo>bc046455-8b6d-458f-b07a-92e117b0d00b</BoundTo>
+      <DependentUpon>Hangouts.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>e1cfa6e1-0fcc-4d52-9683-d0bcbc71e188</id>
+    </Compile>
+    <Compile Include="Hangouts.UserCode.cs">
+      <BoundTo>bc046455-8b6d-458f-b07a-92e117b0d00b</BoundTo>
+      <DependentUpon>Hangouts.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>6e33bffd-36bf-4da9-8dbc-496260a1d140</id>
+    </Compile>
     <Compile Include="OpenChromeExtension.cs">
       <BoundTo>910c0ade-5756-43ab-9fa5-6a8eaaf9afc2</BoundTo>
       <DependentUpon>OpenChromeExtension.rxrec</DependentUpon>
@@ -120,6 +132,18 @@
     </Compile>
     <Compile Include="Program.cs">
       <id>9e6a80b0-c35a-45cf-bd03-efdc1a6007f9</id>
+    </Compile>
+    <Compile Include="SalesforceMeeting.cs">
+      <BoundTo>4d30937f-4a8a-425b-9f94-7772bb448a9c</BoundTo>
+      <DependentUpon>SalesforceMeeting.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>303f63e6-db60-4c10-9139-59926f366d19</id>
+    </Compile>
+    <Compile Include="SalesforceMeeting.UserCode.cs">
+      <BoundTo>4d30937f-4a8a-425b-9f94-7772bb448a9c</BoundTo>
+      <DependentUpon>SalesforceMeeting.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>a5e045c4-c189-4628-8a26-6122d9f79281</id>
     </Compile>
     <Compile Include="SignInGoogle.cs">
       <BoundTo>7ebb5846-1bec-41eb-b04d-f130f0ff7037</BoundTo>
@@ -195,10 +219,20 @@
       <id>db48c83b-706f-42b4-942b-cc6bffb7fc0a</id>
       <recordtableid>9aa645ae-5798-439e-a522-145baa9e6729</recordtableid>
     </None>
+    <None Include="Hangouts.rxrec">
+      <BoundTo>d69a5b0b-9ae9-4fe1-8391-cf659ba9a734</BoundTo>
+      <id>bc046455-8b6d-458f-b07a-92e117b0d00b</id>
+      <recordtableid>5a26c7c9-816c-4b9e-bfb2-f358f5a824e3</recordtableid>
+    </None>
     <None Include="OpenChromeExtension.rxrec">
       <BoundTo>d69a5b0b-9ae9-4fe1-8391-cf659ba9a734</BoundTo>
       <id>910c0ade-5756-43ab-9fa5-6a8eaaf9afc2</id>
       <recordtableid>dfe3cf4b-401a-4202-a053-ec04eaddd46c</recordtableid>
+    </None>
+    <None Include="SalesforceMeeting.rxrec">
+      <BoundTo>d69a5b0b-9ae9-4fe1-8391-cf659ba9a734</BoundTo>
+      <id>4d30937f-4a8a-425b-9f94-7772bb448a9c</id>
+      <recordtableid>7080c313-e8b8-44cd-bf75-5954bcd62996</recordtableid>
     </None>
     <None Include="SignInGoogle.rxrec">
       <BoundTo>d69a5b0b-9ae9-4fe1-8391-cf659ba9a734</BoundTo>

@@ -86,15 +86,15 @@ namespace ZangConnectWebEx
             Report.Log(ReportLevel.Info, "Delay", "Waiting for 15s.", new RecordItemIndex(1));
             Delay.Duration(15000, false);
             
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Move item 'ContactManagerMatheesanmAtesnaCom1.EsnaTech' at Center.", repo.ContactManagerMatheesanmAtesnaCom1.EsnaTechInfo, new RecordItemIndex(2));
-            repo.ContactManagerMatheesanmAtesnaCom1.EsnaTech.MoveTo();
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Move at {X=282,Y=379}.", new RecordItemIndex(2));
+            Mouse.MoveTo(282, 379);
             Delay.Milliseconds(200);
             
             Report.Log(ReportLevel.Info, "Delay", "Waiting for 2s.", new RecordItemIndex(3));
             Delay.Duration(2000, false);
             
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click at {X=618,Y=528}.", new RecordItemIndex(4));
-            Mouse.MoveTo(618, 528);
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click at {X=598,Y=528}.", new RecordItemIndex(4));
+            Mouse.MoveTo(598, 528);
             Mouse.Click(System.Windows.Forms.MouseButtons.Left);
             Delay.Milliseconds(200);
             
@@ -164,19 +164,30 @@ namespace ZangConnectWebEx
             repo.CiscoWebExMeetingCenter.InviteAndRemindOthersToJoin.Click("84;20");
             Delay.Milliseconds(200);
             
-            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='esnatechqc@gmail.com') on item 'Atmgr.EsnatechqcAtgmailCom'.", repo.Atmgr.EsnatechqcAtgmailComInfo, new RecordItemIndex(21));
+            Report.Log(ReportLevel.Info, "Delay", "Waiting for 500ms.", new RecordItemIndex(21));
+            Delay.Duration(500, false);
+            
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click at {X=984,Y=515}.", new RecordItemIndex(22));
+            Mouse.MoveTo(984, 515);
+            Mouse.Click(System.Windows.Forms.MouseButtons.Left);
+            Delay.Milliseconds(200);
+            
+            Report.Log(ReportLevel.Info, "Delay", "Waiting for 500ms.", new RecordItemIndex(23));
+            Delay.Duration(500, false);
+            
+            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='esnatechqc@gmail.com') on item 'Atmgr.EsnatechqcAtgmailCom'.", repo.Atmgr.EsnatechqcAtgmailComInfo, new RecordItemIndex(24));
             Validate.Attribute(repo.Atmgr.EsnatechqcAtgmailComInfo, "Text", "esnatechqc@gmail.com");
             Delay.Milliseconds(100);
             
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Atmgr.Close' at 10;10.", repo.Atmgr.CloseInfo, new RecordItemIndex(22));
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Atmgr.Close' at 10;10.", repo.Atmgr.CloseInfo, new RecordItemIndex(25));
             repo.Atmgr.Close.Click("10;10");
             Delay.Milliseconds(200);
             
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'CiscoWebExMeetingCenter.EndMeeting' at 73;14.", repo.CiscoWebExMeetingCenter.EndMeetingInfo, new RecordItemIndex(23));
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'CiscoWebExMeetingCenter.EndMeeting' at 73;14.", repo.CiscoWebExMeetingCenter.EndMeetingInfo, new RecordItemIndex(26));
             repo.CiscoWebExMeetingCenter.EndMeeting.Click("73;14");
             Delay.Milliseconds(200);
             
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'EndMeeting.EndMeeting' at 98;24.", repo.EndMeeting.EndMeetingInfo, new RecordItemIndex(24));
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'EndMeeting.EndMeeting' at 98;24.", repo.EndMeeting.EndMeetingInfo, new RecordItemIndex(27));
             repo.EndMeeting.EndMeeting.Click("98;24");
             Delay.Milliseconds(200);
             

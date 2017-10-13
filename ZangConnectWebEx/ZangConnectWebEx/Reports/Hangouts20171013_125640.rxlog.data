@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<report
+	progress="">
+	<activity
+		result="Failed"
+		duration="0ms"
+		durationms="0"
+		type="root"
+		rid="b1f0a68f65b75d4"
+		totalerrorcount="1"
+		totalwarningcount="0"
+		totalsuccesstestcasecount="0"
+		totalfailedtestcasecount="1"
+		totalblockedtestcasecount="0"
+		childsuccesscount="0"
+		childfailedcount="0"
+		childblockedcount="0"
+		totalsuccesscount="0"
+		totalfailedcount="0"
+		totalblockedcount="0"
+		user="Administrator"
+		rxversion="7.2.0.0"
+		host="QC-ADMIN-PCMM"
+		osversion="Windows 7 Service Pack 1 64bit"
+		runtimeversion="4.0.30319.42000"
+		procarch="32bit"
+		oslanguage="en-US"
+		dtnlanguage="en-US"
+		screenresolution="3200x1080"
+		timestamp="10/13/2017 12:56:41 PM"
+		timestampiso="2017-10-13T16:56:41"
+		endtime="10/13/2017 12:57:09 PM"
+		timeoutfactor="1"
+		module="Hangouts">
+		<detail>
+			Hangouts
+		</detail>
+		<varbindings>
+		</varbindings>
+		<item
+			timeRelativeToTestSuiteStartTime="00:00.463"
+			timeRelativeToTestModuleStartTime="00:00.463"
+			timeWallClock="12:56:42"
+			time="00:00.463"
+			level="Info"
+			category="Website"
+			errimg=".\Hangouts_8f785384_3883c5bc_trace.jpg"
+			errthumb=".\Hangouts_8f785384_3883c5bc_trace_thumb.jpg">
+			<message>
+				Opening web site 'https://mail.google.com/mail/u/0/#contacts' with browser 'chrome' in normal mode.
+			</message>
+			<metainfo
+				itemindex="0"
+				codefile="c:\Users\Administrator\Documents\GitHub\Zang_Products_Auto_Test_Python\ZangConnectWebEx\ZangConnectWebEx\Hangouts.cs"
+				codeline="82"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:00.496"
+			timeRelativeToTestModuleStartTime="00:00.496"
+			timeWallClock="12:56:42"
+			time="00:00.496"
+			level="Info"
+			category="Delay"
+			errimg=".\Hangouts_8f785384_3883c5bc_trace.jpg"
+			errthumb=".\Hangouts_8f785384_3883c5bc_trace_thumb.jpg">
+			<message>
+				Waiting for 15s.
+			</message>
+			<metainfo
+				itemindex="1"
+				codefile="c:\Users\Administrator\Documents\GitHub\Zang_Products_Auto_Test_Python\ZangConnectWebEx\ZangConnectWebEx\Hangouts.cs"
+				codeline="86"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:15.516"
+			timeRelativeToTestModuleStartTime="00:15.516"
+			timeWallClock="12:56:57"
+			time="00:15.516"
+			level="Info"
+			category="Mouse"
+			errimg=".\Hangouts_8f785384_a07e1e0e_trace.jpg"
+			errthumb=".\Hangouts_8f785384_a07e1e0e_trace_thumb.jpg">
+			<message>
+				Mouse Left Move item 'ContactManagerMatheesanmAtesnaCom.EsnaTech' at Center.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/dom[13]//tr[#':2t']//span[@innertext='Esna Tech']"
+				fullname="ZangConnectWebExRepository.ContactManagerMatheesanmAtesnaCom.EsnaTech"
+				id="ad7387474f3942f0b9e3578c03be4e9b"
+				timeout="60000"
+				codefile="c:\Users\Administrator\Documents\GitHub\Zang_Products_Auto_Test_Python\ZangConnectWebEx\ZangConnectWebEx\Hangouts.cs"
+				codeline="89"
+				itemindex="2"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:27.056"
+			timeRelativeToTestModuleStartTime="00:27.057"
+			timeWallClock="12:57:09"
+			time="00:27.056"
+			level="Error"
+			category="User"
+			errimg=".\Hangouts_8f785384_9087c702_trace.jpg"
+			errthumb=".\Hangouts_8f785384_9087c702_trace_thumb.jpg">
+			<message>
+				The test run has been aborted by the user.
+			</message>
+			<metainfo
+				loglvl="Error">
+			</metainfo>
+		</item>
+	</activity>
+</report>
