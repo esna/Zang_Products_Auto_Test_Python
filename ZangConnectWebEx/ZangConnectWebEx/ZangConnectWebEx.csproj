@@ -70,6 +70,30 @@
     <Compile Include="AssemblyInfo.cs">
       <id>a9cbaa9e-f709-43fc-ac1e-b7ce691c0791</id>
     </Compile>
+    <Compile Include="cal.cs">
+      <BoundTo>da0a91f9-7e61-4c6e-a0c3-f1d6739e85fa</BoundTo>
+      <DependentUpon>cal.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>7967b3cc-8d0d-477d-a929-f808046cc221</id>
+    </Compile>
+    <Compile Include="cal.UserCode.cs">
+      <BoundTo>da0a91f9-7e61-4c6e-a0c3-f1d6739e85fa</BoundTo>
+      <DependentUpon>cal.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>a6cbde87-f8b7-47f9-8800-84f9c4039e95</id>
+    </Compile>
+    <Compile Include="contact.cs">
+      <BoundTo>a448e03a-3afd-4a92-a660-470369380c18</BoundTo>
+      <DependentUpon>contact.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>b7cc54ff-1274-4de8-86b1-2eccf1125a36</id>
+    </Compile>
+    <Compile Include="contact.UserCode.cs">
+      <BoundTo>a448e03a-3afd-4a92-a660-470369380c18</BoundTo>
+      <DependentUpon>contact.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>d7cf79d7-7d4b-43f1-84b3-6532b2a468e1</id>
+    </Compile>
     <Compile Include="CreateMeeting1.cs">
       <BoundTo>fcf94049-e18b-4c75-9680-88f9563c626f</BoundTo>
       <DependentUpon>CreateMeeting1.rxrec</DependentUpon>
@@ -117,6 +141,18 @@
       <DependentUpon>Hangouts.rxrec</DependentUpon>
       <UserCode>true</UserCode>
       <id>6e33bffd-36bf-4da9-8dbc-496260a1d140</id>
+    </Compile>
+    <Compile Include="o365Mail.cs">
+      <BoundTo>50c88ce2-fb66-45e0-a3dd-b4a2647c2d38</BoundTo>
+      <DependentUpon>o365Mail.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>0e093c7c-52fb-4c87-a36d-db65839404c2</id>
+    </Compile>
+    <Compile Include="o365Mail.UserCode.cs">
+      <BoundTo>50c88ce2-fb66-45e0-a3dd-b4a2647c2d38</BoundTo>
+      <DependentUpon>o365Mail.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>20d06274-f459-4a8d-92ec-ccbffd64a0c8</id>
     </Compile>
     <Compile Include="OpenChromeExtension.cs">
       <BoundTo>910c0ade-5756-43ab-9fa5-6a8eaaf9afc2</BoundTo>
@@ -204,6 +240,16 @@
     <None Include="app.config">
       <id>2efb90c3-f85a-48d0-9fe3-e3afca12d00c</id>
     </None>
+    <None Include="cal.rxrec">
+      <BoundTo>d69a5b0b-9ae9-4fe1-8391-cf659ba9a734</BoundTo>
+      <id>da0a91f9-7e61-4c6e-a0c3-f1d6739e85fa</id>
+      <recordtableid>573bc2c3-9969-45be-ac3d-09d5c8a614c7</recordtableid>
+    </None>
+    <None Include="contact.rxrec">
+      <BoundTo>d69a5b0b-9ae9-4fe1-8391-cf659ba9a734</BoundTo>
+      <id>a448e03a-3afd-4a92-a660-470369380c18</id>
+      <recordtableid>9175af98-ab16-4dad-b2b4-10ded43765b3</recordtableid>
+    </None>
     <None Include="CreateMeeting1.rxrec">
       <BoundTo>d69a5b0b-9ae9-4fe1-8391-cf659ba9a734</BoundTo>
       <id>fcf94049-e18b-4c75-9680-88f9563c626f</id>
@@ -223,6 +269,11 @@
       <BoundTo>d69a5b0b-9ae9-4fe1-8391-cf659ba9a734</BoundTo>
       <id>bc046455-8b6d-458f-b07a-92e117b0d00b</id>
       <recordtableid>5a26c7c9-816c-4b9e-bfb2-f358f5a824e3</recordtableid>
+    </None>
+    <None Include="o365Mail.rxrec">
+      <BoundTo>d69a5b0b-9ae9-4fe1-8391-cf659ba9a734</BoundTo>
+      <id>50c88ce2-fb66-45e0-a3dd-b4a2647c2d38</id>
+      <recordtableid>dac91092-ea48-48b9-acfc-35f2f35fc1fe</recordtableid>
     </None>
     <None Include="OpenChromeExtension.rxrec">
       <BoundTo>d69a5b0b-9ae9-4fe1-8391-cf659ba9a734</BoundTo>

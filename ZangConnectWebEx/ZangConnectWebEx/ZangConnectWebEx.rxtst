@@ -4,6 +4,18 @@ rxversion="7.2">
 	<testsuiteentryhierarchy>
 		<flatlistofchildren>
 			<testmodule
+			id="00ede695-b1f9-4726-851f-a86f03147bfa"
+			name="OpenChromeExtension"
+			ref="dfe3cf4b-401a-4202-a053-ec04eaddd46c"
+			type="Recording">
+			</testmodule>
+			<testmodule
+			id="1366780a-78e1-4f8b-8670-ece97dfbd778"
+			name="o365Mail"
+			ref="dac91092-ea48-48b9-acfc-35f2f35fc1fe"
+			type="Recording">
+			</testmodule>
+			<testmodule
 			id="1496a733-2283-40c2-9472-e63da2ea89e0"
 			name="SignInGoogle"
 			ref="0643f785-6a73-4840-9984-cba703945349"
@@ -33,15 +45,17 @@ rxversion="7.2">
 			type="Recording">
 			</testmodule>
 			<testmodule
+			id="3af3a7fa-e0eb-4277-8b90-6a1d55473715"
+			name="WebExSignInPostSSO"
+			ref="17c82bf0-ebb2-48e4-96e2-c59e268245d4"
+			type="Recording">
+			</testmodule>
+			<testmodule
 			id="4a0ced1f-0b58-4c6a-b627-618616859503"
 			name="SalesforceMeeting"
 			ref="7080c313-e8b8-44cd-bf75-5954bcd62996"
 			type="Recording">
 			</testmodule>
-			<testcase
-			id="53d99257-8cbd-4b21-8e23-e53df32b487a"
-			name="LogInTrialGoogle">
-			</testcase>
 			<testcase
 			id="59d59e3a-a394-4038-97d4-9d2cba4b1c48"
 			name="LoggingIn">
@@ -50,6 +64,12 @@ rxversion="7.2">
 			id="6352a52a-e653-4332-a43b-1309af3d2cd7"
 			name="OpenChromeExtension"
 			ref="dfe3cf4b-401a-4202-a053-ec04eaddd46c"
+			type="Recording">
+			</testmodule>
+			<testmodule
+			id="6cf4034e-76be-4e0d-bc5b-80d669be25b1"
+			name="contact"
+			ref="9175af98-ab16-4dad-b2b4-10ded43765b3"
 			type="Recording">
 			</testmodule>
 			<testcase
@@ -105,7 +125,6 @@ rxversion="7.2">
 			type="Recording">
 			</testmodule>
 			<testmodule
-			enabled="False"
 			id="a599307c-c8b0-402d-81ff-36beb55918d2"
 			name="SignInO365"
 			ref="965e777a-c367-434b-8c54-51b712450e22"
@@ -114,10 +133,6 @@ rxversion="7.2">
 					<![CDATA[MUST SIGN OUT OF O365 FIRST]]>
 				</description>
 			</testmodule>
-			<testcase
-			id="ad82b57c-f9ce-41d9-b8b8-5332d8de185f"
-			name="LogInZangCloud">
-			</testcase>
 			<testcase
 			id="cd704c4a-31c6-4458-8a36-9bd7faa77e5e"
 			name="GoogleContactCard&amp;Hangout">
@@ -149,6 +164,12 @@ rxversion="7.2">
 			id="e791fed1-8712-4681-b440-17499b106c41"
 			name="GoogleHangOutsIntegration">
 			</testcase>
+			<testmodule
+			id="e8f1c702-39b7-4dca-9941-dfca9499a1ed"
+			name="cal"
+			ref="573bc2c3-9969-45be-ac3d-09d5c8a614c7"
+			type="Recording">
+			</testmodule>
 			<testcase
 			id="f4294086-8d4b-43dc-8479-dbbd6f96f552"
 			name="O365Mail">
@@ -177,10 +198,6 @@ rxversion="7.2">
 						<testmodule
 						id="8f858ec0-b2ff-4f68-8262-48761099fe59"
 						name="SignInSalesforce">
-						</testmodule>
-						<testmodule
-						id="a599307c-c8b0-402d-81ff-36beb55918d2"
-						name="SignInO365">
 						</testmodule>
 						<testmodule
 						id="1496a733-2283-40c2-9472-e63da2ea89e0"
@@ -246,22 +263,38 @@ rxversion="7.2">
 					<testcase
 					id="f4294086-8d4b-43dc-8479-dbbd6f96f552"
 					name="O365Mail">
+						<testmodule
+						id="00ede695-b1f9-4726-851f-a86f03147bfa"
+						name="OpenChromeExtension">
+						</testmodule>
+						<testmodule
+						id="a599307c-c8b0-402d-81ff-36beb55918d2"
+						name="SignInO365">
+						</testmodule>
+						<testmodule
+						id="3af3a7fa-e0eb-4277-8b90-6a1d55473715"
+						name="WebExSignInPostSSO">
+						</testmodule>
+						<testmodule
+						id="1366780a-78e1-4f8b-8670-ece97dfbd778"
+						name="o365Mail">
+						</testmodule>
 					</testcase>
 					<testcase
 					id="73f6f153-7ba6-47ee-8c88-df8b1e916006"
 					name="O365Calendar">
+						<testmodule
+						id="e8f1c702-39b7-4dca-9941-dfca9499a1ed"
+						name="cal">
+						</testmodule>
 					</testcase>
 					<testcase
 					id="cf2fcd74-00ba-4113-9831-24dba8ec92a3"
 					name="O365People">
-					</testcase>
-					<testcase
-					id="ad82b57c-f9ce-41d9-b8b8-5332d8de185f"
-					name="LogInZangCloud">
-					</testcase>
-					<testcase
-					id="53d99257-8cbd-4b21-8e23-e53df32b487a"
-					name="LogInTrialGoogle">
+						<testmodule
+						id="6cf4034e-76be-4e0d-bc5b-80d669be25b1"
+						name="contact">
+						</testmodule>
 					</testcase>
 				</testcase>
 			</testsuite>
@@ -273,12 +306,6 @@ rxversion="7.2">
 	default="TestRun">
 		<testconfiguration
 		name="TestRun">
-			<testcontainer
-			id="19ffaadb-a251-41a6-8d0c-4c58ad6ed9bf">
-			</testcontainer>
-			<testcontainer
-			id="a333a2b0-02f7-4e00-af88-d702900cb31e">
-			</testcontainer>
 		</testconfiguration>
 	</testconfigurations>
 	<references>

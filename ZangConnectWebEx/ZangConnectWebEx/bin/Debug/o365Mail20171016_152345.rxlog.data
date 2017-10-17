@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<report
+	progress="">
+	<activity
+		result="Failed"
+		duration="0ms"
+		durationms="0"
+		type="root"
+		rid="96fe2ffc080f828"
+		totalerrorcount="1"
+		totalwarningcount="0"
+		totalsuccesstestcasecount="0"
+		totalfailedtestcasecount="1"
+		totalblockedtestcasecount="0"
+		childsuccesscount="0"
+		childfailedcount="0"
+		childblockedcount="0"
+		totalsuccesscount="0"
+		totalfailedcount="0"
+		totalblockedcount="0"
+		user="Administrator"
+		rxversion="7.2.0.0"
+		host="QC-ADMIN-PCMM"
+		osversion="Windows 7 Service Pack 1 64bit"
+		runtimeversion="4.0.30319.42000"
+		procarch="32bit"
+		oslanguage="en-US"
+		dtnlanguage="en-US"
+		screenresolution="3200x1080"
+		timestamp="10/16/2017 3:23:46 PM"
+		timestampiso="2017-10-16T19:23:46"
+		endtime="10/16/2017 3:23:56 PM"
+		timeoutfactor="1"
+		module="o365Mail">
+		<detail>
+			o365Mail
+		</detail>
+		<varbindings>
+		</varbindings>
+		<item
+			timeRelativeToTestSuiteStartTime="00:00.427"
+			timeRelativeToTestModuleStartTime="00:00.427"
+			timeWallClock="15:23:46"
+			time="00:00.427"
+			level="Info"
+			category="Website"
+			errimg=".\o365Mail_3ac88680_dc49d1a1_trace.jpg"
+			errthumb=".\o365Mail_3ac88680_dc49d1a1_trace_thumb.jpg">
+			<message>
+				Opening web site 'http://www.ranorex.com' with browser 'Chrome' in normal mode.
+			</message>
+			<metainfo
+				itemindex="0"
+				codefile="c:\Users\Administrator\Documents\GitHub\Zang_Products_Auto_Test_Python\ZangConnectWebEx\ZangConnectWebEx\o365Mail.cs"
+				codeline="82"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:00.472"
+			timeRelativeToTestModuleStartTime="00:00.472"
+			timeWallClock="15:23:46"
+			time="00:00.472"
+			level="Info"
+			category="Mouse"
+			errimg=".\o365Mail_3ac88680_57a0a2e2_trace.jpg"
+			errthumb=".\o365Mail_3ac88680_57a0a2e2_trace_thumb.jpg">
+			<message>
+				Mouse Left Click item 'ContactManagerMatheesanmAtesnaCom.SpanTagAriaId73' at 45;9.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/dom[13]//span[#'_ariaId_73']"
+				fullname="ZangConnectWebExRepository.ContactManagerMatheesanmAtesnaCom.SpanTagAriaId73"
+				id="f5828ee5ef7e447f8b6d33da1d2c0f19"
+				timeout="60000"
+				codefile="c:\Users\Administrator\Documents\GitHub\Zang_Products_Auto_Test_Python\ZangConnectWebEx\ZangConnectWebEx\o365Mail.cs"
+				codeline="86"
+				itemindex="1"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:10.091"
+			timeRelativeToTestModuleStartTime="00:10.091"
+			timeWallClock="15:23:56"
+			time="00:10.091"
+			level="Error"
+			category="User"
+			errimg=".\o365Mail_3ac88680_9d0ac0dd_trace.jpg"
+			errthumb=".\o365Mail_3ac88680_9d0ac0dd_trace_thumb.jpg">
+			<message>
+				The test run has been aborted by the user.
+			</message>
+			<metainfo
+				loglvl="Error">
+			</metainfo>
+		</item>
+	</activity>
+</report>

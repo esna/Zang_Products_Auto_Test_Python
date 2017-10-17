@@ -168,8 +168,8 @@ namespace ZangConnectWebEx
             repo.AllowAccessSalesforce.Save.Click("30;7");
             Delay.Milliseconds(200);
             
-            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (InnerText='test1115') on item 'AllowAccessSalesforce.Test1115'.", repo.AllowAccessSalesforce.Test1115Info, new RecordItemIndex(23));
-            Validate.Attribute(repo.AllowAccessSalesforce.Test1115Info, "InnerText", "test1115");
+            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (InnerText='test1115') on item 'ContactManagerMatheesanmAtesnaCom1.Test1115'.", repo.ContactManagerMatheesanmAtesnaCom1.Test1115Info, new RecordItemIndex(23));
+            Validate.Attribute(repo.ContactManagerMatheesanmAtesnaCom1.Test1115Info, "InnerText", "test1115");
             Delay.Milliseconds(100);
             
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'SalesforceDeveloperEditionGoogle.ZangConnectForWebEx' at 17;17.", repo.SalesforceDeveloperEditionGoogle.ZangConnectForWebExInfo, new RecordItemIndex(24));
@@ -189,6 +189,10 @@ namespace ZangConnectWebEx
             Delay.Milliseconds(200);
             
             Report.Log(ReportLevel.Info, "Keyboard", "Key 'Ctrl+W' Press.", new RecordItemIndex(28));
+            Keyboard.Press(System.Windows.Forms.Keys.W | System.Windows.Forms.Keys.Control, Keyboard.DefaultScanCode, Keyboard.DefaultKeyPressTime, 1, true);
+            Delay.Milliseconds(0);
+            
+            Report.Log(ReportLevel.Info, "Keyboard", "Key 'Ctrl+W' Press.", new RecordItemIndex(29));
             Keyboard.Press(System.Windows.Forms.Keys.W | System.Windows.Forms.Keys.Control, Keyboard.DefaultScanCode, Keyboard.DefaultKeyPressTime, 1, true);
             Delay.Milliseconds(0);
             

@@ -1222,6 +1222,9 @@ namespace ZangConnectWebEx
             SelfInfoClass _selfInfo;
             RepoItemInfo _element216437072Info;
             RepoItemInfo _element309695888Info;
+            RepoItemInfo _element637051488Info;
+            RepoItemInfo _element635356752Info;
+            RepoItemInfo _element635275600Info;
 
             /// <summary>
             /// Creates a new Chrome  folder.
@@ -1232,6 +1235,9 @@ namespace ZangConnectWebEx
                 _selfInfo = new SelfInfoClass(this);
                 _element216437072Info = new RepoItemInfo(this, "Element216437072", "element[@controlid='216437072']", 30000, null, "4fe1e8fa-2676-478f-875b-47ecc41c1168");
                 _element309695888Info = new RepoItemInfo(this, "Element309695888", "element[@controlid='309695888']", 30000, null, "057d3c5a-4fed-4b59-b8c9-147808f28106");
+                _element637051488Info = new RepoItemInfo(this, "Element637051488", "element[@controlid='637051488']", 30000, null, "c6f8a19c-a0f9-4adb-beac-3cd3c3b01092");
+                _element635356752Info = new RepoItemInfo(this, "Element635356752", "element[@controlid='635356752']", 30000, null, "6efdc2bb-bfc4-45b0-bd3c-fbf179f4afae");
+                _element635275600Info = new RepoItemInfo(this, "Element635275600", "element[@controlid='635275600']", 30000, null, "7bcc6f73-1a64-425c-b200-03722ec8f35b");
             }
 
             /// <summary>
@@ -1340,6 +1346,78 @@ namespace ZangConnectWebEx
                     return _element309695888Info;
                 }
             }
+
+            /// <summary>
+            /// The Element637051488 item.
+            /// </summary>
+            [RepositoryItem("c6f8a19c-a0f9-4adb-beac-3cd3c3b01092")]
+            public virtual Ranorex.Unknown Element637051488
+            {
+                get
+                {
+                    return _element637051488Info.CreateAdapter<Ranorex.Unknown>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Element637051488 item info.
+            /// </summary>
+            [RepositoryItemInfo("c6f8a19c-a0f9-4adb-beac-3cd3c3b01092")]
+            public virtual RepoItemInfo Element637051488Info
+            {
+                get
+                {
+                    return _element637051488Info;
+                }
+            }
+
+            /// <summary>
+            /// The Element635356752 item.
+            /// </summary>
+            [RepositoryItem("6efdc2bb-bfc4-45b0-bd3c-fbf179f4afae")]
+            public virtual Ranorex.Unknown Element635356752
+            {
+                get
+                {
+                    return _element635356752Info.CreateAdapter<Ranorex.Unknown>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Element635356752 item info.
+            /// </summary>
+            [RepositoryItemInfo("6efdc2bb-bfc4-45b0-bd3c-fbf179f4afae")]
+            public virtual RepoItemInfo Element635356752Info
+            {
+                get
+                {
+                    return _element635356752Info;
+                }
+            }
+
+            /// <summary>
+            /// The Element635275600 item.
+            /// </summary>
+            [RepositoryItem("7bcc6f73-1a64-425c-b200-03722ec8f35b")]
+            public virtual Ranorex.Unknown Element635275600
+            {
+                get
+                {
+                    return _element635275600Info.CreateAdapter<Ranorex.Unknown>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Element635275600 item info.
+            /// </summary>
+            [RepositoryItemInfo("7bcc6f73-1a64-425c-b200-03722ec8f35b")]
+            public virtual RepoItemInfo Element635275600Info
+            {
+                get
+                {
+                    return _element635275600Info;
+                }
+            }
         }
 
         /// <summary>
@@ -1391,6 +1469,8 @@ namespace ZangConnectWebEx
             RepoItemInfo _webexmeetinghash111Info;
             RepoItemInfo _endmeetingInfo;
             RepoItemInfo _inviteandremindotherstojoinInfo;
+            RepoItemInfo _endthemeetingforallparticipantsorInfo;
+            RepoItemInfo _clientInfo;
 
             /// <summary>
             /// Creates a new CiscoWebExMeetingCenter  folder.
@@ -1401,6 +1481,8 @@ namespace ZangConnectWebEx
                 _webexmeetinghash111Info = new RepoItemInfo(this, "WebExMeetingHash111", "container[@caption='' and @accessiblerole='Client' and @accessibledescription='c1911']/container[@caption='' and @accessiblerole='Client' and @accessibledescription='c10314']/?/?/container[@accessiblename='Quick Start']//text[@accessiblerole='Text' and @accessibledescription='c1031']", 30000, null, "7ff9d328-ca8d-4376-918d-27d0383f6882");
                 _endmeetingInfo = new RepoItemInfo(this, "EndMeeting", "container[@caption='' and @accessiblerole='Client' and @accessibledescription='c1911']//container[@accessiblename='Quick Start']//container[@caption='' and @accessiblerole='Client' and @accessibledescription='o7150']/button[@accessiblename='End Meeting']", 30000, null, "0a362e45-9745-4eeb-9cdf-aa294fd8568d");
                 _inviteandremindotherstojoinInfo = new RepoItemInfo(this, "InviteAndRemindOthersToJoin", "container[@caption='' and @accessiblerole='Client' and @accessibledescription='c1911']//container[@accessiblename='Quick Start']/container[@caption='' and @accessiblerole='Client' and @accessibledescription='c1020']/?/?/button[@accessiblename~'^Invite\\ and\\ remind\\ others\\ ']", 30000, null, "e0c845ca-0d85-4dff-9945-27ac73b0d060");
+                _endthemeetingforallparticipantsorInfo = new RepoItemInfo(this, "EndTheMeetingForAllParticipantsOr", "container[@caption='' and @accessiblerole='Client' and @accessibledescription='c1911']//container[@accessiblename='Quick Start']//container[@caption='' and @accessiblerole='Client' and @accessibledescription='o7150']/button[@accessiblename~'^End\\ the\\ meeting\\ for\\ all\\ p']", 30000, null, "dcd77d85-fa13-418c-85f0-61aae6b5c257");
+                _clientInfo = new RepoItemInfo(this, "Client", "container[@caption='' and @accessiblerole='Client' and @accessibledescription='c1911']//container[@accessiblename='Quick Start']/?/?/container[@caption='' and @accessiblerole='Client' and @accessibledescription='o1035']", 30000, null, "ed117b1a-4538-4591-b7ea-34b9ec6e06aa");
             }
 
             /// <summary>
@@ -1496,6 +1578,54 @@ namespace ZangConnectWebEx
                 get
                 {
                     return _inviteandremindotherstojoinInfo;
+                }
+            }
+
+            /// <summary>
+            /// The EndTheMeetingForAllParticipantsOr item.
+            /// </summary>
+            [RepositoryItem("dcd77d85-fa13-418c-85f0-61aae6b5c257")]
+            public virtual Ranorex.Button EndTheMeetingForAllParticipantsOr
+            {
+                get
+                {
+                    return _endthemeetingforallparticipantsorInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The EndTheMeetingForAllParticipantsOr item info.
+            /// </summary>
+            [RepositoryItemInfo("dcd77d85-fa13-418c-85f0-61aae6b5c257")]
+            public virtual RepoItemInfo EndTheMeetingForAllParticipantsOrInfo
+            {
+                get
+                {
+                    return _endthemeetingforallparticipantsorInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Client item.
+            /// </summary>
+            [RepositoryItem("ed117b1a-4538-4591-b7ea-34b9ec6e06aa")]
+            public virtual Ranorex.Container Client
+            {
+                get
+                {
+                    return _clientInfo.CreateAdapter<Ranorex.Container>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Client item info.
+            /// </summary>
+            [RepositoryItemInfo("ed117b1a-4538-4591-b7ea-34b9ec6e06aa")]
+            public virtual RepoItemInfo ClientInfo
+            {
+                get
+                {
+                    return _clientInfo;
                 }
             }
         }
@@ -1894,6 +2024,10 @@ namespace ZangConnectWebEx
             RepoItemInfo _esnatechqcatgmailcomInfo;
             RepoItemInfo _closeInfo;
             RepoItemInfo _esnatechqcatgmailcom1Info;
+            RepoItemInfo _remindInfo;
+            AtmgrInfoClass _atmgrInfo;
+            RepoItemInfo _remindtabtoswitchpagespressctrltInfo;
+            RepoItemInfo _superuseratesnatechonmicrosoftcomInfo;
 
             /// <summary>
             /// Creates a new Atmgr  folder.
@@ -1905,6 +2039,45 @@ namespace ZangConnectWebEx
                 _esnatechqcatgmailcomInfo = new RepoItemInfo(this, "EsnatechqcAtgmailCom", "container[@caption='' and @accessiblerole='Client' and @accessibledescription='c10016']//tree[@accessiblename='esnatechqc@gmail.com']/treeitem[@accessiblename='esnatechqc@gmail.com']", 30000, null, "f969cc3c-0a43-493c-bb03-3b5d1c058f6a");
                 _closeInfo = new RepoItemInfo(this, "Close", "button[@accessiblename='Close']", 30000, null, "bc64cb8c-5cf5-45f5-999f-3962ed24b2b6");
                 _esnatechqcatgmailcom1Info = new RepoItemInfo(this, "EsnatechqcAtgmailCom1", "container[@caption='' and @accessiblerole='Client' and @accessibledescription='c10016']//tree[@accessiblename='esnatechqc@gmail.com']", 30000, null, "b4364eed-01d9-427b-afc9-14410302bf26");
+                _remindInfo = new RepoItemInfo(this, "Remind", "?/?/tabpage[@accessiblename='Remind']", 30000, null, "4b1f45bc-9f0d-4967-a2ea-eb3f9b82c438");
+                _atmgrInfo = new AtmgrInfoClass(this);
+                _remindtabtoswitchpagespressctrltInfo = new RepoItemInfo(this, "RemindTabToSwitchPagesPressCtrlT", "?/?/container[@accessiblename~'^Remind\\ tab,\\ to\\ switch\\ pag']", 30000, null, "8372077c-cb8f-4d74-abce-64078c49d674");
+                _superuseratesnatechonmicrosoftcomInfo = new RepoItemInfo(this, "SuperuserAtesnatechOnmicrosoftCom", "container[@caption='' and @accessiblerole='Client' and @accessibledescription='c10016']//tree[@accessiblename='']/treeitem[@accessiblename~'^superuser@esnatech\\.onmicr']", 30000, null, "88fc537d-de38-4b32-bbf1-1cbb129a8cd4");
+            }
+
+            /// <summary>
+            /// The AtmgrInfoClass folder.
+            /// </summary>
+            [RepositoryItemInfo("3d3c1d73-8c34-40fb-97ef-cf0c7287e8b2")]
+            public class AtmgrInfoClass : RepoItemInfo
+            {
+                /// <summary>
+                /// AtmgrInfoClass class constructor.
+                /// </summary>
+                public AtmgrInfoClass(RepoGenBaseFolder parentFolder)
+                    : base(parentFolder, "Atmgr", "", 30000, null, "3d3c1d73-8c34-40fb-97ef-cf0c7287e8b2")
+                { }
+
+                /// <summary>
+                /// Gets the Screenshot1 item image.
+                /// </summary>
+                /// <returns>The Screenshot1 image.</returns>
+                [RepositoryImage("d37870d7-f409-4ba3-aebc-6c62ab55945d")]
+                public CompressedImage GetScreenshot1()
+                {
+                    return GetImage("d37870d7-f409-4ba3-aebc-6c62ab55945d");
+                }
+
+                /// <summary>
+                /// Gets the Screenshot1 item image.
+                /// </summary>
+                /// <param name="cropRect">The bounds of the sub-image to return.</param>
+                /// <returns>The cropped image.</returns>
+                [RepositoryImage("d37870d7-f409-4ba3-aebc-6c62ab55945d")]
+                public CompressedImage GetScreenshot1(System.Drawing.Rectangle cropRect)
+                {
+                    return GetImage("d37870d7-f409-4ba3-aebc-6c62ab55945d", cropRect);
+                }
             }
 
             /// <summary>
@@ -2026,6 +2199,102 @@ namespace ZangConnectWebEx
                     return _esnatechqcatgmailcom1Info;
                 }
             }
+
+            /// <summary>
+            /// The Remind item.
+            /// </summary>
+            [RepositoryItem("4b1f45bc-9f0d-4967-a2ea-eb3f9b82c438")]
+            public virtual Ranorex.TabPage Remind
+            {
+                get
+                {
+                    return _remindInfo.CreateAdapter<Ranorex.TabPage>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Remind item info.
+            /// </summary>
+            [RepositoryItemInfo("4b1f45bc-9f0d-4967-a2ea-eb3f9b82c438")]
+            public virtual RepoItemInfo RemindInfo
+            {
+                get
+                {
+                    return _remindInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Atmgr item.
+            /// </summary>
+            [RepositoryItem("3d3c1d73-8c34-40fb-97ef-cf0c7287e8b2")]
+            public virtual Ranorex.Form Atmgr
+            {
+                get
+                {
+                    return _atmgrInfo.CreateAdapter<Ranorex.Form>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Atmgr item info.
+            /// </summary>
+            [RepositoryItemInfo("3d3c1d73-8c34-40fb-97ef-cf0c7287e8b2")]
+            public virtual AtmgrInfoClass AtmgrInfo
+            {
+                get
+                {
+                    return _atmgrInfo;
+                }
+            }
+
+            /// <summary>
+            /// The RemindTabToSwitchPagesPressCtrlT item.
+            /// </summary>
+            [RepositoryItem("8372077c-cb8f-4d74-abce-64078c49d674")]
+            public virtual Ranorex.Container RemindTabToSwitchPagesPressCtrlT
+            {
+                get
+                {
+                    return _remindtabtoswitchpagespressctrltInfo.CreateAdapter<Ranorex.Container>(true);
+                }
+            }
+
+            /// <summary>
+            /// The RemindTabToSwitchPagesPressCtrlT item info.
+            /// </summary>
+            [RepositoryItemInfo("8372077c-cb8f-4d74-abce-64078c49d674")]
+            public virtual RepoItemInfo RemindTabToSwitchPagesPressCtrlTInfo
+            {
+                get
+                {
+                    return _remindtabtoswitchpagespressctrltInfo;
+                }
+            }
+
+            /// <summary>
+            /// The SuperuserAtesnatechOnmicrosoftCom item.
+            /// </summary>
+            [RepositoryItem("88fc537d-de38-4b32-bbf1-1cbb129a8cd4")]
+            public virtual Ranorex.TreeItem SuperuserAtesnatechOnmicrosoftCom
+            {
+                get
+                {
+                    return _superuseratesnatechonmicrosoftcomInfo.CreateAdapter<Ranorex.TreeItem>(true);
+                }
+            }
+
+            /// <summary>
+            /// The SuperuserAtesnatechOnmicrosoftCom item info.
+            /// </summary>
+            [RepositoryItemInfo("88fc537d-de38-4b32-bbf1-1cbb129a8cd4")]
+            public virtual RepoItemInfo SuperuserAtesnatechOnmicrosoftComInfo
+            {
+                get
+                {
+                    return _superuseratesnatechonmicrosoftcomInfo;
+                }
+            }
         }
 
         /// <summary>
@@ -2034,21 +2303,203 @@ namespace ZangConnectWebEx
         [RepositoryFolder("edaff561-c490-4720-bb36-08ce2d71f26e")]
         public partial class ContactManagerMatheesanmAtesnaComAppFolder : RepoGenBaseFolder
         {
+            ZangConnectWebExRepositoryFolders.DivTagNR4Folder _divtagnr4;
             RepoItemInfo _esnatechInfo;
             RepoItemInfo _divtagtvigInfo;
             RepoItemInfo _inviteInfo;
             RepoItemInfo _juxhvpuxyfqc0l8pbInfo;
+            RepoItemInfo _spantagariaid80folderInfo;
+            RepoItemInfo _spantagfc3owaimgmsiconmailmsfclInfo;
+            RepoItemInfo _btnjoinroomInfo;
+            RepoItemInfo _spantagariaid22Info;
+            RepoItemInfo _spantagariaid73Info;
+            RepoItemInfo _textInfo;
+            RepoItemInfo _sendInfo;
+            RepoItemInfo _spantagariaid83folderInfo;
+            RepoItemInfo _superuserInfo;
+            RepoItemInfo _tdtagc2017esnatechnologiesincInfo;
+            RepoItemInfo _imghostavatarInfo;
+            RepoItemInfo _spantagariaid29Info;
+            RepoItemInfo _wexbuttonaddInfo;
+            DivTagCxN1CustomScrollBarInfoClass _divtagcxn1customscrollbarInfo;
+            RepoItemInfo _saveInfo;
+            RepoItemInfo _spantagariaid109Info;
+            RepoItemInfo _text1Info;
+            RepoItemInfo _buttontagdx2msfclbmsbgcwmsbclInfo;
+            ModalPanelBackgroundInfoClass _modalpanelbackgroundInfo;
+            PopupPanelPanelPopupShadowInfoClass _popuppanelpanelpopupshadowInfo;
+            RepoItemInfo _spantagariaid105Info;
+            RepoItemInfo _spantagariaid116Info;
+            RepoItemInfo _wexbuttonadd1Info;
+            RepoItemInfo _sometdtagInfo;
+            RepoItemInfo _text2Info;
+            RepoItemInfo _spantagariaid125Info;
+            RepoItemInfo _wexbuttonstartInfo;
 
             /// <summary>
             /// Creates a new ContactManagerMatheesanmAtesnaCom  folder.
             /// </summary>
             public ContactManagerMatheesanmAtesnaComAppFolder(RepoGenBaseFolder parentFolder) :
-                    base("ContactManagerMatheesanmAtesnaCom", "/dom[13]", parentFolder, 30000, null, false, "edaff561-c490-4720-bb36-08ce2d71f26e", "")
+                    base("ContactManagerMatheesanmAtesnaCom", "/dom[@domain='outlook.office.com']", parentFolder, 30000, null, false, "edaff561-c490-4720-bb36-08ce2d71f26e", "")
             {
+                _divtagnr4 = new ZangConnectWebExRepositoryFolders.DivTagNR4Folder(this);
                 _esnatechInfo = new RepoItemInfo(this, "EsnaTech", ".//tr[#':2t']//span[@innertext='Esna Tech']", 30000, null, "ad738747-4f39-42f0-b9e3-578c03be4e9b");
                 _divtagtvigInfo = new RepoItemInfo(this, "DivTagTvIg", ".//div[#':tv.ig']", 30000, null, "143489bc-1da7-4104-be9e-967c0b1fb7ed");
                 _inviteInfo = new RepoItemInfo(this, "Invite", ".//div[#':tj.Wh']/span[@innertext='Invite']", 30000, null, "cfe9bcb9-8732-43f7-8ce2-168d7ad5c28a");
                 _juxhvpuxyfqc0l8pbInfo = new RepoItemInfo(this, "JUXHvPUXYFQC0L8pb", ".//div[#'wex_hangout2webexbutton0']/div/div/div/div[1]/div[2]", 30000, null, "b22eaf4d-6b80-48d2-9d3f-4e7e8e364e22");
+                _spantagariaid80folderInfo = new RepoItemInfo(this, "SpanTagAriaId80Folder", ".//span[#'_ariaId_80.folder']", 30000, null, "e6b3144b-f8a9-4325-80ac-8d000c9e7d79");
+                _spantagfc3owaimgmsiconmailmsfclInfo = new RepoItemInfo(this, "SpanTagFc3OwaimgMsIconMailMsFcl", "body/div[12]/div/div[2]/div[2]/div[2]/div/div/div[6]/button[@title='WebEx']/span[1]", 30000, null, "bc346711-818e-45fc-9237-822761ce606c");
+                _btnjoinroomInfo = new RepoItemInfo(this, "BtnJoinRoom", ".//a[#'btn_join_room']", 30000, null, "387adc44-52b0-494d-b071-767ab11d63e3");
+                _spantagariaid22Info = new RepoItemInfo(this, "SpanTagAriaId22", ".//span[#'_ariaId_22']", 30000, null, "8949deef-9674-43ff-95c6-96cd5492e522");
+                _spantagariaid73Info = new RepoItemInfo(this, "SpanTagAriaId73", ".//span[#'_ariaId_73']", 30000, null, "f5828ee5-ef7e-447f-8b6d-33da1d2c0f19");
+                _textInfo = new RepoItemInfo(this, "Text", ".//div[#'primaryContainer']/div[5]/div/div[1]/div/div[5]/div[3]/div/div[5]/div[1]/div/div[3]/div[4]/div/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[6]/?/?/input[@type='text']", 30000, null, "e0b8b72f-5491-40d3-afae-8f91f4b7c808");
+                _sendInfo = new RepoItemInfo(this, "Send", ".//div[#'primaryContainer']/div[5]/div/div[1]/div/div[5]/div[1]/div/div[1]/div/div/div[1]/?/?/button[@title='Send']/span[@innertext='Send']", 30000, null, "36c38b32-3e8b-4c4c-a210-4a91ece7e709");
+                _spantagariaid83folderInfo = new RepoItemInfo(this, "SpanTagAriaId83Folder", ".//span[#'_ariaId_83.folder']", 30000, null, "9a092bb3-6ab6-414f-9ccb-49de3b456176");
+                _superuserInfo = new RepoItemInfo(this, "SuperUser", ".//div[#'ItemHeader.ToContainer']/div/div/div/?/?/span/?/?/span[@innertext='Super User']", 30000, null, "3bcc936a-459d-4f72-8a06-922ed89b7cf6");
+                _tdtagc2017esnatechnologiesincInfo = new RepoItemInfo(this, "TdTagC2017EsnaTechnologiesInc", ".//frameset[#'topframeset']/frame[@name='mainFrame']/?/?/frame[@name='main']//div[#'all-footer']/table//td[@innertext~'^\\ ©\\ 2017\\ Esna\\ Technologies']", 30000, null, "914ec441-3bdf-4033-af0b-6514fad7c5ef");
+                _imghostavatarInfo = new RepoItemInfo(this, "ImgHostAvatar", ".//frameset[#'topframeset']/frame[@name='mainFrame']/?/?/frame[@name='main']//img[#'img_hostAvatar']", 30000, null, "71f8b242-a6ef-4898-a716-96fc5a0cbd9d");
+                _spantagariaid29Info = new RepoItemInfo(this, "SpanTagAriaId29", ".//span[#'_ariaId_29']", 30000, null, "8b601819-dc69-401a-b57c-ca08b8ff262a");
+                _wexbuttonaddInfo = new RepoItemInfo(this, "WexButtonAdd", "", 30000, null, "25934919-45f1-413b-9a6d-f939473b66e5");
+                _divtagcxn1customscrollbarInfo = new DivTagCxN1CustomScrollBarInfoClass(this);
+                _saveInfo = new RepoItemInfo(this, "Save", "body/div[13]/div/div[4]/div[2]/div/div[1]/div/div/div/div[1]/?/?/button[@title='Save']/span[@innertext='Save']", 30000, null, "4f9823f8-d0a9-4c49-a900-8462ac7a7213");
+                _spantagariaid109Info = new RepoItemInfo(this, "SpanTagAriaId109", ".//span[#'_ariaId_109']", 30000, null, "a49860f9-47c8-4162-ac1d-933f32f54284");
+                _text1Info = new RepoItemInfo(this, "Text1", "body/div[13]/div/div[4]/div[2]/div/div[4]/div[2]/div[1]/div[2]/div[1]/div[3]/ul/div/div[1]/div[1]//input[@type='text']", 30000, null, "e883ae11-816b-4bf5-9db4-730bc6811660");
+                _buttontagdx2msfclbmsbgcwmsbclInfo = new RepoItemInfo(this, "ButtonTagDx2MsFclBMsBgcWMsBcl", "body/div[13]/div/div[4]/div[2]/div/div[4]/div[2]/div[1]/div[2]/div[1]/div[3]/ul/div/div[1]/div[1]//button", 30000, null, "40c1ad55-2a29-479c-a424-9a744aa50893");
+                _modalpanelbackgroundInfo = new ModalPanelBackgroundInfoClass(this);
+                _popuppanelpanelpopupshadowInfo = new PopupPanelPanelPopupShadowInfoClass(this);
+                _spantagariaid105Info = new RepoItemInfo(this, "SpanTagAriaId105", ".//span[#'_ariaId_105']", 30000, null, "477c5a93-f072-42b3-adc1-9cc85e1c14ec");
+                _spantagariaid116Info = new RepoItemInfo(this, "SpanTagAriaId116", ".//span[#'_ariaId_116']", 30000, null, "abc30866-68d6-46fb-8777-1fe3ce0d73c3");
+                _wexbuttonadd1Info = new RepoItemInfo(this, "WexButtonAdd1", ".//span[#'wexButtonAdd']", 30000, null, "6bf9a2cc-44c7-40c5-a5f9-41c998a0541d");
+                _sometdtagInfo = new RepoItemInfo(this, "SomeTdTag", "", 30000, null, "5530ea83-4f16-4aa8-9484-c6b8771b8a4d");
+                _text2Info = new RepoItemInfo(this, "Text2", "body/div[13]/div/div[4]/div[2]/div/div[4]/div[2]/div[1]/div[2]/div[1]/div[3]/ul/li[1]/?/?/input[@type='text']", 30000, null, "caf2fa3e-3224-4bf8-8a09-37cc49f4ca1c");
+                _spantagariaid125Info = new RepoItemInfo(this, "SpanTagAriaId125", ".//span[#'_ariaId_125']", 30000, null, "3ec1adaf-0dd0-472d-a8ef-8ded8a63fcae");
+                _wexbuttonstartInfo = new RepoItemInfo(this, "WexButtonStart", ".//span[#'wexButtonStart']", 30000, null, "e29878d3-9048-4928-b51a-88e3466c7b26");
+            }
+
+            /// <summary>
+            /// The DivTagCxN1CustomScrollBarInfoClass folder.
+            /// </summary>
+            [RepositoryItemInfo("3848ee9d-870c-459a-9591-74bdd7a4d164")]
+            public class DivTagCxN1CustomScrollBarInfoClass : RepoItemInfo
+            {
+                /// <summary>
+                /// DivTagCxN1CustomScrollBarInfoClass class constructor.
+                /// </summary>
+                public DivTagCxN1CustomScrollBarInfoClass(RepoGenBaseFolder parentFolder)
+                    : base(parentFolder, "DivTagCxN1CustomScrollBar", "body/div[13]/div/div[4]/div[2]/div/div[4]", 30000, null, "3848ee9d-870c-459a-9591-74bdd7a4d164")
+                { }
+
+                /// <summary>
+                /// Gets the Screenshot1 item image.
+                /// </summary>
+                /// <returns>The Screenshot1 image.</returns>
+                [RepositoryImage("d9b0a9d8-2c8c-46b1-b613-4739139d40ab")]
+                public CompressedImage GetScreenshot1()
+                {
+                    return GetImage("d9b0a9d8-2c8c-46b1-b613-4739139d40ab");
+                }
+
+                /// <summary>
+                /// Gets the Screenshot1 item image.
+                /// </summary>
+                /// <param name="cropRect">The bounds of the sub-image to return.</param>
+                /// <returns>The cropped image.</returns>
+                [RepositoryImage("d9b0a9d8-2c8c-46b1-b613-4739139d40ab")]
+                public CompressedImage GetScreenshot1(System.Drawing.Rectangle cropRect)
+                {
+                    return GetImage("d9b0a9d8-2c8c-46b1-b613-4739139d40ab", cropRect);
+                }
+
+                /// <summary>
+                /// Gets the Screenshot2 item image.
+                /// </summary>
+                /// <returns>The Screenshot2 image.</returns>
+                [RepositoryImage("b6e6cec1-6819-45a9-81b1-6687662988b8")]
+                public CompressedImage GetScreenshot2()
+                {
+                    return GetImage("b6e6cec1-6819-45a9-81b1-6687662988b8");
+                }
+
+                /// <summary>
+                /// Gets the Screenshot2 item image.
+                /// </summary>
+                /// <param name="cropRect">The bounds of the sub-image to return.</param>
+                /// <returns>The cropped image.</returns>
+                [RepositoryImage("b6e6cec1-6819-45a9-81b1-6687662988b8")]
+                public CompressedImage GetScreenshot2(System.Drawing.Rectangle cropRect)
+                {
+                    return GetImage("b6e6cec1-6819-45a9-81b1-6687662988b8", cropRect);
+                }
+            }
+
+            /// <summary>
+            /// The ModalPanelBackgroundInfoClass folder.
+            /// </summary>
+            [RepositoryItemInfo("3c38a633-6d5c-408b-afa5-4b4f67d2a5f7")]
+            public class ModalPanelBackgroundInfoClass : RepoItemInfo
+            {
+                /// <summary>
+                /// ModalPanelBackgroundInfoClass class constructor.
+                /// </summary>
+                public ModalPanelBackgroundInfoClass(RepoGenBaseFolder parentFolder)
+                    : base(parentFolder, "ModalPanelBackground", "body/div[12]", 30000, null, "3c38a633-6d5c-408b-afa5-4b4f67d2a5f7")
+                { }
+
+                /// <summary>
+                /// Gets the Screenshot1 item image.
+                /// </summary>
+                /// <returns>The Screenshot1 image.</returns>
+                [RepositoryImage("9ff73920-7aa2-498d-810c-0d7a32335c60")]
+                public CompressedImage GetScreenshot1()
+                {
+                    return GetImage("9ff73920-7aa2-498d-810c-0d7a32335c60");
+                }
+
+                /// <summary>
+                /// Gets the Screenshot1 item image.
+                /// </summary>
+                /// <param name="cropRect">The bounds of the sub-image to return.</param>
+                /// <returns>The cropped image.</returns>
+                [RepositoryImage("9ff73920-7aa2-498d-810c-0d7a32335c60")]
+                public CompressedImage GetScreenshot1(System.Drawing.Rectangle cropRect)
+                {
+                    return GetImage("9ff73920-7aa2-498d-810c-0d7a32335c60", cropRect);
+                }
+            }
+
+            /// <summary>
+            /// The PopupPanelPanelPopupShadowInfoClass folder.
+            /// </summary>
+            [RepositoryItemInfo("53b2a402-da64-4aba-9a81-540494a95cc9")]
+            public class PopupPanelPanelPopupShadowInfoClass : RepoItemInfo
+            {
+                /// <summary>
+                /// PopupPanelPanelPopupShadowInfoClass class constructor.
+                /// </summary>
+                public PopupPanelPanelPopupShadowInfoClass(RepoGenBaseFolder parentFolder)
+                    : base(parentFolder, "PopupPanelPanelPopupShadow", "body/div[13]", 30000, null, "53b2a402-da64-4aba-9a81-540494a95cc9")
+                { }
+
+                /// <summary>
+                /// Gets the Screenshot1 item image.
+                /// </summary>
+                /// <returns>The Screenshot1 image.</returns>
+                [RepositoryImage("8bad06d9-dff1-496a-b99a-19b179fffd38")]
+                public CompressedImage GetScreenshot1()
+                {
+                    return GetImage("8bad06d9-dff1-496a-b99a-19b179fffd38");
+                }
+
+                /// <summary>
+                /// Gets the Screenshot1 item image.
+                /// </summary>
+                /// <param name="cropRect">The bounds of the sub-image to return.</param>
+                /// <returns>The cropped image.</returns>
+                [RepositoryImage("8bad06d9-dff1-496a-b99a-19b179fffd38")]
+                public CompressedImage GetScreenshot1(System.Drawing.Rectangle cropRect)
+                {
+                    return GetImage("8bad06d9-dff1-496a-b99a-19b179fffd38", cropRect);
+                }
             }
 
             /// <summary>
@@ -2170,6 +2621,842 @@ namespace ZangConnectWebEx
                     return _juxhvpuxyfqc0l8pbInfo;
                 }
             }
+
+            /// <summary>
+            /// The SpanTagAriaId80Folder item.
+            /// </summary>
+            [RepositoryItem("e6b3144b-f8a9-4325-80ac-8d000c9e7d79")]
+            public virtual Ranorex.SpanTag SpanTagAriaId80Folder
+            {
+                get
+                {
+                    return _spantagariaid80folderInfo.CreateAdapter<Ranorex.SpanTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The SpanTagAriaId80Folder item info.
+            /// </summary>
+            [RepositoryItemInfo("e6b3144b-f8a9-4325-80ac-8d000c9e7d79")]
+            public virtual RepoItemInfo SpanTagAriaId80FolderInfo
+            {
+                get
+                {
+                    return _spantagariaid80folderInfo;
+                }
+            }
+
+            /// <summary>
+            /// The SpanTagFc3OwaimgMsIconMailMsFcl item.
+            /// </summary>
+            [RepositoryItem("bc346711-818e-45fc-9237-822761ce606c")]
+            public virtual Ranorex.SpanTag SpanTagFc3OwaimgMsIconMailMsFcl
+            {
+                get
+                {
+                    return _spantagfc3owaimgmsiconmailmsfclInfo.CreateAdapter<Ranorex.SpanTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The SpanTagFc3OwaimgMsIconMailMsFcl item info.
+            /// </summary>
+            [RepositoryItemInfo("bc346711-818e-45fc-9237-822761ce606c")]
+            public virtual RepoItemInfo SpanTagFc3OwaimgMsIconMailMsFclInfo
+            {
+                get
+                {
+                    return _spantagfc3owaimgmsiconmailmsfclInfo;
+                }
+            }
+
+            /// <summary>
+            /// The BtnJoinRoom item.
+            /// </summary>
+            [RepositoryItem("387adc44-52b0-494d-b071-767ab11d63e3")]
+            public virtual Ranorex.ATag BtnJoinRoom
+            {
+                get
+                {
+                    return _btnjoinroomInfo.CreateAdapter<Ranorex.ATag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The BtnJoinRoom item info.
+            /// </summary>
+            [RepositoryItemInfo("387adc44-52b0-494d-b071-767ab11d63e3")]
+            public virtual RepoItemInfo BtnJoinRoomInfo
+            {
+                get
+                {
+                    return _btnjoinroomInfo;
+                }
+            }
+
+            /// <summary>
+            /// The SpanTagAriaId22 item.
+            /// </summary>
+            [RepositoryItem("8949deef-9674-43ff-95c6-96cd5492e522")]
+            public virtual Ranorex.SpanTag SpanTagAriaId22
+            {
+                get
+                {
+                    return _spantagariaid22Info.CreateAdapter<Ranorex.SpanTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The SpanTagAriaId22 item info.
+            /// </summary>
+            [RepositoryItemInfo("8949deef-9674-43ff-95c6-96cd5492e522")]
+            public virtual RepoItemInfo SpanTagAriaId22Info
+            {
+                get
+                {
+                    return _spantagariaid22Info;
+                }
+            }
+
+            /// <summary>
+            /// The SpanTagAriaId73 item.
+            /// </summary>
+            [RepositoryItem("f5828ee5-ef7e-447f-8b6d-33da1d2c0f19")]
+            public virtual Ranorex.SpanTag SpanTagAriaId73
+            {
+                get
+                {
+                    return _spantagariaid73Info.CreateAdapter<Ranorex.SpanTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The SpanTagAriaId73 item info.
+            /// </summary>
+            [RepositoryItemInfo("f5828ee5-ef7e-447f-8b6d-33da1d2c0f19")]
+            public virtual RepoItemInfo SpanTagAriaId73Info
+            {
+                get
+                {
+                    return _spantagariaid73Info;
+                }
+            }
+
+            /// <summary>
+            /// The Text item.
+            /// </summary>
+            [RepositoryItem("e0b8b72f-5491-40d3-afae-8f91f4b7c808")]
+            public virtual Ranorex.InputTag Text
+            {
+                get
+                {
+                    return _textInfo.CreateAdapter<Ranorex.InputTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Text item info.
+            /// </summary>
+            [RepositoryItemInfo("e0b8b72f-5491-40d3-afae-8f91f4b7c808")]
+            public virtual RepoItemInfo TextInfo
+            {
+                get
+                {
+                    return _textInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Send item.
+            /// </summary>
+            [RepositoryItem("36c38b32-3e8b-4c4c-a210-4a91ece7e709")]
+            public virtual Ranorex.SpanTag Send
+            {
+                get
+                {
+                    return _sendInfo.CreateAdapter<Ranorex.SpanTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Send item info.
+            /// </summary>
+            [RepositoryItemInfo("36c38b32-3e8b-4c4c-a210-4a91ece7e709")]
+            public virtual RepoItemInfo SendInfo
+            {
+                get
+                {
+                    return _sendInfo;
+                }
+            }
+
+            /// <summary>
+            /// The SpanTagAriaId83Folder item.
+            /// </summary>
+            [RepositoryItem("9a092bb3-6ab6-414f-9ccb-49de3b456176")]
+            public virtual Ranorex.SpanTag SpanTagAriaId83Folder
+            {
+                get
+                {
+                    return _spantagariaid83folderInfo.CreateAdapter<Ranorex.SpanTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The SpanTagAriaId83Folder item info.
+            /// </summary>
+            [RepositoryItemInfo("9a092bb3-6ab6-414f-9ccb-49de3b456176")]
+            public virtual RepoItemInfo SpanTagAriaId83FolderInfo
+            {
+                get
+                {
+                    return _spantagariaid83folderInfo;
+                }
+            }
+
+            /// <summary>
+            /// The SuperUser item.
+            /// </summary>
+            [RepositoryItem("3bcc936a-459d-4f72-8a06-922ed89b7cf6")]
+            public virtual Ranorex.SpanTag SuperUser
+            {
+                get
+                {
+                    return _superuserInfo.CreateAdapter<Ranorex.SpanTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The SuperUser item info.
+            /// </summary>
+            [RepositoryItemInfo("3bcc936a-459d-4f72-8a06-922ed89b7cf6")]
+            public virtual RepoItemInfo SuperUserInfo
+            {
+                get
+                {
+                    return _superuserInfo;
+                }
+            }
+
+            /// <summary>
+            /// The TdTagC2017EsnaTechnologiesInc item.
+            /// </summary>
+            [RepositoryItem("914ec441-3bdf-4033-af0b-6514fad7c5ef")]
+            public virtual Ranorex.TdTag TdTagC2017EsnaTechnologiesInc
+            {
+                get
+                {
+                    return _tdtagc2017esnatechnologiesincInfo.CreateAdapter<Ranorex.TdTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TdTagC2017EsnaTechnologiesInc item info.
+            /// </summary>
+            [RepositoryItemInfo("914ec441-3bdf-4033-af0b-6514fad7c5ef")]
+            public virtual RepoItemInfo TdTagC2017EsnaTechnologiesIncInfo
+            {
+                get
+                {
+                    return _tdtagc2017esnatechnologiesincInfo;
+                }
+            }
+
+            /// <summary>
+            /// The ImgHostAvatar item.
+            /// </summary>
+            [RepositoryItem("71f8b242-a6ef-4898-a716-96fc5a0cbd9d")]
+            public virtual Ranorex.ImgTag ImgHostAvatar
+            {
+                get
+                {
+                    return _imghostavatarInfo.CreateAdapter<Ranorex.ImgTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ImgHostAvatar item info.
+            /// </summary>
+            [RepositoryItemInfo("71f8b242-a6ef-4898-a716-96fc5a0cbd9d")]
+            public virtual RepoItemInfo ImgHostAvatarInfo
+            {
+                get
+                {
+                    return _imghostavatarInfo;
+                }
+            }
+
+            /// <summary>
+            /// The SpanTagAriaId29 item.
+            /// </summary>
+            [RepositoryItem("8b601819-dc69-401a-b57c-ca08b8ff262a")]
+            public virtual Ranorex.SpanTag SpanTagAriaId29
+            {
+                get
+                {
+                    return _spantagariaid29Info.CreateAdapter<Ranorex.SpanTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The SpanTagAriaId29 item info.
+            /// </summary>
+            [RepositoryItemInfo("8b601819-dc69-401a-b57c-ca08b8ff262a")]
+            public virtual RepoItemInfo SpanTagAriaId29Info
+            {
+                get
+                {
+                    return _spantagariaid29Info;
+                }
+            }
+
+            /// <summary>
+            /// The WexButtonAdd item.
+            /// </summary>
+            [RepositoryItem("25934919-45f1-413b-9a6d-f939473b66e5")]
+            public virtual Ranorex.WebDocument WexButtonAdd
+            {
+                get
+                {
+                    return _wexbuttonaddInfo.CreateAdapter<Ranorex.WebDocument>(true);
+                }
+            }
+
+            /// <summary>
+            /// The WexButtonAdd item info.
+            /// </summary>
+            [RepositoryItemInfo("25934919-45f1-413b-9a6d-f939473b66e5")]
+            public virtual RepoItemInfo WexButtonAddInfo
+            {
+                get
+                {
+                    return _wexbuttonaddInfo;
+                }
+            }
+
+            /// <summary>
+            /// The DivTagCxN1CustomScrollBar item.
+            /// </summary>
+            [RepositoryItem("3848ee9d-870c-459a-9591-74bdd7a4d164")]
+            public virtual Ranorex.DivTag DivTagCxN1CustomScrollBar
+            {
+                get
+                {
+                    return _divtagcxn1customscrollbarInfo.CreateAdapter<Ranorex.DivTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The DivTagCxN1CustomScrollBar item info.
+            /// </summary>
+            [RepositoryItemInfo("3848ee9d-870c-459a-9591-74bdd7a4d164")]
+            public virtual DivTagCxN1CustomScrollBarInfoClass DivTagCxN1CustomScrollBarInfo
+            {
+                get
+                {
+                    return _divtagcxn1customscrollbarInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Save item.
+            /// </summary>
+            [RepositoryItem("4f9823f8-d0a9-4c49-a900-8462ac7a7213")]
+            public virtual Ranorex.SpanTag Save
+            {
+                get
+                {
+                    return _saveInfo.CreateAdapter<Ranorex.SpanTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Save item info.
+            /// </summary>
+            [RepositoryItemInfo("4f9823f8-d0a9-4c49-a900-8462ac7a7213")]
+            public virtual RepoItemInfo SaveInfo
+            {
+                get
+                {
+                    return _saveInfo;
+                }
+            }
+
+            /// <summary>
+            /// The SpanTagAriaId109 item.
+            /// </summary>
+            [RepositoryItem("a49860f9-47c8-4162-ac1d-933f32f54284")]
+            public virtual Ranorex.SpanTag SpanTagAriaId109
+            {
+                get
+                {
+                    return _spantagariaid109Info.CreateAdapter<Ranorex.SpanTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The SpanTagAriaId109 item info.
+            /// </summary>
+            [RepositoryItemInfo("a49860f9-47c8-4162-ac1d-933f32f54284")]
+            public virtual RepoItemInfo SpanTagAriaId109Info
+            {
+                get
+                {
+                    return _spantagariaid109Info;
+                }
+            }
+
+            /// <summary>
+            /// The Text1 item.
+            /// </summary>
+            [RepositoryItem("e883ae11-816b-4bf5-9db4-730bc6811660")]
+            public virtual Ranorex.InputTag Text1
+            {
+                get
+                {
+                    return _text1Info.CreateAdapter<Ranorex.InputTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Text1 item info.
+            /// </summary>
+            [RepositoryItemInfo("e883ae11-816b-4bf5-9db4-730bc6811660")]
+            public virtual RepoItemInfo Text1Info
+            {
+                get
+                {
+                    return _text1Info;
+                }
+            }
+
+            /// <summary>
+            /// The ButtonTagDx2MsFclBMsBgcWMsBcl item.
+            /// </summary>
+            [RepositoryItem("40c1ad55-2a29-479c-a424-9a744aa50893")]
+            public virtual Ranorex.ButtonTag ButtonTagDx2MsFclBMsBgcWMsBcl
+            {
+                get
+                {
+                    return _buttontagdx2msfclbmsbgcwmsbclInfo.CreateAdapter<Ranorex.ButtonTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ButtonTagDx2MsFclBMsBgcWMsBcl item info.
+            /// </summary>
+            [RepositoryItemInfo("40c1ad55-2a29-479c-a424-9a744aa50893")]
+            public virtual RepoItemInfo ButtonTagDx2MsFclBMsBgcWMsBclInfo
+            {
+                get
+                {
+                    return _buttontagdx2msfclbmsbgcwmsbclInfo;
+                }
+            }
+
+            /// <summary>
+            /// The ModalPanelBackground item.
+            /// </summary>
+            [RepositoryItem("3c38a633-6d5c-408b-afa5-4b4f67d2a5f7")]
+            public virtual Ranorex.DivTag ModalPanelBackground
+            {
+                get
+                {
+                    return _modalpanelbackgroundInfo.CreateAdapter<Ranorex.DivTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ModalPanelBackground item info.
+            /// </summary>
+            [RepositoryItemInfo("3c38a633-6d5c-408b-afa5-4b4f67d2a5f7")]
+            public virtual ModalPanelBackgroundInfoClass ModalPanelBackgroundInfo
+            {
+                get
+                {
+                    return _modalpanelbackgroundInfo;
+                }
+            }
+
+            /// <summary>
+            /// The PopupPanelPanelPopupShadow item.
+            /// </summary>
+            [RepositoryItem("53b2a402-da64-4aba-9a81-540494a95cc9")]
+            public virtual Ranorex.DivTag PopupPanelPanelPopupShadow
+            {
+                get
+                {
+                    return _popuppanelpanelpopupshadowInfo.CreateAdapter<Ranorex.DivTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The PopupPanelPanelPopupShadow item info.
+            /// </summary>
+            [RepositoryItemInfo("53b2a402-da64-4aba-9a81-540494a95cc9")]
+            public virtual PopupPanelPanelPopupShadowInfoClass PopupPanelPanelPopupShadowInfo
+            {
+                get
+                {
+                    return _popuppanelpanelpopupshadowInfo;
+                }
+            }
+
+            /// <summary>
+            /// The SpanTagAriaId105 item.
+            /// </summary>
+            [RepositoryItem("477c5a93-f072-42b3-adc1-9cc85e1c14ec")]
+            public virtual Ranorex.SpanTag SpanTagAriaId105
+            {
+                get
+                {
+                    return _spantagariaid105Info.CreateAdapter<Ranorex.SpanTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The SpanTagAriaId105 item info.
+            /// </summary>
+            [RepositoryItemInfo("477c5a93-f072-42b3-adc1-9cc85e1c14ec")]
+            public virtual RepoItemInfo SpanTagAriaId105Info
+            {
+                get
+                {
+                    return _spantagariaid105Info;
+                }
+            }
+
+            /// <summary>
+            /// The SpanTagAriaId116 item.
+            /// </summary>
+            [RepositoryItem("abc30866-68d6-46fb-8777-1fe3ce0d73c3")]
+            public virtual Ranorex.SpanTag SpanTagAriaId116
+            {
+                get
+                {
+                    return _spantagariaid116Info.CreateAdapter<Ranorex.SpanTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The SpanTagAriaId116 item info.
+            /// </summary>
+            [RepositoryItemInfo("abc30866-68d6-46fb-8777-1fe3ce0d73c3")]
+            public virtual RepoItemInfo SpanTagAriaId116Info
+            {
+                get
+                {
+                    return _spantagariaid116Info;
+                }
+            }
+
+            /// <summary>
+            /// The WexButtonAdd1 item.
+            /// </summary>
+            [RepositoryItem("6bf9a2cc-44c7-40c5-a5f9-41c998a0541d")]
+            public virtual Ranorex.SpanTag WexButtonAdd1
+            {
+                get
+                {
+                    return _wexbuttonadd1Info.CreateAdapter<Ranorex.SpanTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The WexButtonAdd1 item info.
+            /// </summary>
+            [RepositoryItemInfo("6bf9a2cc-44c7-40c5-a5f9-41c998a0541d")]
+            public virtual RepoItemInfo WexButtonAdd1Info
+            {
+                get
+                {
+                    return _wexbuttonadd1Info;
+                }
+            }
+
+            /// <summary>
+            /// The SomeTdTag item.
+            /// </summary>
+            [RepositoryItem("5530ea83-4f16-4aa8-9484-c6b8771b8a4d")]
+            public virtual Ranorex.WebDocument SomeTdTag
+            {
+                get
+                {
+                    return _sometdtagInfo.CreateAdapter<Ranorex.WebDocument>(true);
+                }
+            }
+
+            /// <summary>
+            /// The SomeTdTag item info.
+            /// </summary>
+            [RepositoryItemInfo("5530ea83-4f16-4aa8-9484-c6b8771b8a4d")]
+            public virtual RepoItemInfo SomeTdTagInfo
+            {
+                get
+                {
+                    return _sometdtagInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Text2 item.
+            /// </summary>
+            [RepositoryItem("caf2fa3e-3224-4bf8-8a09-37cc49f4ca1c")]
+            public virtual Ranorex.InputTag Text2
+            {
+                get
+                {
+                    return _text2Info.CreateAdapter<Ranorex.InputTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Text2 item info.
+            /// </summary>
+            [RepositoryItemInfo("caf2fa3e-3224-4bf8-8a09-37cc49f4ca1c")]
+            public virtual RepoItemInfo Text2Info
+            {
+                get
+                {
+                    return _text2Info;
+                }
+            }
+
+            /// <summary>
+            /// The SpanTagAriaId125 item.
+            /// </summary>
+            [RepositoryItem("3ec1adaf-0dd0-472d-a8ef-8ded8a63fcae")]
+            public virtual Ranorex.SpanTag SpanTagAriaId125
+            {
+                get
+                {
+                    return _spantagariaid125Info.CreateAdapter<Ranorex.SpanTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The SpanTagAriaId125 item info.
+            /// </summary>
+            [RepositoryItemInfo("3ec1adaf-0dd0-472d-a8ef-8ded8a63fcae")]
+            public virtual RepoItemInfo SpanTagAriaId125Info
+            {
+                get
+                {
+                    return _spantagariaid125Info;
+                }
+            }
+
+            /// <summary>
+            /// The WexButtonStart item.
+            /// </summary>
+            [RepositoryItem("e29878d3-9048-4928-b51a-88e3466c7b26")]
+            public virtual Ranorex.SpanTag WexButtonStart
+            {
+                get
+                {
+                    return _wexbuttonstartInfo.CreateAdapter<Ranorex.SpanTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The WexButtonStart item info.
+            /// </summary>
+            [RepositoryItemInfo("e29878d3-9048-4928-b51a-88e3466c7b26")]
+            public virtual RepoItemInfo WexButtonStartInfo
+            {
+                get
+                {
+                    return _wexbuttonstartInfo;
+                }
+            }
+
+            /// <summary>
+            /// The DivTagNR4 folder.
+            /// </summary>
+            [RepositoryFolder("21685ab6-12ed-4414-9a2f-21386d2169c6")]
+            public virtual ZangConnectWebExRepositoryFolders.DivTagNR4Folder DivTagNR4
+            {
+                get { return _divtagnr4; }
+            }
+        }
+
+        /// <summary>
+        /// The DivTagNR4Folder folder.
+        /// </summary>
+        [RepositoryFolder("21685ab6-12ed-4414-9a2f-21386d2169c6")]
+        public partial class DivTagNR4Folder : RepoGenBaseFolder
+        {
+            RepoItemInfo _divtagwxl1msbordercolorneutrallighInfo;
+            DivTagWxO1UiDroppableInfoClass _divtagwxo1uidroppableInfo;
+            RepoItemInfo _somedivtagInfo;
+            RepoItemInfo _test1114Info;
+
+            /// <summary>
+            /// Creates a new DivTagNR4  folder.
+            /// </summary>
+            public DivTagNR4Folder(RepoGenBaseFolder parentFolder) :
+                    base("DivTagNR4", ".//div[#'primaryContainer']/div[5]/div/div[1]/div[2]/div/div[1]/div[2]/div[4]/div[3]/div[2]/div/div/div[2]/div/div[2]", parentFolder, 30000, null, false, "21685ab6-12ed-4414-9a2f-21386d2169c6", "")
+            {
+                _divtagwxl1msbordercolorneutrallighInfo = new RepoItemInfo(this, "DivTagWxL1MsBorderColorNeutralLigh", "", 30000, null, "5c26261f-f9f3-4f14-85cb-c6066e7300ad");
+                _divtagwxo1uidroppableInfo = new DivTagWxO1UiDroppableInfoClass(this);
+                _somedivtagInfo = new RepoItemInfo(this, "SomeDivTag", "div[2]/div[27]/div", 30000, null, "da45de45-abe3-42b6-881b-80f8cba53187");
+                _test1114Info = new RepoItemInfo(this, "Test1114", "div[2]/div[1]/div[1]/div/div[1]/div[3]/?/?/span[@innertext='test1114']", 30000, null, "26e40100-4c9d-4b91-9b65-e0dee6f422cc");
+            }
+
+            /// <summary>
+            /// The DivTagWxO1UiDroppableInfoClass folder.
+            /// </summary>
+            [RepositoryItemInfo("d8fa30f0-d904-4b70-9c42-8f4aaa1aa317")]
+            public class DivTagWxO1UiDroppableInfoClass : RepoItemInfo
+            {
+                /// <summary>
+                /// DivTagWxO1UiDroppableInfoClass class constructor.
+                /// </summary>
+                public DivTagWxO1UiDroppableInfoClass(RepoGenBaseFolder parentFolder)
+                    : base(parentFolder, "DivTagWxO1UiDroppable", "div[2]", 30000, null, "d8fa30f0-d904-4b70-9c42-8f4aaa1aa317")
+                { }
+
+                /// <summary>
+                /// Gets the Screenshot1 item image.
+                /// </summary>
+                /// <returns>The Screenshot1 image.</returns>
+                [RepositoryImage("56e15552-08f6-427f-93b8-0136e54a28fe")]
+                public CompressedImage GetScreenshot1()
+                {
+                    return GetImage("56e15552-08f6-427f-93b8-0136e54a28fe");
+                }
+
+                /// <summary>
+                /// Gets the Screenshot1 item image.
+                /// </summary>
+                /// <param name="cropRect">The bounds of the sub-image to return.</param>
+                /// <returns>The cropped image.</returns>
+                [RepositoryImage("56e15552-08f6-427f-93b8-0136e54a28fe")]
+                public CompressedImage GetScreenshot1(System.Drawing.Rectangle cropRect)
+                {
+                    return GetImage("56e15552-08f6-427f-93b8-0136e54a28fe", cropRect);
+                }
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("21685ab6-12ed-4414-9a2f-21386d2169c6")]
+            public virtual Ranorex.DivTag Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.DivTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("21685ab6-12ed-4414-9a2f-21386d2169c6")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The DivTagWxL1MsBorderColorNeutralLigh item.
+            /// </summary>
+            [RepositoryItem("5c26261f-f9f3-4f14-85cb-c6066e7300ad")]
+            public virtual Ranorex.DivTag DivTagWxL1MsBorderColorNeutralLigh
+            {
+                get
+                {
+                    return _divtagwxl1msbordercolorneutrallighInfo.CreateAdapter<Ranorex.DivTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The DivTagWxL1MsBorderColorNeutralLigh item info.
+            /// </summary>
+            [RepositoryItemInfo("5c26261f-f9f3-4f14-85cb-c6066e7300ad")]
+            public virtual RepoItemInfo DivTagWxL1MsBorderColorNeutralLighInfo
+            {
+                get
+                {
+                    return _divtagwxl1msbordercolorneutrallighInfo;
+                }
+            }
+
+            /// <summary>
+            /// The DivTagWxO1UiDroppable item.
+            /// </summary>
+            [RepositoryItem("d8fa30f0-d904-4b70-9c42-8f4aaa1aa317")]
+            public virtual Ranorex.DivTag DivTagWxO1UiDroppable
+            {
+                get
+                {
+                    return _divtagwxo1uidroppableInfo.CreateAdapter<Ranorex.DivTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The DivTagWxO1UiDroppable item info.
+            /// </summary>
+            [RepositoryItemInfo("d8fa30f0-d904-4b70-9c42-8f4aaa1aa317")]
+            public virtual DivTagWxO1UiDroppableInfoClass DivTagWxO1UiDroppableInfo
+            {
+                get
+                {
+                    return _divtagwxo1uidroppableInfo;
+                }
+            }
+
+            /// <summary>
+            /// The SomeDivTag item.
+            /// </summary>
+            [RepositoryItem("da45de45-abe3-42b6-881b-80f8cba53187")]
+            public virtual Ranorex.DivTag SomeDivTag
+            {
+                get
+                {
+                    return _somedivtagInfo.CreateAdapter<Ranorex.DivTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The SomeDivTag item info.
+            /// </summary>
+            [RepositoryItemInfo("da45de45-abe3-42b6-881b-80f8cba53187")]
+            public virtual RepoItemInfo SomeDivTagInfo
+            {
+                get
+                {
+                    return _somedivtagInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Test1114 item.
+            /// </summary>
+            [RepositoryItem("26e40100-4c9d-4b91-9b65-e0dee6f422cc")]
+            public virtual Ranorex.SpanTag Test1114
+            {
+                get
+                {
+                    return _test1114Info.CreateAdapter<Ranorex.SpanTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Test1114 item info.
+            /// </summary>
+            [RepositoryItemInfo("26e40100-4c9d-4b91-9b65-e0dee6f422cc")]
+            public virtual RepoItemInfo Test1114Info
+            {
+                get
+                {
+                    return _test1114Info;
+                }
+            }
         }
 
         /// <summary>
@@ -2179,6 +3466,11 @@ namespace ZangConnectWebEx
         public partial class ContactManagerMatheesanmAtesnaCom1AppFolder : RepoGenBaseFolder
         {
             RepoItemInfo _esnatechInfo;
+            RepoItemInfo _test1115Info;
+            RepoItemInfo _spantagariaid130Info;
+            RepoItemInfo _spantagariaid120Info;
+            RepoItemInfo _createwebexmeetingInfo;
+            RepoItemInfo _sometdtagInfo;
 
             /// <summary>
             /// Creates a new ContactManagerMatheesanmAtesnaCom1  folder.
@@ -2187,6 +3479,11 @@ namespace ZangConnectWebEx
                     base("ContactManagerMatheesanmAtesnaCom1", "/dom[10]", parentFolder, 30000, null, false, "057df526-6445-4918-979c-b660250e3989", "")
             {
                 _esnatechInfo = new RepoItemInfo(this, "EsnaTech", ".//tr[#':2t']//span[@innertext='Esna Tech']", 30000, null, "8b1b1150-b0f3-4740-89b9-5f273cc4d1f2");
+                _test1115Info = new RepoItemInfo(this, "Test1115", ".//div[#'homeCalendarSection']/div/div[2]/table//ul/?/?/span[@innertext=' (WebExID: 641347239)']/a[@innertext='test1115']", 30000, null, "b31969d5-0afc-4133-a281-49573e25bb59");
+                _spantagariaid130Info = new RepoItemInfo(this, "SpanTagAriaId130", ".//span[#'_ariaId_130']", 30000, null, "f03baa32-7ef0-4649-a5d3-15246e9afe3d");
+                _spantagariaid120Info = new RepoItemInfo(this, "SpanTagAriaId120", ".//span[#'_ariaId_120']", 30000, null, "79492bec-d308-4c75-b162-a9e9808ffb92");
+                _createwebexmeetingInfo = new RepoItemInfo(this, "CreateWebExMeeting", ".//div[#'O365fpcontainerid']/div[8]/div/div/div/div[2]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/div[1]/div[6]/a/span[@title='Create WebEx meeting']", 30000, null, "99b885b0-ea29-44d7-91c8-469bb1734d20");
+                _sometdtagInfo = new RepoItemInfo(this, "SomeTdTag", ".//frameset[#'topframeset']/frame[@name='header']/body/div/div[1]/?/?/table//td/table//td", 30000, null, "f3c24637-91a3-4b8b-b156-b6f3ed163ad1");
             }
 
             /// <summary>
@@ -2234,6 +3531,126 @@ namespace ZangConnectWebEx
                 get
                 {
                     return _esnatechInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Test1115 item.
+            /// </summary>
+            [RepositoryItem("b31969d5-0afc-4133-a281-49573e25bb59")]
+            public virtual Ranorex.ATag Test1115
+            {
+                get
+                {
+                    return _test1115Info.CreateAdapter<Ranorex.ATag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Test1115 item info.
+            /// </summary>
+            [RepositoryItemInfo("b31969d5-0afc-4133-a281-49573e25bb59")]
+            public virtual RepoItemInfo Test1115Info
+            {
+                get
+                {
+                    return _test1115Info;
+                }
+            }
+
+            /// <summary>
+            /// The SpanTagAriaId130 item.
+            /// </summary>
+            [RepositoryItem("f03baa32-7ef0-4649-a5d3-15246e9afe3d")]
+            public virtual Ranorex.SpanTag SpanTagAriaId130
+            {
+                get
+                {
+                    return _spantagariaid130Info.CreateAdapter<Ranorex.SpanTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The SpanTagAriaId130 item info.
+            /// </summary>
+            [RepositoryItemInfo("f03baa32-7ef0-4649-a5d3-15246e9afe3d")]
+            public virtual RepoItemInfo SpanTagAriaId130Info
+            {
+                get
+                {
+                    return _spantagariaid130Info;
+                }
+            }
+
+            /// <summary>
+            /// The SpanTagAriaId120 item.
+            /// </summary>
+            [RepositoryItem("79492bec-d308-4c75-b162-a9e9808ffb92")]
+            public virtual Ranorex.SpanTag SpanTagAriaId120
+            {
+                get
+                {
+                    return _spantagariaid120Info.CreateAdapter<Ranorex.SpanTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The SpanTagAriaId120 item info.
+            /// </summary>
+            [RepositoryItemInfo("79492bec-d308-4c75-b162-a9e9808ffb92")]
+            public virtual RepoItemInfo SpanTagAriaId120Info
+            {
+                get
+                {
+                    return _spantagariaid120Info;
+                }
+            }
+
+            /// <summary>
+            /// The CreateWebExMeeting item.
+            /// </summary>
+            [RepositoryItem("99b885b0-ea29-44d7-91c8-469bb1734d20")]
+            public virtual Ranorex.SpanTag CreateWebExMeeting
+            {
+                get
+                {
+                    return _createwebexmeetingInfo.CreateAdapter<Ranorex.SpanTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The CreateWebExMeeting item info.
+            /// </summary>
+            [RepositoryItemInfo("99b885b0-ea29-44d7-91c8-469bb1734d20")]
+            public virtual RepoItemInfo CreateWebExMeetingInfo
+            {
+                get
+                {
+                    return _createwebexmeetingInfo;
+                }
+            }
+
+            /// <summary>
+            /// The SomeTdTag item.
+            /// </summary>
+            [RepositoryItem("f3c24637-91a3-4b8b-b156-b6f3ed163ad1")]
+            public virtual Ranorex.TdTag SomeTdTag
+            {
+                get
+                {
+                    return _sometdtagInfo.CreateAdapter<Ranorex.TdTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The SomeTdTag item info.
+            /// </summary>
+            [RepositoryItemInfo("f3c24637-91a3-4b8b-b156-b6f3ed163ad1")]
+            public virtual RepoItemInfo SomeTdTagInfo
+            {
+                get
+                {
+                    return _sometdtagInfo;
                 }
             }
         }
@@ -2311,6 +3728,8 @@ namespace ZangConnectWebEx
         public partial class EsnaTechnologiesIncWebExEnterpriseSAppFolder : RepoGenBaseFolder
         {
             RepoItemInfo _closeInfo;
+            RepoItemInfo _addressandsearchbarInfo;
+            RepoItemInfo _zangconnectforwebexInfo;
 
             /// <summary>
             /// Creates a new EsnaTechnologiesIncWebExEnterpriseS  folder.
@@ -2319,6 +3738,8 @@ namespace ZangConnectWebEx
                     base("EsnaTechnologiesIncWebExEnterpriseS", "/form[@title~'^Esna\\ Technologies\\ Inc\\ Web']", parentFolder, 30000, null, true, "2939c9c3-54ed-4020-a8ee-43fdc572ec81", "")
             {
                 _closeInfo = new RepoItemInfo(this, "Close", "container[@accessiblename='Google Chrome']//tabpage[@accessiblerole='PageTab' and @accessibledescription~'^Esna\\ Technologies\\ Inc\\ Web' and @title~'^Esna\\ Technologies\\ Inc\\ Web' and @index='12']/button[@accessiblename='Close']", 30000, null, "706ebcd7-4c27-457a-b3bf-ad13163a2d6c");
+                _addressandsearchbarInfo = new RepoItemInfo(this, "AddressAndSearchBar", "container[@accessiblename='Google Chrome']//toolbar[@accessiblename='main']/?/?/text[@accessiblename='Address and search bar']", 30000, null, "288efc90-ca3c-4eb0-a06e-27b6be11562f");
+                _zangconnectforwebexInfo = new RepoItemInfo(this, "ZangConnectForWebEx", "container[@accessiblename='Google Chrome']//toolbar[@accessiblename='main']/?/?/button[@accessiblename='Zang Connect for WebEx']", 30000, null, "1e33549d-faa1-4d91-a1e8-5a558785464a");
             }
 
             /// <summary>
@@ -2366,6 +3787,54 @@ namespace ZangConnectWebEx
                 get
                 {
                     return _closeInfo;
+                }
+            }
+
+            /// <summary>
+            /// The AddressAndSearchBar item.
+            /// </summary>
+            [RepositoryItem("288efc90-ca3c-4eb0-a06e-27b6be11562f")]
+            public virtual Ranorex.Text AddressAndSearchBar
+            {
+                get
+                {
+                    return _addressandsearchbarInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The AddressAndSearchBar item info.
+            /// </summary>
+            [RepositoryItemInfo("288efc90-ca3c-4eb0-a06e-27b6be11562f")]
+            public virtual RepoItemInfo AddressAndSearchBarInfo
+            {
+                get
+                {
+                    return _addressandsearchbarInfo;
+                }
+            }
+
+            /// <summary>
+            /// The ZangConnectForWebEx item.
+            /// </summary>
+            [RepositoryItem("1e33549d-faa1-4d91-a1e8-5a558785464a")]
+            public virtual Ranorex.Button ZangConnectForWebEx
+            {
+                get
+                {
+                    return _zangconnectforwebexInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ZangConnectForWebEx item info.
+            /// </summary>
+            [RepositoryItemInfo("1e33549d-faa1-4d91-a1e8-5a558785464a")]
+            public virtual RepoItemInfo ZangConnectForWebExInfo
+            {
+                get
+                {
+                    return _zangconnectforwebexInfo;
                 }
             }
         }

@@ -1003,11 +1003,6 @@ gQsM4uJOfZf8KAJaKi8p/wDn4k/Jf8KPKf8A5+JPyX/CgCWmsgZ0Y5ypyPyxTPKf/n4k/Jf8KPKf
 						Calendar: New Event ~ Salesforce - Developer Edition
 					</attribute>
 					<attribute
-					name="browser"
-					type="Ranorex.Form, Ranorex.Core, Culture=neutral">
-						{Form:Calendar: New Event ~ Salesforce - Developer Edition - Google Chrome}
-					</attribute>
-					<attribute
 					name="browsername"
 					type="System.String">
 						Chrome
@@ -1697,11 +1692,6 @@ AOR296KKAH1FL/rU+h/pRRQA9elLRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAf/Z
 						Calendar: New Event ~ Salesforce - Developer Edition
 					</attribute>
 					<attribute
-					name="browser"
-					type="Ranorex.Form, Ranorex.Core, Culture=neutral">
-						{Form:Calendar: New Event ~ Salesforce - Developer Edition - Google Chrome}
-					</attribute>
-					<attribute
 					name="browsername"
 					type="System.String">
 						Chrome
@@ -2311,11 +2301,6 @@ ABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQB//9k=
 						Calendar: New Event ~ Salesforce - Developer Edition
 					</attribute>
 					<attribute
-					name="browser"
-					type="Ranorex.Form, Ranorex.Core, Culture=neutral">
-						{Form:Calendar: New Event ~ Salesforce - Developer Edition - Google Chrome}
-					</attribute>
-					<attribute
 					name="browsername"
 					type="System.String">
 						Chrome
@@ -2632,11 +2617,6 @@ UUUAFFFFABRRRQAUUUUAFFFFAH//2Q==
 					name="caption"
 					type="System.String">
 						Calendar: New Event ~ Salesforce - Developer Edition
-					</attribute>
-					<attribute
-					name="browser"
-					type="Ranorex.Form, Ranorex.Core, Culture=neutral">
-						{Form:Calendar: New Event ~ Salesforce - Developer Edition - Google Chrome}
 					</attribute>
 					<attribute
 					name="browsername"
@@ -3163,11 +3143,6 @@ g/OlooATn0H50c+g/OlooATn0H50c+g/OlooATn0H50c+g/OlooAoqs9rcTiOB5YZG8xdjD5WP3h
 					name="caption"
 					type="System.String">
 						Calendar: New Event ~ Salesforce - Developer Edition
-					</attribute>
-					<attribute
-					name="browser"
-					type="Ranorex.Form, Ranorex.Core, Culture=neutral">
-						{Form:Calendar: New Event ~ Salesforce - Developer Edition - Google Chrome}
 					</attribute>
 					<attribute
 					name="browsername"
@@ -3825,11 +3800,6 @@ RQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQB//9k=
 					name="caption"
 					type="System.String">
 						Calendar: New Event ~ Salesforce - Developer Edition
-					</attribute>
-					<attribute
-					name="browser"
-					type="Ranorex.Form, Ranorex.Core, Culture=neutral">
-						{Form:Calendar: New Event ~ Salesforce - Developer Edition - Google Chrome}
 					</attribute>
 					<attribute
 					name="browsername"
@@ -4666,8 +4636,8 @@ B+dHPoPzpaKAP//Z
 			<bindings>
 			</bindings>
 			<info
-			id="ac529eb2-4375-4004-8f49-6713bfd8afe8"
-			sourcename="ElementTree">
+			id="b31969d5-0afc-4133-a281-49573e25bb59"
+			sourcename="RepositoryEditor">
 				<element
 				capabilities="webelement, atag"
 				dontcache="True"
@@ -4676,7 +4646,7 @@ B+dHPoPzpaKAP//Z
 				hasfocus="False"
 				index="1"
 				prefcap="atag"
-				rect="386,925,44,14"
+				rect="386,895,44,14"
 				role="unknown"
 				snapElem=""
 				valid="True"
@@ -4704,58 +4674,25 @@ B+dHPoPzpaKAP//Z
 					<attribute
 					name="href"
 					type="System.String">
-						https://na88.salesforce.com/00U1Y00000J0X77?retURL=%2Fhome%2Fhome.jsp%3Ftsid%3D02ui0000000eIX4
+						https://na88.salesforce.com/00U1Y00000J0ZWL?retURL=%2Fhome%2Fhome.jsp%3Ftsid%3D02ui0000000eIX4
 					</attribute>
 					<dynamicattribute
 					description="Dynamic HTML attribute."
 					name="wexchk0"
 					readonly="False"
 					type="System.String">
-						1
 					</dynamicattribute>
 					<dynamicattribute
 					description="Dynamic HTML attribute."
 					name="wexchk1"
 					readonly="False"
 					type="System.String">
-						1
 					</dynamicattribute>
 				</element>
 				<path>
-					/dom[@domain='na88.salesforce.com']//div[#'homeCalendarSection']/div/div[2]/table/?/?/tr/td[1]/div[2]/ul/?/?/span[@innertext=' (WebExID: 315634032)']/a[@innertext='test1115']
+					/dom[10]//div[#'homeCalendarSection']/div/div[2]/table//ul/?/?/span[@innertext=' (WebExID: 641347239)']/a[@innertext='test1115']
 				</path>
 			</info>
-			<helperscreenshot
-			guid="0d9aa027-7dca-4e64-85ba-81d28023a76a">
-				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
-			</helperscreenshot>
 			<matchname>
 				InnerText
 			</matchname>
@@ -4935,19 +4872,19 @@ RRQMMUUUUAf/2Q==
 					name="appicon"
 					type="System.Drawing.Icon, System.Drawing, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
 						iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
-jwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAKKSURBVDhPpZJbSFNxHMdNoSCiAstp2pUiiB6M
-ApNY29zFy27uooJT0aU9RZGgRA9JEIJdX3rQzOZ0ivli2FOULmVFOjeziZl2jkUXgiJYbuVl7dvv
-HM+ZM+ipL3zPeTj/z+f3489JAPBfXXnEZVaVlcgWa01sifYOW5Q/wJo1w6xF08ua1WcZgyJZOLaa
-eMG0JTdzzmacZK15YC25YE1qMIUqMEYlCAZbqAwyJrVdOL4SUTCcl31k0qL5MWslUBSYNWsEjF6O
-tzp6GxTneIgLJ9jSVpJ4/oL1g1cvwxQH/GMDRkcCrYwksgijk2XGBAe6TxuOtlRGegxSTNCUaZr8
-vqMVHu/H6KOxb1Fm/DHmXEZ8dh7H954shPqy8bNf+jQm2N9V07yvqxolF80Yyj8B1tmKS70hGG+E
-YaDabofx+s0Mlt05iLhPIjIkxW+PbAE+eRIv2OuqfrLHdQoHHVW4WSyHe+xLDNZdp14Lo/FBCAuB
-ekRHchAdzQG8VJ98Iy/IcFZ6dnXasdtlh76pDP3eeeg5UIC11PruEBZnrgB+NVVFVXKCzbwg3VnR
-t7OzClw50YuJqUXTrVW44GoIvZ4gIoEqAVYh6uM32MALdjjK69M7KiE272EDBgJfUdsZQk3rPJzu
-IMZf3lszfXlUMRu7REl7eUZae/lSmrMCYg/3nEHdcBsue1youV+HZV9+DIafLnNUXhsTcJG02RpS
-CSRZXMsgaSlFYFC3BqbpPlp/PQ+KAvqZ1pGkWeIoQwqBXLc7bLA7DIj6c+PhVwSn8xAXUSAm5W5p
-EXVmm6MUyc3F+PSsYEEAg0sjikaCNwlHV/K3QAxttPVYkzLz3YD00K/nslQCk4RPcUlI+AMP6SbG
-wFirSAAAAABJRU5ErkJggg==
+jwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAKJSURBVDhPtZNbSFNxHMfPOUOd4nJecoqVZoUm
+hkoP3lrqNq+72MwML2nOfIsCQR98SIwQzC4vCabUmq7QvRhFBJouhxTeq0WltnWDiIJiOUFz7Nv/
+HI+zUdFTH/i+HH6f7+/38D/U/4CR+Au12pio7uak+JHWpHhL3Z5o094g0SmaokL5mT8jFDDJ3Vmp
+z+2lBbAfzoddmwvbIQVsxXLYNDl4VHDAsTMwQMePe+MnYFLMyqzvi6VE3CgoyfMqsKmz8VqVg4Sg
+wNO85oGpqJF/mFJn4QUr/OUCm4oUKMlMkdTFXsu7FCUQ+2tSOqtd/RopnpItr8jmd709sEy8d9+f
+/Oy2zQ3jjbEYHw1p+NqfCudgOjrqdz3kdYoSZezuir15AkebSzBWmAm7oQdnTE4UX1yGhqTyyjJe
+zi9gzSyDy3wQrjEpvg1lrhBVwBWElKc+iDHWIU5fi0tl2TBPf/LIqgskHctou+3EirUJ7gkZ3JMy
+YEoGogZwBcE16eM7+nSINuqgbq/CnaklqFmRl5UkTbecWF04B8zmkihI5KBpagtXIFLuG9zeVws2
+bNHo4+lV7eVNuei8E6ZxB1zWWl5WwD3DXeDHFfjGhjVF9R7HRgrutmDE+gUNfU7U9yzBYHZg7sl1
+r+1DncmLnMzB0Nsiu8t/RBqqsZHE/pNotFxD67gR9QONWJsp9MiYlWF/vKiBt9fxiQtviSCi5Max
+X1IFydUKWEdVXnLv2YQZovium5vQwrSYLom+CuFEZLNVXwmdXgP3bL5HNrUnPhMwdBTv/A4THHBE
+3CBbCNNXILSrDPPDeSus+PZehiM3LaSN/FCB/Og/oCkx48Mk+/owCQxDR5Av64/GC4r6CYQvk8I6
+KcCsAAAAAElFTkSuQmCC
 					</attribute>
 					<attribute
 					name="state"
@@ -5773,6 +5710,21 @@ iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKK
 KKACiiigAooooA//2Q==
 			</helperscreenshot>
 		</mouseitem>
+		<keyitem
+		action="Press"
+		data="W, Control"
+		duration="100ms"
+		enabled="True"
+		optional="False"
+		presstime="100ms"
+		scancode="0"
+		searchpropertyid="2211c6ca-7261-435d-a41a-20fe509c9270"
+		setModifiers="True">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+		</keyitem>
 		<keyitem
 		action="Press"
 		data="W, Control"

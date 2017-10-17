@@ -1,10 +1,11 @@
 ﻿<Properties>
+  <Array name="active">
+    <Element value="ZangConnectWebEx.rxtst" />
+  </Array>
   <Array name="bookmarks" />
   <Array name="files">
     <Element value="ZangConnectWebEx.rxtst" />
-    <Element value="GoogleCard.rxrec" />
-    <Element value="WebExSignInPostSSO.rxrec" />
-    <Element value="googleCalendarValidation.rxrec" />
+    <Element value="contact.rxrec" />
   </Array>
   <Properties name="projectSavedData">
     <Properties name="customTool">
